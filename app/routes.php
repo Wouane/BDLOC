@@ -1,5 +1,5 @@
 <?php
-	
+	// merci de ne pas toucher au fichier routes sans accord du PATRON :D :p 
 	$w_routes = array(
 	// --------------------------PUBLIC / USER ------------------------------------
 		['GET', '/', 'Default#home', 'home'],
