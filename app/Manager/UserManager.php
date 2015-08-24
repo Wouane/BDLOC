@@ -3,8 +3,7 @@
 
 	class UserManager extends \W\Manager\UserManager
 	{
-		public function checkMail($email)
-		
+		public function checkMail($email)		
 		{
 			$sql = "SELECT email FROM users WHERE email = :email";
 	    	$sth = $dbh->prepare($sql);
@@ -20,6 +19,10 @@
 	    	$sth->execute(array(":username" => $username));
 	    	$foundUsername = $sth->fetchColumn();
 	    	return $foundUsername;
+		}
+		public function register()
+		{
+			
 		}
 
 	}

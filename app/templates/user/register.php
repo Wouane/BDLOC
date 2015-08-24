@@ -21,9 +21,21 @@
 			    <input name='lastname' type="text" class="form-control" id="lastname" value="<?= $lastname ?>">
 			</div>
 			<div class="form-group">
-			    <label for="lastname">Code Postal</label>
-			    <input name='lastname' type="text" class="form-control" id="lastname" value="<?= $lastname ?>">
+			    <label for="zipcode">Code Postal</label>
+			    <input name='zipcode' type="text" class="form-control" id="zipcode" value="<?= $zipcode ?>">
 			</div>
+			<div class="form-group">
+			    <label for="streetnumber">Numéro</label>
+			    <input name='streetnumber' type="text" class="form-control" id="streetnumber" value="<?= $streetnumber ?>">
+			</div>
+			<div class="form-group">
+			    <label for="streetname">Adresse</label>
+			    <input name='streetname' type="text" class="form-control" id="streetname" value="<?= $streetname ?>">
+			</div>
+			<div class="form-group">
+			    <label for="phonenumber">N° Mobile ou Fixe</label>
+			    <input name='phonenumber' type="text" class="form-control" id="phonenumber" value="<?= $phonenumber ?>">
+			</div>			
 			<div class="form-group">
 			    <label for="password">Votre mot de passe</label>
 			    <input name='password' type="password" class="form-control" id="password" value="">
