@@ -1,13 +1,10 @@
 <?php
 	
 	$w_routes = array(
-		// --------------------------PUBLIC / USER ------------------------------------
+	// --------------------------PUBLIC / USER ------------------------------------
 		['GET', '/', 'Default#home', 'home'],
 		['GET|POST', '/catalogue/', 'Default#catalogue', 'catalogue'],
-		['GET|POST', '/user/', 'User#register', 'inscription'],
-		['GET|POST', '/user/', 'User#login', 'login'],
-		['GET|POST', '/user/', 'User#login', 'login'],
-
-
-		// --------------------------PRIVATE / ADMIN ------------------------------------
+		['GET|POST', '/inscription/', 'User#register', 'inscription'],
+		['GET|POST', '/connexion/', 'User#login', 'connexion'],
+	// --------------------------PRIVATE / ADMIN ------------------------------------
 	);
