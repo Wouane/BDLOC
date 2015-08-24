@@ -15,4 +15,9 @@ class DefaultController extends Controller
 		$this->show('default/home');
 	}
 
+	public function catalogue()
+	{
+		$this->show('default/catalogue');
+	}
+
 }
