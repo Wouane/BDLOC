@@ -3,7 +3,7 @@
 namespace Controller;
 
 use \W\Controller\Controller;
-
+use \W\Security\AuthentificationManager as AuthentificationManager;
 class DefaultController extends Controller
 {
 
@@ -13,6 +13,11 @@ class DefaultController extends Controller
 	public function home()
 	{
 		$this->show('default/home');
+	}
+		public function login()
+	{
+		$am = new AuthentificationManager();
+		$this->show('user/login');
 	}
 
 	public function catalogue()
