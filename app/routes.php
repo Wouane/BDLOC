@@ -7,4 +7,5 @@
 		['GET|POST', '/inscription/', 'User#register', 'inscription'],
 		['GET|POST', '/connexion/', 'User#login', 'connexion'],
 	// --------------------------PRIVATE / ADMIN ------------------------------------
+
 	);
