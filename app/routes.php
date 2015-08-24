@@ -25,10 +25,10 @@
 		['GET|POST', '/catalogue/', 'Default#catalogue', 'catalogue'],
 
 		//Page panier de l'utilisateur ----------------------------------------------------------------
-		['GET|POST', '/catalogue/panier/', 'User#cart', 'panier'],
+		['GET|POST', '/catalogue/panier/', 'Cart#cart', 'panier'],
 
 		//Page contact de l'utilisateur-----------------------------------------------------------------
-		['GET|POST', '/catalogue/contact/', 'User#contact', 'contact'],
+		['GET|POST', '/catalogue/contact/', 'Default#contact', 'contact'],
 
 		//Page profil de l'utilisateur-----------------------------------------------------------------
 		['GET|POST', '/catalogue/profil/', 'User#profil', 'profile'],
