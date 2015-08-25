@@ -21,8 +21,10 @@
 			<?= $this->section('main_content') ?>
 		</section>
 
-		<footer>
+		<footer class="footer-layout-bdloc-nomenu">
+			<p>Facebook | Twitter | Mentions Légales | Contactez-nous </p>
 		</footer>
+		
 	</div>
 </body>
 </html>
