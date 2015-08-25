@@ -17,19 +17,19 @@ class UserController extends Controller
 		$this->show('default/home');
 	}
 
-
+// Function d'inscription //
 	public function register()
 	{
 		$userManager = new UserManager();
-		$error 			= "";
-		$username 		= "";
-		$email 			= "";
-		$firstname		= "";
-		$lastname		= "";
-		$streetnumber	= "";
-		$streetname 	= "";
-		$phonenumber 	= "";
-		$zipcode 		= "";
+		$error = "";
+		$username = "";
+		$email = "";
+		$firstname = "";
+		$lastname = "";
+		$streetnumber = "";
+		$streetname = "";
+		$phonenumber = "";
+		$zipcode = "";
 
 
 		if(!empty($_POST))
@@ -55,31 +55,32 @@ class UserController extends Controller
 
 				$error = "Email non valide";
 			}
-	// ZIPCODE valide
+		// ZIPCODE valide
 			if($zipcode <= "75000" || $zipcode >= "75021"){
-				$error = "Vous devez habiter Paris";
+				$error = "Vous devez habiter Paris !";
 			}
-	// Téléphone valide
+		// Téléphone valide
 			if(preg_match("/^[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}$/", $phonenumber)) {
   				// $phonenumber is valid
 				$error = "Votre numéro n'est pas valide !";
 			}
-	 // Password identiques ?
-			if($password!= $confirm)
-			{
-
-				$error = "Vos mots de passe doivent être identiques";
+		//	2er cihffre du Telephone coresponde a 01,02,03,04,05,06,07,08 ou 09 
+			if(substr($phonenumber, 0,2) < "01" || substr($phonenumber, 0,2) > "09") {
+				$error = "Votre numero de telephone n'es pas dans les normes !";
 			}
-	// 				/* fin validation */
+	 	// Password identiques ?
+			if($password != $confirm)
+			{
+				$error = "Vos mots de passe doivent être identiques !";
+			}
 
 	 	//si valide...
 			if(empty($error))
 			{
-		 		//hasher le mot de passe
-
+		//hasher le mot de passe
 				$hash = password_hash($password, PASSWORD_DEFAULT);
 
-				//insérer en base
+		//insérer en base
 
 				$newSubscriber = [
 				"username" 		=> $username,
@@ -88,7 +89,7 @@ class UserController extends Controller
 				"firstname" 	=> $firstname,
 				"lastname" 		=> $lastname,
 				"zip_code" 		=> $zipcode,
-				"street_number" 	=> $streetnumber,
+				"street_number" => $streetnumber,
 				"street_name" 	=> $streetname,
 				"phone_number" 	=> $phonenumber,
 				"date_modified" => date("Y-m-d H:i:s"),
@@ -101,51 +102,52 @@ class UserController extends Controller
 		}
 		/* Afficher la page */
 		$data = [];
-		$data['error']=$error;
-		$data['username']=$username;
-		$data['email']=$email;
-		$data['firstname']=$firstname;
-		$data['lastname']=$lastname;
-		$data['zipcode']=$zipcode;
-		$data['streetnumber']=$streetnumber;
-		$data['streetname']=$streetname;
-		$data['phonenumber']=$phonenumber;
+		$data['error'] = $error;
+		$data['username'] = $username;
+		$data['email'] = $email;
+		$data['firstname'] = $firstname;
+		$data['lastname'] = $lastname;
+		$data['zipcode'] = $zipcode;
+		$data['streetnumber'] = $streetnumber;
+		$data['streetname'] = $streetname;
+		$data['phonenumber'] = $phonenumber;
 
 		$this->show('user/register', $data);
 	}
 
+// Function de connexion //
 	public function login()
 	{
 		$am = new AuthentificationManager();
-		$error 		= "";
-		$username 	= "";
+		$error = "";
+		$username = "";
 		if(!empty($_POST))
 		{
-	 		//validation
-			$password 	= $_POST['password'];
-			$username 	= $_POST['username'];
+	 	//validation
+			$password = $_POST['password'];
+			$username = $_POST['username'];
 			$result = $am->isValidLoginInfo($username, $password);
-	 		//si valide : connexion
+	 	//si valide : connexion
 			if($result > 0)
 			{
 				$userId = $result;
-	 			//récupère l'utilisateur
+	 	//récupère l'utilisateur
 				$userManager = new \Manager\UserManager();
 				$user = $userManager->find($userId);
 
-	 			//connecte l'user
+	 	//connecte l'user
 				$am->LogUserIn($user);
-	 			//redirection
+	 	//redirection
 				$this->redirectToRoute('show_all_terms');
 			}
 			else 
 			{
-				$error = "Mauvais Identifiants";
+				$error = "Mauvais Identifiants !";
 			}
 		}
 		$data = [];
-		$data['error']=$error;
-		$data['username']=$username;
+		$data['error'] = $error;
+		$data['username'] = $username;
 		/* Afficher la page */
 		$this->show('user/login',$data);
 	}
