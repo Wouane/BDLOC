@@ -4,7 +4,7 @@
 
 
 <?php $this->start('main_content') ?>
-	<h1>Bienvenue sur la page d'Acueil</h1>
+	<h1>Bienvenue sur la page d'Accueil</h1>
 
 	<div class="presentation">
 		<p>BDLOC est un site de location de Bande dessinés
