@@ -2,23 +2,6 @@
 <?php $this->start("header") ?>
 	<!-- HEADER -->
 
-		<header>
-		<div class="navigation">
-			<div class="BD">
-				<a href="#"><i class="fa fa-book"></i> Les BDs !</a>
-			</div>
-			<div class="panier">
-				<a href="#"><i class="fa fa-shopping-cart"></i> Mon panier</a>
-			</div>
-			<div class="compte">
-				<a href="#"><i class="fa fa-user"></i> Mon compte</a>
-			</div>
-		</div>
- 
- 		<h1>Bonjour <?= $w_user['username']; ?> !</h1>
- 		<input type="submit" value="Se déconnecter">
-		</header>
-
 	<?php $this->stop("header") ?>
 	<?php $this->start("main_content") ?>
 <div class="container">
