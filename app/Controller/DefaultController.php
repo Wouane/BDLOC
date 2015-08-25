@@ -1,7 +1,7 @@
 <?php
 
 namespace Controller;
-
+use \Manager\BookManager;
 use \W\Controller\Controller;
 use \W\Security\AuthentificationManager as AuthentificationManager;
 class DefaultController extends Controller
@@ -22,6 +22,11 @@ class DefaultController extends Controller
 
 	public function catalogue()
 	{
+		$user = $this->getUser();
+		$bookManager = new BookManager();
+		$books = $bookManager->findAll("cover");
+		debug ($books);
+		//$this->show('catalogue');
 		$this->show('default/catalogue');
 	}
 

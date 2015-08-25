@@ -109,7 +109,7 @@
 				<button>Suivant <i class="fa fa-chevron-right"></i></button>
 			</fieldset>
 	
-	<div class="listcat">Liste</div>
+	<div class="listcat"></div>
 </div>
 </div>
 <?php $this->stop("main_content") ?>

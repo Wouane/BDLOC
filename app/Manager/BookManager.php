@@ -1,9 +1,10 @@
 <?php 
-	namespace BookManager;
+	namespace Manager;
 
 	class BookManager extends \W\Manager\Manager
 	{
-		public function catalogue(){
+		public function BookManager()
+		{
 			
 			
 		}
