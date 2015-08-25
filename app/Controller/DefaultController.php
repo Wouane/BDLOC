@@ -25,4 +25,10 @@ class DefaultController extends Controller
 		$this->show('default/catalogue');
 	}
 
+	public function cart()
+	{
+		$this->show('default/cart');
+	}
+
+
 }
