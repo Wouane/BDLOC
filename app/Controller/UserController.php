@@ -16,6 +16,40 @@ class UserController extends Controller
 		/* Afficher la page */
 		$this->show('default/home');
 	}
+	public function Fakedata(){
+		$userManager = new UserManager();
+		$users = 1000;
+
+	//paamayim nekutotayim
+
+	$faker = \Faker\Factory::create("fr_FR");
+
+	for($i=0; $i<$users; $i++){		
+		$username = $faker->userName;
+		$email = $faker->email;
+		$lastname = $faker->firstname;
+		$firstname = $faker->lastname;
+		$phone_number = $faker->phoneNumber;
+		$user_data = array($username,$email,$firstname,$lastname,$phone_number);
+		$newData = [
+				"username" 		=> $username,
+				"email" 		=> $email,
+				"firstname" 	=> $firstname,
+				"lastname" 		=> $lastname,
+				"phone_number" 	=> $phone_number,
+				];
+		$userManager->insert($newData);
+		//print_r($user_data);
+		}
+
+	$time_end = microtime(true);
+	//dividing with 60 will give the execution time in minutes other wise seconds
+	$execution_time = ($time_end - $time_start);
+
+	//execution time of the script
+	echo '<b>Total Execution Time:</b> '.$execution_time.' seconds';
+	$this->show('user/fake_data');
+	}
 
 	//Page profile
 
