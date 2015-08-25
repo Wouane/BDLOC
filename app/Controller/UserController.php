@@ -17,6 +17,13 @@ class UserController extends Controller
 		$this->show('default/home');
 	}
 
+	//Page profile
+
+	public function profil()
+	{
+		$this->show('user/profile');
+	}
+
 // Function d'inscription //
 	public function register()
 	{
