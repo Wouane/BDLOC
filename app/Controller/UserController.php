@@ -2,7 +2,7 @@
 
 namespace Controller;
 
-use \Manager\UserManager;
+use \Manager\Manager;
 use \W\Controller\Controller;
 use \W\Security\AuthentificationManager as AuthentificationManager;
 class UserController extends Controller
@@ -16,11 +16,6 @@ class UserController extends Controller
 		/* Afficher la page */
 		$this->show('default/home');
 	}
-
-	public function catalogue(){
-
-		$this->show('catalogue');
-	}
 	// Affiche forget password
 	public function forgotPassword(){
 
@@ -31,9 +26,6 @@ class UserController extends Controller
  		if ($userManager->emailExists($email)) {
 				echo "NICE !";
 			}
-
-
-
 	}
 
 	public function Fakedata(){
