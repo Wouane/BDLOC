@@ -29,76 +29,76 @@
 				<legend>Filtres</legend>
 				<h1>Catégories</h1>
 
-				<input type="checkbox" name="Action" value="Action">
-				<label for="Action">Action</label><br />
+				<input type="checkbox" name="action" id="action" value="action">
+				<label for="action">Action</label><br />
 
-				<input type="checkbox" name="Adulte" value="Adulte">
-				<label for="Adulte">Adulte</label><br />
+				<input type="checkbox" name="adulte" id="adulte" value="adulte">
+				<label for="adulte">Adulte</label><br />
 
-				<input type="checkbox" name="Aventure" value="Aventure">
-				<label for="Aventure">Aventure</label><br />
+				<input type="checkbox" name="aventure" id="aventure" value="aventure">
+				<label for="aventure">Aventure</label><br />
 
-				<input type="checkbox" name="Aviation" value="Aviation">
-				<label for="Aviation">Aviation</label><br />
+				<input type="checkbox" name="aviation" id="aviation" value="aviation">
+				<label for="aviation">Aviation</label><br />
 
-				<input type="checkbox" name="Espionnage" value="Espionnage">
-				<label for="Espionnage">Espionnage</label><br />
+				<input type="checkbox" name="espionnage" id="espionnage" value="espionnage">
+				<label for="espionnage">Espionnage</label><br />
 
-				<input type="checkbox" name="Fantastique" value="Fantastique">
-				<label for="Fantastique">Fantastique</label><br />
+				<input type="checkbox" name="fantastique" id="fantastique" value="fantastique">
+				<label for="fantastique">Fantastique</label><br />
 
-				<input type="checkbox" name="Guerre" value="Guerre">
-				<label for="Guerre">Guerre</label><br />
+				<input type="checkbox" name="guerre" id="guerre" value="guerre">
+				<label for="guerre">Guerre</label><br />
 
-				<input type="checkbox" name="Heroic_fantasy" value="Heroic_fantasy">
-				<label for="Heroic_fantasy">Heroic Fantasy</label><br />
+				<input type="checkbox" name="heroic_fantasy" id= "heroic_fantasy" value="heroic_fantasy">
+				<label for="heroic_fantasy">Heroic Fantasy</label><br />
 
-				<input type="checkbox" name="Historique" value="Historique">
-				<label for="Historique">Historique</label><br />
+				<input type="checkbox" name="historique" id="historique" value="historique">
+				<label for="historique">Historique</label><br />
 
-				<input type="checkbox" name="Humour" value="Humour">
-				<label for="Humour">Humour</label><br />
+				<input type="checkbox" name="humour" id="humour" value="humour">
+				<label for="humour">Humour</label><br />
 
-				<input type="checkbox" name="Jeunesse" value="Jeunesse">
-				<label for="Jeunesse">Jeunesse</label><br />
+				<input type="checkbox" name="jeunesse" id="jeunesse" value="jeunesse">
+				<label for="jeunesse">Jeunesse</label><br />
 
-				<input type="checkbox" name="Inclassables" value="Inclassables">
-				<label for="Inclassables">Inclassables</label><br />
+				<input type="checkbox" name="inclassables" id="inclassables" value="inclassables">
+				<label for="inclassables">Inclassables</label><br />
 
-				<input type="checkbox" name="Littérature" value="Littérature">
-				<label for="Littérature">Littérature</label><br />
+				<input type="checkbox" name="litterature" id="litterature" value="litterature">
+				<label for="litterature">Littérature</label><br />
 
-				<input type="checkbox" name="Polar" value="Polar">
-				<label for="Polar">Polar</label><br />
+				<input type="checkbox" name="polar" id="polar" value="polar">
+				<label for="polar">Polar</label><br />
 
-				<input type="checkbox" name="science_fiction" value="science_fiction">
+				<input type="checkbox" name="science_fiction" id="science_fiction" value="science_fiction">
 				<label for="science_fiction">Science Fiction</label><br />
 
-				<input type="checkbox" name="Sentimental" value="Sentimental">
-				<label for="Sentimental">Sentimental</label><br />
+				<input type="checkbox" name="sentimental" id="sentimental" value="sentimental">
+				<label for="sentimental">Sentimental</label><br />
 
-				<input type="checkbox" name="Sport" value="Sport">
-				<label for="Sport">Sport</label><br />
+				<input type="checkbox" name="sport" id="sport" value="sport">
+				<label for="sport">Sport</label><br />
 
-				<input type="checkbox" name="Super_Heros" value="Super_Heros">
-				<label for="Super_Heros">Super Héros</label><br />
+				<input type="checkbox" name="super_heros" id="super_heros" value="super_heros">
+				<label for="super_heros">Super Héros</label><br />
 
-				<input type="checkbox" name="tranche_de_vie" value="tranche_de_vie">
-				<label for="Vie">Tranche de vie</label><br />
+				<input type="checkbox" name="tranche_de_vie" id="tranche_de_vie" value="tranche_de_vie">
+				<label for="tranche_de_vie">Tranche de vie</label><br />
 
-				<input type="checkbox" name="Thriller" value="Thriller">
-				<label for="Thriller">Thriller</label><br />
+				<input type="checkbox" name="thriller" id="thriller" value="thriller">
+				<label for="thriller">Thriller</label><br />
 
-				<input type="checkbox" name="Western" value="Western">
-				<label for="Western">Western</label><br />
+				<input type="checkbox" name="western" id="western" value="western">
+				<label for="western">Western</label><br />
 
 				<h1>Disponibilité</h1>
 
-				<input type="checkbox" name="disponibles" value="disponibles">
-				<label for="Disponibles">Disponibles</label><br />
+				<input type="checkbox" name="disponibles" id="disponibles" value="disponibles">
+				<label for="disponibles">Disponibles</label><br />
 
-				<input type="checkbox" name="Indisponibles" value="Indisponibles">
-				<label for="Indisponibles">Indisponibles</label><br />
+				<input type="checkbox" name="indisponibles" id="indisponibles" value="indisponibles">
+				<label for="indisponibles">Indisponibles</label><br />
 
 				<h1>Recherche</h1>
 				<input type="recherche" placeholder="Mots-clefs" name="recherche">
