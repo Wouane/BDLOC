@@ -1,12 +1,12 @@
-<?php $this->layout('layout_bdloc_nomenu', ['title' => 'Accueil !']) ?>
+<?php $this->layout('layout_bdloc_nomenu', ['title' => 'Bienvenue sur la page Accueil !']) ?>
 
 
 
 
 <?php $this->start('main_content') ?>
-	
+	<h1>Bienvenue sur la page d'Acueil</h1>
+
 	<div class="presentation">
-		<h1>Bienvenue sur l'accueil</h1>
 		<p>BDLOC est un site de location de Bande dessinés
 		réservé aux Parisiens</p>
 		<br/>
