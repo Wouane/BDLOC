@@ -16,6 +16,14 @@ class UserController extends Controller
 		/* Afficher la page */
 		$this->show('default/home');
 	}
+
+	public function catalogue(){
+		
+		$data[];
+		$data['username'] = $username;
+
+		$this->show('catalogue', $data);
+	}
 	public function Fakedata(){
 		$userManager = new UserManager();
 		$users = 1000;
@@ -110,16 +118,16 @@ class UserController extends Controller
 			}
 		// ZIPCODE valide
 			if($zipcode <= "75000" || $zipcode >= "75021"){
-				$error = "Vous devez habiter Paris pour vous inscrire a notre service !";
+				$error = "Vous devez habiter Paris pour vous inscrire à notre service !";
 			}
 		// Téléphone valide
 			if(preg_match("/^[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}$/", $phonenumber)) {
   				// $phonenumber is valid
-				$error = "Votre numéro n'est pas valide !";
+				$error = "Votre numéro de téléphone n'est pas valide !";
 			}
 		//	2er cihffre du Telephone coresponde a 01,02,03,04,05,06,07,08 ou 09 
 			if(substr($phonenumber, 0,2) < "01" || substr($phonenumber, 0,2) > "09") {
-				$error = "Votre numero de telephone n'es pas dans les normes !";
+				$error = "Votre numéro de téléphone n'est pas valide !";
 			}
 		// verif du MDP -- il doit contenir au moin 1 lettre et 1 chiffre !
 			else {
@@ -127,7 +135,7 @@ class UserController extends Controller
 				$containsDigit = preg_match('/\d/', $password);
 
 				if (!$containsLetter || !$containsDigit ) {
-					$error = "Veulliez choisir un mot de passe avec au moin une lettre,  et un chiffre !";
+					$error = "Merci de choisir un mot de passe comportant au moins une lettre et un chiffre !";
 				}
 			}
 	 	// Password identiques ?
@@ -200,7 +208,7 @@ class UserController extends Controller
 	 	//connecte l'user
 				$am->LogUserIn($user);
 	 	//redirection
-				$this->redirectToRoute('show_all_terms');
+				$this->redirectToRoute('catalogue');
 			}
 			else 
 			{
