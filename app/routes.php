@@ -24,7 +24,7 @@
 		['GET|POST', '/catalogue/profil/parametres', 'User#parameters', 'parametres'],
 
 		//Page catalogue-------------------------------------------------------------------------------
-		['GET|POST', '/catalogue/', 'Default#catalogue', 'catalogue'],
+		['GET|POST', '/catalogue/', 'Book#catalogue', 'catalogue'],
 
 		//Page panier de l'utilisateur ----------------------------------------------------------------
 		['GET|POST', '/catalogue/panier/', 'Default#cart', 'panier'],
