@@ -1,4 +1,4 @@
-<?php $this->layout('layout_bdloc', ['title' => 'Login !']) ?>
+<?php $this->layout('layout_bdloc', ['title' => 'Bienvenue sur la Page de Login !']) ?>
 
 <?php $this->start('main_content') ?>
 
