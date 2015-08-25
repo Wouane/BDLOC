@@ -11,8 +11,9 @@
 			<div class="form-group">
 			    <label for="password">Votre mot de passe</label>
 			    <input name='password' type="password" class="form-control" id="password" value="">
-			</div>			
+			</div>
 		  <button type="submit" class="btn btn-default">Valider</button>
 		  <div class="warning"><?php echo $error; ?></div>
+		  <div class=""><a href="<?php echo url(); ?>">Mot de passe oublié ?</a></div>
 		</form>	
 <?php $this->stop('main_content') ?>
