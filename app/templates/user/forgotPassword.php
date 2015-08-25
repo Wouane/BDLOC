@@ -8,12 +8,12 @@
 		<input type="text" placeholder="Entrer votre adresse Mail" name="email">
 		<div class="error">
 			<?php 
-				echo $error;
+				//echo $error;
 			 ?>
 		</div>
 		<div class="succes">
 			<?php 
-				echo $succes;
+				//echo $succes;
 			 ?>
 		</div>
 		<button type="submit">Envoyer</button>

@@ -3,6 +3,7 @@
 namespace Controller;
 
 use \Manager\Manager;
+use \Manager\UserManager;
 use \W\Controller\Controller;
 use \W\Security\AuthentificationManager as AuthentificationManager;
 class UserController extends Controller
@@ -19,13 +20,32 @@ class UserController extends Controller
 	// Affiche forget password
 	public function forgotPassword(){
 
-		$this->show('user/forgotPassword');
+		$userManager = new UserManager();
+
+		$factory = new \RandomLib\Factory;
+		$generator = $factory->getGenerator(new \SecurityLib\Strength(\SecurityLib\Strength::MEDIUM));
+ 		$token = $generator->generateString(32, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
 
  		$email = $_POST['email'];
 
  		if ($userManager->emailExists($email)) {
-				echo "NICE !";
+				include 'mailer.php';
+				$_SESSION['mail_succes'] = "Le mail a bien été Envoyé !";
+				
+				$user = $userManager->getUserByUsernameOrEmail($email);
+
+				$userManager->update(array("token"=>$token),$user['id']);
+
+				echo "good";
+				$succes = "Le mail a bien été Envoyé !";
+				//redirection apres
 			}
+			else {
+				$error = "Adress Email non trouver !";
+				// redirection 
+			}
+
+		$this->show('user/forgotPassword');
 	}
 
 	public function Fakedata(){
