@@ -21,6 +21,21 @@ class UserController extends Controller
 
 		$this->show('catalogue');
 	}
+	// Affiche forget password
+	public function forgotPassword(){
+
+		$this->show('user/forgotPassword');
+
+ 		$email = $_POST['email'];
+
+ 		if ($userManager->emailExists($email)) {
+				echo "NICE !";
+			}
+
+
+
+	}
+
 	public function Fakedata(){
 		$userManager = new UserManager();
 		$users = 1000;
