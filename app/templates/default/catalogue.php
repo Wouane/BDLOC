@@ -15,7 +15,7 @@
 			</div>
 		</div>
  
- 		<h1>Bonjour <?= $username; ?> !</h1>
+ 		<h1>Bonjour <?= $w_user['username']; ?> !</h1>
  		<input type="submit" value="Se déconnecter">
 		</header>
 

@@ -18,11 +18,8 @@ class UserController extends Controller
 	}
 
 	public function catalogue(){
-		
-		$data[];
-		$data['username'] = $username;
 
-		$this->show('catalogue', $data);
+		$this->show('catalogue');
 	}
 	public function Fakedata(){
 		$userManager = new UserManager();
