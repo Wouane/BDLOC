@@ -1,8 +1,5 @@
 <?php $this->layout('layout_bdloc', ['title' => 'BdLoc']) ?>
-<?php $this->start("header") ?>
-	<!-- HEADER -->
 
-	<?php $this->stop("header") ?>
 	<?php $this->start("main_content") ?>
 <div class="container">
 	<div class="filter">
@@ -90,6 +87,7 @@
 			</fieldset>	
 			</form>
 	</div>
+
 	<div class="results">
 		<!-- Tris et pagination -->
 			<fieldset>
@@ -110,7 +108,8 @@
 				
 				<button>Suivant <i class="fa fa-chevron-right"></i></button>
 			</fieldset>
-	</div>
+	
 	<div class="listcat">Liste</div>
+</div>
 </div>
 <?php $this->stop("main_content") ?>
