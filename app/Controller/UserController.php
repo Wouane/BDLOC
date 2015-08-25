@@ -31,6 +31,8 @@ class UserController extends Controller
 		$phonenumber = "";
 		$zipcode = "";
 
+		$user_name_regex = "/^[\p{L}0-9._-]{2,100}$/u";
+
 
 		if(!empty($_POST))
 		{
@@ -45,19 +47,29 @@ class UserController extends Controller
 			$zipcode = trim(strip_tags($_POST['zipcode']));
 			$phonenumber = trim(strip_tags($_POST['phonenumber']));
 
+
+		// username valide ?
 			if(strlen($username) < 4)
 			{
-				$error = "Votre Pseudo doit comporter 4 lettres minimum";
+				$error = "Votre Pseudo doit comporter 4 lettres minimum !";
+			}
+			if(!preg_match($user_name_regex, $username)) {
+				$error = "Votre Pseudo ne doit pas contenir de caractère spéciaux !";
+			}
+			if ($userManager->usernameExists($username)) {
+				$error = "Ce Pseudo est deja utillisé !";
 			}
 		// Email valide ?
 			if(!filter_var($email, FILTER_VALIDATE_EMAIL))
 			{
-
 				$error = "Email non valide";
+			}
+			if ($userManager->emailExists($email)) {
+				$error = "Cet Email est deja utillisé !";
 			}
 		// ZIPCODE valide
 			if($zipcode <= "75000" || $zipcode >= "75021"){
-				$error = "Vous devez habiter Paris !";
+				$error = "Vous devez habiter Paris pour vous inscrire a notre service !";
 			}
 		// Téléphone valide
 			if(preg_match("/^[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}$/", $phonenumber)) {
@@ -67,6 +79,15 @@ class UserController extends Controller
 		//	2er cihffre du Telephone coresponde a 01,02,03,04,05,06,07,08 ou 09 
 			if(substr($phonenumber, 0,2) < "01" || substr($phonenumber, 0,2) > "09") {
 				$error = "Votre numero de telephone n'es pas dans les normes !";
+			}
+		// verif du MDP -- il doit contenir au moin 1 lettre et 1 chiffre !
+			else {
+				$containsLetter = preg_match('/[a-zA-Z]/', $password);
+				$containsDigit = preg_match('/\d/', $password);
+
+				if (!$containsLetter || !$containsDigit ) {
+					$error = "Veulliez choisir un mot de passe avec au moin une lettre,  et un chiffre !";
+				}
 			}
 	 	// Password identiques ?
 			if($password != $confirm)
