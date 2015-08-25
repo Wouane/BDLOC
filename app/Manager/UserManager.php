@@ -3,7 +3,7 @@
 
 	class UserManager extends \W\Manager\UserManager
 	{
-		public function  Fakedata(){
+		public function Fakedata(){
 			$this->dbh->query("TRUNCATE users;");
 			
 		}
