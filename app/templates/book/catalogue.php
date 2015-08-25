@@ -109,7 +109,17 @@
 				<button>Suivant <i class="fa fa-chevron-right"></i></button>
 			</fieldset>
 	
-	<div class="listcat"></div>
+	<div class="listcat">
+		
+		<?php 
+		//foreach ($books as $book) {
+			//echo "<div class='book'><img src=" . $this->$books['cover'] . "></div>";
+		//
+		debug($books);
+		//}
+
+		 ?>
+	</div>
 </div>
 </div>
 <?php $this->stop("main_content") ?>

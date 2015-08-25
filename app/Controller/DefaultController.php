@@ -20,15 +20,15 @@ class DefaultController extends Controller
 		$this->show('user/login');
 	}
 
-	public function catalogue()
-	{
-		$user = $this->getUser();
-		$bookManager = new BookManager();
-		$books = $bookManager->findAll("cover");
-		debug ($books);
-		//$this->show('catalogue');
-		$this->show('default/catalogue');
-	}
+	// public function catalogue()
+	// {
+	// 	$user = $this->getUser();
+	// 	$bookManager = new BookManager();
+	// 	$books = $bookManager->findAll("cover");
+	// 	debug ($books);
+	// 	//$this->show('catalogue');
+	// 	$this->show('default/catalogue');
+	// }
 
 	public function cart()
 	{
