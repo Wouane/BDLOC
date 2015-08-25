@@ -12,6 +12,6 @@ class BookController extends Controller
 		//debug ($books);
 		//$this->show('catalogue');
 
-		$this->show('default/catalogue',$books);
+		$this->show('book/catalogue',$books);
 	}
 }
