@@ -1,4 +1,4 @@
-<?php $this->layout('layout_bdloc', ['title' => 'Entrer votre adresse Mail !']) ?>
+<?php $this->layout('layout_bdloc_nomenu', ['title' => 'Entrer votre adresse Mail !']) ?>
 
 <?php $this->start('main_content') ?>
 
