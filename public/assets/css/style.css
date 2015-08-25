@@ -20,4 +20,18 @@ body
 	position: relative;
 }
 
-/*=================================================*/
+/*=====================STYLE PAGE HOME.PHP=======================*/
+
+.presentation{
+	border:1px solid #ccc;
+	width:500px;
+	padding:50px;
+	margin:50px auto;
+}
+
+/*=====================STYLE PAGE LAYOUT_BDLOC_NOMENU.PHP=======================*/
+
+.footer-layout-bdloc-nomenu{
+	height:20%;
+	background-color: #ccc;
+}
