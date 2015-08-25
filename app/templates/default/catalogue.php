@@ -21,7 +21,8 @@
 
 	<?php $this->stop("header") ?>
 	<?php $this->start("main_content") ?>
-
+<div class="container">
+	<div class="filter">
 	<!-- Filtres -->
 	
 			<form name="Filtres" id="filtres" onChange="this.form.submit()">
@@ -105,7 +106,8 @@
 
 			</fieldset>	
 			</form>
-
+	</div>
+	<div class="results">
 		<!-- Tris et pagination -->
 			<fieldset>
 				<legend>Résultats</legend>
@@ -124,6 +126,8 @@
 				<button><i class="fa fa-chevron-left"></i> Précédent</button>
 				
 				<button>Suivant <i class="fa fa-chevron-right"></i></button>
-			</fieldset>	
-
+			</fieldset>
+	</div>
+	<div class="listcat">Liste</div>
+</div>
 <?php $this->stop("main_content") ?>
