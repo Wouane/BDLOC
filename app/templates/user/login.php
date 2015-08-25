@@ -1,4 +1,4 @@
-<?php $this->layout('layout_bdloc', ['title' => 'Bienvenue sur la Page de Login !']) ?>
+<?php $this->layout('layout_bdloc', ['title' => 'Login !']) ?>
 
 <?php $this->start('main_content') ?>
 
@@ -14,6 +14,6 @@
 			</div>
 		  <button type="submit" class="btn btn-default">Valider</button>
 		  <div class="warning"><?php echo $error; ?></div>
-		  <div class=""><a href="<?php echo url(); ?>">Mot de passe oublié ?</a></div>
+		  <div class=""><a href="">Mot de passe oublié ?</a></div>
 		</form>	
 <?php $this->stop('main_content') ?>
