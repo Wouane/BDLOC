@@ -15,7 +15,7 @@
 			</div>
 		</div>
  
- 		<h1>Bonjour (username) !</h1> 
+ 		<h1>Bonjour <?= $w_user['username']; ?> !</h1>
  		<input type="submit" value="Se déconnecter">
 		</header>
 
@@ -24,7 +24,7 @@
 
 	<!-- Filtres -->
 	
-			<form name="Filtres">
+			<form name="Filtres" id="filtres" onChange="this.form.submit()">
 			<fieldset>
 				<legend>Filtres</legend>
 				<h1>Catégories</h1>
