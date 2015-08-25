@@ -1,5 +1,25 @@
 <?php $this->layout('layout_bdloc', ['title' => 'BdLoc']) ?>
+<?php $this->start("header") ?>
+	<!-- HEADER -->
 
+		<header>
+		<div class="navigation">
+			<div class="BD">
+				<a href="#"><i class="fa fa-book"></i> Les BDs !</a>
+			</div>
+			<div class="panier">
+				<a href="#"><i class="fa fa-shopping-cart"></i> Mon panier</a>
+			</div>
+			<div class="compte">
+				<a href="#"><i class="fa fa-user"></i> Mon compte</a>
+			</div>
+		</div>
+ 
+ 		<h1>Bonjour <?= $w_user['username']; ?> !</h1>
+ 		<input type="submit" value="Se déconnecter">
+		</header>
+
+	<?php $this->stop("header") ?>
 	<?php $this->start("main_content") ?>
 <div class="container">
 	<div class="filter">
@@ -112,11 +132,11 @@
 	<div class="listcat">
 		
 		<?php 
-		//foreach ($books as $book) {
-			//echo "<div class='book'><img src=" . $this->$books['cover'] . "></div>";
-		//
-		debug($books);
-		//}
+		foreach ($books as $book) {
+			echo "<div class='book'><img src='" . $this->assetUrl("img/couvertures/" . $book['cover']) . "'></div>";
+		
+		//debug($books);
+		}
 
 		 ?>
 	</div>

@@ -9,9 +9,6 @@ class BookController extends Controller
 		$user = $this->getUser();
 		$bookManager = new BookManager();
 		$books = $bookManager->findAll("cover");
-		//debug ($books);
-		//$this->show('catalogue');
-
-		$this->show('book/catalogue',$books);
+		$this->show('book/catalogue',["books"=>$books]);
 	}
 }
