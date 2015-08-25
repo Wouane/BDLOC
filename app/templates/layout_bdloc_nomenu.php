@@ -13,14 +13,8 @@
 			<?= $this->section('main_content') ?>
 		</section>
 
-		<br />
-		<p>==========Footer==========</p>
-		<br />
-
-		<footer>
-			<div class="bas">
-				<p>Facebook | Twitter | Mentions Légales | Contactez-nous </p>
-			</div>
+		<footer class="footer-layout-bdloc-nomenu">
+			<p>Facebook | Twitter | Mentions Légales | Contactez-nous </p>
 		</footer>
 
 	</div>
