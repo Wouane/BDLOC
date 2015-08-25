@@ -35,3 +35,27 @@ body
 	height:20%;
 	background-color: #ccc;
 }
+/*=====================STYLE PAGE CATALOGUE.PHP=======================*/
+.container{
+	width: 100%;
+}
+.filter{
+	float:left;
+	width: 20%;
+	background-color: #984456;
+	padding:10px;
+	margin-right: 2%;
+	margin-left: 2%;
+}
+.results{
+	float: left;
+	width: 76%;
+	background-color:#458871;
+	padding: 5px;
+}
+.listcat{
+	clear: both;
+	width: 76%;
+	background-color: #457822;
+	padding: 20px;
+}

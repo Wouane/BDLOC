@@ -107,6 +107,7 @@
 			</fieldset>	
 			</form>
 	</div>
+
 	<div class="results">
 		<!-- Tris et pagination -->
 			<fieldset>
@@ -127,7 +128,8 @@
 				
 				<button>Suivant <i class="fa fa-chevron-right"></i></button>
 			</fieldset>
-	</div>
+	
 	<div class="listcat">Liste</div>
+</div>
 </div>
 <?php $this->stop("main_content") ?>
