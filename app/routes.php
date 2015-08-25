@@ -27,7 +27,7 @@
 		['GET|POST', '/catalogue/', 'Default#catalogue', 'catalogue'],
 
 		//Page panier de l'utilisateur ----------------------------------------------------------------
-		['GET|POST', '/catalogue/panier/', 'Cart#cart', 'panier'],
+		['GET|POST', '/catalogue/panier/', 'Default#cart', 'panier'],
 
 		//Page contact de l'utilisateur-----------------------------------------------------------------
 		['GET|POST', '/catalogue/contact/', 'Default#contact', 'contact'],
