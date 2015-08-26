@@ -110,6 +110,7 @@
 
 	<div class="results">
 		<!-- Tris et pagination -->
+		<form method="GET">
 			<fieldset>
 				<legend>Résultats</legend>
 				<select name="Trier">
@@ -128,12 +129,12 @@
 				
 				<button>Suivant <i class="fa fa-chevron-right"></i></button>
 			</fieldset>
-	
+		</form>
 	<div class="listcat">
 		
 		<?php 
 		foreach ($books as $book) {
-			echo "<div class='book'><img src='" . $this->assetUrl("img/couvertures/" . $book['cover']) . "'></div>";
+			echo "<div class='book'><img src='" . $this->assetUrl("img/couvertures-medium/" . $book['cover']) . "'></div>";
 		
 		//debug($books);
 		}

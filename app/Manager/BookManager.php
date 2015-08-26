@@ -3,9 +3,15 @@
 
 	class BookManager extends \W\Manager\Manager
 	{
-		public function BookManager()
+		public function getBooks($num)
 		{
-			
+		$sql = "SELECT * FROM $this->table
+				ORDER BY RAND() 
+				LIMIT $num";
+		$sth = $this->dbh->prepare($sql);
+		$sth->execute();
+
+		return $sth->fetchAll();
 			
 		}
 	}
