@@ -21,5 +21,7 @@
 
 	<div>
 		<p>* Champs obligatoire</p>
-	</div>
+	</div>	
+
+	<input type="submit" value="Envoyer">
 </form>

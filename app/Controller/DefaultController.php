@@ -35,5 +35,10 @@ class DefaultController extends Controller
 		$this->show('default/cart');
 	}
 
+	public function contact()
+	{
+		$this->show('default/contact');
+	}
+
 
 }
