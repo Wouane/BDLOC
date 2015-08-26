@@ -20,6 +20,57 @@ body
 	position: relative;
 }
 
+/*=====================STYLE PAGE LAYOUT_BDLOC.PHP=======================*/
+
+.header-bdloc {
+	background-color:#3498db;
+	height:10%;
+	margin-bottom:10px;
+}
+
+#logo {
+	float:left;
+	padding-bottom: 10px;
+}
+	
+	img.logo {
+		border:1px solid blue;
+	}
+
+nav {
+	width:80%;
+}
+	
+	.navigation{
+		border:1px solid blue;
+		width:30%;
+		margin:0 auto;
+		}
+	
+		.navigation li{
+			display:inline-block;
+			padding:5px;
+			}
+	
+			.navigation li a{
+				color:white;
+			}
+	
+.logout {
+	background-color: #2980B9;
+	float:right;
+}
+
+/*=====================STYLE PAGE LAYOUT_BDLOC_NOMENU.PHP=======================*/
+
+.nav-footer{
+	position:fixed;
+	height:20px;
+	background-color: #9B59B6;
+	border:2px solid red;
+	/*violet*/
+}
+
 /*=====================STYLE PAGE HOME.PHP=======================*/
 
 .titre-home {
@@ -43,36 +94,25 @@ body
 			text-align: center;
 			margin:5%;
 		}
-/*=====================STYLE PAGE LAYOUT_BDLOC.PHP=======================*/
+/*=====================STYLE PAGE INSCRIPTION.PHP=======================*/
 
-.header-bdloc {
-	background-color:#3498db;
+fieldset {
+	border:2px solid black;
+	padding:15px;
 }
 
-	.navigation {
-	display:inline-block;
+	legend {
+		margin-left:20px;
 	}
 
-.logout {
-	background-color: #2980B9;
-	float:right;
 
-}
 
-/*=====================STYLE PAGE LAYOUT_BDLOC_NOMENU.PHP=======================*/
-
-.footer-layout-bdloc-nomenu{
-	position: fixed;
-  	bottom: 0;
-  	left: 0;
-  	height: 5%;
-	background-color: #9B59B6;
-	/*violet*/
-}
 
 /*=====================STYLE PAGE CATALOGUE.PHP=======================*/
+
 .main-catalogue{
 	width: 100%;
+	float:right;
 }
 
 .filter{
