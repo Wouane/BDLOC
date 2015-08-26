@@ -3,33 +3,28 @@
 <head>
 	<meta charset="UTF-8">
 	<title><?= $this->e($title) ?></title>
-
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/reset.css') ?>">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="<?= $this->assetUrl('css/style.css') ?>">
 </head>
+
 <body>
 	<header class="header-bdloc">
-		<nav class="navigation">
-			<div class="BD">
-				<a href="#"><i class="fa fa-book"></i> Les BDs !</a>
-			</div>
-			<!-- LIEN PANIER -->
-			<div class="panier"> 
-				<a href="<?= $this->url('panier') ?>" title="panier"><i class="fa fa-shopping-cart"></i> Mon panier</a>
-			</div>
-			<!-- LIEN MON COMPTE -->
-			<div class="compte">
-				<a href="<?= $this->url('profile') ?>" title="profil"><i class="fa fa-user"></i> Mon compte</a>
-			</div>
+		<!-- NAV PRINCIPAL -->
+		<nav>
+			<ul class="navigation">
+				<li><a href="#" title="Accueil"><i class="fa fa-book"></i> Les BDs !</a></li>
+				<li><a href="<?= $this->url('panier') ?>" title="Panier"><i class="fa fa-shopping-cart"></i> Mon panier</a></li>
+				<li><a href="<?= $this->url('profile') ?>" title="profil"><i class="fa fa-user"></i> Mon compte</a></li>
+			</ul>
 		</nav>
-			<!-- ESPACE USER -->
+		<!-- ESPACE USER -->
 		<div class="logout">
   			<h1>Bonjour <?= $w_user['username']; ?> !</h1>
   			<div class="profil-picture">
-  				<p>ICI insertion petite image profil (avatar)</p>
+  				<img src="<?= $this->assetUrl('img/profil_default.jpg') ?>"/>
   			</div>
-  			<!-- DECONNEXION -->
+  		<!-- DECONNEXION -->
  			<input type="submit" value="Déconnexion">
  		</div>
 	</header>

@@ -2,9 +2,8 @@
 
 <?php $this->start("main_content") ?>
 <div class="main-catalogue">
-	<div class="filter">
 	<!-- Filtres -->
-	
+	<div class="filter">
 			<form name="Filtres" id="filtres" onChange="this.form.submit()">
 			<fieldset>
 				<legend>Filtres</legend>
