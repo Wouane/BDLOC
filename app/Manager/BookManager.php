@@ -3,15 +3,19 @@
 
 	class BookManager extends \W\Manager\Manager
 	{
-		public function getBooks($num)
+		public function getBooks($byNumber)
 		{
-		$sql = "SELECT * FROM $this->table
-				ORDER BY RAND() 
-				LIMIT $num";
-		$sth = $this->dbh->prepare($sql);
-		$sth->execute();
-
-		return $sth->fetchAll();
-			
+			if(!empty($_GET))
+			{
+			$byNumber = $_GET['byNumber'];			
+			//$num = $byNumber;
+			$sql = "SELECT * FROM $this->table
+					ORDER BY RAND()
+					-- LEFT JOIN books ON authors.title = books.illustrator
+					LIMIT $byNumber";
+			$sth = $this->dbh->prepare($sql);
+			$sth->execute();
+			return $sth->fetchAll();
+			}
 		}
 	}

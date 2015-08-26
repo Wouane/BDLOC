@@ -5,12 +5,13 @@ use \W\Controller\Controller;
 
 class BookController extends Controller
 {
-	public function catalogue(){
-		$num = 20;
+	public function catalogue()
+	{
+		$byNumber = 20;
 		$bookManager = new BookManager();
 		// $bookManager->BookManager($books);
-		$books = $bookManager->getBooks($num);
-		debug($books);
+		$books = $bookManager->getBooks($byNumber);
+		//debug($books);
 		$this->show('book/catalogue',["books"=>$books]);
 	}
 }

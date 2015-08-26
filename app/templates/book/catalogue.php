@@ -25,7 +25,7 @@
 	<div class="filter">
 	<!-- Filtres -->
 	
-			<form name="Filtres" id="filtres" onChange="this.form.submit()">
+			<form name="Filtres" id="filtres">
 			<fieldset>
 				<legend>Filtres</legend>
 				<h1>Catégories</h1>
@@ -113,13 +113,15 @@
 		<form method="GET">
 			<fieldset>
 				<legend>Résultats</legend>
-				<select name="Trier">
-					<option value="date_ajout">Date d'ajout au catalogue</option>
-					<option value="ordre_alphabetique">Ordre alphabétique</option>
-					<option value="date_publication">Date de publication</option>
+				<select name="byDate" onChange="this.form.submit()" id="byDate">
+					<option selected>Trier</option>
+					<option value="date">Date d'ajout au catalogue</option>
+					<option value="alpha">Ordre alphabétique</option>
+					<option value="publication">Date de publication</option>
 				</select>
 
-				<select>
+				<select name="byNumber" onChange="this.form.submit()" id="byNumber">
+					<option selected>Afficher</option>
 					<option value="20">Afficher 20 résultats</option>
 					<option value="40">Afficher 40 résultats</option>
 					<option value="60">Afficher 60 résultats</option>
@@ -135,7 +137,9 @@
 		<?php 
 		foreach ($books as $book) {
 			echo "<div class='book'><img src='" . $this->assetUrl("img/couvertures-medium/" . $book['cover']) . "'></div>";
-		
+			echo "<div class='book'>" . $book['title'] . " </div>";
+			echo "<div class='book'>" . $book['stock'] . " </div>";
+			echo "<div class='book'>" . $book['stock'] . " </div>";
 		//debug($books);
 		}
 
