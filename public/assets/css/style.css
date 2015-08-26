@@ -11,7 +11,10 @@
 	-moz-box-sizing:border-box;
 	-ms-box-sizing:border-box;
 }
-
+img{
+/*	width: 100%;
+	display: block;*/
+}
 body
 {
 	font:14px;
