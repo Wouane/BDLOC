@@ -6,7 +6,8 @@
         "league/plates": "^3.0",
         "ircmaxell/random-lib": "^1.1",
         "ircmaxell/password-compat": "^1.0",
-        "fzaninotto/faker": "^1.5"
+        "fzaninotto/faker": "^1.5",
+        "phpmailer/phpmailer": "^5.2"
     },
     "autoload": {
         "psr-4": {
