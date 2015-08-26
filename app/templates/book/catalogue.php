@@ -132,19 +132,27 @@
 			</fieldset>
 		</form>
 	<div class="listcat">
+		<?php  
 		
-		<?php 
-		foreach ($books as $book) {
-			echo "<div class='book'><img src='" . $this->assetUrl("img/couvertures-medium/" . $book['cover']) . "'></div>";
-			echo "<div class='book'>" . $book['title'] . " </div>";
-			echo "<div class='book'>" . $book['stock'] . " </div>";
-			echo "<div class='book'>" . $book['firstName'] . " </div>";
-				echo "<div class='book'>" . $book['lastName'] . " </div>";
-		//debug($books);
+			foreach ($books as $book) {
+				$bookie = $this->assetUrl('img/couvertures-medium/'. $book["cover"]);
+				echo "<div class='book'>";
+				echo "<table><tr>";
+				echo "<td>";
+				echo "<td class='info-book'><img src=\"" . $bookie.  "\"></td>";
+				echo "<td><span>" . $book['title'] . "</span></br>";
+				echo "<span>" . $book['stock'] . "</span></br>";
+				echo "<span>" . $book['firstName'] . "</span>";
+				echo "<span> " . $book['lastName'] . "</span>";
+				echo "<div>".$book["stock"]." dispo</div>";
+				echo "<div><button>Plus de détails</button></div>";	
+				echo "<div><button>Panier ?</button></div>";	
+				echo "</td></tr></table>";
+				echo "</div>";
 		}
-
-		 ?>
+			?>
 	</div>
 </div>
 </div>
 <?php $this->stop("main_content") ?>
+
