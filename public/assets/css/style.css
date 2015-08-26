@@ -16,34 +16,37 @@ body
 {
 	font:14px;
 	font-family: 'Open Sans', sans-serif;
-	min-height: 100%;
-	position: relative;
+	margin:0;
 }
 
 /*=====================STYLE PAGE LAYOUT_BDLOC.PHP=======================*/
 
-.header-bdloc {
+header {
+	display:flex;
 	background-color:#3498db;
-	height:10%;
+	height:100px;
 	margin-bottom:10px;
 }
 
 #logo {
-	float:left;
-	padding-bottom: 10px;
-}
+	position: absolute;
+  	left: 0px;
+	}
 	
 	img.logo {
-		border:1px solid blue;
+	border:1px solid blue;
+	display:block;
+	margin-right:10px;
 	}
 
 nav {
-	width:80%;
+	width:75%;
 }
 	
 	.navigation{
 		border:1px solid blue;
-		width:30%;
+		width:35%;
+		padding:20px;
 		margin:0 auto;
 		}
 	
@@ -57,19 +60,43 @@ nav {
 			}
 	
 .logout {
-	background-color: #2980B9;
 	float:right;
-}
+	padding:10px;
+	background-color: #2980B9;
+	}
+
+	.titre-logout {
+		color:white;
+		font-size: 12px;
+	}
+
+	.link-logout {
+		color:white;
+		font-size: 14px;
+		text-decoration: underline;
+	}
 
 /*=====================STYLE PAGE LAYOUT_BDLOC_NOMENU.PHP=======================*/
 
 .nav-footer{
-	position:fixed;
-	height:20px;
+	height:30%;
+	width:100%;
 	background-color: #9B59B6;
-	border:2px solid red;
 	/*violet*/
-}
+	bottom:0;
+	left:0;
+	color:white;
+	
+	}
+
+		.nav-footer li {
+			display:inline-block;
+		}
+
+			.nav-footer li a {
+				color:white;
+			}
+
 
 /*=====================STYLE PAGE HOME.PHP=======================*/
 
@@ -97,7 +124,7 @@ nav {
 /*=====================STYLE PAGE INSCRIPTION.PHP=======================*/
 
 fieldset {
-	border:2px solid black;
+	border:1px solid black;
 	padding:15px;
 }
 
@@ -105,41 +132,42 @@ fieldset {
 		margin-left:20px;
 	}
 
-
-
-
 /*=====================STYLE PAGE CATALOGUE.PHP=======================*/
 
-.main-catalogue{
-	width: 100%;
-	float:right;
+.main {
+	background-color:#F1C40F;
+	border:3px solid red;
+	width:100%;
+	overflow:auto;
+	/*yellow*/
 }
 
-.filter{
-	float:left;
-	width: 15%;
-	background-color: #2ECC71;
-	/*vert fluo*/
-	padding:10px;
-	margin-right: 2%;
-	margin-left: 2%;
-}
-.results{
-	float: left;
-	width: 76%;
-	background-color:#E74C3C;
-	/*rouge*/
-	padding: 5px;
-}
-.listcat{
-	clear: both;
-	width: 76%;
-	background-color: #F39C12;
-	/*orange*/
-	padding: 20px;
-	overflow: auto;
-}
-.book{
-	float: left;
-	margin-right: 20px;
-}
+	.filter{
+		width: 15%;
+		background-color: #2ECC71;
+		/*vert fluo*/
+		padding:10px;
+		min-width: 250px;
+		display:inline-block;
+		
+	}
+	.results{
+		height:100px;
+		width:100%;
+		background-color:#E74C3C;
+		/*rouge*/
+		padding: 5px;
+		min-width: 250px;
+		float:right;
+	}
+	.listcat{
+		width: 76%;
+		background-color: #F39C12;
+		/*orange*/
+		padding: 20px;
+		min-width: 300px;
+		
+	}
+	.book{
+		margin-right: 20px;
+	}
