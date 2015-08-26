@@ -21,7 +21,7 @@
 		['GET|POST', '/change-mot-de-passe/', 'User#changePassword', 'changeMotdepasse'],
 
 		//Page de changement de mot de passe après avoir recu un mail-----------------------------------------------------------	
-		['GET|POST', '/reinitialisation-mot-de-passe/[token]/', 'User#resetPassword', 'resetMotdepasse'],
+		['GET|POST', '/reinitialisation-mot-de-passe/[:token]/', 'User#resetPassword', 'resetMotdepasse'],
 
 		//Paramètres du profil de l'utilisateur -------------------------------------------------------
 		['GET|POST', '/catalogue/profil/parametres', 'User#parameters', 'parametres'],
