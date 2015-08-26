@@ -17,8 +17,11 @@
 
 		//Page de Mot de passe oublié -----------------------------------------------------------------
 		['GET|POST', '/connexion/mot-de-passe-oublie/', 'User#forgotPassword', 'oublieMotdepasse'],
+		//Page de changement de mot de passe depuis Profil-----------------------------------------------------------	
+		['GET|POST', '/change-mot-de-passe/', 'User#changePassword', 'changeMotdepasse'],
+
 		//Page de changement de mot de passe après avoir recu un mail-----------------------------------------------------------	
-		['GET|POST', '/change-mot-de-passe[$id]/', 'User#changePassword', 'changeMoTdepasse'],
+		['GET|POST', '/reinitialisation-mot-de-passe/[token]/', 'User#resetPassword', 'resetMotdepasse'],
 
 		//Paramètres du profil de l'utilisateur -------------------------------------------------------
 		['GET|POST', '/catalogue/profil/parametres', 'User#parameters', 'parametres'],
