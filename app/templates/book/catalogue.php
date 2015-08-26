@@ -142,8 +142,12 @@
 				echo "<td class='info-book'><img src=\"" . $bookie.  "\"></td>";
 				echo "<td><span>" . $book['title'] . "</span></br>";
 				echo "<span>" . $book['stock'] . "</span></br>";
-				echo "<span>" . $book['firstName'] . "</span>";
-				echo "<span> " . $book['lastName'] . "</span>";
+				echo "<span>" . $book['sfirstname'] . "</span>";
+				echo "<span> " . $book['slastname'] . "</span>";
+				echo "<span>" . $book['cfirstname'] . "</span>";
+				echo "<span> " . $book['clastname'] . "</span>";
+				echo "<span>" . $book['ifirstname'] . "</span>";
+				echo "<span> " . $book['ilastname'] . "</span>";
 				echo "<div>".$book["stock"]." dispo</div>";
 				echo "<div><button>Plus de détails</button></div>";	
 				echo "<div><button>Panier ?</button></div>";	
@@ -155,5 +159,5 @@
 	</div>
 </div>
 </div>
-<?php $this->stop("main_content") ?>
+<?php $this->stop("main_content") ?> 
 
