@@ -9,15 +9,15 @@ use \W\Security\AuthentificationManager as AuthentificationManager;
 class UserController extends Controller
 {
 
-	/**
-	 * Page d'accueil par défaut
-	 */
+
+/*==================PAGE D'ACCUEIL PAR DEFAUT===================*/
 	public function home()
 	{
-		/* Afficher la page */
+	/* Afficher la page */
 		$this->show('default/home');
 	}
-	// Affiche forget password
+
+/*==================PAGE FORGOT PASSWORD===================*/
 	public function forgotPassword(){
 		$userManager = new UserManager();
 		$succes = "";
@@ -31,14 +31,14 @@ class UserController extends Controller
 
 	 		$email = $_POST['email'];
 
+	 	// Verif si email existe dans la BDD
 	 		if ($userManager->emailExists($email)) {
 
 					$user = $userManager->getUserByUsernameOrEmail($email);
 
 					$userManager->update(array("token"=>$token),$user['id']);
 				
-
-					// Envois du mail	
+				// Envois du mail	
 					$mail = new \PHPMailer;
 
 					$mail->isSMTP();
@@ -69,8 +69,7 @@ class UserController extends Controller
 					$mail->Body = 'Nous avons bien reçu votre demande de renouvellement de mot de passe <br>
 						pour changer votre mot de passe <a href="http://www.bdloc.dev'.$url.'">Cliquer ici</a>';
 
-						// Help--"http://localhost/tagged_twitter/change_password.php?token='.$randomString.'&email='.$email.'"
-
+				// SI email est bien envoyer
 					if (!$mail->send()) {
 						echo "Mailer Error: " . $mail->ErrorInfo;
 					} else {
@@ -92,12 +91,13 @@ class UserController extends Controller
 		$this->show('user/forgotPassword', $data);
 	}
 
+/*==================PAGE RESET PASSWORD===================*/
 	public function resetPassword()
 	{
 		$userManager = new UserManager();
 		$succes = "";
 		$error = "";
-
+	// On verif si le token de URL est bien celui de la BDD pour trouver le user
 		$sql = "SELECT * FROM users
 			WHERE token = :token";
 
@@ -107,6 +107,7 @@ class UserController extends Controller
 
 		$foundUser = $sth->fetch();
 
+	// Si user pas trouver =  retour sur la home su site 
 		if (empty($foundUser)) {
 			redirectToRoute('home');
 			//die();
@@ -119,6 +120,7 @@ class UserController extends Controller
 		$this->show('user/resetPassword', $data);
 	}
 
+/*==================FAKE DATA===================*/
 	public function Fakedata(){
 		$userManager = new UserManager();
 		$users = 1000;
@@ -155,7 +157,7 @@ class UserController extends Controller
 	}
 
 	//Page profile
-
+/*==================PAGE PROFIL===================*/
 	public function profil()
 	{
 		$userManager = new UserManager();
@@ -260,7 +262,7 @@ class UserController extends Controller
 		$this->show('user/profile', $data);
 	}
 
-// Function d'inscription //
+/*==================PAGE REGISTER===================*/
 	public function register()
 	{
 		$userManager = new UserManager();
@@ -379,7 +381,7 @@ class UserController extends Controller
 		$this->show('user/register', $data);
 	}
 
-// Function de connexion //
+/*==================PAGE LOGIN===================*/
 	public function login()
 	{
 		$am = new AuthentificationManager();
@@ -412,7 +414,7 @@ class UserController extends Controller
 		$data = [];
 		$data['error'] = $error;
 		$data['username'] = $username;
-		/* Afficher la page */
+		// Afficher la page 
 		$this->show('user/login',$data);
 	}
 
