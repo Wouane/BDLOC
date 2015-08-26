@@ -6,9 +6,11 @@ use \W\Controller\Controller;
 class BookController extends Controller
 {
 	public function catalogue(){
-		$user = $this->getUser();
+		$num = 20;
 		$bookManager = new BookManager();
-		$books = $bookManager->findAll("title","DESC");
+		// $bookManager->BookManager($books);
+		$books = $bookManager->getBooks($num);
+		debug($books);
 		$this->show('book/catalogue',["books"=>$books]);
 	}
 }
