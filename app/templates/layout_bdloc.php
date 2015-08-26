@@ -9,7 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="<?= $this->assetUrl('css/style.css') ?>">
 </head>
 <body>
-	<header>
+	<header class="header-bdloc">
 		<nav class="navigation">
 			<div class="BD">
 				<a href="#"><i class="fa fa-book"></i> Les BDs !</a>
@@ -37,11 +37,11 @@
 <hr>
 <br/>
 
-	<div class="container">
+	
 		<section>
 			<?= $this->section('main_content') ?>
 		</section>
-	</div>
+	
 
 <br/>		
 <hr>
