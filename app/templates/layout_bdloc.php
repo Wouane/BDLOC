@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title><?= $this->e($title) ?></title>
-	<link rel="stylesheet" href="<?= $this->assetUrl('css/reset.css') ?>">
+	<!-- <link rel="stylesheet" href="<?= $this->assetUrl('css/reset.css') ?>"> -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="<?= $this->assetUrl('css/style.css') ?>">
 </head>
@@ -13,47 +13,47 @@
 		<!-- HEADER -->
 	<!-- ============= -->
 
-	<header class="header-bdloc">
+	<header>
 		<div id="logo">
 			<img class="logo" src="<?= $this->assetUrl('img/logo-default.png') ?>" alt="logo"/>
 		</div>
 		<!-- NAV PRINCIPAL -->
 		<nav>
 			<ul class="navigation">
-				<li><a href="#" title="Accueil"><i class="fa fa-book"></i> Les BDs !</a></li>
+				<li><a href="<?= $this->url('catalogue') ?>" title="Catalogue"><i class="fa fa-book"></i> Les BDs !</a></li>
 				<li><a href="<?= $this->url('panier') ?>" title="Panier"><i class="fa fa-shopping-cart"></i> Mon panier [ 0 ]</a></li>
 				<li><a href="<?= $this->url('profile') ?>" title="profil"><i class="fa fa-user"></i> Mon compte</a></li>
 			</ul>
 		</nav>
 		<!-- ESPACE USER -->
 		<div class="logout">
-  			<h1>Bonjour <?= $w_user['username']; ?> !</h1>
+  			<h1 class="titre-logout">Bonjour <?= $w_user['username']; ?> !</h1>
   			<div class="profil-picture">
   				<img src="<?= $this->assetUrl('img/profil_default.jpg') ?>"/>
   			</div>
   		<!-- DECONNEXION -->
- 			<a href="<?= $this->url('deconnexion'); ?>" title="deconnexion" >Deconnexion</a> 
+ 			<a class="link-logout" href="<?= $this->url('deconnexion'); ?>" title="deconnexion" >Deconnexion</a> 
  		</div>
 	</header>
 
 	<!-- ============= -->
 		<!--MAIN CONTENT -->
 	<!-- ============= -->
-	
+	<div class="main">
 		<section>
 			<?= $this->section('main_content') ?>
 		</section>
-	
+	</div>
 	<!-- ============= -->
 		<!-- FOOTER -->
 	<!-- ============= -->
 
 		<footer>
 			<ul class="nav-footer">
-				<li><a href="#">Facebook</a></li>
-				<li><a href="#">Twitter</a></li>
-				<li><a href="#">Mentions légales</a></li>
-				<li><a href="#">Contactez-nous</a></li>
+				<li><a href="#">Facebook</a></li> |
+				<li><a href="#">Twitter</a></li> |
+				<li><a href="#">Mentions légales</a></li> |
+				<li><a href="<?= $this->url('contact'); ?>">Contactez-nous</a></li> |
 			</ul>
 		</footer>
 		
