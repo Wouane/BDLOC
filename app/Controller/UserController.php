@@ -418,4 +418,11 @@ class UserController extends Controller
 		$this->show('user/login',$data);
 	}
 
+	public function logout()
+	{
+		$am = new AuthentificationManager();
+		$am->logUserOut();
+		$this->redirectToRoute('home');
+	}
+
 }

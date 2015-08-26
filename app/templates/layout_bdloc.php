@@ -32,7 +32,7 @@
   				<img src="<?= $this->assetUrl('img/profil_default.jpg') ?>"/>
   			</div>
   		<!-- DECONNEXION -->
- 			<input type="submit" value="Déconnexion">
+ 			<a href="<?= $this->url('deconnexion'); ?>" title="deconnexion" >Deconnexion</a> 
  		</div>
 	</header>
 
