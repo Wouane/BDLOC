@@ -19,10 +19,9 @@ class UserController extends Controller
 	}
 	// Affiche forget password
 	public function forgotPassword(){
-
 		$userManager = new UserManager();
-		$error = "";
 		$succes = "";
+		$error = "";
 
 		if (!empty($_POST)) {
 
@@ -63,16 +62,23 @@ class UserController extends Controller
 
 					$mail->Subject = 'Envoyé par PHP !';
 
-					$mail->Body = 'Nous avont bien reçus votre demande de renouvelement de mots de passe <br>
-						pour changer votre mots de passe <a href="<?= $this->url("www.google.com") ?>">Click ici</a>';
+					$app = getApp();
+    				$router = $app->getRouter();
+    				$url = $router->generate("resetMotdepasse", array("token"=>$token));
+
+					$mail->Body = 'Nous avons bien reçu votre demande de renouvellement de mot de passe <br>
+						pour changer votre mot de passe <a href="http://www.bdloc.dev'.$url.'">Cliquer ici</a>';
+
+						// Help--"http://localhost/tagged_twitter/change_password.php?token='.$randomString.'&email='.$email.'"
 
 					if (!$mail->send()) {
 						echo "Mailer Error: " . $mail->ErrorInfo;
 					} else {
 						echo "Message sent!";
 					}
+					$_SESSION['mail_succes'] = "Le mail a bien été Envoyé !";
 					$this->redirectToRoute('oublieMotdepasse');
-					$succes = "Le mail a bien été Envoyé !";
+
 				}
 				else {
 					$error = "Adress Email non trouver !";
@@ -80,10 +86,37 @@ class UserController extends Controller
 		}
 
 		$data = [];
-		$data['error'] = $error;
 		$data['succes'] = $succes;
+		$data['error'] = $error;
 
 		$this->show('user/forgotPassword', $data);
+	}
+
+	public function resetPassword()
+	{
+		$userManager = new UserManager();
+		$succes = "";
+		$error = "";
+
+		$sql = "SELECT * FROM users
+			WHERE token = :token";
+
+		$sth = $dbh->prepare($sql);
+		$sth->bindValue(":token", $_GET['token']);
+		$sth->execute();
+
+		$foundUser = $sth->fetch();
+
+		if (empty($foundUser)) {
+			redirectToRoute('home');
+			//die();
+		}
+
+		$data = [];
+		$data['succes'] = $succes;
+		$data['error'] = $error;
+
+		$this->show('user/resetPassword', $data);
 	}
 
 	public function Fakedata(){
