@@ -1,27 +1,7 @@
 <?php $this->layout('layout_bdloc', ['title' => 'BdLoc']) ?>
-<?php $this->start("header") ?>
-	<!-- HEADER -->
 
-		<header>
-		<div class="navigation">
-			<div class="BD">
-				<a href="#"><i class="fa fa-book"></i> Les BDs !</a>
-			</div>
-			<div class="panier">
-				<a href="#"><i class="fa fa-shopping-cart"></i> Mon panier</a>
-			</div>
-			<div class="compte">
-				<a href="#"><i class="fa fa-user"></i> Mon compte</a>
-			</div>
-		</div>
- 
- 		<h1>Bonjour <?= $w_user['username']; ?> !</h1>
- 		<input type="submit" value="Se déconnecter">
-		</header>
-
-	<?php $this->stop("header") ?>
-	<?php $this->start("main_content") ?>
-<div class="container">
+<?php $this->start("main_content") ?>
+<div class="main-catalogue">
 	<div class="filter">
 	<!-- Filtres -->
 	
@@ -109,7 +89,7 @@
 	</div>
 
 	<div class="results">
-		<!-- Tris et pagination -->
+		<!-- TRIER PAR TYPE -->
 			<fieldset>
 				<legend>Résultats</legend>
 				<select name="Trier">
@@ -117,7 +97,7 @@
 					<option value="ordre_alphabetique">Ordre alphabétique</option>
 					<option value="date_publication">Date de publication</option>
 				</select>
-
+		<!-- TRIER PAR NB DE RESULTATS -->
 				<select>
 					<option value="20">Afficher 20 résultats</option>
 					<option value="40">Afficher 40 résultats</option>
@@ -128,18 +108,17 @@
 				
 				<button>Suivant <i class="fa fa-chevron-right"></i></button>
 			</fieldset>
-	
+	</div>
+	<!-- APPEL DES COVERS -->
 	<div class="listcat">
-		
 		<?php 
 		foreach ($books as $book) {
 			echo "<div class='book'><img src='" . $book['cover'] . "'></div>";
 		
 		//debug($books);
 		}
-
 		 ?>
 	</div>
-</div>
+
 </div>
 <?php $this->stop("main_content") ?>
