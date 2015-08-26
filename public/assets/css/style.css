@@ -22,27 +22,64 @@ body
 
 /*=====================STYLE PAGE HOME.PHP=======================*/
 
-.presentation{
-	border:1px solid #ccc;
-	width:40%;
-	padding:5%;
-	margin:10% auto;
+.titre-home {
+	text-align: center;
+}
+
+.main-home {
+	width:100%;
+	background-color:#ccc;
+}
+
+	.presentation {
+		border:1px solid #000;
+		width:40%;
+		padding:5%;
+		margin:5% auto;
+		background-color:#fff;
+	}
+
+		.presentation-link {
+			text-align: center;
+			margin:5%;
+		}
+/*=====================STYLE PAGE LAYOUT_BDLOC.PHP=======================*/
+
+.header-bdloc {
+	background-color:#3498db;
+}
+
+	.navigation {
+	display:inline-block;
+	}
+
+.logout {
+	background-color: #2980B9;
+	float:right;
+
 }
 
 /*=====================STYLE PAGE LAYOUT_BDLOC_NOMENU.PHP=======================*/
 
 .footer-layout-bdloc-nomenu{
-	height:20%;
-	background-color: #ccc;
+	position: fixed;
+  	bottom: 0;
+  	left: 0;
+  	height: 5%;
+	background-color: #9B59B6;
+	/*violet*/
 }
+
 /*=====================STYLE PAGE CATALOGUE.PHP=======================*/
-.container{
+.main-catalogue{
 	width: 100%;
 }
+
 .filter{
 	float:left;
 	width: 20%;
-	background-color: #984456;
+	background-color: #2ECC71;
+	/*vert fluo*/
 	padding:10px;
 	margin-right: 2%;
 	margin-left: 2%;
@@ -50,15 +87,19 @@ body
 .results{
 	float: left;
 	width: 76%;
-	background-color:#458871;
+	background-color:#E74C3C;
+	/*rouge*/
 	padding: 5px;
 }
 .listcat{
 	clear: both;
 	width: 76%;
-	background-color: #457822;
+	background-color: #F39C12;
+	/*orange*/
 	padding: 20px;
+	overflow: auto;
 }
-.book{float: left;
+.book{
+	float: left;
 	margin-right: 20px;
 }
