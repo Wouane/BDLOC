@@ -45,8 +45,8 @@
 				<input type="password" class="form-control" id="confirm" name="confirm" value="">
 			</div>
 
-		  <button type="submit" class="btn btn-default">Valider</button>
+			 <button type="submit" class="btn btn-default">Valider</button>
 		  <div class="warning"><?php echo $error; ?></div>
-		</form>
+		</form>		
 	
 <?php $this->stop('main_content') ?>
