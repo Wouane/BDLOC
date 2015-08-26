@@ -21,7 +21,7 @@
 
 	<?php $this->stop("header") ?>
 	<?php $this->start("main_content") ?>
-<div class="container">
+<div class="main">
 	<div class="filter">
 	<!-- Filtres -->
 	
@@ -107,7 +107,7 @@
 			</fieldset>	
 			</form>
 	</div>
-
+<div class="maincat">
 	<div class="results">
 		<!-- Tris et pagination -->
 		<form method="GET">
@@ -151,6 +151,7 @@
 				echo "</div>";
 		}
 			?>
+	</div>
 	</div>
 </div>
 </div>

@@ -146,28 +146,40 @@ fieldset {
 		width: 15%;
 		background-color: #2ECC71;
 		/*vert fluo*/
-		padding:10px;
+		padding:0.8em;
 		min-width: 250px;
-		display:inline-block;
+		float: left;
+		
 		
 	}
 	.results{
 		height:100px;
-		width:100%;
+		width:auto;
 		background-color:#E74C3C;
 		/*rouge*/
-		padding: 5px;
+		padding: .3em;
 		min-width: 250px;
-		float:right;
+		/*float:right;*/
+	}
+	.maincat{
+		float: left;
+		width: 85%;
 	}
 	.listcat{
-		width: 76%;
+		width: auto;
 		background-color: #F39C12;
 		/*orange*/
-		padding: 20px;
+		padding: 1.2em;
 		min-width: 300px;
-		
+		float: left;
 	}
 	.book{
-		margin-right: 15px
+		padding: 0.5em;
+		margin: 0.8em;
+		border : 1px solid #ccc;
+		max-width: 400px;
+		float: left;
+	}
+	.info-book img{
+		margin-right: 1em;
 	}
