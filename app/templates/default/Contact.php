@@ -1,4 +1,4 @@
-<form action="contact_handler.php" method="POST">
+<form method="POST">
 	<div>
 		<label for="nom">* Nom complet</label>
 		<input type="text" id="nom">
@@ -11,7 +11,7 @@
 
 	<div>
 		<label for="Objet">* Objet</label>
-		<input type="Objet" id="Objet">
+		<input type="text" id="Objet">
 	</div> 
 
 	<div>
