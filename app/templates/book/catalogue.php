@@ -120,8 +120,7 @@
 					<option value="publication">Date de publication</option>
 				</select>
 
-				<select name="byNumber" onChange="this.form.submit()" id="byNumber">
-					<option selected>Afficher</option>
+				<select name="byNumber" onChange="this.form.submit()" id="byNumber">					
 					<option value="20">Afficher 20 résultats</option>
 					<option value="40">Afficher 40 résultats</option>
 					<option value="60">Afficher 60 résultats</option>
@@ -139,7 +138,8 @@
 			echo "<div class='book'><img src='" . $this->assetUrl("img/couvertures-medium/" . $book['cover']) . "'></div>";
 			echo "<div class='book'>" . $book['title'] . " </div>";
 			echo "<div class='book'>" . $book['stock'] . " </div>";
-			echo "<div class='book'>" . $book['stock'] . " </div>";
+			echo "<div class='book'>" . $book['firstName'] . " </div>";
+				echo "<div class='book'>" . $book['lastName'] . " </div>";
 		//debug($books);
 		}
 

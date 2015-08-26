@@ -5,17 +5,15 @@
 	{
 		public function getBooks($byNumber)
 		{
-			if(!empty($_GET))
-			{
-			$byNumber = $_GET['byNumber'];			
+			$byNumberSelected = 'selected';
 			//$num = $byNumber;
-			$sql = "SELECT * FROM $this->table
+			$sql = "SELECT *
+					FROM $this->table					
+					LEFT JOIN authors ON books.scenarist = authors.id
 					ORDER BY RAND()
-					-- LEFT JOIN books ON authors.title = books.illustrator
 					LIMIT $byNumber";
 			$sth = $this->dbh->prepare($sql);
 			$sth->execute();
 			return $sth->fetchAll();
-			}
 		}
 	}
