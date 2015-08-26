@@ -9,72 +9,72 @@
 				<legend>Filtres</legend>
 				<h1>Catégories</h1>
 
-				<input type="checkbox" name="action" id="action" value="action">
+				<input type="checkbox" name="action" id="action" value="action" checked>
 				<label for="action">Action</label><br />
 
-				<input type="checkbox" name="adulte" id="adulte" value="adulte">
+				<input type="checkbox" name="adulte" id="adulte" value="adulte" checked>
 				<label for="adulte">Adulte</label><br />
 
-				<input type="checkbox" name="aventure" id="aventure" value="aventure">
+				<input type="checkbox" name="aventure" id="aventure" value="aventure" checked>
 				<label for="aventure">Aventure</label><br />
 
-				<input type="checkbox" name="aviation" id="aviation" value="aviation">
+				<input type="checkbox" name="aviation" id="aviation" value="aviation" checked>
 				<label for="aviation">Aviation</label><br />
 
-				<input type="checkbox" name="espionnage" id="espionnage" value="espionnage">
+				<input type="checkbox" name="espionnage" id="espionnage" value="espionnage" checked>
 				<label for="espionnage">Espionnage</label><br />
 
-				<input type="checkbox" name="fantastique" id="fantastique" value="fantastique">
+				<input type="checkbox" name="fantastique" id="fantastique" value="fantastique" checked>
 				<label for="fantastique">Fantastique</label><br />
 
-				<input type="checkbox" name="guerre" id="guerre" value="guerre">
+				<input type="checkbox" name="guerre" id="guerre" value="guerre" checked>
 				<label for="guerre">Guerre</label><br />
 
-				<input type="checkbox" name="heroic_fantasy" id= "heroic_fantasy" value="heroic_fantasy">
+				<input type="checkbox" name="heroic_fantasy" id= "heroic_fantasy" value="heroic_fantasy" checked>
 				<label for="heroic_fantasy">Heroic Fantasy</label><br />
 
-				<input type="checkbox" name="historique" id="historique" value="historique">
+				<input type="checkbox" name="historique" id="historique" value="historique" checked>
 				<label for="historique">Historique</label><br />
 
-				<input type="checkbox" name="humour" id="humour" value="humour">
+				<input type="checkbox" name="humour" id="humour" value="humour" checked>
 				<label for="humour">Humour</label><br />
 
-				<input type="checkbox" name="jeunesse" id="jeunesse" value="jeunesse">
+				<input type="checkbox" name="jeunesse" id="jeunesse" value="jeunesse" checked>
 				<label for="jeunesse">Jeunesse</label><br />
 
-				<input type="checkbox" name="inclassables" id="inclassables" value="inclassables">
+				<input type="checkbox" name="inclassables" id="inclassables" value="inclassables" checked>
 				<label for="inclassables">Inclassables</label><br />
 
-				<input type="checkbox" name="litterature" id="litterature" value="litterature">
+				<input type="checkbox" name="litterature" id="litterature" value="litterature" checked>
 				<label for="litterature">Littérature</label><br />
 
-				<input type="checkbox" name="polar" id="polar" value="polar">
+				<input type="checkbox" name="polar" id="polar" value="polar" checked>
 				<label for="polar">Polar</label><br />
 
-				<input type="checkbox" name="science_fiction" id="science_fiction" value="science_fiction">
+				<input type="checkbox" name="science_fiction" id="science_fiction" value="science_fiction" checked>
 				<label for="science_fiction">Science Fiction</label><br />
 
-				<input type="checkbox" name="sentimental" id="sentimental" value="sentimental">
+				<input type="checkbox" name="sentimental" id="sentimental" value="sentimental" checked>
 				<label for="sentimental">Sentimental</label><br />
 
-				<input type="checkbox" name="sport" id="sport" value="sport">
+				<input type="checkbox" name="sport" id="sport" value="sport" checked>
 				<label for="sport">Sport</label><br />
 
-				<input type="checkbox" name="super_heros" id="super_heros" value="super_heros">
+				<input type="checkbox" name="super_heros" id="super_heros" value="super_heros" checked>
 				<label for="super_heros">Super Héros</label><br />
 
-				<input type="checkbox" name="tranche_de_vie" id="tranche_de_vie" value="tranche_de_vie">
+				<input type="checkbox" name="tranche_de_vie" id="tranche_de_vie" value="tranche_de_vie" checked>
 				<label for="tranche_de_vie">Tranche de vie</label><br />
 
-				<input type="checkbox" name="thriller" id="thriller" value="thriller">
+				<input type="checkbox" name="thriller" id="thriller" value="thriller" checked>
 				<label for="thriller">Thriller</label><br />
 
-				<input type="checkbox" name="western" id="western" value="western">
+				<input type="checkbox" name="western" id="western" value="western" checked>
 				<label for="western">Western</label><br />
 
 				<h1>Disponibilité</h1>
 
-				<input type="checkbox" name="disponibles" id="disponibles" value="disponibles">
+				<input type="checkbox" name="disponibles" id="disponibles" value="disponibles" checked>
 				<label for="disponibles">Disponibles</label><br />
 
 				<input type="checkbox" name="indisponibles" id="indisponibles" value="indisponibles">
@@ -102,9 +102,8 @@
 					<option value="40">Afficher 40 résultats</option>
 					<option value="60">Afficher 60 résultats</option>
 				</select>
-
+		<!-- PAGINATION -->
 				<button><i class="fa fa-chevron-left"></i> Précédent</button>
-				
 				<button>Suivant <i class="fa fa-chevron-right"></i></button>
 			</fieldset>
 	</div>
