@@ -461,4 +461,9 @@ class UserController extends Controller
 		$this->redirectToRoute('home');
 	}
 
+	public function changePassword()
+	{
+		$this->show('user/change_password');
+	}
+
 }

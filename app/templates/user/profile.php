@@ -63,6 +63,7 @@
 		</div>
 	</fieldset>
 
+	<a href="<?= $this->url('changeMotdepasse'); ?>" title="password" >Modifier son mot de passe</a>
 	<button type="submit" class="btn btn-modify">Valider</button>
 	<div><?= $error; ?></div>
 	</fieldset>
