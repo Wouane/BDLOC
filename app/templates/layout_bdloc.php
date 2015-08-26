@@ -20,7 +20,7 @@
 		<!-- NAV PRINCIPAL -->
 		<nav>
 			<ul class="navigation">
-				<li><a href="#" title="Accueil"><i class="fa fa-book"></i> Les BDs !</a></li>
+				<li><a href="<?= $this->url('catalogue') ?>" title="Accueil"><i class="fa fa-book"></i> Les BDs !</a></li>
 				<li><a href="<?= $this->url('panier') ?>" title="Panier"><i class="fa fa-shopping-cart"></i> Mon panier [ 0 ]</a></li>
 				<li><a href="<?= $this->url('profile') ?>" title="profil"><i class="fa fa-user"></i> Mon compte</a></li>
 			</ul>
