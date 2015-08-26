@@ -27,13 +27,8 @@
 	</div>
 
 	<div class="form-modify">
-		<label for ="name">Nom</label>
-		<input name="name" type="text" id="name" class="form_modify" value="<?= $w_user['lastname']; ?>">
-	</div>
-
-	<div class="form-modify">
-		<label for="zipcode">Code postal</label>
-		<input name="zipcode" type="text" id="zipcode" class="form_modify" value="<?= $w_user['zip_code']; ?>">
+		<label for="lastname">Nom</label>
+		<input name="lastname" type="text" id="lastname" class="form_modify" value="<?= $w_user['lastname']; ?>">
 	</div>
 		
 	<div class="form-modify">
@@ -41,11 +36,22 @@
 		<input name="streetnumber" type="text" id="streetnumber" class="form_modify" value="<?= $w_user['street_number']; ?>">
 
 	<div class="form-modify">
-		<label for="adress">Adresse</label>
-		<input name="adress" type="text" id="adress" class="form_modify" value="<?= $w_user['street_name']; ?>">
+		<label for="streetname">Adresse</label>
+		<input name="streetname" type="text" id="streetname" class="form_modify" value="<?= $w_user['street_name']; ?>">
+	</div>
+
+	<div class="form-modify">
+		<label for="zipcode">Code postal</label>
+		<input name="zipcode" type="text" id="zipcode" class="form_modify" value="<?= $w_user['zip_code']; ?>">
+	</div>
+
+	<div class="form-modify">
+		<label for="phonenumber">N° Mobile ou Fixe</label>
+		<input name="phonenumber" type="text" id="phonenumber" class="form_modify" value="<?= $w_user['phone_number']; ?>">
 	</div>
 
 	<button type="submit" class="btn btn-modify">Valider</button>
+	<div><?= $error; ?></div>
 
 	</form>
 

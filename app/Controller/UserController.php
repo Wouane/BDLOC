@@ -158,7 +158,106 @@ class UserController extends Controller
 
 	public function profil()
 	{
-		$this->show('user/profile');
+		$userManager = new UserManager();
+		$error = "";
+		$id = "";
+		$username = "";
+		$email = "";
+		$firstname = "";
+		$lastname = "";
+		$streetnumber = "";
+		$streetname = "";
+		$phonenumber = "";
+		$zipcode = "";
+
+		$user_name_regex = "/^[\p{L}0-9._-]{2,100}$/u";
+
+		if(!empty($_POST))
+		{
+			$user = $this->getUser();
+			$id = $user["id"];
+			$email = trim(strip_tags($_POST['email']));
+			$username = trim(strip_tags($_POST['username']));
+			$firstname = trim(strip_tags($_POST['firstname']));
+			$lastname = trim(strip_tags($_POST['lastname']));
+			$streetnumber = trim(strip_tags($_POST['streetnumber']));
+			$streetname = trim(strip_tags($_POST['streetname']));
+			$zipcode = trim(strip_tags($_POST['zipcode']));
+			$phonenumber = trim(strip_tags($_POST['phonenumber']));
+
+			// username valide ?
+			if(strlen($username) < 4)
+			{
+				$error = "Votre Pseudo doit comporter 4 lettres minimum !";
+			}
+			if(!preg_match($user_name_regex, $username)) {
+				$error = "Votre Pseudo ne doit pas contenir de caractère spéciaux !";
+			}
+			if ($userManager->usernameExists($username)) {
+				$error = "Ce Pseudo est deja utillisé !";
+			}
+
+			// Email valide ?
+			if(!filter_var($email, FILTER_VALIDATE_EMAIL))
+			{
+				$error = "Email non valide";
+			}
+			if ($userManager->emailExists($email)) {
+				$error = "Cet Email est deja utillisé !";
+			}
+
+			// ZIPCODE valide
+			if($zipcode <= "75000" || $zipcode >= "75021"){
+				$error = "Vous devez habiter Paris pour vous inscrire à notre service !";
+			}
+
+			// Téléphone valide
+			if(preg_match("/^[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}$/", $phonenumber)) {
+  				// $phonenumber is valid
+				$error = "Votre numéro de téléphone n'est pas valide !";
+			}
+		//	2er cihffre du Telephone coresponde a 01,02,03,04,05,06,07,08 ou 09 
+			if(substr($phonenumber, 0,2) < "01" || substr($phonenumber, 0,2) > "09") {
+				$error = "Votre numéro de téléphone n'est pas valide !";
+			}
+
+			//si valide...
+			if(empty($error))
+			{
+		//insérer en base
+
+				$modifySubscriber = [
+				"username" 		=> $username,
+				"email" 		=> $email,
+				"firstname" 	=> $firstname,
+				"lastname" 		=> $lastname,
+				"zip_code" 		=> $zipcode,
+				"street_number" => $streetnumber,
+				"street_name" 	=> $streetname,
+				"phone_number" 	=> $phonenumber,
+				"date_modified" => date("Y-m-d H:i:s"),
+				];
+				$userManager = new \Manager\UserManager();
+				$userManager->update($modifySubscriber, $id);
+				$am = new AuthentificationManager();
+				$am->refreshUser();
+			}	
+
+
+		}
+
+		$data = [];
+		$data['error'] = $error;
+		$data['username'] = $username;
+		$data['email'] = $email;
+		$data['firstname'] = $firstname;
+		$data['lastname'] = $lastname;
+		$data['zipcode'] = $zipcode;
+		$data['streetnumber'] = $streetnumber;
+		$data['streetname'] = $streetname;
+		$data['phonenumber'] = $phonenumber;
+		
+		$this->show('user/profile', $data);
 	}
 
 // Function d'inscription //
