@@ -282,6 +282,8 @@ class UserController extends Controller
 				];
 				$userManager = new \Manager\UserManager();
 				$userManager->update($modifySubscriber, $id);
+
+				//Crée une instance et refresh le contenu
 				$am = new AuthentificationManager();
 				$am->refreshUser();
 			}	
