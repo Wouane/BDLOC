@@ -155,6 +155,13 @@ class UserController extends Controller
 	}
 
 
+/*==================Change Password===================*/
+	public function changePassword()
+	{
+		$this->show('user/change_password');
+	}
+
+
 /*==================FAKE DATA===================*/
 	public function Fakedata(){
 		$userManager = new UserManager();
@@ -459,11 +466,6 @@ class UserController extends Controller
 		$am = new AuthentificationManager();
 		$am->logUserOut();
 		$this->redirectToRoute('home');
-	}
-
-	public function changePassword()
-	{
-		$this->show('user/change_password');
 	}
 
 }
