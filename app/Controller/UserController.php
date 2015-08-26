@@ -113,12 +113,53 @@ class UserController extends Controller
 			//die();
 		}
 
+		if (!empty($_POST)) {
+		$password = trim($_POST['password']);
+		$password_confirm = trim($_POST['password_confirm']);
+
+		if (empty($password)) {
+			$error = "Veuilliez renseigner votre Mots de passe !";
+		}
+		elseif ($password !== $password_confirm) {
+			$error = "Vos mots de passe ne conrresponde pas !";
+		}
+		else {	
+			$containsLetter = preg_match('/[a-zA-Z]/', $password);		
+			$containsDigit = preg_match('/\d/', $password);
+			
+			if (!$containsLetter || !$containsDigit) {
+				$error = "Veulliez choisir un mot de passe avec au moin une lettre,  et un chiffre !";
+			}
+		}		
+		if (empty($password_confirm)) {
+			$error = "Veuilliez confirmer votre Mots de passe !";
+		}
+		if (empty($error)) {
+
+			$succes = "Votre Mots de passe a bien été changer !";
+			
+
+			$sql = "UPDATE users
+					SET password = :password
+					WHERE token = :token
+					";
+			$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+			$sth = $dbh->prepare($sql);
+			$sth->bindValue(":password", $hashedPassword);
+			$sth->bindValue(":token", $_GET['token']);
+
+
+			$sth->execute();
+		}
+
 		$data = [];
 		$data['succes'] = $succes;
 		$data['error'] = $error;
 
 		$this->show('user/resetPassword', $data);
+		}
 	}
+
 
 /*==================FAKE DATA===================*/
 	public function Fakedata(){
@@ -363,6 +404,8 @@ class UserController extends Controller
 				];
 				$userManager = new \Manager\UserManager();
 				$userManager->insert($newSubscriber);
+
+				$this->redirectToRoute('catalogue');
 			}				
 
 		}
