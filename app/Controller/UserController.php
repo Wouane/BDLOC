@@ -92,72 +92,66 @@ class UserController extends Controller
 	}
 
 /*==================PAGE RESET PASSWORD===================*/
-	public function resetPassword()
+	public function resetPassword($token)
 	{
 		$userManager = new UserManager();
 		$succes = "";
 		$error = "";
 	// On verif si le token de URL est bien celui de la BDD pour trouver le user
-		$sql = "SELECT * FROM users
-			WHERE token = :token";
-
-		$sth = $dbh->prepare($sql);
-		$sth->bindValue(":token", $_GET['token']);
-		$sth->execute();
-
-		$foundUser = $sth->fetch();
-
+		$foundUser = $userManager->getToken($token);
 	// Si user pas trouver =  retour sur la home su site 
 		if (empty($foundUser)) {
-			redirectToRoute('home');
+			$this->redirectToRoute('home');
 			//die();
 		}
 
+	// Confirmation du Form de reset MDP
 		if (!empty($_POST)) {
-		$password = trim($_POST['password']);
-		$password_confirm = trim($_POST['password_confirm']);
+			$password = trim($_POST['password']);
+			$password_confirm = trim($_POST['password_confirm']);
 
-		if (empty($password)) {
-			$error = "Veuilliez renseigner votre Mots de passe !";
-		}
-		elseif ($password !== $password_confirm) {
-			$error = "Vos mots de passe ne conrresponde pas !";
-		}
-		else {	
-			$containsLetter = preg_match('/[a-zA-Z]/', $password);		
-			$containsDigit = preg_match('/\d/', $password);
-			
-			if (!$containsLetter || !$containsDigit) {
-				$error = "Veulliez choisir un mot de passe avec au moin une lettre,  et un chiffre !";
+			if (empty($password)) {
+				$error = "Veuilliez renseigner votre Mots de passe !";
 			}
-		}		
-		if (empty($password_confirm)) {
-			$error = "Veuilliez confirmer votre Mots de passe !";
+			elseif ($password !== $password_confirm) {
+				$error = "Vos mots de passe ne conrresponde pas !";
+			}
+			else {	
+				$containsLetter = preg_match('/[a-zA-Z]/', $password);		
+				$containsDigit = preg_match('/\d/', $password);
+				
+				if (!$containsLetter || !$containsDigit) {
+					$error = "Veulliez choisir un mot de passe avec au moin une lettre,  et un chiffre !";
+				}
+			}		
+			if (empty($password_confirm)) {
+				$error = "Veuilliez confirmer votre Mots de passe !";
+			}
+			if (empty($error)) {
+	
+			//insérer en base
+				$hash = password_hash($password, PASSWORD_DEFAULT);
+				
+				$id = $foundUser['id'];
+
+				$newPassword = [
+				"password" => $hash,
+				];
+	
+				$userManager = new \Manager\UserManager();
+				$userManager->update($newPassword, $id);	
+				$this->redirectToRoute('connexion');
+	
+				$succes = "Votre Mots de passe a bien été changer !";
+				
+			}
+
 		}
-		if (empty($error)) {
-
-			$succes = "Votre Mots de passe a bien été changer !";
-			
-
-			$sql = "UPDATE users
-					SET password = :password
-					WHERE token = :token
-					";
-			$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-			$sth = $dbh->prepare($sql);
-			$sth->bindValue(":password", $hashedPassword);
-			$sth->bindValue(":token", $_GET['token']);
-
-
-			$sth->execute();
-		}
-
 		$data = [];
 		$data['succes'] = $succes;
 		$data['error'] = $error;
 
-		$this->show('user/resetPassword', $data);
-		}
+		$this->show('user/reset_password', $data);
 	}
 
 
@@ -382,15 +376,12 @@ class UserController extends Controller
 			{
 				$error = "Vos mots de passe doivent être identiques !";
 			}
-
 	 	//si valide...
 			if(empty($error))
 			{
 		//hasher le mot de passe
 				$hash = password_hash($password, PASSWORD_DEFAULT);
-
 		//insérer en base
-
 				$newSubscriber = [
 				"username" 		=> $username,
 				"email" 		=> $email,
