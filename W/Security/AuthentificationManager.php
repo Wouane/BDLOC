@@ -27,7 +27,7 @@ class AuthentificationManager
 		}
 
 		if (password_verify($plainPassword, $foundUser[$app->getConfig('security_password_property')])){
-			return (int) $foundUser['id'];
+			return (int) $foundUser[$app->getConfig('security_id_property')];
 		}
 
 		return 0;
@@ -71,10 +71,12 @@ class AuthentificationManager
 	 */
 	public function refreshUser()
 	{
+		$app = getApp();
 		$userManager = new UserManager();
+		$userManager->setTable( $app->getConfig('security_user_table') );
 		$userFromSession = $this->getLoggedUser();
 		if ($userFromSession){
-			$userFromDb = $userManager->find($userFromSession['id']);
+			$userFromDb = $userManager->find($userFromSession[$app->getConfig('security_id_property')]);
 			if ($userFromDb){
 				$_SESSION["user"] = $userFromDb;
 				return true;
