@@ -16,7 +16,7 @@
 		<legend>Famille</legend>
 		<div class="form-modify">
 			<label for="firstname"><i class="fa fa-street-view"></i> Prénom</label>
-			<input name="firstname"type="text" id="firstname" class="form_modify" value="<?= $w_user['firstname']; ?>">
+			<input name="firstname" type="text" id="firstname" class="form_modify" value="<?= $w_user['firstname']; ?>">
 		</div>
 
 		<div class="form-modify">
