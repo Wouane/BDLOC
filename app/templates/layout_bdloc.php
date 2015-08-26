@@ -9,12 +9,19 @@
 </head>
 
 <body>
+	<!-- ============= -->
+		<!-- HEADER -->
+	<!-- ============= -->
+
 	<header class="header-bdloc">
+		<div id="logo">
+			<img class="logo" src="<?= $this->assetUrl('img/logo-default.png') ?>" alt="logo"/>
+		</div>
 		<!-- NAV PRINCIPAL -->
 		<nav>
 			<ul class="navigation">
 				<li><a href="#" title="Accueil"><i class="fa fa-book"></i> Les BDs !</a></li>
-				<li><a href="<?= $this->url('panier') ?>" title="Panier"><i class="fa fa-shopping-cart"></i> Mon panier</a></li>
+				<li><a href="<?= $this->url('panier') ?>" title="Panier"><i class="fa fa-shopping-cart"></i> Mon panier [ 0 ]</a></li>
 				<li><a href="<?= $this->url('profile') ?>" title="profil"><i class="fa fa-user"></i> Mon compte</a></li>
 			</ul>
 		</nav>
@@ -29,20 +36,25 @@
  		</div>
 	</header>
 
-<hr>
-<br/>
-
+	<!-- ============= -->
+		<!--MAIN CONTENT -->
+	<!-- ============= -->
 	
 		<section>
 			<?= $this->section('main_content') ?>
 		</section>
 	
+	<!-- ============= -->
+		<!-- FOOTER -->
+	<!-- ============= -->
 
-<br/>		
-<hr>
-<br/>
-		<footer class="footer-layout-bdloc-nomenu">
-			<p>Facebook | Twitter | Mentions Légales | Contactez-nous </p>
+		<footer>
+			<ul class="nav-footer">
+				<li><a href="#">Facebook</a></li>
+				<li><a href="#">Twitter</a></li>
+				<li><a href="#">Mentions légales</a></li>
+				<li><a href="#">Contactez-nous</a></li>
+			</ul>
 		</footer>
 		
 	</div>
