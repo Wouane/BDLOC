@@ -1,4 +1,4 @@
-<?php $this->layout('layout_bdloc', ['title' => 'Mot de passe']) ?>
+<?php $this->layout('layout_bdloc_nomenu', ['title' => 'Mot de passe']) ?>
 
 <?php $this->start('main_content'); ?>
 
@@ -16,6 +16,11 @@
 			<div>
 				<?php 
 					echo $error;
+				 ?>
+			</div>
+			<div>
+				<?php 
+					echo $succes;
 				 ?>
 			</div>
 
