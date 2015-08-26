@@ -13,36 +13,36 @@
 	
 	<div class="form-modify">
 		<label for="email">Email</label>
-		<input name="email" type="email" class="form_modify">
+		<input name="email" type="email" class="form_modify" value="<?= $w_user['email']; ?>">
 	</div>
 
 	<div class="form-modify">
 		<label for="username">Pseudo</label>
-		<input name="username" type="text" class="form_modify">
-	</div>
-
-	<div class="form-modify">
-		<label for ="name">Nom</label>
-		<input name="name" type="text" id="name" class="form_modify">
+		<input name="username" type="text" class="form_modify" value="<?= $w_user['username']; ?>">
 	</div>
 
 	<div class="form-modify">
 		<label for="firstname">Prénom</label>
-		<input name="firstname"type="text" id="firstname" class="form_modify">
+		<input name="firstname"type="text" id="firstname" class="form_modify" value="<?= $w_user['firstname']; ?>">
+	</div>
+
+	<div class="form-modify">
+		<label for ="name">Nom</label>
+		<input name="name" type="text" id="name" class="form_modify" value="<?= $w_user['lastname']; ?>">
 	</div>
 
 	<div class="form-modify">
 		<label for="zipcode">Code postal</label>
-		<input name="zipcode" type="text" id="zipcode" class="form_modify">
+		<input name="zipcode" type="text" id="zipcode" class="form_modify" value="<?= $w_user['zip_code']; ?>">
 	</div>
 		
 	<div class="form-modify">
 		<label for="streetnumber">Numéro</label>
-		<input name="streetnumber" type="text" id="streetnumber" class="form_modify">
+		<input name="streetnumber" type="text" id="streetnumber" class="form_modify" value="<?= $w_user['street_number']; ?>">
 
 	<div class="form-modify">
 		<label for="adress">Adresse</label>
-		<input name="adress" type="text" id="adress" class="form_modify">
+		<input name="adress" type="text" id="adress" class="form_modify" value="<?= $w_user['street_name']; ?>">
 	</div>
 
 	<button type="submit" class="btn btn-modify">Valider</button>
