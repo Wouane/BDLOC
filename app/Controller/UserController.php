@@ -21,31 +21,69 @@ class UserController extends Controller
 	public function forgotPassword(){
 
 		$userManager = new UserManager();
+		$error = "";
+		$succes = "";
 
-		$factory = new \RandomLib\Factory;
-		$generator = $factory->getGenerator(new \SecurityLib\Strength(\SecurityLib\Strength::MEDIUM));
- 		$token = $generator->generateString(32, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
+		if (!empty($_POST)) {
 
- 		$email = $_POST['email'];
+			$factory = new \RandomLib\Factory;
+			$generator = $factory->getGenerator(new \SecurityLib\Strength(\SecurityLib\Strength::MEDIUM));
+	 		$token = $generator->generateString(32, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
 
- 		if ($userManager->emailExists($email)) {
-				include 'mailer.php';
-				$_SESSION['mail_succes'] = "Le mail a bien été Envoyé !";
+	 		$email = $_POST['email'];
+
+	 		if ($userManager->emailExists($email)) {
+
+					$user = $userManager->getUserByUsernameOrEmail($email);
+
+					$userManager->update(array("token"=>$token),$user['id']);
 				
-				$user = $userManager->getUserByUsernameOrEmail($email);
 
-				$userManager->update(array("token"=>$token),$user['id']);
+					// Envois du mail	
+					$mail = new \PHPMailer;
 
-				echo "good";
-				$succes = "Le mail a bien été Envoyé !";
-				//redirection apres
-			}
-			else {
-				$error = "Adress Email non trouver !";
-				// redirection 
-			}
+					$mail->isSMTP();
+					$mail->setLanguage('fr');
+					$mail->CharSet = 'UTF-8';
 
-		$this->show('user/forgotPassword');
+					$mail->SMTPDebug = 2;	//0 pour désactiver les infos de débug
+					$mail->Debugoutput = 'html';
+
+					$mail->Host = 'smtp.gmail.com';
+					$mail->Port = 587;
+					$mail->SMTPSecure = 'tls';
+					$mail->SMTPAuth = true;
+					$mail->Username = "thejma666@gmail.com";
+					$mail->Password = "poiuytreza321654987";
+
+					$mail->setFrom('ServiceMessagerie@BDloc', 'Service de Messagerie BDloc');
+					$mail->addAddress($email, $user['username']);
+
+					$mail->isHTML(true); 
+
+					$mail->Subject = 'Envoyé par PHP !';
+
+					$mail->Body = 'Nous avont bien reçus votre demande de renouvelement de mots de passe <br>
+						pour changer votre mots de passe <a href="<?= $this->url("www.google.com") ?>">Click ici</a>';
+
+					if (!$mail->send()) {
+						echo "Mailer Error: " . $mail->ErrorInfo;
+					} else {
+						echo "Message sent!";
+					}
+					$this->redirectToRoute('oublieMotdepasse');
+					$succes = "Le mail a bien été Envoyé !";
+				}
+				else {
+					$error = "Adress Email non trouver !";
+				}
+		}
+
+		$data = [];
+		$data['error'] = $error;
+		$data['succes'] = $succes;
+
+		$this->show('user/forgotPassword', $data);
 	}
 
 	public function Fakedata(){
