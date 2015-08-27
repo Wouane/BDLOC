@@ -5,8 +5,17 @@
 	{
 		public function getBooks($byNumber)
 		{	
+
+			// déclaration des variables ($types de recherches)
+
 			$byNumberSelected = 'selected';
-			//$num = $byNumber;
+
+			// $byType = 'selected';
+			// $byFilter = 'checked';
+			// $byKeywords = '';
+			
+
+			// LA REQUETE NINJA POWA DYNAMIQUE DE LA MORT
 			$sql = "SELECT books.cover, books.title, books.id, books.stock, i.lastName AS ilastname, i.firstName AS ifirstname, s.lastName AS slastname, s.firstName AS sfirstname, c.lastName AS clastname, c.firstName AS cfirstname
 					FROM $this->table					
 					LEFT JOIN authors AS s ON books.scenarist = s.id
@@ -16,24 +25,10 @@
 					LIMIT $byNumber";
 
 
+
+					// LA REQUETE DYNAMIQUE S'EXECUTE UNE SEULE FOIS
 			$sth = $this->dbh->prepare($sql);
 			$sth->execute();			
 			return $sth->fetchAll();
 		}
-
-		public function OrderBy($byType)
-		{
-			$byAlpha = 'selected';
-			$byDateCreated = 'selected';
-			$byDatePublish = 'selected';
-			
-			$sql = "SELECT cover, title
-					FROM books					
-					ORDER BY title ASC";					
-					
-			$sth = $this->dbh->prepare($sql);
-			$sth->execute();			
-			return $sth->fetchAll();
-		}
-
 	}
