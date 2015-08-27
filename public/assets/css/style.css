@@ -30,7 +30,11 @@ header {
 	height:100px;
 	margin: 0 auto;
 	padding-top:20px; 
-	
+}
+
+.user-picture {
+	width:75px;
+
 }
 
 #logo {
