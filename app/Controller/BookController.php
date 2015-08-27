@@ -25,8 +25,7 @@ class BookController extends Controller
 	public function catalogueOrderby()
 	{	
 		$bookManager = new BookManager();
-
-
+		
 		$books = $bookManager->getBooks($byType);
 		$this->show('book/catalogue',["books"=>$books]);
 
