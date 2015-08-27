@@ -4,9 +4,9 @@
 <div class="main">
 	<div class="filter">
 	<!-- Filtres -->
-			<form name="Filtres" id="Filters" method='POST'>
+			<form name="Filtres" id="Filters" method='GET'>
 				<h1>Recherche</h1>
-				<input type="recherche" placeholder="Mots-clefs" name="recherche">
+				<input type="recherche" placeholder="Mots-clefs" name="recherche" id="recherche">
 				
 				<fieldset>
 					<legend>Filtres</legend>

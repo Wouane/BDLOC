@@ -42,6 +42,7 @@ class DefaultController extends Controller
 
 	public function contact()
 	{
+		$result = "";
 		if (!empty($_POST)) {
 		
 		$mail = new \PHPMailer;
@@ -83,13 +84,13 @@ class DefaultController extends Controller
 		//envoie du mail ou error
 		if(!$mail->send())
 			{
-				echo "Mailer Error: " .$mail->ErrorInfo;
+				$result = "Mailer Error: " .$mail->ErrorInfo;
 			}else{
-				echo "Message sent!";
+				$result = "Votre message a bien été envoyé";
 			}
 	}
 		//affiche la page contact
-		$this->show('default/contact');
+		$this->show('default/contact', [ 'result' => $result ]);
 	}
 
 
