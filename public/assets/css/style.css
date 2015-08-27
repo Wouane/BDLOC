@@ -64,6 +64,7 @@ nav {
 	float:right;
 	padding:10px;
 	background-color:#AFB4B7;
+	width:12%;
 	}
 
 	.titre-logout {
@@ -172,11 +173,12 @@ fieldset {
 		background-color:#E74C3C;
 		/*rouge*/
 		margin:0.8em;
-		margin-bottom: 2em;
+		margin-bottom: 10em;
 		padding:0.8em;
 		min-width: 250px;
 		/*float:right;*/
 	}
+
 	.maincat{
 		float: left;
 		width: 80%;
@@ -193,7 +195,7 @@ fieldset {
 		padding: 0.5em;
 		margin: 0.8em;
 		border : 1px solid #AFB4B7;
-		max-width: 400px;
+		max-width: 600px;
 		float: left;
 		background-color: #fff;
 	}
