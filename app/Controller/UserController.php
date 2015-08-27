@@ -273,7 +273,7 @@ class UserController extends Controller
 		$streetname = "";
 		$phonenumber = "";
 		$zipcode = "";
-		$picture="";
+		$pic_name =$this->getUser()['pic_name'];
 
 		$user_name_regex = "/^[\p{L}0-9._-]{2,100}$/u";
 
@@ -426,8 +426,6 @@ class UserController extends Controller
 				
 				$succes = "Votre profil a bien été enregistré !";
 			}	
-
-
 		}
 
 		$data = [];
@@ -441,7 +439,7 @@ class UserController extends Controller
 		$data['streetnumber'] = $streetnumber;
 		$data['streetname'] = $streetname;
 		$data['phonenumber'] = $phonenumber;
-		$data['pic_name'] = $picture;
+		$data['pic_name'] = 'default.png';
 		
 		$this->show('user/profile', $data);
 	}
@@ -459,6 +457,7 @@ class UserController extends Controller
 		$streetname = "";
 		$phonenumber = "";
 		$zipcode = "";
+		$pic_name = "default.png";
 
 		$user_name_regex = "/^[\p{L}0-9._-]{2,100}$/u";
 
@@ -541,6 +540,7 @@ class UserController extends Controller
 				"phone_number" 	=> $phonenumber,
 				"date_modified" => date("Y-m-d H:i:s"),
 				"date_created" 	=> date("Y-m-d H:i:s"),
+				"pic_name"      => $pic_name,
 				];
 				$userManager = new \Manager\UserManager();
 				$userManager->insert($newSubscriber);
@@ -560,6 +560,7 @@ class UserController extends Controller
 		$data['streetnumber'] = $streetnumber;
 		$data['streetname'] = $streetname;
 		$data['phonenumber'] = $phonenumber;
+		$data['pic_name'] = $pic_name;
 
 		$this->show('user/register', $data);
 	}
