@@ -221,7 +221,6 @@ class UserController extends Controller
 		$this->show('user/change_password', $data);
 	}
 
-
 /*==================FAKE DATA===================*/
 	public function Fakedata(){
 		$userManager = new UserManager();
@@ -274,6 +273,7 @@ class UserController extends Controller
 		$streetname = "";
 		$phonenumber = "";
 		$zipcode = "";
+		$picture="";
 
 		$user_name_regex = "/^[\p{L}0-9._-]{2,100}$/u";
 
@@ -290,7 +290,8 @@ class UserController extends Controller
 			$zipcode = trim(strip_tags($_POST['zipcode']));
 			$phonenumber = trim(strip_tags($_POST['phonenumber']));
 
-		// username valide ?
+		//|||||||||||||||||||| username valide ?
+
 			if(strlen($username) < 4)
 			{
 				$error = "Votre Pseudo doit comporter 4 lettres minimum !";
@@ -298,6 +299,7 @@ class UserController extends Controller
 			if(!preg_match($user_name_regex, $username)) {
 				$error = "Votre Pseudo ne doit pas contenir de caractère spéciaux !";
 			}
+
 			else {
 				if ($username !== $_SESSION['user']['username']) {
 					$foundPseudo = $userManager->usernameExists($username);
@@ -307,7 +309,9 @@ class UserController extends Controller
 					}
 				}
 			}
-		// Email valide ?
+
+		//|||||||||||||||| Email valide ?
+
 			if(!filter_var($email, FILTER_VALIDATE_EMAIL))
 			{
 				$error = "Email non valide";
@@ -321,23 +325,82 @@ class UserController extends Controller
 					}
 				}
 			}
-		// ZIPCODE valide
+
+		// |||||||||||||||| IMAGE valide ?
+		if (($_FILES['pic_name']['error']) != 4) {
+
+			$tmpName = $_FILES['pic_name']['tmp_name'];
+
+			if ($_FILES['pic_name']['error'] != 0) {
+				switch ($_FILES['pic_name']['error']) {
+					case 1:
+						$error = "Votre fichier est trop gros !";
+						break;
+					case 4:
+						$error = "Aucun fichier n'a été selectionné !";
+						break;
+					default:
+						$error = "Une erreur est survenue lors du chargement de votre image LOL";
+						break;		
+				}
+			}
+
+			$info = finfo_open(FILEINFO_MIME_TYPE);
+			$mime = finfo_file($info, $tmpName);
+
+			$acceptedMime = array("image/jpeg", "image/gif", "image/png");
+
+			if (!in_array($mime, $acceptedMime)) {
+				$error = "Type de fichier refuser ";
+			}
+			if ($_FILES == $_SESSION['user']['pic_name']) {
+				
+			}
+
+			if (empty($error)) {
+				$extention = pathinfo($_FILES['pic_name']['name'], PATHINFO_EXTENSION);
+				$pic_name = md5($tmpName . time() . uniqid()) . "." . $extention;
+				$destinationDirectory = __DIR__ . "/../../public/assets/img/uploads/";
+
+				if (file_exists($destinationDirectory . "originals/" . $pic_name)) {
+					$pic_name = md5($tmpName . time() . uniqid())  . uniqid() . "." . $extention;
+				}
+				move_uploaded_file($tmpName, $destinationDirectory . "originals/".$pic_name);
+
+				$img = new \abeautifulsite\SimpleImage($destinationDirectory . "originals/".$pic_name);
+				$img->best_fit(600,600)->save($destinationDirectory . "mediums/" . $pic_name);
+				$img->thumbnail(150,150)->save($destinationDirectory . "thumbnails/" . $pic_name);
+		
+			}
+			if (empty($error)) {
+				 $succes ="Bravo !";
+			}
+		}
+
+		//|||||||||||||||| ZIPCODE valide ?
+
 			if($zipcode <= "75000" || $zipcode >= "75021"){
 				$error = "Vous devez habiter Paris pour vous inscrire à notre service !";
 			}
-		// Téléphone valide
+
+		//|||||||||||||||| Téléphone valide ?
+
 			if(preg_match("/^[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}$/", $phonenumber)) {
   				// $phonenumber is valid
 				$error = "Votre numéro de téléphone n'est pas valide !";
 			}
-		//	2er cihffre du Telephone coresponde a 01,02,03,04,05,06,07,08 ou 09 
+
+		//||||||||||||||||	2er cihffre du Telephone coresponde a 01,02,03,04,05,06,07,08 ou 09 
+
 			if(substr($phonenumber, 0,2) < "01" || substr($phonenumber, 0,2) > "09") {
 				$error = "Votre numéro de téléphone n'est pas valide !";
 			}
 
 		//si valide...
+
 			if(empty($error))
 			{
+
 		//insérer en base
 
 				$modifySubscriber = [
@@ -350,7 +413,9 @@ class UserController extends Controller
 				"street_name" 	=> $streetname,
 				"phone_number" 	=> $phonenumber,
 				"date_modified" => date("Y-m-d H:i:s"),
+				"pic_name"		=> $pic_name,
 				];
+
 				$userManager = new \Manager\UserManager();
 				$userManager->update($modifySubscriber, $id);
 
@@ -376,6 +441,7 @@ class UserController extends Controller
 		$data['streetnumber'] = $streetnumber;
 		$data['streetname'] = $streetname;
 		$data['phonenumber'] = $phonenumber;
+		$data['pic_name'] = $picture;
 		
 		$this->show('user/profile', $data);
 	}
