@@ -114,11 +114,11 @@
 		<form method="GET">
 			<fieldset>
 				<legend>Résultats</legend>
-				<select name="byDate" onChange="this.form.submit()" id="byDate">
+				<select name="byDate" onChange="this.form.submit()" id="byType">
 					<option selected>Trier</option>
-					<option value="date">Date d'ajout au catalogue</option>
-					<option value="alpha">Ordre alphabétique</option>
-					<option value="publication">Date de publication</option>
+					<option value="date" id="byDateCreated">Date d'ajout au catalogue</option>
+					<option value="alpha" id="byAlpha">Ordre alphabétique</option>
+					<option value="publication" id="byDatePublish">Date de publication</option>
 				</select>
 
 				<select name="byNumber" onChange="this.form.submit()" id="byNumber">					

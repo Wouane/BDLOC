@@ -37,20 +37,18 @@ header {
 	}
 	
 	img.logo {
-	border:1px solid blue;
 	display:block;
 	margin-right:10px;
 	}
 
 nav {
-	width:75%;
+	width:100%;
 }
 	
 	.navigation{
-		border:1px solid blue;
 		width:35%;
 		padding:20px;
-		margin:0 auto;
+		margin:15px 0 0 280px;
 		}
 	
 		.navigation li{
@@ -113,18 +111,25 @@ nav {
 	background-color:#ccc;
 }
 
-	.presentation {
-		border:1px solid #000;
-		width:40%;
-		padding:5%;
-		margin:5% auto;
-		background-color:#fff;
-	}
+.presentation {
+	border:1px solid #000;
+	width:40%;
+	padding:5%;
+	margin:5% auto;
+	background-color:#fff;
+}
 
-		.presentation-link {
-			text-align: center;
-			margin:5%;
-		}
+.presentation-link {
+	text-align: center;
+	margin:5%;
+}
+.login{
+	position: absolute;
+	width: 500px;
+	top:-500px;
+	opacity: 0.5;
+}
+
 /*=====================STYLE PAGE INSCRIPTION.PHP=======================*/
 
 fieldset {
