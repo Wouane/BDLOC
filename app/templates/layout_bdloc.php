@@ -32,7 +32,9 @@
 		<div class="logout">
   			<h1 class="titre-logout">Bonjour <?= $w_user['username']; ?> !</h1>
   			<div class="profil-picture">
-  				<img src="<?= $this->assetUrl('img/profil_default.jpg') ?>"/>
+  				<img src="<?= $this->assetUrl('img/uploads/thumbnails/' . $w_user['pic_name'])?>" alt="Photo de profil">
+
+  				<!-- <img src="<?= $this->assetUrl('img/profil_default.jpg') ?>"/> -->
   			</div>
   		<!-- DECONNEXION -->
  			<a class="link-logout" href="<?= $this->url('deconnexion'); ?>" title="deconnexion" >Deconnexion</a> 
