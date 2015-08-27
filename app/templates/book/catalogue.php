@@ -1,30 +1,10 @@
 <?php $this->layout('layout_bdloc', ['title' => 'BdLoc']) ?>
-<?php $this->start("header") ?>
-	<!-- HEADER -->
 
-		<header>
-		<div class="navigation">
-			<div class="BD">
-				<a href="#"><i class="fa fa-book"></i> Les BDs !</a>
-			</div>
-			<div class="panier">
-				<a href="#"><i class="fa fa-shopping-cart"></i> Mon panier</a>
-			</div>
-			<div class="compte">
-				<a href="#"><i class="fa fa-user"></i> Mon compte</a>
-			</div>
-		</div>
- 
- 		<h1>Bonjour <?= $w_user['username']; ?> !</h1>
- 		<input type="submit" value="Se déconnecter">
-		</header>
-
-	<?php $this->stop("header") ?>
 	<?php $this->start("main_content") ?>
 <div class="main">
 	<div class="filter">
 	<!-- Filtres -->
-			<form name="Filtres" id="filtres">
+			<form name="Filtres" id="Filters" method='POST'>
 				<h1>Recherche</h1>
 				<input type="recherche" placeholder="Mots-clefs" name="recherche">
 				
@@ -96,7 +76,7 @@
 					<label for="western">Western</label><br />
 				</fieldset>	
 			</form>
-			<form>
+			<form >
 				<fieldset>
 					<legend>Disponibilité</legend>
 	
@@ -114,7 +94,7 @@
 		<form method="GET">
 			<fieldset>
 				<legend>Résultats</legend>
-				<select name="OrderBy" onChange="this.form.submit()" id="Orderby">
+				<select name="byType" onChange="this.form.submit()" id="byType">
 					<option selected>Trier</option>
 					<option value="date" id="byDateCreated">Date d'ajout au catalogue</option>
 					<option value="alpha" id="byAlpha">Ordre alphabétique</option>
