@@ -111,18 +111,25 @@ nav {
 	background-color:#ccc;
 }
 
-	.presentation {
-		border:1px solid #000;
-		width:40%;
-		padding:5%;
-		margin:5% auto;
-		background-color:#fff;
-	}
+.presentation {
+	border:1px solid #000;
+	width:40%;
+	padding:5%;
+	margin:5% auto;
+	background-color:#fff;
+}
 
-		.presentation-link {
-			text-align: center;
-			margin:5%;
-		}
+.presentation-link {
+	text-align: center;
+	margin:5%;
+}
+.login{
+	position: absolute;
+	width: 500px;
+	top:-500px;
+	opacity: 0.5;
+}
+
 /*=====================STYLE PAGE INSCRIPTION.PHP=======================*/
 
 fieldset {
