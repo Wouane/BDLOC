@@ -227,6 +227,7 @@ h1.titre-home {
 	width: 475px;
 	height: 270px;
 	margin-right: 30px;
+	margin-top: -2em;
 	line-height: 1em;
 	padding-top: 60px;
 	font-family: 'Lobster', cursive;	
@@ -244,6 +245,7 @@ h1.titre-home {
 	/*background-repeat: no-repeat;*/
 	width: 475px;
 	height: 270px;
+	color: #AFB4B7;
 	
 }
 .form-group>input {
@@ -259,6 +261,12 @@ h1.titre-home {
 	width: 200px;
 	padding: 10px;
 	border-radius: 5px;
+}
+.cent{
+	color: #FE641E;
+	font-family: 'Open';
+	font-weight: 100;
+	font-size: 3em;
 }
 /*=====================STYLE PAGE INSCRIPTION.PHP=======================*/
 

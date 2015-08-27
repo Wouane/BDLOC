@@ -8,8 +8,8 @@
 				<a href="<?= $this->url('inscription') ?>" title="Abonnement">Abonnez-vous</br> à BDLOC</a>
 			</div>
 			<div class="homewords">
-			BDLOC est un site de location de Bande dessinés
-				réservé aux Parisiens			
+			...la Marie de Paris</br> a décidé de créer un nouveau système de location de BD, bdloc.fr,
+			</br><span class="cent"> 100% en ligne,</span> </br><span class="cent">100% gratuit,</span> </br><span class="cent">100% moderne</span>		
 			</div>
 		</div>
 	</div>
