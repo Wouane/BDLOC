@@ -89,7 +89,10 @@ nav {
 	left:0;
 	color:white;
 	
-	}
+	}	
+		img.palette {
+			width:20%;
+		}
 
 		.nav-footer li {
 			display:inline-block;
@@ -98,6 +101,7 @@ nav {
 			.nav-footer li a {
 				color:white;
 			}
+
 
 
 /*=====================STYLE PAGE HOME.PHP=======================*/
