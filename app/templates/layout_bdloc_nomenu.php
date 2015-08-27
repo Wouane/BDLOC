@@ -16,6 +16,7 @@
 		</section>
 
 		<footer>
+			<img class="palette" src="<?= $this->assetUrl('img/palette.jpg') ?>" alt="palette"/>
 			<ul class="nav-footer">
 				<li><a href="#">Facebook</a></li>
 				<li><a href="#">Twitter</a></li>
