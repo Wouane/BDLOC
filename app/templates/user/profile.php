@@ -8,7 +8,7 @@
 		<legend>Identifiant</legend>
 		<div class="form-modify">
 			<label for="picture">Modifiez votre image :</label>
-			<input type="file" name="pic_name" id="pic_name" value="<?php echo $_SESSION['users']['pic_name']; ?>"/>
+			<input type="file" name="pic_name" id="pic_name"/>
 		</div>
 
 		<div class="form-modify">
