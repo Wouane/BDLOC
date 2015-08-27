@@ -40,23 +40,57 @@ class DefaultController extends Controller
 		$this->show('default/credits');
 	}
 
-	// public function contact()
-	// {
-	// 	if (!empty($_POST)) {
-	// 		# code...
+	public function contact()
+	{
+		if (!empty($_POST)) {
 		
-	// 	$mail = new \PHPMailer();
+		$mail = new \PHPMailer;
 
-	// 	$mail->From = $_POST['email'];
-	// 	$mail->FromName = $_POST['name'];
-	// 	$mail->Subject = $_POST['objet'];
-	// 	$mail->addAddress('bdlocbdloc@gmail.com', 'Admin');
+		//configuration de l'envoi
+		$mail->isSMTP();
+		$mail->setLanguage('fr');
+		$mail->CharSet = 'UTF-8';
 
-	// 	$mail->send();
-	// }
-	
-	// 	$this->show('default/contact');
-	// }
+		//debug
+		$mail->SMTPDebug   = 0;
+		$mail->Debugoutput = 'html';
+
+		//config du serveur smtp
+		$mail->Host = 'smtp.gmail.com';
+		$mail->Port = 587; 
+		$mail->SMTPSecure = 'tls'; 
+		$mail->SMTPAuth = true;
+
+		//Identifiant
+		global $w_config;
+		$smtp_user = $w_config['smtp_user'];
+		$smtp_pass = $w_config['smtp_pass'];
+		$mail->Username = $smtp_user;
+		$mail->Password = $smtp_pass;
+
+		//envoie
+		$mail->From = $_POST['email'];
+		$mail->FromName = $_POST['name'];
+		$mail->Subject = $_POST['subject'];
+		$mail->Body = $_POST['message'];
+
+		//To us
+		$mail->addAddress('bdlocbdloc@gmail.com', 'Admin');
+
+		//mail au format HTML
+		$mail->isHTML(true);
+
+		//envoie du mail ou error
+		if(!$mail->send())
+			{
+				echo "Mailer Error: " .$mail->ErrorInfo;
+			}else{
+				echo "Message sent!";
+			}
+	}
+		//affiche la page contact
+		$this->show('default/contact');
+	}
 
 
 

@@ -1,22 +1,26 @@
+<?php $this->layout('layout_bdloc', ['title' => 'Contactez-nous']) ?>
+
+<?php $this->start('main_content'); ?>
+
 <form method="POST">
 	<div>
-		<label for="nom">* Nom complet</label>
-		<input type="text" id="nom">
+		<label for="name">* Nom complet</label>
+		<input type="text" id="nom" name="name">
 	</div>
 
 	<div>
 		<label for="email">* Adresse email</label>
-		<input type="email" id="email">
+		<input type="email" id="email" name="email">
 	</div>
 
 	<div>
-		<label for="Objet">* Objet</label>
-		<input type="text" id="Objet">
+		<label for="subject">* Objet</label>
+		<input type="text" id="subject" name="subject">
 	</div> 
 
 	<div>
 		<label for="Message">* Message :</label>
-		<textarea id="message"></textarea>
+		<textarea id="message" name="message"></textarea>
 	</div>
 
 	<div>
@@ -25,3 +29,5 @@
 
 	<input type="submit" value="Envoyer">
 </form>
+
+<?php $this->stop('main_content'); ?>

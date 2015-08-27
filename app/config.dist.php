@@ -19,6 +19,10 @@ $w_config = [
 	'security_role_property' => 'role',				//nom de la colonne pour le "role"
 
 	'security_login_route_name' => 'login',			//nom de la route affichant le formulaire de connexion
+
+	'smtp_user' => 'bdlocbdloc@gmail.com',
+	'smtp_pass' => '',
+
 ];
 
 require('routes.php');
