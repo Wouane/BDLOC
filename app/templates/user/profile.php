@@ -5,15 +5,12 @@
 	<h1>Hello <?= $w_user['username']; ?> ! Vous allez modifier vos informations</h1>
 	<form method="POST" enctype="multipart/form-data">
 	<fieldset>
-		<legend>Modifiez les informations générales</legend>
-	<fieldset>
-
+		<legend>Identifiant</legend>
 		<div class="form-modify">
 			<label for="picture">Modifiez votre image :</label>
 			<input type="file" name="pic_name" id="pic_name" value="<?php echo $_SESSION['users']['pic_name']; ?>"/>
 		</div>
 
-		<legend>Famille</legend>
 		<div class="form-modify">
 			<label for="firstname"><i class="fa fa-street-view"></i> Prénom</label>
 			<input name="firstname" type="text" id="firstname" class="form_modify" value="<?= $w_user['firstname']; ?>">
@@ -23,10 +20,7 @@
 			<label for="lastname"><i class="fa fa-street-view"></i> Nom</label>
 			<input name="lastname" type="text" id="lastname" class="form_modify" value="<?= $w_user['lastname']; ?>">
 		</div>
-	</fieldset>
 
-	<fieldset>
-		<legend>Identifiant</legend>
 		<div class="form-modify">
 			<label for="email"><i class="fa fa-envelope-o"></i> Email</label>
 			<input name="email" type="email" class="form_modify" value="<?= $w_user['email']; ?>">
