@@ -1,20 +1,19 @@
-<?php $this->layout('layout_bdloc_nomenu', ['title' => 'Bienvenue sur la page Accueil !']) ?>
+<?php $this->layout('layout_bdloc_home', ['title' => 'Bienvenue sur la page Accueil !']) ?>
 
 
 
 
 <?php $this->start('main_content') ?>
 	<div class="main-home">
-		<div class="login"><?php $this->insert('user/login_insert',['username'=>'','error'=>'']) ?></div>
-		<h1 class="titre-home">Bienvenue sur la page d'Accueil</h1>
-		
-		<div class="presentation">
-			<p>BDLOC est un site de location de Bande dessinés
-			réservé aux Parisiens</p>
-			<br/>
-			<p>Réalisé par D.G | F.M | J.M | A.D</p>
-			<div class="presentation-link">
-				<a href="<?= $this->url('inscription') ?>" title="Abonnement">S'abonner</a> | <button>Connexion</button>
+		<div class="login"><?php $this->insert('user/login_insert',['username'=>'','error'=>'']) ?></div>		
+		<div class="slider"><img src="<?= $this->assetUrl('img/slider/roy-lichtenstein_00249251.jpg') ?>"/></div>
+		<div class="maintop">
+			<div class="subscribe">
+				<a href="<?= $this->url('inscription') ?>" title="Abonnement">Abonnez-vous</br> à BDLOC</a>
+			</div>
+			<div class="homewords">
+			BDLOC est un site de location de Bande dessinés
+				réservé aux Parisiens			
 			</div>
 		</div>
 	</div>

@@ -6,3 +6,7 @@ $(document).ready(function(){
         });
     });
 });
+function onChange(){
+	this.form.submit();
+	//showUser(this.value)
+}

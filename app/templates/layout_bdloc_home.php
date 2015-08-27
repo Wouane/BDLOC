@@ -11,6 +11,16 @@
 	<link rel="stylesheet" type="text/css" href="<?= $this->assetUrl('css/style.css') ?>">
 </head>
 <body>
+	<header>
+		<div id="logo">
+			<a href="<?= $this->url('home') ?>"><img class="logo" src="<?= $this->assetUrl('img/logo-default.png') ?>" alt="logo BDLOC"/></a>
+		</div>
+		<h1 class="titre-home">BDLOC, louer gratuitement vos BD</h1>
+		<!-- LOGIN  -->
+		<div class="btn-login">
+			<a href="#" title="Connexion"><button>Connexion</button></a>
+		</div>
+	</header>
 	<div class="container">
 		<section>
 			<?= $this->section('main_content') ?>

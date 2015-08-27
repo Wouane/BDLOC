@@ -101,7 +101,7 @@
 					<option value="publication" id="byDatePublish">Date de publication</option>
 				</select>
 
-				<select name="byNumber" onchange="showUser(this.value)" id="byNumber">					
+				<select name="byNumber" onChange() id="byNumber">
 					<option value="20">Afficher 20 résultats</option>
 					<option value="40">Afficher 40 résultats</option>
 					<option value="60">Afficher 60 résultats</option>
