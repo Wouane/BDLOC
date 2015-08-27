@@ -2,17 +2,15 @@
 
 <?php $this->start('main_content'); ?>
 
+	<h1>Hello <?= $w_user['username']; ?> ! Vous allez modifier vos informations</h1>
 	<form method="POST" enctype="multipart/form-data">
-	
-	<div class="form-modify">
-		<label for="picture">Modifiez votre image :</label>
-		<input type="file" name="picture" id="picture" />
-	</div>
-
-	
 	<fieldset>
 		<legend>Modifiez les informations générales</legend>
 	<fieldset>
+		<div class="form-modify">
+			<label for="picture">Modifiez votre image :</label>
+			<input type="file" name="picture" id="picture" />
+		</div>
 		<legend>Famille</legend>
 		<div class="form-modify">
 			<label for="firstname"><i class="fa fa-street-view"></i> Prénom</label>
