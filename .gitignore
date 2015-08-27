@@ -1,5 +1,4 @@
 /vendor/
 /app/config.php
 /phpDocumentor.phar
-composer.json
-composer.lock
+/composer.lock

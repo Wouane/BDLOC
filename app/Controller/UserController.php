@@ -157,8 +157,68 @@ class UserController extends Controller
 
 /*==================Change Password===================*/
 	public function changePassword()
-	{
-		$this->show('user/change_password');
+	{	
+		$userManager = new UserManager();
+		$succes = "";
+		$error = "";
+
+		$am = new AuthentificationManager();
+
+		if (!empty($_POST)) {
+			$user = $this->getUser();
+			$password = $_POST['password'];
+			$password_confirm = $_POST['password_confirm'];
+			$old_password = $_POST['old_password'];
+
+			$result = $am->isValidLoginInfo($user['username'], $old_password);
+
+			if($result == 0) {
+				$error = "Entrer votre ancien mot de passe !";
+			}
+
+			if (empty($password)) {
+			$error = "Veuilliez renseigner votre Mots de passe !";
+			}
+			elseif ($password !== $password_confirm) {
+				$error = "Vos mots de passe ne conrresponde pas !";
+			}
+			else {	
+				$containsLetter = preg_match('/[a-zA-Z]/', $password);		
+				$containsDigit = preg_match('/\d/', $password);
+				
+				if (!$containsLetter || !$containsDigit) {
+					$error = "Veulliez choisir un mot de passe avec au moin une lettre,  et un chiffre !";
+				}
+			}		
+			if (empty($password_confirm)) {
+				$error = "Veuilliez confirmer votre Mots de passe !";
+			}
+			if (empty($error)) {
+	
+			//insérer en base
+				$hash = password_hash($password, PASSWORD_DEFAULT);
+				
+				$id = $user['id'];
+
+				$newPassword = [
+				"password" => $hash,
+				];
+	
+				$userManager = new \Manager\UserManager();
+				$userManager->update($newPassword, $id);	
+				//$this->redirectToRoute('profile');
+	
+				$succes = "Votre Mots de passe a bien été changer !";
+				
+			}
+			
+			
+		}
+		$data = [];
+		$data['succes'] = $succes;
+		$data['error'] = $error;
+
+		$this->show('user/change_password', $data);
 	}
 
 
@@ -214,6 +274,8 @@ class UserController extends Controller
 		$phonenumber = "";
 		$zipcode = "";
 
+		$user = $this->getUser();
+
 		$user_name_regex = "/^[\p{L}0-9._-]{2,100}$/u";
 
 		if(!empty($_POST))
@@ -229,6 +291,8 @@ class UserController extends Controller
 			$zipcode = trim(strip_tags($_POST['zipcode']));
 			$phonenumber = trim(strip_tags($_POST['phonenumber']));
 
+			//$result_username = $am->isValidLoginInfo($user['username'], $username);
+
 			// username valide ?
 			if(strlen($username) < 4)
 			{
@@ -237,8 +301,14 @@ class UserController extends Controller
 			if(!preg_match($user_name_regex, $username)) {
 				$error = "Votre Pseudo ne doit pas contenir de caractère spéciaux !";
 			}
-			if ($userManager->usernameExists($username)) {
-				$error = "Ce Pseudo est deja utillisé !";
+			else {
+				if ($username !== $_SESSION['user']['username']) {
+					$foundPseudo = $userManager->usernameExists($username);
+
+					if (!empty($foundPseudo)) {
+						$error = "Ce pseudo est déjà enregistré ici !";
+					}
+				}
 			}
 
 			// Email valide ?
@@ -246,8 +316,14 @@ class UserController extends Controller
 			{
 				$error = "Email non valide";
 			}
-			if ($userManager->emailExists($email)) {
-				$error = "Cet Email est deja utillisé !";
+			else {
+				if ($email !== $_SESSION['user']['email']) {
+					$foundEmail = $userManager->emailExists($email);
+
+					if (!empty($foundEmail)) {
+						$error = "Ce pseudo est déjà enregistré ici !";
+					}
+				}
 			}
 
 			// ZIPCODE valide
@@ -284,9 +360,11 @@ class UserController extends Controller
 				$userManager = new \Manager\UserManager();
 				$userManager->update($modifySubscriber, $id);
 
+				
 				//Crée une instance et refresh le contenu
 				$am = new AuthentificationManager();
 				$am->refreshUser();
+				$succes = "Votre profil a bien été enregistré !";
 			}	
 
 
@@ -294,6 +372,7 @@ class UserController extends Controller
 
 		$data = [];
 		$data['error'] = $error;
+		$data['succes'] = $succes;
 		$data['username'] = $username;
 		$data['email'] = $email;
 		$data['firstname'] = $firstname;

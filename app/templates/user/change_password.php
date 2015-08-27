@@ -18,6 +18,16 @@
 				<label for="password_confirm">Confirmation mot de passe</label>
 				<input type="password" name="password_confirm" id="password_confirm">
 			</div>
+			<div>
+				<?php 
+					echo $error;
+				 ?>
+			</div>
+			<div>
+				<?php 
+					echo $succes;
+				 ?>
+			</div>
 
 			<input type="submit" value="Sauvegarder">
 	</form>
