@@ -264,6 +264,7 @@ class UserController extends Controller
 	{
 		$userManager = new UserManager();
 		$error = "";
+		$succes = "";
 		$id = "";
 		$username = "";
 		$email = "";
@@ -273,8 +274,6 @@ class UserController extends Controller
 		$streetname = "";
 		$phonenumber = "";
 		$zipcode = "";
-
-		$user = $this->getUser();
 
 		$user_name_regex = "/^[\p{L}0-9._-]{2,100}$/u";
 
@@ -291,9 +290,7 @@ class UserController extends Controller
 			$zipcode = trim(strip_tags($_POST['zipcode']));
 			$phonenumber = trim(strip_tags($_POST['phonenumber']));
 
-			//$result_username = $am->isValidLoginInfo($user['username'], $username);
-
-			// username valide ?
+		// username valide ?
 			if(strlen($username) < 4)
 			{
 				$error = "Votre Pseudo doit comporter 4 lettres minimum !";
@@ -310,8 +307,7 @@ class UserController extends Controller
 					}
 				}
 			}
-
-			// Email valide ?
+		// Email valide ?
 			if(!filter_var($email, FILTER_VALIDATE_EMAIL))
 			{
 				$error = "Email non valide";
@@ -325,13 +321,11 @@ class UserController extends Controller
 					}
 				}
 			}
-
-			// ZIPCODE valide
+		// ZIPCODE valide
 			if($zipcode <= "75000" || $zipcode >= "75021"){
 				$error = "Vous devez habiter Paris pour vous inscrire à notre service !";
 			}
-
-			// Téléphone valide
+		// Téléphone valide
 			if(preg_match("/^[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}$/", $phonenumber)) {
   				// $phonenumber is valid
 				$error = "Votre numéro de téléphone n'est pas valide !";
@@ -341,7 +335,7 @@ class UserController extends Controller
 				$error = "Votre numéro de téléphone n'est pas valide !";
 			}
 
-			//si valide...
+		//si valide...
 			if(empty($error))
 			{
 		//insérer en base
@@ -364,6 +358,7 @@ class UserController extends Controller
 				//Crée une instance et refresh le contenu
 				$am = new AuthentificationManager();
 				$am->refreshUser();
+				
 				$succes = "Votre profil a bien été enregistré !";
 			}	
 
