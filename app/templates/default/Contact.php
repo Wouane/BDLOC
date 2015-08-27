@@ -28,6 +28,7 @@
 	</div>	
 
 	<input type="submit" value="Envoyer">
+	<div><?php echo $result; ?></div>
 </form>
 
 <?php $this->stop('main_content'); ?>
