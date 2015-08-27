@@ -9,7 +9,7 @@
         "fzaninotto/faker": "^1.5",
         "phpmailer/phpmailer": "^5.2",
         "abeautifulsite/simpleimage": "^2.5",
-        "abeautifulsite/simpleImage": "^2.5"
+        "abeautifulsite/simpleimage": "^2.5"
     },
     "autoload": {
         "psr-4": {

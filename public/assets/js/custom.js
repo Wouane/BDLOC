@@ -1,5 +1,6 @@
 $(document).ready(function(){
-    $("button").click(function(){
+    $("button").click(function(event){
+    	event.stopPropagation();
         $(".login").animate({
         	top: '165px',
         	opacity: '1',
