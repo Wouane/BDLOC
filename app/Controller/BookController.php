@@ -7,14 +7,26 @@ class BookController extends Controller
 {
 	public function catalogue()
 	{
+		
 		$byNumber = 20;
 		$bookManager = new BookManager();
+
 		if(!empty($_GET['byNumber'])){
 			$byNumber = $_GET['byNumber'];
 		}
 		
 		$books = $bookManager->getBooks($byNumber);
 		//debug($books);
+
+		
 		$this->show('book/catalogue',["books"=>$books]);
+
+
+
+
+
+
+
+
 	}
 }
