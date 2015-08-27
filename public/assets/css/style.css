@@ -21,20 +21,29 @@ body
 	font-family: 'Open Sans', sans-serif;
 	margin:0;
 }
-
+h2{
+	color: #AFB4B7;
+	font-weight: 300;
+	margin-bottom: 1em;
+}
+input[type='text'],input[type='password']{
+	border-radius: 3px;
+	border: 1px solid #FF641E;
+	margin: 3px;
+}
 /*=====================STYLE PAGE LAYOUT_BDLOC.PHP=======================*/
 
 header {
 	/*display:flex;*/
 	background-color:#FF641E;
-	height:100px;
+	height:120px;
 	margin: 0 auto;
-	padding-top:20px; 
+	padding-top:20px;
 	
 }
 
-#logo {
-
+#logo {	
+	position: absolute;
   	margin-left: 20px;
   	width: 16%;
 	}
@@ -67,7 +76,6 @@ nav {
 	float:right;
 	padding:10px;
 	background-color:#AFB4B7;
-	width:12%;
 	}
 
 	.titre-logout {
@@ -106,13 +114,51 @@ display:inline-block;
 	color:#AFB4B7;
 	}
 
-.btn-login{
+.btn-login button{
+	border: none;
+    color: #FFF;
+    width: 10em;
+    background-color: #1C8AF9;
+    padding: 7px;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
 	float: right;
-	
-	width: 16%;
-
+	border-radius: 3px;
+	margin-right: 1em;
+	margin-top: -2em;
 	}
+.btn-login button:hover{
+	background-color: #FFF;
+	color:#1C8AF9;
+	}
+.btn-default{
+	border: none;
+    color: #FFF;
+    width: 10em;
+    background-color: #FE641E;
+    margin-top: 1em;
+	margin-bottom: 1em;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+.btn-default:hover,
+.btn-default:focus,
+.btn-default.focus,
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
 
+    color: #FFF;
+    background-color: #1C8AF9;
+}
+.btn-forgot a{
+	color: #1C8AF9;
+}
+.btn-forgot a:hover{
+	color: #FE641E;
+}
 /*=====================STYLE PAGE HOME.PHP=======================*/
 
 h1.titre-home {
@@ -120,6 +166,8 @@ h1.titre-home {
 	text-align: center;
 	width: 66%;
 	margin: 0 auto;
+	color: #FFF;
+	font-weight: 200;
 }
 
 .main-home {
@@ -141,19 +189,30 @@ h1.titre-home {
 }
 .login{
 	position: absolute;
+	padding-top: 2.5em;
+	left: 25%;
 	width: 500px;
 	top:-500px;
 	opacity: 0.5;
+	width: 50%;
+	height: 30%;
+	background-color: rgba(255, 255, 255, 0.9);
+	text-align: center;	
+	margin:0 auto;
+	border: 3px solid #FE641E;
+	border-radius: 13px;
+
 }
 .slider{
 	width: 100%;
 	height: 400px;
 	overflow: hidden;
+	border-top: 1px solid #FFF;
 }
 
 .slider img {
 	width: 100%;
-	margin-top: 2em;
+	
 }
 .maintop{
 	margin: 2em auto;
@@ -170,9 +229,14 @@ h1.titre-home {
 	margin-right: 30px;
 	line-height: 1em;
 	padding-top: 60px;
-	font-family: 'Lobster', cursive;
+	font-family: 'Lobster', cursive;	
 	font-size: 3vw;
-
+}
+.subscribe a {
+	color: #FE641E;
+}
+.subscribe a:hover{
+	color: #1C8AF9;
 }
 .homewords{
 	display: inline-block;
@@ -220,12 +284,11 @@ fieldset {
 		background-color:#E74C3C;
 		/*rouge*/
 		margin:0.8em;
-		margin-bottom: 10em;
+		margin-bottom: 2em;
 		padding:0.8em;
 		min-width: 250px;
 		/*float:right;*/
 	}
-
 	.maincat{
 		float: left;
 		width: 80%;

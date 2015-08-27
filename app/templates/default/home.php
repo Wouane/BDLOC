@@ -1,8 +1,4 @@
 <?php $this->layout('layout_bdloc_home', ['title' => 'Bienvenue sur la page Accueil !']) ?>
-
-
-
-
 <?php $this->start('main_content') ?>
 	<div class="main-home">
 		<div class="login"><?php $this->insert('user/login_insert',['username'=>'','error'=>'']) ?></div>		
