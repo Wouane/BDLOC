@@ -26,7 +26,7 @@ body
 
 header {
 	display:flex;
-	background-color:#3498db;
+	background-color:#EBEBEB;;
 	height:100px;
 	
 }
@@ -57,13 +57,13 @@ nav {
 			}
 	
 			.navigation li a{
-				color:white;
+				color:#AFB4B7;
 			}
 	
 .logout {
 	float:right;
 	padding:10px;
-	background-color: #2980B9;
+	background-color:#AFB4B7;
 	}
 
 	.titre-logout {
@@ -83,11 +83,11 @@ nav {
 	height:30%;
 	padding:5em;
 	width:100%;
-	background-color: #9B59B6;
-	/*violet*/
+	background-color: #EBEBEB;
+	/*gris clair*/
 	bottom:0;
 	left:0;
-	color:white;
+	color:#AFB4B7;
 	
 	}	
 		img.palette {
@@ -99,7 +99,7 @@ nav {
 		}
 
 			.nav-footer li a {
-				color:white;
+				color:#AFB4B7;
 			}
 
 
@@ -148,7 +148,7 @@ fieldset {
 /*=====================STYLE PAGE CATALOGUE.PHP=======================*/
 
 .main {
-	background-color:#F1C40F;
+	background-color:#fff;
 	width:100%;
 	overflow:auto;
 	/*yellow*/
@@ -156,11 +156,13 @@ fieldset {
 
 	.filter{
 		width: 15%;
-		background-color: #2ECC71;
+		background-color: #1C8AF9;;
 		/*vert fluo*/
 		padding:0.8em;
+		margin:0.8em;
 		min-width: 250px;
 		float: left;
+		border-radius: 10px
 		
 		
 	}
@@ -169,17 +171,19 @@ fieldset {
 		width:auto;
 		background-color:#E74C3C;
 		/*rouge*/
-		padding: .3em;
+		margin:0.8em;
+		margin-bottom: 2em;
+		padding:0.8em;
 		min-width: 250px;
 		/*float:right;*/
 	}
 	.maincat{
 		float: left;
-		width: 85%;
+		width: 80%;
 	}
 	.listcat{
 		width: auto;
-		background-color: #F39C12;
+		background-color: #FE641E;
 		/*orange*/
 		padding: 1.2em;
 		min-width: 300px;
@@ -188,9 +192,10 @@ fieldset {
 	.book{
 		padding: 0.5em;
 		margin: 0.8em;
-		border : 1px solid #ccc;
+		border : 1px solid #AFB4B7;
 		max-width: 400px;
 		float: left;
+		background-color: #fff;
 	}
 	.info-book img{
 		margin-right: 1em;
