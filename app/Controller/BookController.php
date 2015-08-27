@@ -11,6 +11,7 @@ class BookController extends Controller
 		// déclaration des variables
 		$byNumber = 20;
 		// $byType = $_POST['ByType'];
+		//$keyword = "";
 
 
 		// CONDTION DE LA MORT
@@ -18,6 +19,10 @@ class BookController extends Controller
 		if(!empty($_GET['byNumber'])){
 			$byNumber = $_GET['byNumber'];
 		}
+
+		//if (!empty($_GET['recherche'])) {
+		//	$keyword = $_GET['recherche'];
+		//}
 
 		// if(!empty($_GET['byType'])){
 		// 	$byType = $_GET['byType'];
@@ -36,7 +41,7 @@ class BookController extends Controller
 		$bookManager = new BookManager();
 		$books = $bookManager->getBooks($byNumber);
 
-		
+
 
 	}
 }
