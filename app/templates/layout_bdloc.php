@@ -53,7 +53,7 @@
 			<ul class="nav-footer">
 				<li><a href="#">Facebook</a></li> |
 				<li><a href="#">Twitter</a></li> |
-				<li><a href="#">Mentions légales</a></li> |
+				<li><a href="<?= $this->url('mentionsLegales'); ?>">Mentions légales</a></li> |
 				<li><a href="<?= $this->url('contact'); ?>">Contactez-nous</a></li> |
 			</ul>
 		</footer>

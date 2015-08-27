@@ -35,10 +35,30 @@ class DefaultController extends Controller
 		$this->show('default/cart');
 	}
 
-	public function contact()
+	public function credits()
 	{
-		$this->show('default/contact');
+		$this->show('default/credits');
 	}
+
+	// public function contact()
+	// {
+	// 	if (!empty($_POST)) {
+	// 		# code...
+		
+	// 	$mail = new \PHPMailer();
+
+	// 	$mail->From = $_POST['email'];
+	// 	$mail->FromName = $_POST['name'];
+	// 	$mail->Subject = $_POST['objet'];
+	// 	$mail->addAddress('bdlocbdloc@gmail.com', 'Admin');
+
+	// 	$mail->send();
+	// }
+	
+	// 	$this->show('default/contact');
+	// }
+
+
 
 
 }
