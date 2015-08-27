@@ -29,6 +29,9 @@
 		//Page catalogue-------------------------------------------------------------------------------
 		['GET|POST', '/catalogue/', 'Book#catalogue', 'catalogue'],
 
+		//Page search.js-------------------------------------------------------------------------------
+		['GET|POST', '/recherche/', 'Book#search', 'search'],
+
 		//Page panier de l'utilisateur ----------------------------------------------------------------
 		['GET|POST', '/catalogue/panier/', 'Default#cart', 'panier'],
 
@@ -44,7 +47,6 @@
 		['GET|POST', '/inscription/fakedata', 'User#Fakedata', 'fake_data'],
 
 		//Page Mentions légales ----------------------------------------------------------------
-
 		['GET', '/catalogue/mentions-legales/', 'Default#credits', 'mentionsLegales'],
 
 	// ================================================================================================
