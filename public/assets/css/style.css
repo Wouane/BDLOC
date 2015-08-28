@@ -34,60 +34,66 @@ input[type='text'],input[type='password']{
 /*=====================STYLE PAGE LAYOUT_BDLOC.PHP=======================*/
 
 header {
-	/*display:flex;*/
+	display:flex;
+	width:auto;
 	background-color:#FF641E;
 	height:120px;
 	margin: 0 auto;
 	padding-top:20px;
-	
 }
 
-#logo {	
-	position: absolute;
-  	margin-left: 20px;
-  	width: 16%;
-	}
+	#logo {	
+		position: absolute;
+  		margin-left: 20px;
+  		width: 16%;
+		}
 	
-img.logo {
-display:block;
-margin-right:10px;
-}
+			img.logo {
+			display:block;
+			margin-right:10px;
+			}
 
-nav {
-	width:100%;
-}
-	
-.navigation{
-	width:35%;
-	padding:20px;
-	margin:15px 0 0 280px;
+	nav {
+	width:80%;
 	}
 	
-.navigation li{
-	display:inline-block;
-	padding:5px;
-	}
+		.navigation {
+		width:35%;
+		padding:20px;
+		margin:15px 0 0 280px;
+		clear:both;
+		}
+	
+			.navigation li {
+				display:inline-block;
+				padding:5px;
+				}
 
-	.navigation li a{
-		color:#AFB4B7;
-	}
+					.navigation li a {
+						color:white;
+					}
 	
 .logout {
 	float:right;
 	padding:10px;
 	background-color:#AFB4B7;
+	border:1px solid red;
 	}
 
-	.titre-logout {
-		color:white;
-		font-size: 12px;
-	}
+		.titre-logout {
+			color:white;
+			font-size: 12px;
+		}
 
-	.link-logout {
-		color:white;
-		font-size: 14px;
-		text-decoration: underline;
-	}
+		.user-picture {
+			width:75px;
+		}
+
+		.link-logout {
+			color:white;
+			font-size: 12px;
+			text-decoration: underline;
+		}
 
 /*=====================STYLE PAGE LAYOUT_BDLOC_NOMENU.PHP=======================*/
 
