@@ -5,6 +5,13 @@ use \W\Controller\Controller;
 
 class BookController extends Controller
 {
+	public function details($id)
+	{
+		$bm = new BookManager();
+		$details = $bm->find($id);
+		$this->show('book/details', ['book'=> $details]);
+	}
+
 	public function catalogue()
 	{
 		$bookManager = new BookManager();
