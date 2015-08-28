@@ -22,19 +22,22 @@
 		<!-- NAV PRINCIPAL -->
 		<nav>
 			<ul class="navigation">
-				<li><a href="<?= $this->url('catalogue') ?>" title="Catalogue"><i class="fa fa-book"></i> Les BDs !</a></li>
-				<li><a href="<?= $this->url('panier') ?>" title="Panier"><i class="fa fa-shopping-cart"></i> Mon panier [ 0 ]</a></li>
-				<li><a href="<?= $this->url('profile') ?>" title="profil"><i class="fa fa-user"></i> Mon compte</a></li>
+				<li class="link-catalog"><a href="<?= $this->url('catalogue') ?>" title="Catalogue"><i class="fa fa-book"></i> Les BDs !</a></li>
+				<li class="link-panier"><a href="<?= $this->url('panier') ?>" title="Panier"><i class="fa fa-shopping-cart"></i> Mon panier [ 0 ]</a></li>
+				<li class="link-profile"><a href="<?= $this->url('profile') ?>" title="profil"><i class="fa fa-user"></i> Mon compte</a></li>
 			</ul>
 		</nav>
 		<!-- ESPACE USER -->
 		<div class="logout">
-  			<h1 class="titre-logout">Bonjour <?= $w_user['username']; ?> !</h1>
+  			
   			<div class="profil-picture">
   				<img class="user-picture" src="<?= $this->assetUrl('img/uploads/thumbnails/' . $w_user['pic_name'])?>" alt="Photo du profil Utilisateur">
   			</div>
-  		<!-- DECONNEXION -->
- 			<a class="link-logout" href="<?= $this->url('deconnexion'); ?>" title="deconnexion" >Deconnexion</a> 
+  			<div class="text-profile">
+  				<h1 class="titre-logout">Bonjour <?= $w_user['username']; ?> !</h1>
+  				<!-- DECONNEXION -->
+ 				<a class="link-logout" href="<?= $this->url('deconnexion'); ?>" title="deconnexion" >Deconnexion</a> 
+ 			</div>
  		</div>
 	</header>
 
