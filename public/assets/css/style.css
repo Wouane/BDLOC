@@ -340,8 +340,7 @@ fieldset {
 	.info-book img{
 		margin-right: 1em;
 	}
-	.details{
-		opacity: 0.5;
+	.details{		
 		margin: 0 auto;
 		width: 50%;
 		left: 50%;
