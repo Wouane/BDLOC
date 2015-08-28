@@ -543,8 +543,10 @@ class UserController extends Controller
 				"pic_name"      => $pic_name,
 				];
 				$userManager = new \Manager\UserManager();
+				$am = new AuthentificationManager();
+				$am ->LogUserIn($newSubscriber);
 				$userManager->insert($newSubscriber);
-
+			
 				$this->redirectToRoute('catalogue');
 			}				
 
