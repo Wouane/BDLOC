@@ -133,7 +133,7 @@
 				echo "<span> " . $book['ilastname'] . "</span>";
 				echo "<div>".$book["stock"]." dispo</div>";
 				?> 
-				<a href="#" data-featherlight="<?= $this->url('details', ['id'=> $book['id']]) ?> .details">Open ajax content in lightbox</a>
+				<a href="#" data-featherlight="<?= $this->url('details', ['id'=> $book['id']]) ?> .details">Plus de détails</a>
 				
 				<?php
 				// echo "<div><button>Plus de détails</button></div>";	
