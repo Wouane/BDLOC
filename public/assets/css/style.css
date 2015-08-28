@@ -39,7 +39,7 @@ header {
 	background-color:#fff;
 	height:80px;
 	margin: 0 auto;
-	border-bottom:5px solid #1C8AF9;
+	border-bottom:5px solid #FE641E;
 	-webkit-box-shadow: 0px 0px 40px -12px rgba(0,0,0,0.96);
 	-moz-box-shadow: 0px 0px 40px -12px rgba(0,0,0,0.96);
 	box-shadow: 0px 0px 40px -12px rgba(0,0,0,0.96);
@@ -79,7 +79,9 @@ color:#AFB4B7;
 text-transform: uppercase;
 }				
 .navigation li a:hover {
-color:#CCC;
+border-top: 3px solid #FE641E;
+padding-top: 27px;
+color:#FE641E;
 }
 .logout {
 	position:absolute;
