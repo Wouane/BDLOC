@@ -2,7 +2,7 @@
 $('#search').on("keyup", function(){
 	console.log('julien');
 	var search = $('#search').val();
-	if (search.length < 3) {
+	if (search.length < 0) {
 		$('.listcat').html("");
 	}
 	else {
