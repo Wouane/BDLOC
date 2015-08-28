@@ -95,7 +95,7 @@ header {
 			text-decoration: underline;
 		}
 
-/*=====================STYLE PAGE LAYOUT_BDLOC_NOMENU.PHP=======================*/
+/*=====================STYLE PAGE LAYOUT_BDLOC_HOME.PHP=======================*/
 
 .nav-footer{
 	height:30%;
@@ -339,4 +339,9 @@ fieldset {
 	}
 	.info-book img{
 		margin-right: 1em;
+	}
+	.details{
+		opacity: 0.5;
+		margin: 0 auto;
+		width: 50%;
 	}
