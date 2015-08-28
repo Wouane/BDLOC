@@ -110,12 +110,14 @@ color:#CCC;
 
 /*=====================STYLE PAGE LAYOUT_BDLOC_HOME.PHP=======================*/
 
+footer{
+	background-color: #EBEBEB;
+}
+
 .nav-footer{
 	height:30%;
 	padding:5em;
 	width:100%;
-	background-color: #EBEBEB;
-	/*gris clair*/
 	bottom:0;
 	left:0;
 	color:#AFB4B7;
@@ -358,10 +360,18 @@ fieldset {
 		margin-right: 1em;
 	}
 	.details{		
-		margin: 0 auto;
-		width: 50%;
-		left: 50%;
-		top:50%;
-		background-color: #AFB4B7;
-		border: 3px solid #FE641E;
+		overflow: hidden;
+		padding: 5px;
+		/*background-color: #AFB4B7;*/
+		border: 3px solid #1C8AF9;
+	}
+	.text_details{
+		float: left;
+		width: 45%;
+	}
+
+	.img_details{
+		float: left;
+		width:50%;
+		margin-right: 10px;
 	}
