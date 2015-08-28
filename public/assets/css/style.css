@@ -152,6 +152,11 @@ display:inline-block;
 	margin-top: 1.5em;
 
 	}
+.form-group{
+/*	float: left;
+	text-align: right;
+	margin-right: 50%;*/
+}
 .btn-login button:hover{
 	background-color: #FE641E;
 	color:#FFF;
