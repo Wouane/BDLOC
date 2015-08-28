@@ -334,8 +334,6 @@ fieldset {
 	}
 	.listcat{
 		width: auto;
-		background-color: #FE641E;
-		/*orange*/
 		padding: 1.2em;
 		min-width: 300px;
 		float: left;
@@ -343,10 +341,15 @@ fieldset {
 	.book{
 		padding: 0.5em;
 		margin: 0.8em;
-		border : 1px solid #AFB4B7;
-		max-width: 400px;
+		/*border : 2px solid #AFB4B7;*/
+		border-top: 5px solid #1C8AF9;
+		/*border-radius: 3px;*/
+		border-bottom-right-radius: 5px;
+		border-bottom-left-radius: 5px; 
+		width: 600px;
 		float: left;
 		background-color: #fff;
+		box-shadow: 3px 3px 7px #CCC;
 	}
 	.info-book img{
 		margin-right: 1em;
