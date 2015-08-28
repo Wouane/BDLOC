@@ -3,12 +3,13 @@ namespace Controller;
 use \Manager\BookManager;
 use \W\Controller\Controller;
 
-class BookController extends Controller
+class BookController extends Controller 
 {
 	public function details($id)
 	{
 		$bm = new BookManager();
-		$details = $bm->find($id);
+		$details = $bm->getDetails($id);
+		debug($details);
 		$this->show('book/details', ['book'=> $details]);
 	}
 
