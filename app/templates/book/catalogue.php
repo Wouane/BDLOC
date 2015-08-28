@@ -1,6 +1,8 @@
 <?php $this->layout('layout_bdloc', ['title' => 'BdLoc']) ?>
 
 	<?php $this->start("main_content") ?>
+
+
 <div class="main">
 	<div class="filter">
 	<!-- Filtres -->
@@ -131,7 +133,8 @@
 				echo "<span> " . $book['ilastname'] . "</span>";
 				echo "<div>".$book["stock"]." dispo</div>";
 				?> 
-				<a href="<?= $this->url('details', ['id'=> $book['id']]) ?>">Plus de détails</a>
+				<a href="#" data-featherlight="<?= $this->url('details', ['id'=> $book['id']]) ?> .details">Open ajax content in lightbox</a>
+				
 				<?php
 				// echo "<div><button>Plus de détails</button></div>";	
 				echo "<div><button>Panier ?</button></div>";	

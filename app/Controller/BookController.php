@@ -9,7 +9,6 @@ class BookController extends Controller
 	{
 		$bm = new BookManager();
 		$details = $bm->getDetails($id);
-		debug($details);
 		$this->show('book/details', ['book'=> $details]);
 	}
 
