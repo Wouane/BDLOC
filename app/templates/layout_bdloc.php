@@ -17,7 +17,7 @@
 
 	<header>
 		<div id="logo">
-			<a href="<?= $this->url('home') ?>"><img class="logo" src="<?= $this->assetUrl('img/logo-default.png') ?>" alt="logo"/></a>
+			<a href="<?= $this->url('catalogue') ?>"><img class="logo" src="<?= $this->assetUrl('img/logo-default.png') ?>" alt="logo"/></a>
 		</div>
 		<!-- NAV PRINCIPAL -->
 		<nav>
