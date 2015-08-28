@@ -21,10 +21,10 @@
 					LEFT JOIN authors AS s ON books.scenarist = s.id
 					LEFT JOIN authors AS i ON books.illustrator = i.id 
 					LEFT JOIN authors AS c ON books.colorist = c.id
-					LEFT JOIN series AS t ON books.serieId = t.id					
-					WHERE books.title LIKE '%$keyword%' OR c.lastName LIKE '%$keyword%' OR i.lastName LIKE '%$keyword%' OR s.lastName LIKE '%$keyword%'
-					OR c.firstName LIKE '%$keyword%' OR i.firstName LIKE '%$keyword%' OR s.firstName LIKE '%$keyword%'
-					OR t.title LIKE '%$keyword%'
+					LEFT JOIN series AS t ON books.serieId = t.id				
+					WHERE books.title LIKE :keyword OR c.lastName LIKE :keyword OR i.lastName LIKE :keyword OR s.lastName LIKE :keyword
+					OR c.firstName LIKE :keyword OR i.firstName LIKE :keyword OR s.firstName LIKE :keyword
+					OR t.title LIKE :keyword
 					ORDER BY RAND()
 					LIMIT $byNumber";
 
@@ -32,7 +32,9 @@
 
 					// LA REQUETE DYNAMIQUE S'EXECUTE UNE SEULE FOIS
 			$sth = $this->dbh->prepare($sql);
-			$sth->execute();			
+			$sth->bindValue(":keyword", '%'.$keyword.'%');
+			$sth->bindValue(":byNumber", $byNumber);
+			$sth->execute();
 			return $sth->fetchAll();
 		}
 		public function getDetails($id)
