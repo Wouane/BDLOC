@@ -2,7 +2,7 @@
 		<form method="POST" name="register" class="form-content" id="register" novalidate action="<?= $this->url('connexion') ?>">
 			<div class="form-group">
 			    <label for="username"></label>
-			    <input name='username' type="text" class="form-control" id="username" value="<?= $username ?>" placeholder="Votre Pseudo ">
+			    <input name='username' type="text" class="form-control" id="username" value="<?= $username ?>" placeholder="Pseudo ou Email">
 			</div>
 			<div class="form-group">
 			    <label for="password"></label>
