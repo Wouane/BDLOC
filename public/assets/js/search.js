@@ -1,17 +1,22 @@
-$('#recherche').on("keyup", function(){
-	var kw = $('#kw').val();
-	if (kw.length < 3) {
-		$('#result').html("");
+
+$('#search').on("keyup", function(){
+	console.log('julien');
+	var search = $('#search').val();
+	if (search.length < 3) {
+		$('.listcat').html("");
 	}
 	else {
 			$.ajax({
-				"url":"http://localhost/ajax/test.php",
+				//récupère l'url du formulaire
+				"url":$("#filter").attr("action"),
 				"data":{
-					"kw": $("#kw").val()
+					"search": $("#search").val()
 				}
 			}).done(function(response){
-				$('#result').html(response);
+				var content=$(response).find(".listcat")
+				$('.listcat').html(content);
 			});	
 		}
 	
 });
+

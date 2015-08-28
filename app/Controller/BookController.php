@@ -20,9 +20,12 @@ class BookController extends Controller
 			$byNumber = $_GET['byNumber'];
 		}
 
-		//if (!empty($_GET['recherche'])) {
-		//	$keyword = $_GET['recherche'];
-		//}
+		if (!empty($_GET['search'])) {
+			$keyword = $_GET['search'];
+			//debug($keyword);
+		}else{
+			$_GET['search']="";
+		}
 
 		// if(!empty($_GET['byType'])){
 		// 	$byType = $_GET['byType'];

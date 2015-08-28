@@ -6,8 +6,6 @@
 	<link rel="stylesheet" type="text/css" href="<?= $this->assetUrl('css/normalize.css') ?>">
 	<link href='http://fonts.googleapis.com/css?family=Lobster|Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	<script type="text/javascript" src="<?= $this->assetUrl('js/jquery.min.js') ?>"></script>
-	<script type="text/javascript" src="<?= $this->assetUrl('js/custom.js') ?>"></script>
 	<link rel="stylesheet" type="text/css" href="<?= $this->assetUrl('css/style.css') ?>">	
 </head>
 
@@ -71,5 +69,8 @@
 		</footer>
 		
 	</div>
+	<script type="text/javascript" src="<?= $this->assetUrl('js/jquery.min.js') ?>"></script>
+	<script type="text/javascript" src="<?= $this->assetUrl('js/custom.js') ?>"></script>
+	<script type="text/javascript" src="<?= $this->assetUrl('js/search.js') ?>"></script>
 </body>
 </html>

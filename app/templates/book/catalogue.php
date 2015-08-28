@@ -4,9 +4,9 @@
 <div class="main">
 	<div class="filter">
 	<!-- Filtres -->
-			<form name="Filtres" id="Filters" method='GET'>
+			<form name="filtres" id="filters" method='GET' action="<?php echo $this->url('catalogue')?>">
 				<h1>Recherche</h1>
-				<input type="recherche" placeholder="Mots-clefs" name="recherche" id="recherche">
+				<input type="search" placeholder="Mots-clefs" name="search" id="search">
 				
 				<fieldset>
 					<legend>Filtres</legend>
