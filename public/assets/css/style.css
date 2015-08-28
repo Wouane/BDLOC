@@ -34,66 +34,77 @@ input[type='text'],input[type='password']{
 /*=====================STYLE PAGE LAYOUT_BDLOC.PHP=======================*/
 
 header {
-	display:flex;
-	width:auto;
-	background-color:#FF641E;
-	height:120px;
+	width:100%;
+	background-color:#fff;
+	height:80px;
 	margin: 0 auto;
-	padding-top:20px;
+	border-bottom:5px solid #1C8AF9;
+	-webkit-box-shadow: 0px 0px 40px -12px rgba(0,0,0,0.96);
+	-moz-box-shadow: 0px 0px 40px -12px rgba(0,0,0,0.96);
+	box-shadow: 0px 0px 40px -12px rgba(0,0,0,0.96);
 }
 
 	#logo {	
-		position: absolute;
-  		margin-left: 20px;
-  		width: 16%;
+		margin:8px 0 0 25px;
+  		display:inline-block;
+  		width:130px;
+		height:65px;
 		}
 	
 			img.logo {
-			display:block;
-			margin-right:10px;
-			}
+				padding:10px;
+			}	
 
 	nav {
 	width:80%;
+	float:right;
+	margin:25px ;
 	}
 	
 		.navigation {
 		width:35%;
-		padding:20px;
-		margin:15px 0 0 280px;
 		clear:both;
+		color:#AFB4B7
 		}
 	
 			.navigation li {
-				display:inline-block;
 				padding:5px;
+				display:inline-block;
 				}
 
 					.navigation li a {
-						color:white;
-					}
+					color:#AFB4B7;
+					}				
+	
+
+
 	
 .logout {
-	float:right;
-	padding:10px;
-	background-color:#AFB4B7;
-	border:1px solid red;
+	position:absolute;
+	top:0;
+	right:0;
+	width:235px;
+	background-color:#EBEBEB;
 	}
-
-		.titre-logout {
-			color:white;
-			font-size: 12px;
-		}
-
 		.user-picture {
-			width:75px;
+			width:80px;
+			float:left;
 		}
 
-		.link-logout {
-			color:white;
-			font-size: 12px;
-			text-decoration: underline;
+		.text-profile {
+			float:right;
+			margin:10px 35px 0 0;
 		}
+
+			.titre-logout {
+				color:black;
+				font-size: 12px;
+			}		
+			.link-logout {
+				color:black;
+				font-size: 12px;
+				text-decoration: underline;
+			}
 
 /*=====================STYLE PAGE LAYOUT_BDLOC_HOME.PHP=======================*/
 
@@ -296,7 +307,7 @@ fieldset {
 
 	.filter{
 		width: 15%;
-		background-color: #1C8AF9;;
+		background-color: #1C8AF9;
 		/*vert fluo*/
 		padding:0.8em;
 		margin:0.8em;
