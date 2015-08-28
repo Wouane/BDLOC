@@ -29,6 +29,9 @@
 		//Page catalogue-------------------------------------------------------------------------------
 		['GET|POST', '/catalogue/', 'Book#catalogue', 'catalogue'],
 
+		//Page details-------------------------------------------------------------------------------
+		['GET', '/catalogue/details/[i:id]/', 'Book#details', 'details'],
+
 		//Page search.js-------------------------------------------------------------------------------
 		['GET|POST', '/recherche/', 'Book#search', 'search'],
 
