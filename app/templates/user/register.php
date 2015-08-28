@@ -1,4 +1,4 @@
-<?php $this->layout('layout_bdloc_nomenu', ['title' => 'Bienvenue sur la page Inscription !']) ?>
+<?php $this->layout('layout_bdloc_home', ['title' => 'Bienvenue sur la page Inscription !']) ?>
 
 <?php $this->start('main_content') ?>
 
