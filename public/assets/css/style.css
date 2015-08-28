@@ -148,12 +148,13 @@ display:inline-block;
     transition: all .35s;
 	float: right;
 	border-radius: 3px;
-	margin-right: 1em;
-	margin-top: 2em;
+	margin-right: 2em;
+	margin-top: 1.5em;
+
 	}
 .btn-login button:hover{
-	background-color: #FFF;
-	color:#1C8AF9;
+	background-color: #FE641E;
+	color:#FFF;
 	}
 .btn-default{
 	border: none;
@@ -187,9 +188,10 @@ display:inline-block;
 h1.titre-home {
 	font-family: 'lobster';
 	text-align: center;
+	padding-left: 3em;
 	width: 66%;
-	margin: 0 auto;
-	color: #FFF;
+	margin: 15px auto;
+	color: #FE641E;
 	font-weight: 200;
 	float: left;
 }
