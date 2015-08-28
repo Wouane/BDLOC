@@ -131,7 +131,7 @@
 				echo "<span> " . $book['ilastname'] . "</span>";
 				echo "<div>".$book["stock"]." dispo</div>";
 				?> 
-				<a class="btn-details" href="<?= $this->url('details', ['id'=> $book['id']]) ?>">Plus de détails</a>
+				<a href="<?= $this->url('details', ['id'=> $book['id']]) ?>">Plus de détails</a>
 				<?php
 				// echo "<div><button>Plus de détails</button></div>";	
 				echo "<div><button>Panier ?</button></div>";	

@@ -11,8 +11,6 @@ class BookController extends Controller
 		$details = $bm->getDetails($id);
 		debug($details);
 		$this->show('book/details', ['book'=> $details]);
-
-	
 	}
 
 	public function catalogue()
