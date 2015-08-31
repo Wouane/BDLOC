@@ -441,6 +441,13 @@ legend {
 	font-size: .8vw;
 	font-weight: 600;
 }
+li a .fa {
+	color: #1C8AF9;
+	transition:0.5s;
+}
+li a:hover .fa {
+	color: #E74C3C;
+}
 .right-mini>ul{margin-top: 220px;}
 .right-mini>ul li:first-child{	
 	color: #1C8AF9;
