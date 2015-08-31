@@ -1,7 +1,7 @@
 <?php $this->layout('layout_bdloc_home', ['title' => 'Bienvenue sur la page Inscription !']) ?>
 
 <?php $this->start('main_content') ?>
-
+<h1>Inscription</h1>
 	<h2>Inscrivez-vous</h2>
 		<form method="POST" name="register" id="register">
 			<fieldset>

@@ -1,7 +1,7 @@
-<?php $this->layout('layout_bdloc_nomenu', ['title' => 'Entrer votre adresse Mail !']) ?>
+<?php $this->layout('layout_bdloc', ['title' => 'Entrer votre adresse Mail !']) ?>
 
 <?php $this->start('main_content') ?>
-
+<h1>Changez votre mot de passe</h1>
 <form method="POST" action="">
 		<h2>Mots de passe Oublier ?</h2>
 		<p class="forget-text">Entrer votre adresse Email pour recevoir un mail et changer votre mots de passe</p>
