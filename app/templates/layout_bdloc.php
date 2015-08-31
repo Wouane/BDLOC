@@ -3,12 +3,18 @@
 <head>
 	<meta charset="UTF-8">
 	<title><?= $this->e($title) ?></title>
+	<!-- LIGHTBOX PLUGGIN -->
 	<link href="//cdn.rawgit.com/noelboss/featherlight/1.3.3/release/featherlight.min.css" type="text/css" rel="stylesheet" />
-	<link rel="stylesheet" type="text/css" href="<?= $this->assetUrl('css/normalize.css') ?>">
+	<!-- TYPOGRAPHIES -->
 	<link href='http://fonts.googleapis.com/css?family=Lobster|Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+	<!-- FONT AWESOME -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="<?= $this->assetUrl('css/reset.css') ?>">
+	<link rel="stylesheet" type="text/css" href="<?= $this->assetUrl('css/normalize.css') ?>">
 	<link rel="stylesheet" type="text/css" href="<?= $this->assetUrl('css/style.css') ?>">	
+	<link rel="stylesheet" type="text/css" href="<?= $this->assetUrl('css/style-tabs.css') ?>">
 </head>
 
 <body>
@@ -74,13 +80,17 @@
 		</footer>
 		
 	</div>
+	<!-- jQUERY -->
 	<script type="text/javascript" src="<?= $this->assetUrl('js/jquery.min.js') ?>"></script>
+	<!-- JQUERY CUSTOM PLUGGIN -->
 	<script type="text/javascript" src="<?= $this->assetUrl('js/custom.js') ?>"></script>
+	<!-- AJAX RECHERCHE -->
 	<script type="text/javascript" src="<?= $this->assetUrl('js/search.js') ?>"></script>
-	<script src="//code.jquery.com/jquery-latest.js"></script>
-	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
-  	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-
+	<!-- JS TABS PROFILE -->
+	<script type="text/javascript" src="<?= $this->assetUrl('js/main.js') ?>"></script>
+	<!-- LIGHTBOX SCRIPT -->
 	<script src="//cdn.rawgit.com/noelboss/featherlight/1.3.3/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+	<!-- ADD MODERNIZR for responsive TABS -->
+	<script src="<?= $this->assetUrl('js/modernizr.js') ?>"></script>
 </body>
 </html>

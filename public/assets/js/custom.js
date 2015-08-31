@@ -38,9 +38,3 @@ $(function() {
     });
 });
 
-//page profil multi tabs
- $(function() {
-    $( "#tabs" ).tabs({
-      event: "mouseover"
-    });
-  });
