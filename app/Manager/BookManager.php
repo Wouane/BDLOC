@@ -15,6 +15,9 @@
 			// $byKeywords = '';
 			$keyword = $_GET['search'];
 
+			//$start = 0;
+
+
 			// LA REQUETE NINJA POWA DYNAMIQUE DE LA MORT
 			$sql = "SELECT t.title AS ttitle, books.cover, books.title, books.id, books.stock, i.lastName AS ilastname, i.firstName AS ifirstname, s.lastName AS slastname, s.firstName AS sfirstname, c.lastName AS clastname, c.firstName AS cfirstname
 					FROM $this->table					
@@ -25,8 +28,8 @@
 					WHERE books.title LIKE :keyword OR c.lastName LIKE :keyword OR i.lastName LIKE :keyword OR s.lastName LIKE :keyword
 					OR c.firstName LIKE :keyword OR i.firstName LIKE :keyword OR s.firstName LIKE :keyword
 					OR t.title LIKE :keyword					
-					ORDER BY RAND()
-					LIMIT $byNumber";
+					ORDER BY title ASC
+					LIMIT $start, 10";
 
 
 
@@ -34,6 +37,7 @@
 			$sth = $this->dbh->prepare($sql);
 			$sth->bindValue(":keyword", '%'.$keyword.'%');
 			$sth->bindValue(":byNumber", $byNumber);
+			$sth->bindValue(":start", $start);
 			$sth->execute();
 			return $sth->fetchAll();
 		}

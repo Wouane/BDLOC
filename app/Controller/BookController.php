@@ -34,6 +34,12 @@ class BookController extends Controller
 			$_GET['search']="";
 		}
 
+		//Pagination
+		//$start = 0;
+		//if(!empty($_GET['start'])){
+		//	$start = $_GET['start'];
+		//	debug($start);
+		//}
 		// if(!empty($_GET['byType'])){
 		// 	$byType = $_GET['byType'];
 		// }		

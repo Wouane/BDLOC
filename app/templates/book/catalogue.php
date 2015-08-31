@@ -114,7 +114,8 @@
 				</select>
 
 				<button><i class="fa fa-chevron-left"></i> Précédent</button>
-				
+				<a href="?start=<?= $start-5 ?>"><< Préc.</a>
+				<a href="?start=<?= $start+5 ?>">Suiv. >></a>
 				<button>Suivant <i class="fa fa-chevron-right"></i></button>
 			</fieldset>
 		</form>
