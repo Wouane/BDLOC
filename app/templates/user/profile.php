@@ -2,20 +2,22 @@
 
 <?php $this->start('main_content'); ?>
 
-	<h1>Hello <?= $w_user['username']; ?> ! Vous allez modifier vos informations</h1>
-	<nav id="tabs">
-		<ul>
-			    <li><a href="#tabs-1">Mes Informations</a></li>
-   				<li><a href="#tabs-2">Mon Image</a></li>
-    			<li><a href="#tabs-3">Mon Compte</a></li>
-		</ul>
+	<h2>Hello <span><?= $w_user['username']; ?></span> ! Vous allez modifier vos informations</h2>
+
+	<div class="cd-tabs">
+	<nav>
+		<ul class="cd-tabs-navigation">
+			<li><a data-content="inbox" class="selected" href="#0">Mes informations</a></li>
+			<li><a data-content="new" href="#0">Ma photo</a></li>
+			<li><a data-content="gallery" href="#0">Mon compte</a></li>
+		</ul> <!-- cd-tabs-navigation -->
 	</nav>
 
-	<div id="tabs-1">
-			<!-- FORM IDENTIFIANTS -->
-		<form method="POST" enctype="multipart/form-data">
+	<ul class="cd-tabs-content">
+		<li data-content="inbox" class="selected">
 			<h2>Identifiants</h2>
-			<br/>
+		<form method="POST" enctype="multipart/form-data">
+				<br/>
 			<!-- NOM -->
 				<div class="form-modify">
 					<label for="lastname"><i class="fa fa-street-view"></i> Nom</label>
@@ -61,21 +63,22 @@
 					<label for="phonenumber"><i class="fa fa-mobile"></i> N° Mobile ou Fixe</label>
 					<input name="phonenumber" type="text" id="phonenumber" class="form_modify" value="<?= $w_user['phone_number']; ?>">
 				</div>
-	<div>
-	<!-- END TAB1 -->
-	<div id="tabs-2">
+			
+		</li>
+
+		<li data-content="new">
 				<div class="form-modify">
 					<label for="picture">Modifiez votre image :</label>
 					<input type="file" name="pic_name" id="pic_name"/>
 				</div>
-	</div>
-	<!-- END TAB2 -->
-	<div id="tabs-3">
+		</li>
+
+		<li data-content="gallery">
 				<a href="<?= $this->url('changeMotdepasse'); ?>" title="password" >Modifier son mot de passe</a>
 				<button type="submit" class="btn btn-modify">Valider</button>
 				<div><?= $error; ?></div>
 				<a href="" title="suppression du compte">Supprimer mon compte Bdloc</a>
-	</div>
-	<!-- END TAB3 -->
-
+		</li>
+	</ul> <!-- cd-tabs-content -->
+</div> <!-- cd-tabs -->
 <?php $this->stop('main_content'); ?>
