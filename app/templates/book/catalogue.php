@@ -127,6 +127,7 @@
 				echo "<div class='left-mini'><img src=\"" . $bookie.  "\" alt='BDLOC'></div>";
 				echo "<div class='right-mini'>";
 				echo "<ul>";
+				echo "<li class='title-bd'>" . $book['t.title'] . "</li>";
 				echo "<li class='title-bd'>" . $book['title'] . "</li>";
 				if(isset($book['sfirstname'])){echo "<li>" . $book['sfirstname'] . " " . $book['slastname'] . " <a href='' class='tooltip'><i class='fa fa-info-circle'></i><span>Auteur</span></a></li>";}					
 				if(isset($book['cfirstname'])){echo "<li>" . $book['cfirstname'] . " " . $book['clastname'] . " <a href='' class='tooltip'><i class='fa fa-info-circle'></i><span>Coloriste</span></a></li>";}					

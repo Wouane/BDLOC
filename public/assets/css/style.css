@@ -466,13 +466,18 @@ a.tooltip strong {line-height:20px;}
 a.tooltip:hover {text-decoration:none;} 
 a.tooltip span {
     z-index:10;display:none; padding:7px 10px;
-    margin-top:-30px; margin-left:28px;
+    margin-top:-5px; margin-left:20px;
     width:100px; line-height:16px;
 }
 a.tooltip:hover span{
     display:inline; position:absolute; color:#111;
     border:1px solid #DCA; background:#fffAF0;}
-.callout {z-index:20;position:absolute;top:30px;border:0;left:-12px;}
+.callout {
+	z-index:20;
+	position:absolute;
+	top:-30px;border:0;
+	left:-12px;
+}
     
 /*CSS3 extras*/
 a.tooltip span
