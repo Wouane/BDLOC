@@ -410,6 +410,7 @@ legend {
 	float: left;
 	background-color: #fff;
 	box-shadow: 3px 3px 7px #CCC;
+
 }
 .info-book img{
 	margin-right: 1em;
@@ -424,7 +425,12 @@ legend {
 	float: left;
 	width: 45%;
 }
-
+.title-bd{
+	width: 300px;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
 .img_details{
 	float: left;
 	width:50%;
