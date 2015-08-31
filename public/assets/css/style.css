@@ -457,6 +457,13 @@ li a:hover .fa {
 .right-mini>ul{margin-top: 220px;}
 .right-mini>ul li:first-child{	
 	color: #1C8AF9;
+	text-transform: uppercase;
+	font-size: 1.1em;
+}
+.right-mini>ul li:nth-child(2){	
+	color: #1C8AF9;	
+	font-size: 1.1em;
+	padding-bottom: 1em;
 }
 .right-mini>ul li:last-child{
 	padding-top: 1em;
@@ -484,4 +491,17 @@ a.tooltip span
 {
     border-radius:4px;
     box-shadow: 5px 5px 8px #CCC;
+}
+.ico-cart{
+	transform:scale(0.3);
+	float: left;
+	width: 100px;
+	height: 100px;
+	left:20px;
+}
+.ico-details{
+	transform:scale(0.3);
+	float: left;
+	width: 100px;
+	height: 100px;
 }

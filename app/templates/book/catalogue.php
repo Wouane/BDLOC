@@ -122,11 +122,14 @@
 		<?php  
 		
 			foreach ($books as $book) {
+
 				$bookie = $this->assetUrl('img/couvertures-medium/'. $book["cover"]);
-				echo "<div class='book'>";
+				echo "<div class='book'>";				
 				echo "<div class='left-mini'><img src=\"" . $bookie.  "\" alt='BDLOC'></div>";
 				echo "<div class='right-mini'>";
-				echo "<ul>";
+				echo "<div class='ico-details'><img src=\"" .$this->assetUrl('img/bulle-details.png'). "\" alt='BDLOC'></div>";
+				echo "<div class='ico-cart'><img src=\"" .$this->assetUrl('img/bulle-cart.png'). "\" alt='BDLOC'></div>";
+				echo "<ul>";				
 				echo "<li class='title-bd'>" . $book['ttitle'] . "</li>";
 				echo "<li class='title-bd'>" . $book['title'] . "</li>";
 				if(isset($book['sfirstname'])){echo "<li>" . $book['sfirstname'] . " " . $book['slastname'] . " <a href='' class='tooltip'><i class='fa fa-info-circle'></i><span>Auteur</span></a></li>";}					
