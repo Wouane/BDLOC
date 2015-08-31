@@ -32,3 +32,8 @@ $(document).ready(function(){
 }(document, 'script', 'facebook-jssdk'));
 
 
+$(function() {
+    $('.chk_boxes').click(function() {
+        $('.chk_boxes').prop('checked', this.checked);
+    });
+});
