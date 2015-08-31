@@ -6,9 +6,9 @@
 		<div id="slider">
 			<figure>
 				<img src="<?= $this->assetUrl('img/slider/roy-lichtenstein_00249251.jpg') ?>" alt>
-				<img src="<?= $this->assetUrl('img/slider/Moebius_003.jpg') ?>" alt>
-				<img src="<?= $this->assetUrl('img/slider/Moebius_005.jpg') ?>" alt>
-				<img src="<?= $this->assetUrl('img/slider/KABUKI_HC.jpg') ?>" alt>
+				<img src="<?= $this->assetUrl('img/slider/slider02.jpg') ?>" alt>
+				<img src="<?= $this->assetUrl('img/slider/slider03.jpg') ?>" alt>
+				<img src="<?= $this->assetUrl('img/slider/slider04.jpg') ?>" alt>
 				<img src="<?= $this->assetUrl('img/slider/roy-lichtenstein_00249251.jpg') ?>" alt>
 			</figure>
 		</div>
