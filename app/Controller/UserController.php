@@ -269,7 +269,6 @@ class UserController extends Controller
 		$email = "";
 		$firstname = "";
 		$lastname = "";
-		$streetnumber = "";
 		$streetname = "";
 		$phonenumber = "";
 		$zipcode = "";
@@ -285,7 +284,6 @@ class UserController extends Controller
 			$username = trim(strip_tags($_POST['username']));
 			$firstname = trim(strip_tags($_POST['firstname']));
 			$lastname = trim(strip_tags($_POST['lastname']));
-			$streetnumber = trim(strip_tags($_POST['streetnumber']));
 			$streetname = trim(strip_tags($_POST['streetname']));
 			$zipcode = trim(strip_tags($_POST['zipcode']));
 			$phonenumber = trim(strip_tags($_POST['phonenumber']));
@@ -409,7 +407,6 @@ class UserController extends Controller
 				"firstname" 	=> $firstname,
 				"lastname" 		=> $lastname,
 				"zip_code" 		=> $zipcode,
-				"street_number" => $streetnumber,
 				"street_name" 	=> $streetname,
 				"phone_number" 	=> $phonenumber,
 				"date_modified" => date("Y-m-d H:i:s"),
@@ -436,7 +433,6 @@ class UserController extends Controller
 		$data['firstname'] = $firstname;
 		$data['lastname'] = $lastname;
 		$data['zipcode'] = $zipcode;
-		$data['streetnumber'] = $streetnumber;
 		$data['streetname'] = $streetname;
 		$data['phonenumber'] = $phonenumber;
 		$data['pic_name'] = 'default.png';
@@ -453,7 +449,6 @@ class UserController extends Controller
 		$email = "";
 		$firstname = "";
 		$lastname = "";
-		$streetnumber = "";
 		$streetname = "";
 		$phonenumber = "";
 		$zipcode = "";
@@ -470,7 +465,6 @@ class UserController extends Controller
 			$confirm = trim(strip_tags($_POST['confirm']));
 			$firstname = trim(strip_tags($_POST['firstname']));
 			$lastname = trim(strip_tags($_POST['lastname']));
-			$streetnumber = trim(strip_tags($_POST['streetnumber']));
 			$streetname = trim(strip_tags($_POST['streetname']));
 			$zipcode = trim(strip_tags($_POST['zipcode']));
 			$phonenumber = trim(strip_tags($_POST['phonenumber']));
@@ -535,7 +529,6 @@ class UserController extends Controller
 				"firstname" 	=> $firstname,
 				"lastname" 		=> $lastname,
 				"zip_code" 		=> $zipcode,
-				"street_number" => $streetnumber,
 				"street_name" 	=> $streetname,
 				"phone_number" 	=> $phonenumber,
 				"date_modified" => date("Y-m-d H:i:s"),
@@ -559,7 +552,6 @@ class UserController extends Controller
 		$data['firstname'] = $firstname;
 		$data['lastname'] = $lastname;
 		$data['zipcode'] = $zipcode;
-		$data['streetnumber'] = $streetnumber;
 		$data['streetname'] = $streetname;
 		$data['phonenumber'] = $phonenumber;
 		$data['pic_name'] = $pic_name;
