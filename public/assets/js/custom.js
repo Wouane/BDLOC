@@ -31,9 +31,16 @@ $(document).ready(function(){
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
-
+//page catalogue check / uncheck box
 $(function() {
     $('.chk_boxe').click(function() {
         $('.chk_boxes').prop('checked', this.checked);
     });
 });
+
+//page profil multi tabs
+ $(function() {
+    $( "#tabs" ).tabs({
+      event: "mouseover"
+    });
+  });
