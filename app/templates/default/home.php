@@ -2,7 +2,17 @@
 <?php $this->start('main_content') ?>
 	<div class="main-home">
 		<div class="login"><?php $this->insert('user/login_insert',['username'=>'','error'=>'']) ?></div>
-		<div class="slider"><img src="<?= $this->assetUrl('img/slider/roy-lichtenstein_00249251.jpg') ?>"/></div>
+
+		<div id="slider">
+			<figure>
+				<img src="<?= $this->assetUrl('img/slider/roy-lichtenstein_00249251.jpg') ?>" alt>
+				<img src="<?= $this->assetUrl('img/slider/Moebius_003.jpg') ?>" alt>
+				<img src="<?= $this->assetUrl('img/slider/Moebius_005.jpg') ?>" alt>
+				<img src="<?= $this->assetUrl('img/slider/KABUKI_HC.jpg') ?>" alt>
+				<img src="<?= $this->assetUrl('img/slider/roy-lichtenstein_00249251.jpg') ?>" alt>
+			</figure>
+		</div>
+
 		<div class="maintop">
 			<div class="subscribe">
 				<a href="<?= $this->url('inscription') ?>" title="Abonnement">Abonnez-vous</br> à BDLOC</a>
