@@ -6,6 +6,7 @@
 	<link href="//cdn.rawgit.com/noelboss/featherlight/1.3.3/release/featherlight.min.css" type="text/css" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="<?= $this->assetUrl('css/normalize.css') ?>">
 	<link href='http://fonts.googleapis.com/css?family=Lobster|Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="<?= $this->assetUrl('css/style.css') ?>">	
 </head>
@@ -55,9 +56,7 @@
 
 		<footer>
 			<img class="palette" src="<?= $this->assetUrl('img/palette.jpg') ?>" alt="palette"/>
-			<ul class="nav-footer">
-				<li><a href="#">Facebook</a></li> |
-				<li><a href="#">Twitter</a></li> |
+			<ul class="nav-footer">				
 				<li><a href="<?= $this->url('mentionsLegales'); ?>">Mentions légales</a></li> |
 				<li><a href="<?= $this->url('contact'); ?>">Contactez-nous</a></li> |
 			</ul>
@@ -79,6 +78,9 @@
 	<script type="text/javascript" src="<?= $this->assetUrl('js/custom.js') ?>"></script>
 	<script type="text/javascript" src="<?= $this->assetUrl('js/search.js') ?>"></script>
 	<script src="//code.jquery.com/jquery-latest.js"></script>
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
 	<script src="//cdn.rawgit.com/noelboss/featherlight/1.3.3/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
