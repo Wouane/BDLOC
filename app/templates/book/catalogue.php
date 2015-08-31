@@ -120,25 +120,16 @@
 			foreach ($books as $book) {
 				$bookie = $this->assetUrl('img/couvertures-medium/'. $book["cover"]);
 				echo "<div class='book'>";
-				echo "<table><tr>";
-				echo "<td>";
-				echo "<td class='info-book'><img src=\"" . $bookie.  "\"></td>";
-				echo "<td><span>" . $book['title'] . "</span></br>";
-				echo "<span>" . $book['stock'] . "</span></br>";
-				echo "<span>" . $book['sfirstname'] . "</span>";
-				echo "<span> " . $book['slastname'] . "</span>";
-				echo "<span>" . $book['cfirstname'] . "</span>";
-				echo "<span> " . $book['clastname'] . "</span>";
-				echo "<span>" . $book['ifirstname'] . "</span>";
-				echo "<span> " . $book['ilastname'] . "</span>";
-				echo "<div>".$book["stock"]." dispo</div>";
-				?> 
-				<a href="#" data-featherlight="<?= $this->url('details', ['id'=> $book['id']]) ?> .details">Plus de détails</a>
-				
-				<?php
-				// echo "<div><button>Plus de détails</button></div>";	
-				echo "<div><button>Panier ?</button></div>";	
-				echo "</td></tr></table>";
+				echo "<div class='left-mini'><img src=\"" . $bookie.  "\" alt='BDLOC'></div>";
+				echo "<div class='right-mini'>";
+				echo "<ul>";
+				echo "<li>" . $book['title'] . "</li>";
+				echo "<li>" . $book['sfirstname'] . " " . $book['slastname'] . " <a href='#' class='tooltip'><i class='fa fa-info-circle'></i><span>Auteur</span></a></li>";					
+				echo "<li>" . $book['cfirstname'] . " " . $book['clastname'] . " <a href='#' class='tooltip'><i class='fa fa-info-circle'></i><span>Coloriste</span></a></li>";						
+				echo "<li>" . $book['ifirstname'] . " " . $book['ilastname'] . " <a href='#' class='tooltip'><i class='fa fa-info-circle'></i><span>Illustrateur</span></a></li>";
+				echo "<li>" . $book['stock'] . " dispo</li>";
+				echo "</ul>";
+				echo "</div>";
 				echo "</div>";
 		}
 			?>
@@ -146,5 +137,5 @@
 	</div>
 </div>
 </div>
-<?php $this->stop("main_content") ?> 
+<?php $this->stop("main_content") ?>
 
