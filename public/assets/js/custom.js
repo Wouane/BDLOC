@@ -33,7 +33,7 @@ $(document).ready(function(){
 
 
 $(function() {
-    $('.chk_boxes').click(function() {
+    $('.chk_boxe').click(function() {
         $('.chk_boxes').prop('checked', this.checked);
     });
 });

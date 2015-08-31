@@ -14,7 +14,7 @@
 					<legend>Filtres</legend>
 					<h1>Catégories</h1>
 
-					<input type="checkbox" class="chk_boxes" label="check all" id="check_all" value="check_all">
+					<input type="checkbox" class="chk_boxe" label="check all" id="check_all" value="check_all">
 					<label for="check_all">Check all / UnCheck</label>
 					<br>
 	
