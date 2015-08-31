@@ -31,10 +31,11 @@ $(document).ready(function(){
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
-//page catalogue check / uncheck box
-$(function() {
-    $('.chk_boxe').click(function() {
-        $('.chk_boxes').prop('checked', this.checked);
-    });
-});
 
+//page catalogue check / uncheck box
+$(".chk_boxe").click(function () {
+    $('.chk_boxes').prop('checked', this.checked);
+    $(".cheked_label").text(function(i, v){
+        return v === 'Check all' ? 'Uncheck all' : 'Check all'
+    })
+});

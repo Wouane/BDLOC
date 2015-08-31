@@ -15,7 +15,7 @@
 					<h1>Catégories</h1>
 
 					<input type="checkbox" class="chk_boxe" label="check all" id="check_all" value="check_all">
-					<label for="check_all">Check all / UnCheck</label>
+					<label for="check_all" class="cheked_label">Check all</label>
 					<br>
 	
 					<input type="checkbox" name="action" id="action" value="action" class="chk_boxes">
