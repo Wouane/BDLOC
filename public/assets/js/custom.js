@@ -23,6 +23,7 @@ $(document).ready(function(){
     });
 });
 
+// Function pour l'API Facebook
 (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -32,6 +33,7 @@ $(document).ready(function(){
 }(document, 'script', 'facebook-jssdk'));
 
 
+// Function pour checked toutes les checkbox ou les UnCheked
 $(function() {
     $('.chk_boxe').click(function() {
         $('.chk_boxes').prop('checked', this.checked);
