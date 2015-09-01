@@ -235,6 +235,18 @@ h1.titre-home {
 	border-radius: 13px;
 	z-index: 1;
 }
+.page-login{
+
+	margin: 20px auto;
+	width: 50%;
+	text-align: center;
+}
+.warning{
+	width: 30%;
+	text-align: center;
+	margin: 0 auto;
+	color: #FF0000;
+}
 /*||||||||||||||||||||||||||SLIDER||||||||||||||||||||||||||*/
 .slider{
 	width: 100%;

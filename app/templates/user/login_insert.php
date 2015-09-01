@@ -7,8 +7,8 @@
 			<div class="form-group">
 			    <label for="password"></label>
 			    <input name='password' type="password" class="form-control" id="password" value="" placeholder="Votre mot de passe">
-			</div>
+			</div><div class="warning"><?php echo $error; ?></div>
 		  <button type="submit" class="btn btn-default">Valider</button>
-		  <div class="warning"><?php echo $error; ?></div>
+		  
 		  <div class="btn-forgot"><a href="<?= $this->url('oublieMotdepasse') ?>">Mot de passe oublié ?</a></div>
 		</form>

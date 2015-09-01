@@ -591,10 +591,10 @@ class UserController extends Controller
 			}
 		}
 		$data = [];
-		$data['error'] = $error;
+		//$data['error'] = $error;
 		$data['username'] = $username;
 		// Afficher la page 
-		$this->show('user/login',$data);
+		$this->show('user/login',['error'=>$error]);
 	}
 
 	public function logout()
