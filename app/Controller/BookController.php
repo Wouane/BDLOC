@@ -17,16 +17,14 @@ class BookController extends Controller
 		$bookManager = new BookManager();
 		// déclaration des variables
 		$byNumber = 20;
-		// $byType = $_POST['ByType'];
-		//$keyword = "";
-
-
 		// CONDTION DE LA MORT
 
 		if(!empty($_GET['byNumber'])){
 			$byNumber = $_GET['byNumber'];
 		}
-
+		if(!empty($_GET['byType'])){
+			$byType = $_GET['byType'];
+		}
 		if (!empty($_GET['search'])) {
 			$keyword = $_GET['search'];
 			//debug($keyword);
@@ -34,24 +32,22 @@ class BookController extends Controller
 			$_GET['search']="";
 		}
 
-		// if(!empty($_GET['byType'])){
-		// 	$byType = $_GET['byType'];
-		// }		
-
-
 		// UNE FOIS LA CONDITION FINIE (les différents options recherches sélectionnées)
 		//alors affiche les livres et le catalogue
 
-		$books = $bookManager->getBooks($byNumber);
+			$books = $bookManager->getBooks($byNumber);
+			// $books = $bookManager->sortBooks($byType);
+
+
+		
 		//debug($books);
 		$this->show('book/catalogue',["books"=>$books]);
 	}
 	public function search()
 	{
 		$bookManager = new BookManager();
-		$books = $bookManager->getBooks($byNumber);
-
-
+			$books = $bookManager->getBooks($byNumber);		
+			// $books = $bookManager->sortBooks($byType);
 
 	}
 }

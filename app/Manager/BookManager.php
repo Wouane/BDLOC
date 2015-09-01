@@ -19,17 +19,14 @@
 			$sql = "SELECT t.title AS ttitle, books.cover, books.title, books.id, books.stock, i.lastName AS ilastname, i.firstName AS ifirstname, s.lastName AS slastname, s.firstName AS sfirstname, c.lastName AS clastname, c.firstName AS cfirstname
 					FROM $this->table					
 					LEFT JOIN authors AS s ON books.scenarist = s.id
-					LEFT JOIN authors AS i ON books.illustrator = i.id 
+					LEFT JOIN authors AS i ON books.illustrator = i.id
 					LEFT JOIN authors AS c ON books.colorist = c.id
-					LEFT JOIN series AS t ON books.serieId = t.id				
+					LEFT JOIN series AS t ON books.serieId = t.id					
 					WHERE books.title LIKE :keyword OR c.lastName LIKE :keyword OR i.lastName LIKE :keyword OR s.lastName LIKE :keyword
 					OR c.firstName LIKE :keyword OR i.firstName LIKE :keyword OR s.firstName LIKE :keyword
-					OR t.title LIKE :keyword					
-					ORDER BY RAND()
+					OR t.title LIKE :keyword
+					ORDER BY title ASC
 					LIMIT $byNumber";
-
-
-
 					// LA REQUETE DYNAMIQUE S'EXECUTE UNE SEULE FOIS
 			$sth = $this->dbh->prepare($sql);
 			$sth->bindValue(":keyword", '%'.$keyword.'%');
@@ -37,6 +34,16 @@
 			$sth->execute();
 			return $sth->fetchAll();
 		}
+		// public function sortBooks($byType){
+		// 	$sql = "SELECT title
+		// 			FROM $this->table
+		// 			ORDER BY title ASC";
+		// 	$sth = $this->dbh->prepare($sql);			
+		// 	$sth->bindValue(":byType", $byType);
+		// 	$sth->execute();
+		// 	return $sth->fetchAll();
+
+		// }
 		public function getDetails($id)
 		{	
 			// LA REQUETE NINJA POWA DYNAMIQUE DE LA MORT
@@ -47,9 +54,6 @@
 					LEFT JOIN authors AS c ON books.colorist = c.id
 					LEFT JOIN series AS t ON books.serieId = t.id					
 					WHERE books.id = :id ";
-
-
-
 					// LA REQUETE DYNAMIQUE S'EXECUTE UNE SEULE FOIS
 			$sth = $this->dbh->prepare($sql);
 			$sth->bindValue(':id', $id );

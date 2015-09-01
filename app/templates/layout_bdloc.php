@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title><?= $this->e($title) ?></title>
-	<!-- LIGHTBOX PLUGGIN -->
+	<!-- LIGHTBOX PLUGIN -->
 	<link href="//cdn.rawgit.com/noelboss/featherlight/1.3.3/release/featherlight.min.css" type="text/css" rel="stylesheet" />
 	<!-- TYPOGRAPHIES -->
 	<link href='http://fonts.googleapis.com/css?family=Lobster|Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
@@ -89,7 +89,8 @@
 	<!-- JS TABS PROFILE -->
 	<script type="text/javascript" src="<?= $this->assetUrl('js/main.js') ?>"></script>
 	<!-- LIGHTBOX SCRIPT -->
-	<script src="//cdn.rawgit.com/noelboss/featherlight/1.3.3/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="//code.jquery.com/jquery-latest.js"></script>
+<script src="//cdn.rawgit.com/noelboss/featherlight/1.3.3/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
 	<!-- ADD MODERNIZR for responsive TABS -->
 	<script src="<?= $this->assetUrl('js/modernizr.js') ?>"></script>
 </body>

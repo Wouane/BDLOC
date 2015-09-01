@@ -93,6 +93,7 @@
 					<label for="indisponibles">Indisponibles</label><br />
 				</fieldset>
 			</form>
+
 	</div>
 <div class="maincat">
 	<div class="results">
@@ -106,15 +107,14 @@
 					<option value="alpha" id="byAlpha">Ordre alphabétique</option>
 					<option value="publication" id="byDatePublish">Date de publication</option>
 				</select>
-
+		</form>
+		<form method="GET">
 				<select name="byNumber" onChange="this.form.submit()" id="byNumber">
 					<option value="20">Afficher 20 résultats</option>
 					<option value="40">Afficher 40 résultats</option>
 					<option value="60">Afficher 60 résultats</option>
 				</select>
-
-				<button><i class="fa fa-chevron-left"></i> Précédent</button>
-				
+				<button><i class="fa fa-chevron-left"></i> Précédent</button>				
 				<button>Suivant <i class="fa fa-chevron-right"></i></button>
 			</fieldset>
 		</form>
@@ -128,7 +128,7 @@
 				echo "<div class='book'>";				
 				echo "<div class='left-mini'><img src=\"" . $bookie.  "\" alt='BDLOC'></div>";
 				echo "<div class='right-mini'>";
-				echo "<div class='ico-details'><a href='#' data-featherlight='" . $findDetails . "details'><img src=\"" .$this->assetUrl('img/bulle-details.png'). "\" alt='BDLOC'></a></div>";
+				echo "<div class='ico-details' id='details'><a href='#' data-featherlight='" . $findDetails . "'><img src=\"" .$this->assetUrl('img/bulle-details.png'). "\" alt='BDLOC'></a></div>";
 				echo "<div class='ico-cart'><img src=\"" .$this->assetUrl('img/bulle-cart.png'). "\" alt='BDLOC'></div>";			
 				echo "<ul>";				
 				echo "<li class='title-bd'>" . $book['ttitle'] . "</li>";
@@ -139,7 +139,8 @@
 				echo "<li>" . $book['stock'] . " disponibilité</li>";
 				echo "</ul>";
 				echo "</div>";
-				echo "</div>";
+				echo "</div>";				
+			
 		}
 			?>
 	</div>
