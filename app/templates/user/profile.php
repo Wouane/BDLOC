@@ -44,7 +44,7 @@
 					<input name="email" placeholder="Email" type="email" class="form_modify" value="<?= $w_user['email']; ?>">
 				</div>
 				<br/>	
-				<h3 class="titre-section"><i class="fa fa-home"></i> Mon Adresse</h3>
+				<h3 class="titre-section"><i class="fa fa-home"></i> Adresse</h3>
 				<br/>
 			<!--  ADRESS -->		
 				<div class="form-modify">
@@ -59,38 +59,37 @@
 				
 			<!--PHONE -->
 				<br/>
-				<h3 class="titre-section">Numéro</h3>
+				<h3 class="titre-section"><i class="fa fa-phone"></i> Numéro</h3>
 				<br/>
 				<div class="form-modify">
 					<label for="phonenumber"> TELEPHONE </label>
 					<input name="phonenumber" placeholder="Numéro Mobile / Fixe" type="text" id="phonenumber" class="form_modify" value="<?= $w_user['phone_number']; ?>">
 				</div>
 				<!-- VALIDATION -->
-				<button type="submit" class="btn btn-default">Valider</button>
-				<div><?= $error; ?></div>
+				<input type="submit" class="btn btn-default" value="Valider">
 			
 		</li>
 
 		<li data-content="new">
-				<div class="form-modify">
-					<div class="profil-picture">
-					<p>Photo actuelle</p>
-  					<img class="edit-picture" src="<?= $this->assetUrl('img/uploads/thumbnails/' . $w_user['pic_name'])?>" alt="Photo du profil Utilisateur">
-  					</div>
+					<fieldset class="form-modify">
+						<legend class="update-picture">Ma Photo</legend>
+						<div class="profil-picture">
+  							<img class="edit-picture" src="<?= $this->assetUrl('img/uploads/thumbnails/' . $w_user['pic_name'])?>" alt="Photo du profil Utilisateur">
+  						</div>
+  					</fieldset>
+						<label class="edit-picture" for="picture">Modifiez votre image</label>
+						<input type="file" name="pic_name" id="pic_name"/>
+						<input type="submit" class="valid-picture" value="Valider" onclick="return(confirm('Etes-vous sûr de vouloir remplacer votre image ?'));">
 					
-					<label for="picture">Modifiez votre image :</label>
-					<input type="file" name="pic_name" id="pic_name"/>
-					<button type="submit" class="btn btn-default">Valider</button>
-				</div>
 
 		</li>
 
 		<li data-content="gallery">
-				<a href="<?= $this->url('changeMotdepasse'); ?>" title="password">
+				<a class="change-password" href="<?= $this->url('changeMotdepasse'); ?>" title="password">
 					<i class="fa fa-unlock"></i> Modifier mon mot de passe
 				</a>
-				<a href="" title="suppression du compte" onclick="return(confirm('Etes-vous sûr de vouloir supprimer votre compte ?'));">
-					<i class="fa fa-trash-o"></i>Supprimer mon compte Bdloc
+				<a class="delete-account" href="<?= $this->url('changeMotdepasse'); ?>" title="suppression du compte" onclick="return(confirm('Etes-vous sûr de vouloir supprimer votre compte ?'));">
+					<i class="fa fa-trash-o"></i> Supprimer mon compte Bdloc
 				</a>
 		</li>
 	</ul> <!-- cd-tabs-content -->

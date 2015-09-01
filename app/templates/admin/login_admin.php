@@ -5,7 +5,7 @@
 <form method="POST" name="connexion_admin" id="connexion_admin">
 
 		<div class="form_admin">
-			<label for="username">Choisissez un Pseudo : </label>
+			<label for="username"> Pseudo : </label>
 			<input  type="text"  id="username" name='username'>
 		</div>
 		<div class="form_admin">

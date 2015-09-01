@@ -38,7 +38,7 @@ class BookController extends Controller
 		//Pagination
 		if(!empty($_GET['start'])){
 			$start = $_GET['start'];
-			debug($start);
+			//debug($start);
 		}
 
 		// if(!empty($_GET['byType'])){

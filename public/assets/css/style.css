@@ -133,16 +133,19 @@ float: right;
 border-radius: 3px;
 margin-right: 2em;
 margin-top: 1.5em;
+}
+	.btn-login button:hover{
+	background-color: #FE641E;
+	color:#FFF;
 	}
-		.btn-login button:hover{
-		background-color: #FE641E;
-		color:#FFF;
-		}
+
 /*bouton par défault / etc*/
 .btn-default{
 border: none;
 color: #FFF;
 width: 10em;
+padding:0.7em;
+border-radius: 3px;
 background-color: #FE641E;
 margin-top: 1em;
 margin-bottom: 1em;
@@ -409,6 +412,84 @@ margin-left: 1em
 		border:1px solid #1C8AF9;
 		}
 
+/*|||||||||||||||UPDATE PICTURE|||||||||||||||||*/
+
+fieldset.form-modify{
+margin:0 auto;
+width:40%;
+border:3px dashed #ebebeb;
+border-radius: 3px;
+}
+
+legend.update-picture{
+text-align: center;
+margin-left:2.5em;
+padding:0 1em;
+text-transform: uppercase;
+color:#1C8AF9;
+}
+	.form-modify>.profil-picture{
+	margin:0 auto;
+	}
+		.form-modify>.profil-picture>.edit-picture{
+			margin:0 auto;
+			display:block;
+		}
+
+label.edit-picture{
+	display:block;
+	width:40%;
+	margin-left:13em;
+	padding:0.5em 0;
+	color:#AFB4B7;
+}
+
+input[type="file"]{
+	display:block;
+	font-size: 13px;
+	margin-left:11.5em;
+	padding:0.5em;
+}
+
+input.valid-picture{
+
+border:none;
+width: 8em;
+padding:0.5em;
+margin:0.5em 0 0 13em;
+border-radius: 3px;
+color: #FFF;
+background-color: #FE641E;
+-webkit-transition: all .35s;
+-moz-transition: all .35s;
+transition: all .35s;
+}
+
+input.valid-picture:hover{
+    color:#FFF;
+    background-color: #1C8AF9;
+}
+
+/*|||||||||||||||MON COMPTE|||||||||||||||||*/
+
+a.delete-account, a.change-password{
+	padding:0.8em;
+	background-color:#FE641E;
+	border-radius:3px;
+	color:#fff;
+	width:6em;
+	margin:1em;
+	-webkit-transition: all .35s;
+	-moz-transition: all .35s;
+	transition: all .35s;
+}
+
+a.delete-account:hover, a.change-password:hover {
+	color:#FFF;
+    background-color: #1C8AF9;
+}
+
+
 
 
 /*=====================STYLE PAGE CATALOGUE.PHP=======================*/
@@ -417,7 +498,6 @@ margin-left: 1em
 	background-color:#fff;
 	width:100%;
 	overflow:auto;
-	/*yellow*/
 }
 
 .filter{
@@ -508,11 +588,11 @@ margin-left: 1em
 	font-weight: 600;
 }
 li a .fa {
-	color: #1C8AF9;
-	/*transition:0.5s;*/
+	/*color: #1C8AF9;
+	transition:0.5s;*/
 }
 li a:hover .fa {
-	color: #E74C3C;
+/*	color: #E74C3C;*/
 }
 .right-mini>ul{margin-top: 220px;}
 .right-mini>ul li:first-child{	
