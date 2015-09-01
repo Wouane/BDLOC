@@ -1,6 +1,6 @@
 
 <div class="details">
-	<div class="img_details"><img src="<?php echo $this->assetUrl('img/couvertures-medium/'. $book["cover"]); ?>"> </div>
+	<div class="img_details"><img src="<?php echo $this->assetUrl('img/couvertures-original/'. $book["cover"]); ?>"> </div>
 	<div class="text_details">
 		<div>Titre : <?php echo $book['title']; ?></div>
 		<div>Stock : <?php echo $book['stock']; ?></div>
