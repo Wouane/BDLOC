@@ -56,12 +56,7 @@
 					<label for="zipcode"> CODE POSTAL</label>
 					<input name="zipcode" placeholder=" Code postal" type="text" id="zipcode" class="form_modify" value="<?= $w_user['zip_code']; ?>">
 				</div>
-			<!-- CITY -->
-				<div class="form-modify">
-					<label for="city"> VILLE</label>
-					<input name="zipcode" placeholder=" Code postal" type="text" id="zipcode" class="form_modify" value="PARIS">
-				</div>
-		
+				
 			<!--PHONE -->
 				<br/>
 				<h3 class="titre-section">Numéro</h3>
