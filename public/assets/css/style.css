@@ -477,6 +477,8 @@ margin-left: 1em
 .text_details{
 	float: left;
 	width: 45%;
+	margin-left: 1em;
+	margin-top: 20em;
 }
 .title-bd{
 	width: 300px;
@@ -484,10 +486,15 @@ margin-left: 1em
 	white-space: nowrap;
 	overflow: hidden;
 }
+.img_details img{
+	width: 100%;
+}
 .img_details{
 	float: left;
 	width:50%;
 	margin-right: 10px;
+	overflow: hidden;
+
 }
 .left-mini{
 	float: left;
