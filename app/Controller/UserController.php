@@ -424,6 +424,7 @@ class UserController extends Controller
 				$succes = "Votre profil a bien été enregistré !";
 			}	
 		}
+		
 
 		$data = [];
 		$data['error'] = $error;
