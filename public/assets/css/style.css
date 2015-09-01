@@ -358,6 +358,8 @@ legend {
 	margin-left:20px;
 }
 
+
+
 /*=====================STYLE PAGE CATALOGUE.PHP=======================*/
 
 .main {
@@ -504,4 +506,13 @@ a.tooltip span
 	float: left;
 	width: 100px;
 	height: 100px;
+}
+
+
+/*=====================STYLE PAGE ADMIN=======================*/
+
+
+.error_admin
+{
+	color: red;
 }
