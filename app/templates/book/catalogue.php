@@ -115,13 +115,9 @@
 					<option value="60">Afficher 60 résultats</option>
 				</select>
 
-					<?php 
-						if ($start !== 0) {
-							$pageMoins = $start-20;
-							echo "<a href='?start=" . $pageMoins . "'<< Préc.</a>";
-						}
-					 ?>
-
+					 <?php if ($start !== 0): ?>
+					 	<a href="?start=<?= $start-20 ?>"><< Préc.</a>
+					 <?php endif ?>
 					<a href="?start=<?= $start+20 ?>">Suiv. >></a>
 
 				
