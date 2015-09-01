@@ -597,11 +597,28 @@ class UserController extends Controller
 		$this->show('user/login',['error'=>$error]);
 	}
 
+/*==================PAGE LOGOUT===================*/
+
 	public function logout()
 	{
 		$am = new AuthentificationManager();
 		$am->logUserOut();
 		$this->redirectToRoute('home');
 	}
+
+
+/*==================PAGE DELETE PROFILE===================*/
+
+	public function deleteprofile()
+	{
+		$am = new AuthentificationManager();
+
+		
+		$this->redirectToRoute('home');
+		
+		
+
+	}
+
 
 }
