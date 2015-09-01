@@ -3,7 +3,7 @@
 
 	class BookManager extends \W\Manager\Manager
 	{
-		public function getBooks($byNumber)
+		public function getBooks($byNumber, $start)
 		{	
 
 			// déclaration des variables ($types de recherches)
@@ -15,6 +15,7 @@
 			// $byKeywords = '';
 			$keyword = $_GET['search'];
 
+			//$start = $_GET['start'];
 			//$start = 0;
 
 
@@ -29,7 +30,7 @@
 					OR c.firstName LIKE :keyword OR i.firstName LIKE :keyword OR s.firstName LIKE :keyword
 					OR t.title LIKE :keyword					
 					ORDER BY title ASC
-					LIMIT $start, 10";
+					LIMIT $start, $byNumber";
 
 
 
@@ -37,7 +38,7 @@
 			$sth = $this->dbh->prepare($sql);
 			$sth->bindValue(":keyword", '%'.$keyword.'%');
 			$sth->bindValue(":byNumber", $byNumber);
-			$sth->bindValue(":start", $start);
+			//$sth->bindValue(":start", $start);
 			$sth->execute();
 			return $sth->fetchAll();
 		}

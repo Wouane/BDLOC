@@ -112,10 +112,12 @@
 					<option value="40">Afficher 40 résultats</option>
 					<option value="60">Afficher 60 résultats</option>
 				</select>
-
 				<button><i class="fa fa-chevron-left"></i> Précédent</button>
-				<a href="?start=<?= $start-5 ?>"><< Préc.</a>
-				<a href="?start=<?= $start+5 ?>">Suiv. >></a>
+				<div method="GET">
+				</div>
+					<a href="?start=<?= $start-5 ?>"><< Préc.</a>
+					<a href="?start=<?= $start+5 ?>">Suiv. >></a>
+
 				<button>Suivant <i class="fa fa-chevron-right"></i></button>
 			</fieldset>
 		</form>
