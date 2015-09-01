@@ -89,8 +89,10 @@
 	<!-- JS TABS PROFILE -->
 	<script type="text/javascript" src="<?= $this->assetUrl('js/main.js') ?>"></script>
 	<!-- LIGHTBOX SCRIPT -->
+
 	<script src="//code.jquery.com/jquery-latest.js"></script>
-<script src="//cdn.rawgit.com/noelboss/featherlight/1.3.3/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="//cdn.rawgit.com/noelboss/featherlight/1.3.3/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
 	<!-- ADD MODERNIZR for responsive TABS -->
 	<script src="<?= $this->assetUrl('js/modernizr.js') ?>"></script>
 </body>

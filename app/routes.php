@@ -57,13 +57,13 @@
 	// ================================================================================================
 
 		// Creer un nouvel administrateur -------------------------------------------------------------
-		['GET|POST', '/admin/admin-control/inscription/', 'Admin#register', 'register_admin'],
+		['GET|POST', '/admin/admin-control/inscription/', 'Admin#register_admin', 'register_admin'],
 
 		// Panneau de controle ------------------------------------------------------------------------
 		['GET|POST', '/admin/control-pannel/', 'Admin#control', 'control_admin'],
 
 		// connexion login ----------------------------------------------------------------------------
-		['GET|POST', '/admin/connexion/', 'Admin#login', 'connexion_admin'],
+		['GET|POST', '/admin/connexion/', 'Admin#login_admin', 'connexion_admin'],
 
 		//Déconnexion----------------------------------------------------------------------------------
 		['GET', '/admin/deconnexion/', 'Admin#logout', 'deconnexion_admin'],

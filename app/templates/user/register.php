@@ -27,10 +27,6 @@
 			<fieldset>
 				<legend>Adresse postale</legend>
 				<div class="form-group">
-					<label for="streetnumber">Numéro : </label>
-					<input name='streetnumber' type="text" class="form-control" id="streetnumber" value="<?= $streetnumber ?>">
-				</div>
-				<div class="form-group">
 					<label for="streetname">Adresse : </label>
 					<input name='streetname' type="text" class="form-control" id="streetname" value="<?= $streetname ?>">
 				</div>

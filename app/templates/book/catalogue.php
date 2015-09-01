@@ -114,8 +114,12 @@
 					<option value="40">Afficher 40 résultats</option>
 					<option value="60">Afficher 60 résultats</option>
 				</select>
-				<button><i class="fa fa-chevron-left"></i> Précédent</button>				
-				<button>Suivant <i class="fa fa-chevron-right"></i></button>
+
+							
+					<a href="?start=<?= $start-5 ?>"><< Préc.</a>
+					<a href="?start=<?= $start+5 ?>">Suiv. >></a>
+				
+				
 			</fieldset>
 		</form>
 	<div class="listcat">
