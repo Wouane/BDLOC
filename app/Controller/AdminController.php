@@ -104,7 +104,7 @@ class AdminController extends Controller
 				//connecte l'user
 				$am->logUserIn($admin);
 				//redirection
-				 $this->redirectToRoute('catalogue');
+				 $this->redirectToRoute('control_admin');
 
 
 			}
@@ -115,5 +115,10 @@ class AdminController extends Controller
 		$data['error'] = $error;
 		$data['username'] = $username;
 		$this->show('admin/login_admin', $data);
+	}
+
+	public function control()
+	{
+		$this->show('admin/control_admin');
 	}
 }

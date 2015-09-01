@@ -9,10 +9,11 @@
 </head>
 <body>
 	<div class="container">
+	<div class="header">	
 		<header>
-			<h1>W :: <?= $this->e($title) ?></h1>
+			<h1>Page <?= $this->e($title) ?></h1>
 		</header>
-
+	</div>
 		<section>
 			<?= $this->section('main_content') ?>
 		</section>

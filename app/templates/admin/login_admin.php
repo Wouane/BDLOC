@@ -1,4 +1,4 @@
-<?php $this->layout('layout_admin', ['title' => 'Connexion Admin']) ?>
+<?php $this->layout('layout_admin', ['title' => 'Connexion']) ?>
 
 <?php $this->start('main_content') ?>
 
