@@ -51,7 +51,7 @@ class BookController extends Controller
 
 		$books = $bookManager->getBooks($byNumber, $start);
 		//debug($books);
-		$this->show('book/catalogue',["books"=>$books]);
+		$this->show('book/catalogue',["books"=>$books,"start"=>$start]);
 	}
 	public function search()
 	{

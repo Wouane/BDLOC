@@ -115,10 +115,15 @@
 					<option value="60">Afficher 60 résultats</option>
 				</select>
 
-							
-					<a href="?start=<?= $start-5 ?>"><< Préc.</a>
-					<a href="?start=<?= $start+5 ?>">Suiv. >></a>
-				
+					<?php 
+						if ($start !== 0) {
+							$pageMoins = $start-20;
+							echo "<a href='?start=" . $pageMoins . "'<< Préc.</a>";
+						}
+					 ?>
+
+					<a href="?start=<?= $start+20 ?>">Suiv. >></a>
+
 				
 			</fieldset>
 		</form>
