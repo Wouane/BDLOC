@@ -120,6 +120,12 @@
 					 <?php endif ?>
 					<a href="?start=<?= $start+20 ?>">Suiv. >></a>
 
+					<!--br>
+					<?php if ($start !== 0): ?>
+					 	<a href="?start=<?= $start-$byNumber ?>"><< Préc.</a>
+					 <?php endif ?>
+					<a href="?start=<?= $start+$byNumber ?>">Suiv. >></a-->
+
 				
 			</fieldset>
 		</form>

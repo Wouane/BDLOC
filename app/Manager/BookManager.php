@@ -29,7 +29,7 @@
 					WHERE books.title LIKE :keyword OR c.lastName LIKE :keyword OR i.lastName LIKE :keyword OR s.lastName LIKE :keyword
 					OR c.firstName LIKE :keyword OR i.firstName LIKE :keyword OR s.firstName LIKE :keyword
 					OR t.title LIKE :keyword					
-					ORDER BY title ASC
+					ORDER BY t.title ASC
 					LIMIT $start, $byNumber";
 					
 					// LA REQUETE DYNAMIQUE S'EXECUTE UNE SEULE FOIS
