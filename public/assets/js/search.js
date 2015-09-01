@@ -1,6 +1,6 @@
 
 $('#search').on("keyup", function(){
-	console.log('julien');
+	//console.log('julien');
 	var search = $('#search').val();
 	if (search.length < 0) {
 		$('.listcat').html("");
@@ -19,4 +19,6 @@ $('#search').on("keyup", function(){
 		}
 	
 });
+//LOGIN
+
 

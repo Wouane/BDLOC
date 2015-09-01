@@ -1,5 +1,5 @@
 	<h2>Connectez-vous</h2>
-		<form method="POST" name="register" class="form-content" id="register" novalidate action="<?= $this->url('connexion') ?>">
+		<form method="POST" name="login" class="form-content" id="login" novalidate action="<?= $this->url('connexion') ?>">
 			<div class="form-group">
 			    <label for="username"></label>
 			    <input name='username' type="text" class="form-control" id="username" value="<?= $username ?>" placeholder="Pseudo ou Email">
