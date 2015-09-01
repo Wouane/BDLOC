@@ -17,22 +17,17 @@ class BookController extends Controller
 		$bookManager = new BookManager();
 		// déclaration des variables
 		$byNumber = 20;
-<<<<<<< HEAD
-=======
 		$start = 0;
 		// $byType = $_POST['ByType'];
 		//$keyword = "";
 
 
->>>>>>> origin/master
 		// CONDTION DE LA MORT
 
 		if(!empty($_GET['byNumber'])){
 			$byNumber = $_GET['byNumber'];
 		}
-		if(!empty($_GET['byType'])){
-			$byType = $_GET['byType'];
-		}
+
 		if (!empty($_GET['search'])) {
 			$keyword = $_GET['search'];
 			//debug($keyword);
@@ -40,16 +35,6 @@ class BookController extends Controller
 			$_GET['search']="";
 		}
 
-<<<<<<< HEAD
-		// UNE FOIS LA CONDITION FINIE (les différents options recherches sélectionnées)
-		//alors affiche les livres et le catalogue
-
-			$books = $bookManager->getBooks($byNumber);
-			// $books = $bookManager->sortBooks($byType);
-
-
-		
-=======
 		//Pagination
 		if(!empty($_GET['start'])){
 			$start = $_GET['start'];
@@ -65,21 +50,15 @@ class BookController extends Controller
 		//alors affiche les livres et le catalogue
 
 		$books = $bookManager->getBooks($byNumber, $start);
->>>>>>> origin/master
 		//debug($books);
 		$this->show('book/catalogue',["books"=>$books]);
 	}
 	public function search()
 	{
 		$bookManager = new BookManager();
-<<<<<<< HEAD
-			$books = $bookManager->getBooks($byNumber);		
-			// $books = $bookManager->sortBooks($byType);
-=======
 		$books = $bookManager->getBooks($byNumber, $start);
 
 
->>>>>>> origin/master
 
 	}
 }
