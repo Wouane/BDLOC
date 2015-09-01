@@ -104,11 +104,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 700;
-  color: #fff;
+  color: #29324e;
   padding-top: 34px;
 }
 .no-touch .cd-tabs-navigation a:hover {
-  color: #29324e;
+  color:#1C8AF9;
 }
 .cd-tabs-navigation a.selected {
   background-color: #ffffff !important;
@@ -173,6 +173,7 @@
     height: 80px;
     padding:0 auto;
     background-color: #EBEBEB;
+    color:;
   }
   .cd-tabs-navigation a.selected {
       padding:0 30px;
@@ -190,7 +191,7 @@
 */  }
 
   .cd-tabs-navigation a {
-     height: 60px;
+    height: 60px;
     line-height: 60px;
     width: auto;
     text-align: left;
@@ -220,7 +221,7 @@
 }
 
 .cd-tabs-content li.selected {
-  width:auto;
+  width:88%;
   height:auto;
   display: block;
   padding:50px 100px;
