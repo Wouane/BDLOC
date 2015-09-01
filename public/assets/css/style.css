@@ -31,7 +31,7 @@ h2{
 	font-weight: 400;
 }
 
-input[type='text'],input[type='password']{
+input[type='text'],input[type='password'], input[type='email']{
 	border-radius: 3px;
 	border: 1px solid #FF641E;
 	margin: 3px;
@@ -355,23 +355,47 @@ legend {
 
 /*=====================STYLE PAGE PROFILE.PHP=======================*/
 
-h2.titre-profile {
-	text-align: center;
-	margin:2em;
-	color:#AFB4B7;
-	font-size: 18px;
-}
+/*Stylisation de la nav dans la feuille style-tabs.css*/
 
-	h2.titre-profile>span {
-		color:#1C8AF9;
-		font-weight: bolder;
+/*TITRE DE LA PAGE bonjour "username" */
+h2.titre-profile{
+text-align: center;
+margin:2em;
+color:#AFB4B7;
+font-size: 18px;
+}
+	h2.titre-profile>span{
+	color:#1C8AF9;
+	font-weight: bolder;
 	}
 
 h3.titre-section{
-	font-weight: 700;
-	font-family: 'PT Sans';
-
+font-weight: 700;
+font-family: 'PT Sans';
+text-transform: uppercase;
+color: #1C8AF9;
+margin:5px 0;
 }
+
+/*FORM UPDATE INFOS*/
+form.update-profile{
+margin-left: 1em
+}	
+	form.update-profile>div.form-modify>label{
+	display: block;
+    width: 100px;
+    float: left;
+    margin:15px 2px 0 0;
+	}
+
+	form.update-profile>div.form-modify>input{
+	padding:10px;
+	color:#2C3E50;
+	}
+		form.update-profile>div.form-modify>input:focus, input:active{
+		padding:10px;
+		border:1px solid #1C8AF9;
+		}
 
 
 
