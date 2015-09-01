@@ -132,8 +132,8 @@
 				echo "<div class='book'>";				
 				echo "<div class='left-mini'><img src=\"" . $bookie.  "\" alt='BDLOC'></div>";
 				echo "<div class='right-mini'>";
-				echo "<div class='ico-details' id='details'><a href='#' data-featherlight='" . $findDetails . "'><img src=\"" .$this->assetUrl('img/bulle-details.png'). "\" alt='BDLOC'></a></div>";
-				echo "<div class='ico-cart'><img src=\"" .$this->assetUrl('img/bulle-cart.png'). "\" alt='BDLOC'></div>";			
+				echo "<div class='ico-details' id='details'><a href='#' data-featherlight='" . $findDetails . "'><img src=\"" .$this->assetUrl('img/icone-details.png'). "\" alt='BDLOC'></a></div>";
+				echo "<div class='ico-cart'><img src=\"" .$this->assetUrl('img/icone-cart.png'). "\" alt='BDLOC'></div>";			
 				echo "<ul>";				
 				echo "<li class='title-bd'>" . $book['ttitle'] . "</li>";
 				echo "<li class='title-bd'>" . $book['title'] . "</li>";
