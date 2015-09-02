@@ -2,15 +2,17 @@
 
 <?php $this->start('main_content') ?>
 
+
+
 <form method="POST" name="connexion_admin" id="connexion_admin">
 
 		<div class="form_admin">
 			<label for="username"> Pseudo : </label>
-			<input  type="text"  id="username" name='username'>
+			<input  type="text"  id="username" name='username' placeholder="Pseudo">
 		</div>
 		<div class="form_admin">
 			<label for="password">Votre mot de passe : </label>
-			<input type="password" id="password" name='password' >
+			<input type="password" id="password" name='password' placeholder="Mot de passe" >
 		</div>
 		<div>
 			<?php echo $error; ?>
