@@ -2,6 +2,7 @@
 
 <?php $this->start('main_content'); ?>
 
+<h2 class="contact-title">CONTACT</h2>
 <form method="POST" class="contact">
 	<div class="form-group">
 		<label for="name">NOM COMPLET <sup><i class="fa fa-asterisk"></i></sup></label>
@@ -19,7 +20,8 @@
 	</div> 
 
 	<div class="form-group">
-		<label for="Message">MESSAGE <sup><i class="fa fa-asterisk"></i></sup></label>
+		<label for="Message">MESSAGE <sup><i class="fa fa-asterisk"></i></sup>
+		</label>
 		<textarea id="message" name="message"></textarea>
 	</div>
 
