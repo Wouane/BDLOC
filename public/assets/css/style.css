@@ -12,7 +12,9 @@
 	-moz-box-sizing:border-box;
 	-ms-box-sizing:border-box;
 }
-
+html, body {
+	height: 100%;
+}
 body{
 	font:14px;
 	font-family:'PT Sans', 'Open Sans', sans-serif;
@@ -54,7 +56,7 @@ header{
 	width:100%;
 	background-color:#fff;
 	height:80px;
-	margin: 0 auto;
+	margin: 0;
 	border-bottom:5px solid #FE641E;
 	-webkit-box-shadow: 0px 0px 40px -12px rgba(0,0,0,0.96);
 	-moz-box-shadow: 0px 0px 40px -12px rgba(0,0,0,0.96);
@@ -199,16 +201,17 @@ color: #1C8AF9;
 /*||||||||||||||FOOTER||||||||||||||*/
 footer{
 	background-color: #EBEBEB;
+	bottom: 0px;
+	width: 100%;
 }
-	img.palette{
-	width:20%;
-	}
-
+footer, .main:after {
+	height: 215px;
+}
 	.nav-footer{
 	height:30%;
 	padding:5em;
-	width:100%;
 	color:#AFB4B7;
+	float: left;
 	}
 		.nav-footer li{
 		display:inline-block;
@@ -216,6 +219,9 @@ footer{
 			.nav-footer li a{
 			color:#AFB4B7;
 			}
+.fb-root {
+	float: left;
+}
 /*================================================================================================================*/
 /*====================================HOME.PHP)==================================================*/
 /*================================================================================================================*/
@@ -231,7 +237,14 @@ h1.titre-home {
 	font-weight: 200;
 	float: left;
 }
-
+.main {
+	min-height: 100%;
+	margin-bottom: -215px;
+}
+.main:after {
+	content: "";
+	display: block;
+}
 .main-home {
 	width:100%;
 	/*background-color:#ccc;*/

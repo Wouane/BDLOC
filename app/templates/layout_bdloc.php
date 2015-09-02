@@ -56,12 +56,6 @@
 	<!-- FOOTER -->
 <!-- ============= -->
 		<footer>
-			<img class="palette" src="<?= $this->assetUrl('img/palette.jpg') ?>" alt="palette"/>
-			<ul class="nav-footer">				
-				<li><a href="<?= $this->url('mentionsLegales'); ?>">Mentions légales</a></li> |
-				<li><a href="<?= $this->url('contact'); ?>">Contactez-nous</a></li> |
-			</ul>
-
 			<!-- ENCART FACEBOOK -->
 			<div id="fb-root">
 				<div class="fb-page" data-href="https://www.facebook.com/bdloc" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
@@ -72,6 +66,10 @@
 					</div>
 				</div>
 			</div>
+			<ul class="nav-footer">				
+				<li><a href="<?= $this->url('mentionsLegales'); ?>">Mentions légales</a></li> |
+				<li><a href="<?= $this->url('contact'); ?>">Contactez-nous</a></li> |
+			</ul>
 		</footer>
 		
 	</div>
