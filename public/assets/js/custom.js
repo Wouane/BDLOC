@@ -9,19 +9,13 @@ $(document).ready(function(){
         });
     });
     $('#slider').click(function(e){
-    $(".login").animate({
+        $(".login").animate({
           top: '-665px',
           opacity: '0.1',
         });
+    }); 
 });
 
-          //e.stopPropagation();
- 
-});
-$('.login').click(function(e){
-  //empêche l'évenement sur la div login
-  e.stopPropagation();
-});
 //Page details
 $(document).ready(function(){
     $(".btn-details").click(function(event){
