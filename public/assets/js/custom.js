@@ -8,20 +8,18 @@ $(document).ready(function(){
         	opacity: '1',
         });
     });
+
     $('#slider').click(function(e){
     $(".login").animate({
           top: '-665px',
           opacity: '0.1',
         });
+
 });
 
-          //e.stopPropagation();
  
 });
-$('.login').click(function(e){
-  //empêche l'évenement sur la div login
-  e.stopPropagation();
-});
+
 //Page details
 $(document).ready(function(){
     $(".btn-details").click(function(event){
