@@ -560,6 +560,7 @@ a.delete-account:hover, a.change-password:hover {
 	width: 250px;
 	padding: 3px;
 	border-radius: 3px;
+	border:1px solid #333;
 }
 .filter>form>input[type="search"]:focus {
 	outline: none;
@@ -672,11 +673,11 @@ a.delete-account:hover, a.change-password:hover {
 	font-weight: 600;
 }
 li a .fa {
-	/*color: #1C8AF9;
-	transition:0.5s;*/
+	color: #1C8AF9;
+	transition:0.5s;
 }
 li a:hover .fa {
-/*	color: #E74C3C;*/
+	color: #E74C3C;
 }
 .right-mini>ul{margin-top: 220px;}
 .right-mini>ul li:first-child{	
@@ -728,4 +729,5 @@ a.tooltip span
 	float: left;
 	width: 100px;
 	height: 100px;
+	margin-right: 25px;
 }
