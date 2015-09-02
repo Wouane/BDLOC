@@ -609,14 +609,12 @@ class UserController extends Controller
 
 /*==================PAGE DELETE PROFILE===================*/
 
-	public function deleteprofile()
+	public function deleteProfile()
 	{
 		$am = new AuthentificationManager();
-
-		
+		$am->deleteProfile();
+	
 		$this->redirectToRoute('home');
-		
-		
 
 	}
 
