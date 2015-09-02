@@ -208,7 +208,9 @@ footer{
 			.nav-footer li a{
 			color:#AFB4B7;
 			}
-/*=====================STYLE PAGE HOME.PHP=======================*/
+/*================================================================================================================*/
+/*====================================HOME.PHP)==================================================*/
+/*================================================================================================================*/
 
 h1.titre-home {
 	font-family: 'lobster';
@@ -241,6 +243,7 @@ h1.titre-home {
 }
 
 /*||||||||||||||||||||||||||LOGIN BOX ANIMEE||||||||||||||||||||||||||*/
+
 .login{
 	position: absolute;
 	padding-top: 2.5em;
@@ -257,26 +260,26 @@ h1.titre-home {
 	border-radius: 13px;
 	z-index: 1;
 }
-.login::before {
+	.login::before {
 	font-family: FontAwesome;
 	content: "\f00D";
 	position: absolute;
 	top: 5px;
 	right: 5px;
 	color: #444;
-}
-.page-login{
+	}
+		.page-login{
+		margin: 20px auto;
+		width: 50%;
+		text-align: center;
+		}
+		.warning{
+		width: 30%;
+		text-align: center;
+		margin: 0 auto;
+		color: #FF0000;
+		}
 
-	margin: 20px auto;
-	width: 50%;
-	text-align: center;
-}
-.warning{
-	width: 30%;
-	text-align: center;
-	margin: 0 auto;
-	color: #FF0000;
-}
 /*||||||||||||||||||||||||||SLIDER||||||||||||||||||||||||||*/
 .slider{
 	width: 100%;
@@ -288,6 +291,7 @@ h1.titre-home {
 		width: 100%;
 	}
 
+/*|||||||||||||||||||||||||CONTENT HOME||||||||||||||||||||||||||*/
 
 .maintop{
 	margin: 2em auto;
@@ -391,26 +395,49 @@ div#slider figure {
 /*================================================================================================================*/
 
 /*FORM UPDATE INFOS*/
-form.update-profile{
-margin-left: 1em
+h2.register-title{
+	text-align: center;
+	font-size: 20px;
+	margin:1em;
+}
+
+form.register-profile{
+width:30%;
+margin:0 auto 2em;
 }	
-	form.update-profile>div.form-modify>label{
+	form.register-profile>div.form-group>label{
 	display: block;
-    width: 100px;
+    width: 160px;
     float: left;
     margin:15px 2px 0 0;
 	}
-
-	form.update-profile>div.form-modify>input{
+	form.register-profile>div.form-group>input{
 	padding:10px;
 	color:#2C3E50;
 	}
-		form.update-profile>div.form-modify>input:focus, input:active{
+		form.register-profile>div.form-group>input:focus, input:active{
 		padding:10px;
 		border:1px solid #1C8AF9;
 		}
 
-
+		form.register-profile>input.validate-register{
+		margin-left:12em;
+		border: none;
+		color: #FFF;
+		width: 10em;
+		padding:0.7em;
+		border-radius: 3px;
+		background-color: #FE641E;
+		margin-top: 1em;
+		margin-bottom: 1em;
+		-webkit-transition: all .35s;
+		-moz-transition: all .35s;
+		transition: all .35s;
+		}
+			form.register-profile>input.validate-register:hover{
+			color: #FFF;
+    		background-color: #1C8AF9;
+			}
 
 /*=====================STYLE PAGE PROFILE.PHP=======================*/
 
@@ -496,7 +523,6 @@ input[type="file"]{
 }
 
 input.valid-picture{
-
 border:none;
 width: 8em;
 padding:0.5em;
@@ -508,11 +534,10 @@ background-color: #FE641E;
 -moz-transition: all .35s;
 transition: all .35s;
 }
-
-input.valid-picture:hover{
+	input.valid-picture:hover{
     color:#FFF;
     background-color: #1C8AF9;
-}
+	}
 
 /*|||||||||||||||MON COMPTE|||||||||||||||||*/
 
