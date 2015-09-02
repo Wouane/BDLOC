@@ -1,23 +1,31 @@
 //Login sur home page
 $(document).ready(function(){
     $("button").click(function(event){
-    	event.stopPropagation();
+    	//event.stopPropagation();
+      //$('.login').css('display','block');
         $(".login").animate({
         	top: '165px',
         	opacity: '1',
         });
     });
 });
-function onChange(){
-	this.form.submit();
-	//showUser(this.value)
-}
+// $('#slider').click(function(e){
+//   $(".login").animate({
+//           top: '-665px',
+//           opacity: '0',
+//         });
+//           //e.stopPropagation();
+ 
+// });
+// $('.login').click(function(e){
+//   //empêche l'évenement sur la div login
+//   e.stopPropagation();
+// });
 //Page details
 $(document).ready(function(){
     $(".btn-details").click(function(event){
     	event.stopPropagation();
-        $(".details").animate({
-        	
+        $(".details").animate({        	
         	opacity: '1',
         });
     });

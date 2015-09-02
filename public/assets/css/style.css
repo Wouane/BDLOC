@@ -257,6 +257,14 @@ h1.titre-home {
 	border-radius: 13px;
 	z-index: 1;
 }
+.login::before {
+	font-family: FontAwesome;
+	content: "\f00D";
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	color: #444;
+}
 .page-login{
 
 	margin: 20px auto;
@@ -377,6 +385,7 @@ div#slider figure {
 	animation: 20s slidy infinite;  
 }
 
+
 /*================================================================================================================*/
 /*====================================INSCRIPTION.PHP (REGISTER.PHP)==================================================*/
 /*================================================================================================================*/
@@ -400,6 +409,7 @@ margin-left: 1em
 		padding:10px;
 		border:1px solid #1C8AF9;
 		}
+
 
 
 /*=====================STYLE PAGE PROFILE.PHP=======================*/
@@ -545,16 +555,42 @@ a.delete-account:hover, a.change-password:hover {
 	border-radius: 10px;	
 }
 .results{
-	height:100px;
-	width:auto;
-	background-color:#E74C3C;
-	/*rouge*/
-	margin:0.8em;
-	margin-bottom: 2em;
-	padding:0.8em;
+	margin-top: 15px;
 	min-width: 250px;
-	/*float:right;*/
+	padding: 20px;
+	width: 85%;
+	/*border-radius: 5px;*/
+	border:2px solid #FE641E;
+	border-bottom: none;
 }
+.results>form>h3 {
+	font-size: 1.7em;
+	width: 250px;
+	color: #333;
+	/*border-bottom: solid 2px;*/
+	margin-bottom: 20px;
+}
+.results>form>select {
+	width: 200px;
+	float: left;
+	margin-right: 15px;
+	border: 1px solid #FE641E;
+	padding: 3px;
+	border-radius: 3px;
+}
+.results>form>a {
+	padding: 5px;
+	color: #333;
+	border-bottom: 2px solid;
+}
+.results>form>a:hover {
+	border-bottom: 2px solid #1C8AF9;
+}
+.results>form>select:focus {
+	outline: none;
+	border: 1px solid #1C8AF9;
+}
+
 .maincat{
 	float: left;
 	width: 80%;
@@ -566,17 +602,14 @@ a.delete-account:hover, a.change-password:hover {
 	float: left;
 }
 .book{
-	padding: 0.5em;
 	margin: 0.8em;
-	/*border : 2px solid #AFB4B7;*/
+	margin-right: 5em;
 	border-top: 5px solid #1C8AF9;
-	/*border-radius: 3px;*/
-	border-bottom-right-radius: 5px;
-	border-bottom-left-radius: 5px; 
-	width: 600px;
+	border-bottom-right-radius: 25px;
+	width: 570px;
 	float: left;
 	background-color: #fff;
-	box-shadow: 3px 3px 7px #CCC;
+	box-shadow: 3px 3px 10px #CCC;
 
 }
 .info-book img{
@@ -635,7 +668,7 @@ li a:hover .fa {
 	font-size: 1.1em;
 }
 .right-mini>ul li:nth-child(2){	
-	color: #1C8AF9;	
+	color: #CCC;	
 	font-size: 1.1em;
 	padding-bottom: 1em;
 }
