@@ -118,7 +118,7 @@ class AdminController extends Controller
 	}
 
 	public function control()
-	{
+	{ 
 		$this->show('admin/control_admin');
 	}
 }
