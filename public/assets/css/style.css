@@ -267,7 +267,7 @@ h1.titre-home {
 	top: 5px;
 	right: 5px;
 	color: #444;
-	}
+}
 		.page-login{
 		margin: 20px auto;
 		width: 50%;
@@ -571,20 +571,36 @@ a.delete-account:hover, a.change-password:hover {
 
 .filter{
 	width: 15%;
-	background-color: #1C8AF9;
-	/*vert fluo*/
-	padding:0.8em;
-	margin:0.8em;
-	min-width: 250px;
+	margin: 1em;
+	margin-top: 2.5em;
+	padding: 10px;
+	border:2px solid #1C8AF9;
+	border-left: none;
 	float: left;
-	border-radius: 10px;	
+}
+.filter>form>input[type="search"] {
+	width: 250px;
+	padding: 3px;
+	border-radius: 3px;
+	border:1px solid #333;
+}
+.filter>form>input[type="search"]:focus {
+	outline: none;
+}
+.filter>form>h3 {
+	font-size: 1.3em;
+	border-bottom: 1px solid #333;
+	padding: 3px;
+	margin: 5px 0px;
+}
+.filter>form>input {
+	margin: 5px 2px; 
 }
 .results{
-	margin-top: 15px;
+	margin-top: 2.5em;
 	min-width: 250px;
 	padding: 20px;
 	width: 85%;
-	/*border-radius: 5px;*/
 	border:2px solid #FE641E;
 	border-bottom: none;
 }
@@ -592,7 +608,6 @@ a.delete-account:hover, a.change-password:hover {
 	font-size: 1.7em;
 	width: 250px;
 	color: #333;
-	/*border-bottom: solid 2px;*/
 	margin-bottom: 20px;
 }
 .results>form>select {
@@ -680,11 +695,11 @@ a.delete-account:hover, a.change-password:hover {
 	font-weight: 600;
 }
 li a .fa {
-	/*color: #1C8AF9;
-	transition:0.5s;*/
+	color: #1C8AF9;
+	transition:0.5s;
 }
 li a:hover .fa {
-/*	color: #E74C3C;*/
+	color: #E74C3C;
 }
 .right-mini>ul{margin-top: 220px;}
 .right-mini>ul li:first-child{	
@@ -736,4 +751,5 @@ a.tooltip span
 	float: left;
 	width: 100px;
 	height: 100px;
+	margin-right: 25px;
 }
