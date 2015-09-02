@@ -13,15 +13,13 @@
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="<?= $this->assetUrl('css/reset.css') ?>">
 	<link rel="stylesheet" type="text/css" href="<?= $this->assetUrl('css/normalize.css') ?>">
-	<link rel="stylesheet" type="text/css" href="<?= $this->assetUrl('css/style.css') ?>">	
 	<link rel="stylesheet" type="text/css" href="<?= $this->assetUrl('css/style-tabs.css') ?>">
+	<link rel="stylesheet" type="text/css" href="<?= $this->assetUrl('css/style.css') ?>">	
 </head>
-
 <body>
 	<!-- ============= -->
 		<!-- HEADER -->
 	<!-- ============= -->
-
 	<header>
 		<div id="logo">
 			<a href="<?= $this->url('catalogue') ?>"><img class="logo" src="<?= $this->assetUrl('img/logo-default.png') ?>" alt="logo"/></a>
@@ -34,9 +32,8 @@
 				<li class="link-panier"><a href="<?= $this->url('panier') ?>" title="Panier"><i class="fa fa-shopping-cart"></i> Mon panier [ 0 ]</a></li>
 			</ul>
 		</nav>
-		<!-- ESPACE USER -->
-		<div class="logout">
-  			
+<!-- ESPACE USER -->
+		<div class="logout">		
   			<div class="profil-picture">
   				<img class="user-picture" src="<?= $this->assetUrl('img/uploads/thumbnails/' . $w_user['pic_name'])?>" alt="Photo du profil Utilisateur">
   			</div>
@@ -47,19 +44,17 @@
  			</div>
  		</div>
 	</header>
-
-	<!-- ============= -->
-		<!--MAIN CONTENT -->
-	<!-- ============= -->
+<!-- ============= -->
+	<!--MAIN CONTENT -->
+<!-- ============= -->
 	<div class="main">
 		<section>
 			<?= $this->section('main_content') ?>
 		</section>
 	</div>
-	<!-- ============= -->
-		<!-- FOOTER -->
-	<!-- ============= -->
-
+<!-- ============= -->
+	<!-- FOOTER -->
+<!-- ============= -->
 		<footer>
 			<img class="palette" src="<?= $this->assetUrl('img/palette.jpg') ?>" alt="palette"/>
 			<ul class="nav-footer">				

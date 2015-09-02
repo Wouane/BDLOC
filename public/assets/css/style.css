@@ -1,4 +1,7 @@
-/*==================STYLE GENERAL===================*/
+
+/*================================================================================================================*/
+/*====================================STYLE GENERAL A TT LE SITE==================================================*/
+/*================================================================================================================*/
 *{	
 	margin:0;
 	padding:0;
@@ -37,7 +40,10 @@ input[type='text'],input[type='password'], input[type='email']{
 	margin: 3px;
 }
 
-/*=====================STYLE PAGE LAYOUT_BDLOC.PHP=======================*/
+
+/*================================================================================================================*/
+/*====================================LAYOUT_BDLOC.PHP==================================================*/
+/*================================================================================================================*/
 
 header{
 	width:100%;
@@ -51,6 +57,7 @@ header{
 }
 
 /*||||||||||||||||||||||||||LOGO||||||||||||||||||||||||||*/
+
 	#logo{	
 		margin:8px 0 0 25px;
 		float: left;
@@ -61,6 +68,7 @@ header{
 		padding:10px;
 		}	
 /*||||||||||||||||||||||||||MENU PRINCIPAL||||||||||||||||||||||||||*/
+
 nav{
 width:80%;
 float:right;
@@ -84,10 +92,16 @@ margin:25px ;
 
 				.navigation li a:hover{
 				border-top: 3px solid #FE641E;
-				padding-top: 25px;
 				color:#FE641E;
+				padding-top:25px;
 				}
+
+				.navigation>li>a>i{
+				color:#1C8AF9;
+				}
+					
 /*||||||||||||||||||DECONNEXION|||||||||||||||||||*/
+
 .logout{
 position:absolute;
 top:0;
@@ -115,7 +129,11 @@ background-color:#EBEBEB;
 		font-size: 12px;
 		text-decoration: underline;
 		}
-/*=====================STYLE PAGE LAYOUT_BDLOC_HOME.PHP=======================*/
+
+/*================================================================================================================*/
+/*====================================LAYOUT_BDLOC_HOME.PHP)==================================================*/
+/*================================================================================================================*/
+
 
 	/*||||||||||||||||HEADER||||||||||||||||||||||||||*/
 
@@ -194,10 +212,11 @@ footer{
 
 h1.titre-home {
 	font-family: 'lobster';
+	font-size:27px;
 	text-align: center;
 	padding-left: 3em;
 	width: 66%;
-	margin: 15px auto;
+	margin: 18px auto;
 	color: #FE641E;
 	font-weight: 200;
 	float: left;
@@ -245,6 +264,9 @@ h1.titre-home {
 	top: 5px;
 	right: 5px;
 	color: #444;
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
 }
 .page-login{
 
@@ -365,16 +387,33 @@ div#slider figure {
 	text-align: left;
 	animation: 20s slidy infinite;  
 }
-/*=====================STYLE PAGE INSCRIPTION.PHP=======================*/
 
-fieldset {
-	border:1px solid black;
-	/*padding:15px;*/
-}
 
-legend {
-	margin-left:20px;
-}
+/*================================================================================================================*/
+/*====================================INSCRIPTION.PHP (REGISTER.PHP)==================================================*/
+/*================================================================================================================*/
+
+/*FORM UPDATE INFOS*/
+form.update-profile{
+margin-left: 1em
+}	
+	form.update-profile>div.form-modify>label{
+	display: block;
+    width: 100px;
+    float: left;
+    margin:15px 2px 0 0;
+	}
+
+	form.update-profile>div.form-modify>input{
+	padding:10px;
+	color:#2C3E50;
+	}
+		form.update-profile>div.form-modify>input:focus, input:active{
+		padding:10px;
+		border:1px solid #1C8AF9;
+		}
+
+
 
 /*=====================STYLE PAGE PROFILE.PHP=======================*/
 
