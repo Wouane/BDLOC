@@ -14,6 +14,9 @@ class BookController extends Controller
 
 	public function catalogue()
 	{
+
+
+
 		$bookManager = new BookManager();
 		// déclaration des variables
 		$byNumber = 20;
@@ -50,8 +53,19 @@ class BookController extends Controller
 		//alors affiche les livres et le catalogue
 
 		$books = $bookManager->getBooks($byNumber, $start);
-		//debug($books);
+				/*CATEGORIES*/
+
+		/*END CATEGORIES*/
 		$this->show('book/catalogue',["books"=>$books,"start"=>$start]);
+		if(!empty($_GET['genre'])){
+			$bdlocCat = $_GET['genre'];
+			$bookManager = new BookManager();			
+			if(!empty($bdlocCat)){
+			$booksCat = $bookManager->getCategorie($bdlocCat);
+			$this->show('book/catalogue',["bdlocCat"=>$bdlocCat]);
+			debug($bdlocCat);
+			}					
+		}
 	}
 	public function search()
 	{
@@ -61,4 +75,5 @@ class BookController extends Controller
 
 
 	}
+
 }

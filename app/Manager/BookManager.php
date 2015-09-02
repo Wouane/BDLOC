@@ -66,4 +66,19 @@
 			$sth->execute();			
 			return $sth->fetch();
 		}
+
+		public function getCategorie($genre)
+		{
+			$genre = " WHERE style LIKE '%".$genre[0]."%'";
+			for ($i=1; $i<count($genre); $i++){
+				$genre.=" OR style LIKE '%".$genre[$i]."%'";
+			}
+			$sql = "SELECT style, id
+					FROM series
+					$genre";
+		$sth = $this->dbh->prepare($sql);
+		$sth->execute();
+		$bookCat = $sth->fetchAll();
+		return $bookCat;
+		}
 	}
