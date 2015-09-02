@@ -5,8 +5,7 @@
 <form method="POST" name="register_admin" id="register_admin">
 	
 
-	<fieldset>
-		<legend>Enregistrez vous</legend>	
+	<fieldset>	
 		<div class="form_admin">
 			<label for="email">Email : </label>
 			<input  type="email" id="email" name="email">

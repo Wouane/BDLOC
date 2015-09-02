@@ -2,6 +2,8 @@
 
 <?php $this->start('main_content') ?>
 
+
+
 <form method="POST" name="connexion_admin" id="connexion_admin">
 
 		<div class="form_admin">
