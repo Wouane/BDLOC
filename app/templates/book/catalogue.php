@@ -88,7 +88,8 @@
 <div class="maincat">
 	<div class="results">
 		<!-- Tris et pagination -->
-		<input type="search" placeholder="Mots-clefs" name="search" id="search">
+		<label for="search"><i class="fa fa-search"></i></label>
+		<input type="search" placeholder="Recherche" name="search" id="search">
 		<form method="GET">
 				<select name="byType" onChange="this.form.submit()" id="byType">
 					<option selected>Trier</option>
