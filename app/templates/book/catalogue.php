@@ -99,8 +99,7 @@
 	<div class="results">
 		<!-- Tris et pagination -->
 		<form method="GET">
-			<fieldset>
-				<legend>Résultats</legend>
+				<h3>Résultats</h3>
 				<select name="byType" onChange="this.form.submit()" id="byType">
 					<option selected>Trier</option>
 					<option value="date" id="byDateCreated">Date d'ajout au catalogue</option>
@@ -124,11 +123,9 @@
 					<?php if ($start !== 0): ?>
 					 	<a href="?start=<?= $start-$byNumber ?>"><< Préc.</a>
 					 <?php endif ?>
-					<a href="?start=<?= $start+$byNumber ?>">Suiv. >></a-->
-
-				
-			</fieldset>
+					<a href="?start=<?= $start+$byNumber ?>">Suiv. >></a-->					
 		</form>
+	</div>
 	<div class="listcat">
 		<?php  
 		
