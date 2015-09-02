@@ -8,16 +8,12 @@ $(document).ready(function(){
         	opacity: '1',
         });
     });
-
     $('#slider').click(function(e){
-    $(".login").animate({
+        $(".login").animate({
           top: '-665px',
           opacity: '0.1',
         });
-
-});
-
- 
+    }); 
 });
 
 //Page details
