@@ -53,10 +53,9 @@ class BookController extends Controller
 		//alors affiche les livres et le catalogue
 
 		$books = $bookManager->getBooks($byNumber, $start);
-				/*CATEGORIES*/
 
-		/*END CATEGORIES*/
 		$this->show('book/catalogue',["books"=>$books,"start"=>$start]);
+		/************ CATEGORIES *************/
 		if(!empty($_GET['genre'])){
 			$bdlocCat = $_GET['genre'];
 			$bookManager = new BookManager();			
@@ -66,6 +65,7 @@ class BookController extends Controller
 			debug($bdlocCat);
 			}					
 		}
+		/************* END CATEGORIES ****************/
 	}
 	public function search()
 	{
