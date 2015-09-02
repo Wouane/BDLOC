@@ -22,4 +22,15 @@
 			return $foundUser;
 		}
 
+		public function deleteProfile($id)
+		{
+			$sql = "DELETE * FROM users
+			WHERE id = :id";
+
+			$sth = $this->$dbh->prepare($sql);
+			$sth->bindValue(":id", $id);
+			$sth->execute();
+
+		}
+
 	}
