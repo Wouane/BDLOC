@@ -2,11 +2,11 @@
 		<form method="POST" name="login" class="form-content" id="login" novalidate action="<?= $this->url('connexion') ?>">
 			<div class="form-group">
 			    <label for="username"></label>
-			    <input name='username' type="text" class="form-control" id="username" value="<?= $username ?>" placeholder="Pseudo ou Email">
+			    <input name='username' type="text" autocomplete="off" class="form-control" id="username" value="<?= $username ?>" placeholder="Pseudo ou Email">
 			</div>
 			<div class="form-group">
 			    <label for="password"></label>
-			    <input name='password' type="password" class="form-control" id="password" value="" placeholder="Votre mot de passe">
+			    <input name='password' type="password" class="form-control" id="password" value=""  placeholder="Votre mot de passe">
 			</div><div class="warning"><?php echo $error; ?></div>
 		  <button type="submit" class="btn btn-default">Valider</button>
 		  
