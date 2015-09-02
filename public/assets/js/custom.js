@@ -1,5 +1,6 @@
 //Login sur home page
 $(document).ready(function(){
+  console.log( "ready!" );
     $("button").click(function(event){
     	//event.stopPropagation();
       $('.login').css('display','block');
@@ -14,17 +15,17 @@ $(document).ready(function(){
           opacity: '0.1',
         });
     }); 
-});
-
-//Page details
-$(document).ready(function(){
-    $(".btn-details").click(function(event){
-    	event.stopPropagation();
-        $(".details").animate({        	
-        	opacity: '1',
+    //Page details
+        $(".btn-details").click(function(event){
+        event.stopPropagation();
+        $(".details").animate({         
+          opacity: '1',
         });
     });
 });
+
+
+
 
 (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];

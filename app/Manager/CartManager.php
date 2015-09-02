@@ -4,6 +4,6 @@
 	class CartManager extends \W\Manager\Manager
 	{
 
-
+		
 
 	}

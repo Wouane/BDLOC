@@ -14,7 +14,9 @@
 	<link rel="stylesheet" type="text/css" href="<?= $this->assetUrl('css/reset.css') ?>">
 	<link rel="stylesheet" type="text/css" href="<?= $this->assetUrl('css/normalize.css') ?>">
 	<link rel="stylesheet" type="text/css" href="<?= $this->assetUrl('css/style-tabs.css') ?>">
-	<link rel="stylesheet" type="text/css" href="<?= $this->assetUrl('css/style.css') ?>">	
+	<link rel="stylesheet" type="text/css" href="<?= $this->assetUrl('css/style.css') ?>">
+
+		
 </head>
 <body>
 <!-- ============= -->
@@ -57,5 +59,8 @@
 				</div>
 			</div>
 		</footer>
+						<!-- JQUERY CUSTOM PLUGGIN -->
+		<script type="text/javascript" src="<?= $this->assetUrl('js/jquery.min.js') ?>"></script>
+		<script type="text/javascript" src="<?= $this->assetUrl('js/custom.js') ?>"></script>
 </body>
 </html>
