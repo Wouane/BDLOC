@@ -2,29 +2,29 @@
 
 <?php $this->start('main_content') ?>
 
-	<h2>Inscrivez-vous</h2>
-		<form method="POST" name="register" id="register">
+	<h2 class="register-title">Inscrivez-vous !</h2>
+		<form class="register-profile" method="POST" name="register" id="register">
 			<h3 class="titre-section"><i class="fa fa-user"></i> Identifiants</h3>
 				<br/>
-				<!-- NOM -->
-				<div class="form-group">
-					<label for="lastname" >NOM</label>
-					<input name='lastname' type="text" class="form-control" id="lastname" value="<?= $lastname ?>">
-				</div>
 				<!-- PRENOM -->
 				<div class="form-group">
-					<label for="firstname">Prénom : </label>
-					<input name='firstname' type="text" class="form-control" id="firstname" value="<?= $firstname ?>">
+					<label for="firstname"> PRENOM</label>
+					<input name='firstname' type="text" class="form-control" placeholder="Prenom" value="<?= $firstname ?>">
+				</div>
+				<!-- NOM -->
+				<div class="form-group">
+					<label for="lastname" > NOM</label>
+					<input name='lastname' type="text" class="form-control" id="lastname" placeholder="Nom" value="<?= $lastname ?>">
 				</div>
 				<!-- PSEUDO -->
 				<div class="form-group">
-					<label for="username">Choisissez un Pseudo : </label>
-					<input name='username' type="text" class="form-control" id="username" value="<?= $username ?>">
+					<label for="username"> PSEUDO</label>
+					<input name='username' type="text" class="form-control" placeholder="Pseudo" value="<?= $username ?>">
 				</div>
 				<!-- EMAIL -->
 				<div class="form-group">
-					<label for="email">Votre Email : </label>
-					<input name='email' type="email" class="form-control" id="email" value="<?= $email ?>">
+					<label for="email"> EMAIL</label>
+					<input name='email' type="email" class="form-control" placeholder="Email" value="<?= $email ?>">
 				</div>
 				<br/>	
 			<h3 class="titre-section"><i class="fa fa-home"></i> Adresse</h3>
@@ -32,12 +32,12 @@
 				<!-- ADRESSE  -->
 				<div class="form-group">
 					<label for="streetname"> ADRESSE</label>
-					<input name='streetname' type="text" class="form-control" id="streetname" value="<?= $streetname ?>">
+					<input name='streetname' type="text" class="form-control" placeholder="Adresse" value="<?= $streetname ?>">
 				</div>
 				<!-- ZIPCODE -->
 				<div class="form-group">
 					<label for="zipcode">	CODE POSTAL</label>
-					<input name='zipcode' type="text" class="form-control" id="zipcode" value="<?= $zipcode ?>">
+					<input name='zipcode' type="text" class="form-control" placeholder="Code postal" value="<?= $zipcode ?>">
 				</div>
 				<!--PHONE -->
 				<br/>
@@ -45,7 +45,7 @@
 				<br/>
 				<div class="form-group">
 					<label for="phonenumber"> TELEPHONE</label>
-					<input name='phonenumber' type="text" class="form-control" id="phonenumber" value="<?= $phonenumber ?>">
+					<input name='phonenumber' type="text" class="form-control" placeholder="Telephone" value="<?= $phonenumber ?>">
 				</div>
 				<br/>	
 			<h3 class="titre-section"><i class="fa fa-phone"></i> Mot de Passe</h3>
@@ -53,14 +53,14 @@
 				<!-- MOT DE PASSE -->
 				<div class="form-group">
 					<label for="password">VOTRE MOT DE PASSE </label>
-					<input name='password' type="password" class="form-control" id="password" value="">
+					<input name='password' type="password" class="form-control" id="password" placeholder="Mot de passe" value="">
 				</div>
 				<!-- CONFIRMATION -->
 				<div class="form-group">
-					<label for="confirm">CONFIRMER VOTRE MOT DE PASSE </label>
-					<input type="password" class="form-control" id="confirm" name="confirm" value="">
+					<label for="confirm">CONFIRMATION </label>
+					<input type="password" class="form-control" id="confirm" name="confirm" placeholder="Confirmation" value="">
 				</div>
-				<input type="submit" class="btn btn-default" value="Valider">
+				<input type="submit" class="validate-register" value="Valider">
 		  		<div class="warning"><?php echo $error; ?></div>
 		</form>		
 	
