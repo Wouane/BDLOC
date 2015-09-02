@@ -264,6 +264,9 @@ h1.titre-home {
 	top: 5px;
 	right: 5px;
 	color: #444;
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
 }
 .page-login{
 
