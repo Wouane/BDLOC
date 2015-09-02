@@ -6,9 +6,7 @@
 <div class="main">
 	<div class="filter">
 	<!-- Filtres -->
-		<form name="filtres" id="filters" method='GET' action="<?php echo $this->url('catalogue')?>">
-			<h3>Recherche</h3>
-			<input type="search" placeholder="Mots-clefs" name="search" id="search">		
+		<form name="filtres" id="filters" method='GET' action="<?php echo $this->url('catalogue')?>">					
 				<h3>Catégories</h3>
 
 				<input type="checkbox" class="chk_boxe" label="check all" id="check_all" value="check_all">
@@ -90,6 +88,7 @@
 <div class="maincat">
 	<div class="results">
 		<!-- Tris et pagination -->
+		<input type="search" placeholder="Mots-clefs" name="search" id="search">
 		<form method="GET">
 				<select name="byType" onChange="this.form.submit()" id="byType">
 					<option selected>Trier</option>
