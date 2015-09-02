@@ -77,7 +77,6 @@
 
 				<input type="checkbox" name="western" id="western" value="western" class="chk_boxes">
 				<label for="western">Western</label><br />
-			</fieldset>	
 		</form>
 		<form >
 			<h3>Disponibilité</h3>
@@ -92,7 +91,6 @@
 	<div class="results">
 		<!-- Tris et pagination -->
 		<form method="GET">
-				<h3>Résultats</h3>
 				<select name="byType" onChange="this.form.submit()" id="byType">
 					<option selected>Trier</option>
 					<option value="date" id="byDateCreated">Date d'ajout au catalogue</option>
@@ -108,9 +106,9 @@
 				</select>
 
 					 <?php if ($start !== 0): ?>
-					 	<a href="?start=<?= $start-20 ?>"><< Préc.</a>
+					 	<a href="?start=<?= $start-20 ?>"><i class="fa fa-chevron-left"></i> Préc</a>
 					 <?php endif ?>
-					<a href="?start=<?= $start+20 ?>">Suiv. >></a>
+					<a href="?start=<?= $start+20 ?>">Suiv <i class="fa fa-chevron-right"></i></a>
 
 					<!--br>
 					<?php if ($start !== 0): ?>
@@ -120,8 +118,7 @@
 		</form>
 	</div>
 	<div class="listcat">
-		<?php  
-		
+		<?php  		
 			foreach ($books as $book) {
 				$findDetails = $this->url('details', ['id'=> $book['id']]);
 				$cart = $this->url('panier');
@@ -131,7 +128,11 @@
 				echo "<div class='left-mini'><img src=\"" . $bookie.  "\" alt='BDLOC'></div>";
 				echo "<div class='right-mini'>";
 				echo "<div class='ico-details' id='details'><a href='#' data-featherlight='" . $findDetails . "'><img src=\"" .$this->assetUrl('img/icone-details.png'). "\" alt='BDLOC'></a></div>";
-				echo "<div class='ico-cart'><a href=".$cart."><img src=\"" .$this->assetUrl('img/icone-cart.png'). "\" alt='BDLOC'></a></div>";			
+				echo "<div class='ico-cart'><a href=".$cart.">";
+				if ($book['stock']!=0) {
+					echo "<img src=\"" .$this->assetUrl('img/icone-cart.png'). "\" alt='BDLOC'>";
+				}
+				echo "</a></div>";					
 				echo "<ul>";				
 				echo "<li class='title-bd'>" . $book['ttitle'] . "</li>";
 				echo "<li class='title-bd'>" . $book['title'] . "</li>";
