@@ -219,8 +219,10 @@ footer, .main:after {
 			.nav-footer li a{
 			color:#AFB4B7;
 			}
-.fb-root {
+#fb-root {
+	width: 500px;
 	float: left;
+	bottom: 0;
 }
 /*================================================================================================================*/
 /*====================================HOME.PHP)==================================================*/
@@ -239,7 +241,8 @@ h1.titre-home {
 }
 .main {
 	min-height: 100%;
-	margin-bottom: -215px;
+	height: auto !important;
+	height: 100%;
 }
 .main:after {
 	content: "";
