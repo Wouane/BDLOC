@@ -2,26 +2,28 @@
 
 <?php $this->start('main_content') ?>
 
-<form method="POST" action="">
-		<h2 class="forget-pswd-title">Mots de passe Oublier ?</h2>
-		<p class="forget-text">Entrer votre adresse Email pour recevoir un mail et changer votre mots de passe</p>
-		<input type="text" placeholder="Entrer votre adresse Mail" name="email">
-		<div class="succes">
-			<?php 
-				if (!empty($_SESSION['mail_succes'])) {
-					
-					echo $_SESSION['mail_succes'];
-					
-					unset($_SESSION['mail_succes']);
-				}
-			 ?>
+		<h2 class="forgot-password-title">Mots de passe Oublier ?</h2>
+		<p class="forgot-password-text"><i class="fa fa-exclamation-circle"></i> Entrer votre Email pour recevoir un lien et changer votre mot de passe</p>
+	<form class="forgot-password" method="POST" action="">
+		<input class="mail-forgot-password" type="email" placeholder="Votre Email" name="email" autocomplete="off">
+			<div class="message">
+			<div class="succes">
+				<?php 
+					if (!empty($_SESSION['mail_succes'])) {
+						
+						echo $_SESSION['mail_succes'];
+						
+						unset($_SESSION['mail_succes']);
+					}
+				 ?>
+			</div>
+			<div class="error">
+				<?php 
+					echo $error; 
+				?>
+			</div>
 		</div>
-		<div class="error">
-			<?php 
-				echo $error; 
-			?>
-		</div>
-		<button type="submit">Envoyer</button>
-	</form>
+		<input type="submit" class="sendmail" value="Envoyer">
+	<form>
 
 <?php $this->stop('main_content') ?>

@@ -73,14 +73,14 @@ class UserController extends Controller
 					if (!$mail->send()) {
 						echo "Mailer Error: " . $mail->ErrorInfo;
 					} else {
-						echo "Message sent!";
+						echo "Message envoyé";
 					}
-					$_SESSION['mail_succes'] = "Le mail a bien été Envoyé !";
+					$_SESSION['mail_succes'] = "Le mail a bien été envoyé !";
 					$this->redirectToRoute('oublieMotdepasse');
 
 				}
 				else {
-					$error = "Adress Email non trouver !";
+					$error = "Adresse Email non trouvé !";
 				}
 		}
 

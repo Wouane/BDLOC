@@ -43,7 +43,6 @@
 <!-- FOOTER -->
 <!-- ============= -->
 		<footer>
-			<img class="palette" src="<?= $this->assetUrl('img/palette.jpg') ?>" alt="palette"/>
 			<ul class="nav-footer">				
 				<li><a href="<?= $this->url('mentionsLegales'); ?>">Mentions légales</a></li> |
 				<li><a href="<?= $this->url('contact'); ?>">Contactez-nous</a></li> |
