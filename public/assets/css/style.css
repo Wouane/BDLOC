@@ -40,6 +40,9 @@ input[type='text'],input[type='password'], input[type='email']{
 	margin: 3px;
 }
 
+i.fa-asterisk{
+	color:#FE641E;
+	}
 
 /*================================================================================================================*/
 /*====================================LAYOUT_BDLOC.PHP==================================================*/
@@ -410,17 +413,23 @@ margin:0 auto 2em;
 }	
 	form.register-profile>div.form-group>label{
 	display: block;
-    width: 160px;
+    width: 180px;
     float: left;
     margin:15px 2px 0 0;
-	}
+	}	
+
 	form.register-profile>div.form-group>input{
 	padding:10px;
 	color:#2C3E50;
 	}
 		form.register-profile>div.form-group>input:focus, input:active{
-		padding:10px;
 		border:1px solid #1C8AF9;
+		}
+
+		p.obligatoires{
+		margin:1em 0;
+		color:#FE641E;
+		font-style:italic;
 		}
 
 		form.register-profile>input.validate-register{
@@ -441,6 +450,10 @@ margin:0 auto 2em;
 			color: #FFF;
     		background-color: #1C8AF9;
 			}
+
+
+
+
 
 /*=====================STYLE PAGE PROFILE.PHP=======================*/
 
@@ -482,7 +495,6 @@ margin-left: 1em
 	color:#2C3E50;
 	}
 		form.update-profile>div.form-modify>input:focus, input:active{
-		padding:10px;
 		border:1px solid #1C8AF9;
 		}
 
