@@ -88,7 +88,7 @@
 				<a class="change-password" href="<?= $this->url('changeMotdepasse'); ?>" title="password">
 					<i class="fa fa-unlock"></i> Modifier mon mot de passe
 				</a>
-				<a class="delete-account" href="<?= $this->url('changeMotdepasse'); ?>" title="suppression du compte" onclick="return(confirm('Etes-vous sûr de vouloir supprimer votre compte ?'));">
+				<a class="delete-account" href="<?= $this->url('home'); ?>" title="suppression du compte" onclick="return(confirm('Etes-vous sûr de vouloir supprimer votre compte ?'));">
 					<i class="fa fa-trash-o"></i> Supprimer mon compte Bdloc
 				</a>
 		</li>
