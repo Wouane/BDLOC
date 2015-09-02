@@ -471,13 +471,12 @@ margin:0 auto 2em;
 
 
 
+/*================================================================================================================*/
+/*====================================PAGE PROFILE.PHP==================================================*/
+/*================================================================================================================*/
 
+/*Stylisation de la NAV DE profile dans la feuille style-tabs.css*/
 
-/*=====================STYLE PAGE PROFILE.PHP=======================*/
-
-/*Stylisation de la nav dans la feuille style-tabs.css*/
-
-/*TITRE DE LA PAGE bonjour "username" */
 h2.titre-profile{
 text-align: center;
 margin:2em;
@@ -497,7 +496,7 @@ color: #1C8AF9;
 margin:5px 0;
 }
 
-/*FORM UPDATE INFOS*/
+/*|||||||||||||||ONGLET UPDATE INFOS|||||||||||||||||*/
 form.update-profile{
 margin-left: 1em
 }	
@@ -516,7 +515,7 @@ margin-left: 1em
 		border:1px solid #1C8AF9;
 		}
 
-/*|||||||||||||||UPDATE PICTURE|||||||||||||||||*/
+/*|||||||||||||||ONGLET UPDATE PICTURE|||||||||||||||||*/
 
 fieldset.form-modify{
 margin:0 auto;
@@ -536,23 +535,23 @@ color:#1C8AF9;
 	margin:0 auto;
 	}
 		.form-modify>.profil-picture>.edit-picture{
-			margin:0 auto;
-			display:block;
+		margin:0 auto;
+		display:block;
 		}
 
 label.edit-picture{
-	display:block;
-	width:40%;
-	margin-left:13em;
-	padding:0.5em 0;
-	color:#AFB4B7;
+display:block;
+width:40%;
+margin-left:13em;
+padding:0.5em 0;
+color:#AFB4B7;
 }
 
 input[type="file"]{
-	display:block;
-	font-size: 13px;
-	margin-left:11.5em;
-	padding:0.5em;
+display:block;
+font-size: 13px;
+margin-left:11.5em;
+padding:0.5em;
 }
 
 input.valid-picture{
@@ -572,29 +571,27 @@ transition: all .35s;
     background-color: #1C8AF9;
 	}
 
-/*|||||||||||||||MON COMPTE|||||||||||||||||*/
+/*|||||||||||||||ONGLET MON COMPTE|||||||||||||||||*/
 
 a.delete-account, a.change-password{
-	padding:0.8em;
-	background-color:#FE641E;
-	border-radius:3px;
-	color:#fff;
-	width:6em;
-	margin:1em;
-	-webkit-transition: all .35s;
-	-moz-transition: all .35s;
-	transition: all .35s;
+padding:0.8em;
+background-color:#FE641E;
+border-radius:3px;
+color:#fff;
+width:6em;
+margin:1em;
+-webkit-transition: all .35s;
+-moz-transition: all .35s;
+transition: all .35s;
 }
-
-a.delete-account:hover, a.change-password:hover {
+	a.delete-account:hover, a.change-password:hover {
 	color:#FFF;
-    background-color: #1C8AF9;
-}
+	background-color: #1C8AF9;
+	}
 
-
-
-
-/*=====================STYLE PAGE CATALOGUE.PHP=======================*/
+/*================================================================================================================*/
+/*====================================CATALOGUE.PHP==================================================*/
+/*================================================================================================================*/
 
 .main {
 	background-color:#fff;
@@ -808,3 +805,23 @@ a.tooltip span
 	height: 100px;
 	margin-right: 25px;
 }
+
+/*================================================================================================================*/
+/*====================================CART.PHP================================================================*/
+/*================================================================================================================*/
+
+/*FAIRE UN TABLEAU DANS LA PAGE*/
+
+
+
+
+
+/*================================================================================================================*/
+/*====================================RENT.PHP================================================================*/
+/*================================================================================================================*/
+
+
+
+/*================================================================================================================*/
+/*====================================CONTACT.PHP================================================================*/
+/*================================================================================================================*/
