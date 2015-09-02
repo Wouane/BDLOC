@@ -8,22 +8,22 @@
 				<br/>
 				<!-- PRENOM -->
 				<div class="form-group">
-					<label for="firstname"> PRENOM</label>
-					<input name='firstname' type="text" class="form-control" placeholder="Prenom" value="<?= $firstname ?>">
+					<label for="firstname"> PRENOM <sup><i class="fa fa-asterisk"></i></sup></label>
+					<input name='firstname' type="text" class="form-control" placeholder="Prenom" autocomplete="off" value="<?= $firstname ?>">
 				</div>
 				<!-- NOM -->
 				<div class="form-group">
-					<label for="lastname" > NOM</label>
+					<label for="lastname" > NOM <sup><i class="fa fa-asterisk"></i></sup></label>
 					<input name='lastname' type="text" class="form-control" id="lastname" placeholder="Nom" value="<?= $lastname ?>">
 				</div>
 				<!-- PSEUDO -->
 				<div class="form-group">
-					<label for="username"> PSEUDO</label>
+					<label for="username"> PSEUDO <sup><i class="fa fa-asterisk"></i></sup></label>
 					<input name='username' type="text" class="form-control" placeholder="Pseudo" value="<?= $username ?>">
 				</div>
 				<!-- EMAIL -->
 				<div class="form-group">
-					<label for="email"> EMAIL</label>
+					<label for="email"> EMAIL <sup><i class="fa fa-asterisk"></i></sup></label>
 					<input name='email' type="email" class="form-control" placeholder="Email" value="<?= $email ?>">
 				</div>
 				<br/>	
@@ -31,12 +31,12 @@
 				<br/>
 				<!-- ADRESSE  -->
 				<div class="form-group">
-					<label for="streetname"> ADRESSE</label>
+					<label for="streetname"> ADRESSE <sup><i class="fa fa-asterisk"></i></sup></label>
 					<input name='streetname' type="text" class="form-control" placeholder="Adresse" value="<?= $streetname ?>">
 				</div>
 				<!-- ZIPCODE -->
 				<div class="form-group">
-					<label for="zipcode">	CODE POSTAL</label>
+					<label for="zipcode">	CODE POSTAL <sup><i class="fa fa-asterisk"></i></sup></label>
 					<input name='zipcode' type="text" class="form-control" placeholder="Code postal" value="<?= $zipcode ?>">
 				</div>
 				<!--PHONE -->
@@ -44,7 +44,7 @@
 			<h3 class="titre-section"><i class="fa fa-phone"></i> Numéro</h3>
 				<br/>
 				<div class="form-group">
-					<label for="phonenumber"> TELEPHONE</label>
+					<label for="phonenumber"> TELEPHONE <sup><i class="fa fa-asterisk"></i></sup></label>
 					<input name='phonenumber' type="text" class="form-control" placeholder="Telephone" value="<?= $phonenumber ?>">
 				</div>
 				<br/>	
@@ -52,14 +52,15 @@
 				<br/>
 				<!-- MOT DE PASSE -->
 				<div class="form-group">
-					<label for="password">VOTRE MOT DE PASSE </label>
+					<label for="password"> VOTRE MOT DE PASSE <sup><i class="fa fa-asterisk"></i></sup></label>
 					<input name='password' type="password" class="form-control" id="password" placeholder="Mot de passe" value="">
 				</div>
 				<!-- CONFIRMATION -->
 				<div class="form-group">
-					<label for="confirm">CONFIRMATION </label>
+					<label for="confirm">CONFIRMATION <sup><i class="fa fa-asterisk"></i></sup></label>
 					<input type="password" class="form-control" id="confirm" name="confirm" placeholder="Confirmation" value="">
 				</div>
+				<p class="obligatoires">Champs Obligatoires <sup><i class="fa fa-asterisk"></i></sup></p>
 				<input type="submit" class="validate-register" value="Valider">
 		  		<div class="warning"><?php echo $error; ?></div>
 		</form>		
