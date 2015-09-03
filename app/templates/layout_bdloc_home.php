@@ -30,7 +30,7 @@
 		<h1 class="titre-home">BDLOC, louer gratuitement vos Bandes dessinées</h1>
 		<!-- ESPACE USER -->
 		<div class="btn-login">
-			<a href="#" title="Connexion"><button>Connexion</button></a>
+			<button>Connexion</button>
 		</div>
 	</header>
 <!-- ============= -->

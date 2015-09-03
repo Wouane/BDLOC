@@ -15,11 +15,11 @@
 
 		<div class="maintop">
 			<div class="subscribe">
-				<a href="<?= $this->url('inscription') ?>" title="Abonnement">Abonnez-vous</br> à BDLOC</a>
+				<a href="<?= $this->url('inscription') ?>" title="Abonnement">Abonnez-vous à BDLOC</a>
 			</div>
 			<div class="homewords">
-			...la Marie de Paris</br> a décidé de créer un nouveau système de location de BD, bdloc.fr,
-			</br><span class="cent"> 100% en ligne,</span> </br><span class="cent">100% gratuit,</span> </br><span class="cent">100% moderne</span>
+			...la Marie de Paris a décidé de créer un nouveau système de location de BD, bdloc.fr,
+			<div class="cent"> 100% en ligne,</div><div class="cent">100% gratuit,</div> <div class="cent">100% moderne</div>
 		</div>
 	</div>
 <?php $this->stop('main_content') ?>

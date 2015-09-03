@@ -2,7 +2,7 @@
 
 <?php $this->start('main_content') ?>
 
-<div class="page-login"><?php $this->insert('user/login_insert',['username'=>'','error'=>'']) ?></div>
+
 <?php 
 echo "<div class='warning'>";
 echo ($error);

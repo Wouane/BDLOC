@@ -10,7 +10,7 @@ $('#search').on("keyup", function(){
 				//récupère l'url du formulaire
 				"url":$("#filter").attr("action"),
 				"data":{
-					"search": $("#search").val()
+					"search": $("#search").val();
 				}
 			}).done(function(response){
 				var content=$(response).find(".listcat")
