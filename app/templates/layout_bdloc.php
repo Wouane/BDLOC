@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title><?= $this->e($title) ?></title>
+	<link rel="icon" type=img/png href="<?= $this->assetUrl('img/logo-icon.png') ?>">
 	<!-- LIGHTBOX PLUGIN -->
 	<link href="//cdn.rawgit.com/noelboss/featherlight/1.3.3/release/featherlight.min.css" type="text/css" rel="stylesheet" />
 	<!-- TYPOGRAPHIES -->
