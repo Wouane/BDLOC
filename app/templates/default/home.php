@@ -22,4 +22,5 @@
 			<div class="cent"> 100% en ligne,</div><div class="cent">100% gratuit,</div> <div class="cent">100% moderne</div>
 		</div>
 	</div>
+</div>
 <?php $this->stop('main_content') ?>

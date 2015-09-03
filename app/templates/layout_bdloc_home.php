@@ -45,8 +45,8 @@
 <!-- ============= -->
 		<footer>
 			<ul class="nav-footer">				
-				<li><a href="<?= $this->url('mentionsLegales'); ?>">Mentions légales</a></li> |
-				<li><a href="<?= $this->url('contact'); ?>">Contactez-nous</a></li> |
+				<li><a href="<?= $this->url('mentionsLegales'); ?>">Mentions légales</a></li>
+				<li><a href="<?= $this->url('contact'); ?>">Contactez-nous</a></li>
 			</ul>
 		<!-- ENCART FACEBOOK -->
 			<div id="fb-root">

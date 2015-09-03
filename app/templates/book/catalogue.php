@@ -9,7 +9,7 @@
 		<form name="filters" id="filters" method='GET' action="<?php echo $this->url('catalogue')?>">					
 				<h3>Catégories</h3>
 
-				<input type="checkbox" class="chk_boxe" label="check all" id="check_all" value="check_all">
+				<input type="checkbox" class="chk_boxe" id="check_all" value="check_all">
 				<label for="check_all" class="cheked_label">Check all</label>
 				<br>
 
@@ -128,7 +128,7 @@
 				echo "<div class='book'>";				
 				echo "<div class='left-mini'><img src=\"" . $bookie.  "\" alt='BDLOC'></div>";
 				echo "<div class='right-mini'>";
-				echo "<div class='ico-details' id='details'><a href='#' data-featherlight='" . $findDetails . "'><img src=\"" .$this->assetUrl('img/icone-details.png'). "\" alt='BDLOC'></a></div>";
+				echo "<div class='ico-details'><a href='#' data-featherlight='" . $findDetails . "'><img src=\"" .$this->assetUrl('img/icone-details.png'). "\" alt='BDLOC'></a></div>";
 				echo "<div class='ico-cart'><a href=".$cart.">";
 				if ($book['stock']!=0) {
 					echo "<img src=\"" .$this->assetUrl('img/icone-cart.png'). "\" alt='BDLOC'>";
