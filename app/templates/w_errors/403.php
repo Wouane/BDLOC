@@ -1,5 +1,5 @@
 <?php $this->layout('layout', ['title' => 'Créer un nouvel administrateur']) ?>
 
 <?php $this->start('main_content'); ?>
-<h1>403. Nothing to see here.</h1>
+<img class="error" src="<?= $this->assetUrl('img/error403.jpg') ?>">
 <?php $this->stop('main_content'); ?>
