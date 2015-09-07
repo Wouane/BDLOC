@@ -21,6 +21,9 @@ class BookController extends Controller
 		// déclaration des variables
 		$byNumber = 20;
 		$start = 0;
+
+
+
 		// $byType = $_POST['ByType'];
 		//$keyword = "";
 
@@ -46,26 +49,29 @@ class BookController extends Controller
 
 		// if(!empty($_GET['byType'])){
 		// 	$byType = $_GET['byType'];
-		// }		
+		// }
+		if(!empty($_GET['genre'])){
+			$bdlocCat = $_GET['genre'];
+			//debug($bdlocCat);
+		}
+		else{
+			$bdlocCat=[];
+		}
+
 
 
 		// UNE FOIS LA CONDITION FINIE (les différents options recherches sélectionnées)
 		//alors affiche les livres et le catalogue
 
-		$books = $bookManager->getBooks($byNumber, $start);
-		debug($books);
+		$books = $bookManager->getBooks($byNumber, $start, $bdlocCat);
+		//debug($books);
 		/************ CATEGORIES *************/
-		if(!empty($_GET['genre'])){
-			$bdlocCat = $_GET['genre'];
-			$bookManager = new BookManager();			
-			if(!empty($bdlocCat)){
-			$booksCat = $bookManager->getCategorie($bdlocCat);
-			//$this->show('book/catalogue',["bdlocCat"=>$bdlocCat]);
-			debug($bdlocCat);
-			}					
-		}
+		
+
+				
+		
 		/************* END CATEGORIES ****************/
-		$this->show('book/catalogue',["books"=>$books,"start"=>$start]);
+		$this->show('book/catalogue',["books"=>$books,"start"=>$start,"bdlocCat"=>$bdlocCat]);
 
 	}
 	public function search()

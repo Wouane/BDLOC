@@ -55,8 +55,8 @@
 				<input type="checkbox" name="genre[]" id="polar" value="polar" class="chk_boxes">
 				<label for="polar">Polar</label><br />
 
-				<input type="checkbox" name="genre[]" id="science_fiction" value="science_fiction" class="chk_boxes">
-				<label for="science_fiction">Science Fiction</label><br />
+				<input type="checkbox" name="genre[]" id="science-fiction" value="science-fiction" class="chk_boxes">
+				<label for="science-fiction">Science Fiction</label><br />
 
 				<input type="checkbox" name="genre[]" id="sentimental" value="sentimental" class="chk_boxes">
 				<label for="sentimental">Sentimental</label><br />
