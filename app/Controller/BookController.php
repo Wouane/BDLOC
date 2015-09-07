@@ -24,9 +24,6 @@ class BookController extends Controller
 
 
 
-		// $byType = $_POST['ByType'];
-		//$keyword = "";
-
 
 		// CONDTION DE LA MORT
 
@@ -58,26 +55,19 @@ class BookController extends Controller
 			$bdlocCat=[];
 		}
 
-
-
 		// UNE FOIS LA CONDITION FINIE (les différents options recherches sélectionnées)
 		//alors affiche les livres et le catalogue
 
 		$books = $bookManager->getBooks($byNumber, $start, $bdlocCat);
 		//debug($books);
-		/************ CATEGORIES *************/
-		
 
-				
-		
-		/************* END CATEGORIES ****************/
 		$this->show('book/catalogue',["books"=>$books,"start"=>$start,"bdlocCat"=>$bdlocCat]);
 
 	}
 	public function search()
 	{
 		$bookManager = new BookManager();
-		$books = $bookManager->getBooks($byNumber, $start);
+		$books = $bookManager->getBooks($byNumber, $start, $bdlocCat);
 	}
 
 }
