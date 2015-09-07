@@ -48,6 +48,9 @@ i.fa-asterisk, i.fa-exclamation-circle{
 	color:#FE641E;
 	}
 
+	i.fa-exclamation-circle{
+	color:#1C8AF9;;
+}
 
 /*================================================================================================================*/
 /*====================================LAYOUT_BDLOC.PHP==================================================*/
@@ -528,11 +531,6 @@ transition: all .35s;
     background-color: #1C8AF9;
 	}
 
-
-
-
-
-
 /*================================================================================================================*/
 /*====================================PAGE PROFILE.PHP==================================================*/
 /*================================================================================================================*/
@@ -898,8 +896,46 @@ font-size: 18px;
 form.contact{
 width:30%;
 margin:0 auto 2em;
-}	
+}
+	form.contact>p.contact-text{
+		text-align:center;
+		margin:1em;
+		}
 
+		form.contact>div.form-group>label{
+		display: block;
+		width: 130px;
+		float: left;
+		margin:15px 2px 0 0;
+		}	
+
+		form.contact>input.validate-contact{
+		margin-left:9em;
+		border: none;
+		color: #FFF;
+		width: 10em;
+		padding:0.7em;
+		border-radius: 3px;
+		background-color: #FE641E;
+		margin-top: 1em;
+		margin-bottom: 1em;
+		-webkit-transition: all .35s;
+		-moz-transition: all .35s;
+		transition: all .35s;
+		}
+			form.contact>input.validate-contact:hover{
+			color: #FFF;
+			background-color: #1C8AF9;
+			}
+
+		form.contact>div.form-group>input{
+		padding:8px;
+		color:#2C3E50;
+		}
+		
+			form.contact>div.form-group>input:focus, input:active{
+			border:1px solid #1C8AF9;
+			}
 .form-group{
 padding: 10px;
 }
@@ -909,28 +945,15 @@ width: 252px;
 height:151px;
 border-radius: 3px;
 border:1px solid #FE641E;
-
 }
+	textarea:focus, textarea:active{
+	border:1px solid #1C8AF9;
+	}
 
-textarea:focus, textarea:active{
-border:1px solid #1C8AF9;
-}
-
-form.contact>div.form-group>label{
-display: block;
-width: 180px;
-float: left;
-margin:15px 2px 0 0;
-}	
-
-form.contact>div.form-group>input{
-padding:10px;
-color:#2C3E50;
-}
-
-form.contact>div.form-group>input:focus, input:active{
-border:1px solid #1C8AF9;
-}
+	textarea[placeholder]{
+	font-style:italic;
+	padding:6px;	
+	}
 
 .obligatoires{
 margin:1em 0;
@@ -938,22 +961,3 @@ color:#FE641E;
 font-style:italic;
 }
 
-form.contact>input.validate-contact{
-margin-left:12em;
-border: none;
-color: #FFF;
-width: 10em;
-padding:0.7em;
-border-radius: 3px;
-background-color: #FE641E;
-margin-top: 1em;
-margin-bottom: 1em;
--webkit-transition: all .35s;
--moz-transition: all .35s;
-transition: all .35s;
-}
-
-form.contact>input.validate-contact:hover{
-color: #FFF;
-background-color: #1C8AF9;
-}
