@@ -92,7 +92,7 @@
 		<label for="search"><i class="fa fa-search"></i></label>
 		<input type="search" placeholder="Recherche" name="search" id="search">
 		<form method="GET">
-				<select name="byType" onChange="this.form.submit()" id="byType">
+				<select name="byOrder" onChange="this.form.submit()" id="byOrder">
 					<option value="date" id="byDateCreated">Date d'ajout au catalogue</option>
 					<option value="alpha" id="byAlpha">Ordre alphabétique</option>
 					<option value="publication" id="byDatePublish">Date de publication</option>
