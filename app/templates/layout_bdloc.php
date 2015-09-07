@@ -31,7 +31,7 @@
 				<li class="link-catalog"><a href="<?= $this->url('catalogue') ?>" title="Catalogue"><i class="fa fa-book"></i> Les BDs !</a></li>
 				<li class="link-profile"><a href="<?= $this->url('profile') ?>" title="profil"><i class="fa fa-user"></i> Mon compte</a></li>
 				<li class="link-panier"><a href="<?= $this->url('panier') ?>" title="Panier"><i class="fa fa-shopping-cart"></i> Mon panier [ 0 ]</a></li>
-				<li class="link-panier"><a href="<?= $this->url('contact'); ?>" title="Contact"><i class="fa fa-phone"></i> Contactez-nous</a></li>
+				<li class="link-contact"><a href="<?= $this->url('contact'); ?>" title="Contact"><i class="fa fa-phone"></i> Contactez-nous</a></li>
 				
 			</ul>
 		</nav>
@@ -70,7 +70,8 @@
 				</div>
 			</div>
 			<ul class="nav-footer">				
-				<li><a href="<?= $this->url('mentionsLegales'); ?>">Mentions légales</a></li> 
+				<li><i class="fa fa-file-text-o footer"></i><a href="<?= $this->url('mentionsLegales'); ?>"> Mentions légales |</a></li> 
+				<li><i class="fa fa-phone footer"></i><a href="<?= $this->url('contact'); ?>" title="Contact"> Contactez-nous</a></li>
 			</ul>
 		</footer>
 		
