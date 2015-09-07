@@ -44,12 +44,17 @@ input[type='text'],input[type='password'], input[type='email']{
 
 /*ICONES FONTAWESOME*/
 
-i.fa-asterisk, i.fa-exclamation-circle{
+i.fa-asterisk, i.fa-file-text-o{
 	color:#FE641E;
-	}
+}
 
-	i.fa-exclamation-circle{
-	color:#1C8AF9;;
+i.fa-exclamation-circle, i.fa-external-link{
+color:#1C8AF9;
+}
+
+i.footer{
+	color:#AFB4B7;
+
 }
 
 /*================================================================================================================*/
@@ -100,7 +105,6 @@ margin:25px ;
 			font-family:PT Sans;
 			font-weight: 700;
 			}
-
 				.navigation li a:hover{
 				border-top: 3px solid #FE641E;
 				color:#FE641E;
@@ -120,6 +124,7 @@ position:absolute;
 top:0;
 right:0;
 width:235px;
+height:80px;
 background-color:#FE641E;
 }
 	.user-picture{
@@ -222,11 +227,20 @@ footer, .main:after {
 		}
 			.nav-footer li a{
 			color:#AFB4B7;
+			text-decoration:underline; 
 			}
+
+			.nav-footer li a:hover{
+			color:#AFB4B7;
+			text-decoration:underline;
+			font-weight: bolder
+			}
+
 #fb-root {
 	width: 500px;
 	float: left;
 	bottom: 0;
+	padding:1em;
 }
 /*================================================================================================================*/
 /*====================================HOME.PHP==============================================================*/
@@ -530,6 +544,61 @@ transition: all .35s;
 	color: #FFF;
     background-color: #1C8AF9;
 	}
+
+/*================================================================================================================*/
+/*====================================CHANGE_PASSWORD.PHP==================================================*/
+/*================================================================================================================*/
+
+h2.change-password-title{
+text-align: center;
+font-size: 20px;
+margin:1em;
+}
+
+form.change-password{
+margin:0 auto 6em;
+width:40%;
+padding:1em;
+}	
+	form.change-password>div.change-pswd>label{
+	width:auto;
+	margin:0.5em 0;
+	color:#2C3E50;
+	display:block;
+	text-align: center;
+	}
+
+	form.change-password>div.change-pswd>input{
+	padding:10px;
+	color:#2C3E50;
+	display:block;
+	margin: 0 auto;
+	}
+
+	form.change-password>div.change-pswd>input:focus, input:active{
+		border:1px solid #1C8AF9;
+		}
+
+	form.change-password>input.validate-change-pswd{
+		margin-left:17.5em;
+		border: none;
+		color: #FFF;
+		width: 10em;
+		padding:0.7em;
+		border-radius: 3px;
+		background-color: #FE641E;
+		margin-top: 1em;
+		margin-bottom: 1em;
+		-webkit-transition: all .35s;
+		-moz-transition: all .35s;
+		transition: all .35s;
+		}
+			form.change-password>input.validate-change-pswd:hover, form.forgot-password>input.validate-change-pswd:focus,  form.forgot-password>input.validate-change-pswd:active{
+			color: #FFF;
+    		background-color: #1C8AF9;
+			}
+
+
 
 /*================================================================================================================*/
 /*====================================PAGE PROFILE.PHP==================================================*/
@@ -961,3 +1030,35 @@ color:#FE641E;
 font-style:italic;
 }
 
+/*================================================================================================================*/
+/*====================================CREDITS.PHP==================================================*/
+/*================================================================================================================*/
+
+div.mentions-body{
+width:auto;
+margin:2em;
+padding:3em;
+border:1px solid #ccc;
+}
+	.mentions-body>p,address{
+	line-height:1.4em;
+	}
+
+
+h1.title-mentions{
+color:#FE641E;
+font-weight: bolder;
+font-size:18px;
+padding:1em 0;
+
+}
+
+h2.mentions_legales{
+	color:#1C8AF9;
+	font-style:bolder;
+	padding:1em;
+	font-weight: bolder;
+	text-decoration: underline;
+	text-decoration-style: dotted;
+
+}
