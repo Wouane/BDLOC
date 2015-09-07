@@ -941,6 +941,37 @@ a.tooltip span
 
 /*FAIRE UN TABLEAU DANS LA PAGE*/
 
+.main-cart{
+	padding: 50px;
+	margin: 2em;
+	border: solid 1px blue;
+}
+
+h1{
+	
+}
+	
+table {
+	width: 750px;
+	height: 100px;
+	margin: 0 auto;
+	border: 1px solid black;
+	
+}
+
+/*thead{
+	border: 1px solid black;
+}
+
+caption{
+	text-align: left;
+	margin-left: 20px;
+	margin-bottom: 10px;
+}
+
+th, td {
+	text-align: center;
+}*/
 
 
 

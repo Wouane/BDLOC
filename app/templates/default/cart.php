@@ -2,11 +2,11 @@
 	
 	<?php $this->start("main_content") ?>
 	
+
 	<div class="main-cart">
 		<h1>Votre Panier</h1>
-
 		<table>
-			<caption>Mon panier (maximum 10 articles)</caption>
+			<caption>(maximum 10 articles)</caption>
 			<thead>
 				<th>Poster</th>
 				<th>Titre</th>
@@ -20,10 +20,13 @@
 				</tr>
 			</tbody>
 		<table>
+	</div>
 		
-
+	
 		<a href="<?php echo $this->url('catalogue') ?>" title="Continuer">Continuer à bouquiner</a>
 		
-	</div>
-	
+
 	<?php $this->stop("main_content") ?>
+	
+	
+	
