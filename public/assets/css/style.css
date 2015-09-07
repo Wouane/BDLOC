@@ -296,6 +296,9 @@ h1.titre-home {
 	width: 30px;
 	height: 30px;
 }
+.login::before:hover{
+	color: #FE641E;
+}
 		.page-login{
 		margin: 20px auto;
 		width: 50%;
@@ -306,6 +309,15 @@ h1.titre-home {
 		text-align: center;
 		margin: 0 auto;
 		color: #FF0000;
+		}
+		.closelog{
+			width: 30px;
+			height: 30px;
+			background-color: transparent;
+			cursor: pointer;
+			position: absolute;
+			top:0px;
+			left:96%;
 		}
 
 /*||||||||||||||||||||||||||SLIDER||||||||||||||||||||||||||*/
