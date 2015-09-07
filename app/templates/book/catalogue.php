@@ -55,8 +55,8 @@
 				<input type="checkbox" name="genre[]" id="polar" value="polar" class="chk_boxes">
 				<label for="polar">Polar</label><br />
 
-				<input type="checkbox" name="genre[]" id="science_fiction" value="science_fiction" class="chk_boxes">
-				<label for="science_fiction">Science Fiction</label><br />
+				<input type="checkbox" name="genre[]" id="science-fiction" value="science-fiction" class="chk_boxes">
+				<label for="science-fiction">Science Fiction</label><br />
 
 				<input type="checkbox" name="genre[]" id="sentimental" value="sentimental" class="chk_boxes">
 				<label for="sentimental">Sentimental</label><br />
@@ -92,7 +92,7 @@
 		<label for="search"><i class="fa fa-search"></i></label>
 		<input type="search" placeholder="Recherche" name="search" id="search">
 		<form method="GET">
-				<select name="byType" onChange="this.form.submit()" id="byType">
+				<select name="byOrder" onChange="this.form.submit()" id="byOrder">
 					<option value="date" id="byDateCreated">Date d'ajout au catalogue</option>
 					<option value="alpha" id="byAlpha">Ordre alphabétique</option>
 					<option value="publication" id="byDatePublish">Date de publication</option>
