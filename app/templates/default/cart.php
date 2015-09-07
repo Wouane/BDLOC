@@ -2,11 +2,12 @@
 	
 	<?php $this->start("main_content") ?>
 	
+	<h2>Bienvenue sur votre panier <span><?= $w_user['username']; ?></span> ! </h2>
+	<div class="main-cart">	
 
-	<div class="main-cart">
-		<h1>Votre Panier</h1>
-		<table>
-			<caption>(maximum 10 articles)</caption>
+		<table class="my-cart">
+
+			<caption><i class="fa fa-shopping-cart cart"></i> Mon panier</caption>
 			<thead>
 				<th>Poster</th>
 				<th>Titre</th>
@@ -18,8 +19,25 @@
 					<td>Titre</td>
 					<td>Retirer du Panier</td>
 				</tr>
+				<tr>
+					<td>Image</td>
+					<td>Titre</td>
+					<td>Retirer du Panier</td>
+				</tr>
+				<tr>
+					<td>Image</td>
+					<td>Titre</td>
+					<td>Retirer du Panier</td>
+				</tr>
+				<tr>
+					<td>Image</td>
+					<td>Titre</td>
+					<td>Retirer du Panier</td>
+				</tr>
 			</tbody>
+
 		<table>
+
 	</div>
 		
 	

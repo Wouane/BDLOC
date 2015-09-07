@@ -938,36 +938,47 @@ a.tooltip span
 /*================================================================================================================*/
 /*====================================CART.PHP================================================================*/
 /*================================================================================================================*/
-
-/*FAIRE UN TABLEAU DANS LA PAGE*/
-
 .main-cart{
-	padding: 50px;
-	margin: 2em;
-	border: solid 1px blue;
+padding: 3em;
+margin: 2em;
+border: solid 1px blue;
+}
+	
+table.my-cart{
+width: 75%;
+margin: 0 auto;
+border: 1px solid black;
 }
 
-h1{
-	
+caption{
+text-align: center;
+font-size: 1em;
+color: #1C8AF9;
+padding:15px;
 }
-	
-table {
-	width: 750px;
-	height: 100px;
-	margin: 0 auto;
-	border: 1px solid black;
-	
+	caption>span{
+	color:#1C8AF9;
+	}
+
+.my-cart>thead{
+border:1px solid red;
+padding:15px;
 }
+	.my-cart>thead>th{
+	height:50px;
+	border:1px solid black;
+	}
+
+	.my-cart>tbody>tr>td{
+	padding:50px;
+	border:1px solid black;
+	}
+
 
 /*thead{
 	border: 1px solid black;
 }
 
-caption{
-	text-align: left;
-	margin-left: 20px;
-	margin-bottom: 10px;
-}
 
 th, td {
 	text-align: center;
