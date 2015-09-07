@@ -9,10 +9,10 @@
 		//accueil de l'admin --------------------------------------------------------------------------
 		['GET', '/', 'Default#home', 'home'],
 
-		//Inscription de l'utilisateur ----------------------------------------------------------------
+		//INSCRIPTION de l'utilisateur ----------------------------------------------------------------
 		['GET|POST', '/inscription/', 'User#register', 'inscription'],
 
-		//Connexion de l'utilisateur ------------------------------------------------------------------	
+		//CONNEXION de l'utilisateur ------------------------------------------------------------------	
 		['GET|POST', '/connexion/', 'User#login', 'connexion'],
 
 		//Page de Mot de passe oublié -----------------------------------------------------------------
@@ -20,36 +20,37 @@
 		//Page de changement de mot de passe depuis Profil-----------------------------------------------------------	
 		['GET|POST', '/change-mot-de-passe/', 'User#changePassword', 'changeMotdepasse'],
 
-		//Page de changement de mot de passe après avoir recu un mail-----------------------------------------------------------	
+		//Page de CHANGEMENT DE MOT DE PASSE après avoir recu un mail-----------------------------------------------------------	
 		['GET|POST', '/reinitialisation-mot-de-passe/[:token]/', 'User#resetPassword', 'resetMotdepasse'],
 
-		//Paramètres du profil de l'utilisateur -------------------------------------------------------
+		//Parametre du PROFIL de l'utilisateur -------------------------------------------------------
 		['GET|POST', '/catalogue/profil/parametres', 'User#parameters', 'parametres'],
 
-		//Page catalogue-------------------------------------------------------------------------------
+		//Page CATALOGUE------------------------------------------------------------------------------
 		['GET|POST', '/catalogue/', 'Book#catalogue', 'catalogue'],
 
-		//Page details-------------------------------------------------------------------------------
+		//Page DETAILS-------------------------------------------------------------------------------
 		['GET', '/catalogue/details/[i:id]/', 'Book#details', 'details'],
 
-		//Page search.js-------------------------------------------------------------------------------
+		//Page RECHERCHER search.js-------------------------------------------------------------------------------
 		['GET|POST', '/recherche/', 'Book#search', 'search'],
 
-		//Page panier de l'utilisateur ----------------------------------------------------------------
-		['GET|POST', '/catalogue/panier/', 'Default#cart', 'panier'],
+		//Page PANIER de l'utilisateur ----------------------------------------------------------------
+		['GET|POST', '/catalogue/panier/', 'Cart#cart', 'panier'],
 
-		//Page contact de l'utilisateur-----------------------------------------------------------------
+		//Page CONTACT de l'utilisateur-----------------------------------------------------------------
 		['GET|POST', '/catalogue/contact/', 'Default#contact', 'contact'],
 
-		//Page profil de l'utilisateur-----------------------------------------------------------------
+		//Page PROFIL de l'utilisateur-----------------------------------------------------------------
 		['GET|POST', '/catalogue/profil/', 'User#profil', 'profile'],
 
 		//Page déconnexion de l'utilisateur -----------------------------------------------------------	
 		['GET', '/deconnexion/', 'User#logout', 'deconnexion'],
-		//FakeData----------------------------------------------------------------------------------
+
+		//FAKE DATA----------------------------------------------------------------------------------
 		['GET|POST', '/inscription/fakedata', 'User#Fakedata', 'fake_data'],
 
-		//Page Mentions légales ----------------------------------------------------------------
+		//Page MENTIONS LEGALES ----------------------------------------------------------------
 		['GET', '/catalogue/mentions-legales/', 'Default#credits', 'mentionsLegales'],
 
 	// ================================================================================================
