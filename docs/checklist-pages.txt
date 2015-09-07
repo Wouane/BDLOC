@@ -1,4 +1,4 @@
-
+﻿
 WORKERS /
 Alex
 Ju
@@ -9,14 +9,9 @@ Denis
 
 CHECK LIST PAGES OK ?
 ------------------------------------------------------
-
-PAGE 404 : 
-Mettre le layout bdloc + css
-
 ------------------------------------------------------
 
 PAGE HOME : 
-fixer l'encart de connexion' login (unique) + css
 verif erreurs sous chaque champs
 tcheck validationS
 
@@ -24,29 +19,22 @@ tcheck validationS
 
 PAGE INSCRIPTION :
 
-Titre de la page
-mise en page encart inscription (exemple sur login)
-voir izneo
 verif erreurs sous chaque champs
 tcheck validation
-mettre layout_home
-+ css
+
 
 ------------------------------------------------------
 
 MOT DE PASSE OUBLIE
-Titre de la page
+
 verif erreurs sous chaque champs
 tcheck validation
-Mettre layout_no menu
-affiner css et mise en page des champs
+
 
 ------------------------------------------------------
 
 MODIFICATION DE MOT DE PASSE 
-Titre de la page
-Mettre layout_no menu
-affiner css et mise en page des champs
+
 REDIRECTION HOME
 
 ------------------------------------------------------
@@ -65,7 +53,7 @@ MEGA REQUETE SQL DE LA MORT NINJA DYNAMIQUE
 
 PAGE LAYOUT :
 
-AJOUTER ENCART FACEBOOK 
+
 AJOUTER PLAN DU SITE (pages principales + sous pages = liens 
 AVEC redirection vers chaque page du site)
 TROUVER UN NOUVEAU LOGO
@@ -75,8 +63,6 @@ SE METTRE OK SUR LE DESIGN FINALE DU SITE
 
 ADMIN :
 Titre de la page
-
-Creer page login admin
 Creer un champs pour Ajouter un admin
 (voir exemple wickback framework)
 verif erreurs sous chaque champs
@@ -89,18 +75,8 @@ pour appeller les éléments que l'admin veut récupérer
 ------------------------------------------------------
 PAGE CONTACT :
 
-Mise en page CSS des champs
-Titre de la page
 verif erreurs sous chaque champs
 tcheck validation
-
-------------------------------------------------------
-
-PAGE MENTIONS LEGALES:
-
-Mise en page CSS
-Titre de la page
-+ completer mentions légales
 
 ------------------------------------------------------
 
