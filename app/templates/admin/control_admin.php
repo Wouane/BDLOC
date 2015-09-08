@@ -1,4 +1,4 @@
-<?php $this->layout('layout_admin', ['title' => 'backOffice']) ?>
+<?php $this->layout('layout_backoffice', ['title' => 'backOffice']) ?>
 
 <?php $this->start('main_content') ?>
 

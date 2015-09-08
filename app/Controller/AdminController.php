@@ -121,4 +121,11 @@ class AdminController extends Controller
 	{ 
 		$this->show('admin/control_admin');
 	}
+
+	public function logout()
+	{
+		$am = new AuthentificationManager();
+		$am->logUserOut();
+		$this->redirectToRoute('connexion_admin');
+	}
 }
