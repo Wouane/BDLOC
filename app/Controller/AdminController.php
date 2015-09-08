@@ -94,7 +94,7 @@ class AdminController extends Controller
 			$result = $am->isValidLoginInfo($username, $password);
 
 			//Si valide : connexion
-			if(isset($result)){
+			if($result > 0 ){
 				$adminId = $result;
 				
 				//trouve administrateur

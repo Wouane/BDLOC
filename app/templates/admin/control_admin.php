@@ -23,7 +23,7 @@
 		<thead>
 			<tr>
 				<th><i class="fa fa-shopping-cart"></i> Commandes</th>
-				<th><i class="fa fa-cart-arrow-down"></i> Bande dessinés disponible</th>
+				<th><i class="fa fa-book"></i> Bande dessinés disponible</th>
 				<th><i class="fa fa-user-times"></i> Produits hors stock</th>
 			</tr>
 		</thead>
