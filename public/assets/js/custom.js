@@ -44,7 +44,11 @@ $('.chk_boxes').on("click", function(){
 });
 // Change for form
 function recupere()
-{document.formulaire.choix.value = liste.options[liste.selectedIndex].value;}
+{
+document.getElementById('denis').submit();
+document.formulaire.choix.value = liste.options[liste.selectedIndex].value;
+
+}
 
 
 (function(d, s, id) {
