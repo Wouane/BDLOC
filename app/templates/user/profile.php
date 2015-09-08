@@ -65,6 +65,7 @@
 					<label for="phonenumber"> TELEPHONE </label>
 					<input name="phonenumber" placeholder="Numéro Mobile / Fixe" type="text" id="phonenumber" class="form_modify" value="<?= $w_user['phone_number']; ?>">
 				</div>
+				<?php echo $error; ?>
 				<!-- VALIDATION -->
 				<input type="submit" class="btn btn-default" value="Valider">
 
