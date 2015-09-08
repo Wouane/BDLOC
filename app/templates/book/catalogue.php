@@ -9,7 +9,7 @@
 		<form name="filters" id="filters" method='GET' action="<?php echo $this->url('catalogue')?>">					
 				<h3>Catégories</h3>
 				
-				<div class="checkbox_content">
+				<div class="checkbox_content checker_all">
 					<input type="checkbox" class="chk_boxe" id="check_all" value="check_all">
 					<label for="check_all" class="cheked_label">Check all</label>					
 				</div>
