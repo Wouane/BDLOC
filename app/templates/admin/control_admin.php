@@ -47,9 +47,9 @@
 		</thead>
 		<tbody>
 			<tr>
-				<td>7</td>
-				<td>46</td>
-				<td>142</td>
+				<td>3</td>
+				<td>2</td>
+				<td><?php echo $count; ?></td>
 			</tr>
 		</tbody>
 	</table>	

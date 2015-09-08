@@ -119,7 +119,11 @@ class AdminController extends Controller
 
 	public function control()
 	{ 
-		$this->show('admin/control_admin');
+		//Instance usermanager
+		$userManager = new\Manager\userManager();
+		//appellé la fonction
+		$count = $userManager->countall(); 
+		$this->show('admin/control_admin', ['count' => $count]);
 	}
 
 	public function logout()

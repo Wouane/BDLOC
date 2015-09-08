@@ -33,4 +33,18 @@
 
 		}
 
+		public function countall()
+		{
+			//Qui compte 
+			$sql = "SELECT COUNT(*)
+					FROM users ";
+
+			$sth = $this->dbh->prepare($sql);
+			$sth->execute();
+			$count = $sth->fetchColumn();
+
+			//Return la réponse
+			return $count;
+		}
+
 	}
