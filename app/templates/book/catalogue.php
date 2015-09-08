@@ -134,9 +134,7 @@
 					<option value="60">Afficher 60 résultats</option>
 				</select>
 
-					 <?php if ($start !== 0): ?>
-					 	<a href="?start=<?= $start-20 ?>"><i class="fa fa-chevron-left"></i> Préc</a>
-					 <?php endif ?>
+					<a href="?start=<?= $start-20 ?>"  <?php if ($start == 0): ?> onclick="return false" style="background:#CCC"<?php endif ?>><i class="fa fa-chevron-left"></i> Préc</a>
 					<a href="?start=<?= $start+20 ?>">Suiv <i class="fa fa-chevron-right"></i></a>
 
 								
