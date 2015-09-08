@@ -44,7 +44,10 @@ class DefaultController extends Controller
 	{
 		$am = new AuthentificationManager();
 		$error = "";
+		$result = "";
 		$user_name_regex = "/^[\p{L}._-]{2,100}$/u";
+
+
 
 		if(!empty($_POST)){
 			$name = $_POST['name'];
@@ -61,7 +64,6 @@ class DefaultController extends Controller
 			}
 
 
-			$result = "";
 			if(!$error){
 				$mail = new \PHPMailer;
 
