@@ -3,18 +3,14 @@
 
 	class BookManager extends \W\Manager\Manager
 	{
-		public function getBooks($byNumber, $start, $bdlocCat, $sort)
+		public function getBooks($byNumber, $start, $bdlocCat, $sort, $keyword)
 		{	
 
 			// déclaration des variables ($types de recherches)
-
 			$byNumberSelected = 'selected';
-
-			$keyword = $_GET['search'];
+			$keyword = "";
 			$genre = "";
-			//$start = $_GET['start'];
-			//$start = 0;
-						//Sort by number
+			//Sort by number
 			if(!empty($_GET['byNumber'])){
 				$byNumber = $_GET['byNumber'];
 			}
@@ -22,6 +18,8 @@
 			if (!empty($_GET['search'])) {
 				$keyword = $_GET['search'];
 				//debug($keyword);
+			}else{
+				$keyword = "";
 			}
 
 			//Pagination
@@ -75,7 +73,8 @@
 			$sth->bindValue(":keyword", '%'.$keyword.'%');
 			$sth->bindValue(":byNumber", $byNumber);
 			$sth->bindValue(":genre", $genre);
-			$sth->execute();debug($sql);			
+			$sth->execute();	
+			//debug($_GET);		
 			return $sth->fetchAll();
 
 		}

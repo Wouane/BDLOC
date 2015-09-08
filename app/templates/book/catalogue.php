@@ -70,9 +70,6 @@
 				<input type="checkbox" name="genre[]" id="thriller" value="thriller" class="chk_boxes">
 				<label for="thriller">Thriller</label><br />
 
-				<!-- <input type="checkbox" name="genre[]" id="western" value="western" class="chk_boxes">
-				<label for="western">Western</label><br /> -->
-				<button type="submit">Chercher</button>
 		</form>
 		<form >
 			<h3>Disponibilité</h3>
@@ -86,8 +83,11 @@
 <div class="maincat">
 	<div class="results">
 		<!-- Tris et pagination -->
-		<label for="search"><i class="fa fa-search"></i></label>
-		<input type="search" placeholder="Recherche" name="search" id="search">
+		<form id="searchform" action="<?php echo $this->url('catalogue')?>" method="POST">
+			<label for="search"><i class="fa fa-search"></i></label>
+			<input type="search" placeholder="Recherche" name="search" id="search">
+		</form>
+
 		<form method="GET">
 				<select name="byOrder" onChange="this.form.submit()" id="byOrder">
 					<option value="alpha" id="byAlpha">Ordre alphabétique</option>
@@ -96,7 +96,8 @@
 				</select>
 		</form>
 		<form method="GET">
-				<select name="byNumber" onChange="this.form.submit()" id="byNumber">
+				<select name="byNumber" onChange="showUser(this.value)" id="byNumber">
+					<option>Résultats par page</option>
 					<option value="20">Afficher 20 résultats</option>
 					<option value="40">Afficher 40 résultats</option>
 					<option value="60">Afficher 60 résultats</option>
@@ -107,11 +108,7 @@
 					 <?php endif ?>
 					<a href="?start=<?= $start+20 ?>">Suiv <i class="fa fa-chevron-right"></i></a>
 
-					<!--br>
-					<?php if ($start !== 0): ?>
-					 	<a href="?start=<?= $start-$byNumber ?>"><< Préc.</a>
-					 <?php endif ?>
-					<a href="?start=<?= $start+$byNumber ?>">Suiv. >></a-->					
+								
 		</form>
 	</div>
 	<div class="listcat">

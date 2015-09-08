@@ -18,12 +18,12 @@ class BookController extends Controller
 		// déclaration des variables
 			$byNumber = 20;
 			$start = 0;
-			$sort = 't.title';
-			$_GET['search'] = "";			 
+			$sort = 't.title';		 
 			$bdlocCat = [];
-			$genre=[];
-// CONDTION DE LA MORT
+			$genre = [];
+			$keyword = "";
 
+// CONDTION DE LA MORT
 			//Pagination
 			if(!empty($_GET['start'])){
 				$start = $_GET['start'];
@@ -34,16 +34,16 @@ class BookController extends Controller
 		// UNE FOIS LA CONDITION FINIE (les différents options recherches sélectionnées)
 		//alors affiche les livres et le catalogue
 
-		$books = $bookManager->getBooks($byNumber, $start, $bdlocCat, $sort);
+		$books = $bookManager->getBooks($byNumber, $start, $bdlocCat, $sort, $keyword);
 		//debug($books);
 
-		$this->show('book/catalogue',["books"=>$books,"start"=>$start,"bdlocCat"=>$bdlocCat,"sort"=>$sort]);
+		$this->show('book/catalogue',["books"=>$books,"start"=>$start,"bdlocCat"=>$bdlocCat,"sort"=>$sort,"keyword"=>$keyword]);
 
 	}
 	public function search()
 	{
 		$bookManager = new BookManager();
-		$books = $bookManager->getBooks($byNumber, $start, $bdlocCat, $sort);
+		$books = $bookManager->getBooks($byNumber, $start, $bdlocCat, $sort, $keyword);
 	}
 
 }
