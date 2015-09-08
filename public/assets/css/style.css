@@ -750,6 +750,9 @@ transition: all .35s;
 .filter>form>input {
 	margin: 5px 2px; 
 }
+.checkbox_content {
+	padding-bottom: 5px;
+}
 .results{
 	margin-top: 2.5em;
 	min-width: 250px;
