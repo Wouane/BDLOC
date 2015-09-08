@@ -3,12 +3,29 @@ namespace Controller;
 use \Manager\CartManager;
 use \W\Controller\Controller;
 
-class CartController extends Controller {
-	publicfunction cart {
+class CartController extends Controller{
+
+	public function cart(){
 	$cm = new CartController;
 	}
 
-//MONTRER LES LIVRES DANS LE PANIER
+	//methode pour récupérer l'id du book cliqué
+	public function AddBooktoCart($book_id){
+
+		$id = $_GET['id'];
+		
+		if(!empty($_GET['id'])){
+			$cm = new CartManager();
+			$books = $cm->getBooks($id);
+
+			$this->show('book/details', ['cart'	=> $books]);
+
+		}
+
+	}
+
+
+}
 
 // 	public function showBooks()
 // 	{   
