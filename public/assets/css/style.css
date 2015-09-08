@@ -19,6 +19,7 @@ body{
 	font:14px;
 	font-family:'PT Sans', 'Open Sans', sans-serif;
 	margin:0;
+	background-color: rgba(235,235,235, 0.5);
 }
 
 ul{
@@ -627,7 +628,8 @@ margin:5px 0;
 
 /*|||||||||||||||ONGLET UPDATE INFOS|||||||||||||||||*/
 form.update-profile{
-margin-left: 1em
+margin-left: 1em;
+width: 70%;
 }	
 	form.update-profile>div.form-modify>label{
 	display: block;
@@ -644,6 +646,28 @@ margin-left: 1em
 		border:1px solid #1C8AF9;
 		}
 
+.cd-tabs.is-ended> .nav-tabs{
+	width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+.cd-tabs-navigation>li>a {
+	text-align: center;
+}
+.cd-tabs-content {
+	border-radius: 5px;
+	box-shadow: 3px 3px 5px #CCC;
+	display: block;
+	margin: 0 auto;
+}
+.selected {
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+}
+.cd-tabs-navigation li {
+	width: 284px;
+}
 /*|||||||||||||||ONGLET UPDATE PICTURE|||||||||||||||||*/
 
 fieldset.form-modify{
@@ -702,7 +726,7 @@ transition: all .35s;
 
 /*|||||||||||||||ONGLET MON COMPTE|||||||||||||||||*/
 
-a.delete-account, a.change-password{
+.delete-profile, .change-password{
 padding:0.8em;
 background-color:#FE641E;
 border-radius:3px;
@@ -713,7 +737,7 @@ margin:1em;
 -moz-transition: all .35s;
 transition: all .35s;
 }
-	a.delete-account:hover, a.change-password:hover {
+	a.delete-profile:hover, a.change-password:hover {
 	color:#FFF;
 	background-color: #1C8AF9;
 	}
@@ -723,7 +747,7 @@ transition: all .35s;
 /*================================================================================================================*/
 
 .main {
-	background-color:#fff;
+	/*background-color:#fff;*/
 	width:100%;
 	overflow:auto;
 }
@@ -734,24 +758,36 @@ transition: all .35s;
 	margin-left: 0px;
 	margin-top: 2.5em;
 	padding:25px;
-	/*border:2px solid #1C8AF9;*/
-	background-color: rgba(28,138,249, 0.3);
+	border:2px solid #FE641E;
+	/*background-color: rgba(235,235,235, 0.5);*/
+	background: #FFF;
 	box-shadow: 3px 3px 5px #CCC;
 	border-left: none;
 	float: left;
-	border-radius: 3px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	color: #666;
 }
 .filter>form>h3 {
 	font-size: 1.3em;
-	border-bottom: 1px solid #333;
+	border-bottom: 1px solid #1C8AF9;
+	color: #1C8AF9;
 	padding: 3px;
 	margin: 5px 0px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+.filter>form>div>input[type="checkbox"]:checked +label{
+	color: #FE641E;
+}
+.checker_all {
+	margin-bottom: 10px;
 }
 .filter>form>input {
 	margin: 5px 2px; 
 }
 .checkbox_content {
-	padding-bottom: 5px;
+	padding-bottom: 10px;
 }
 .results{
 	margin-top: 2.5em;
