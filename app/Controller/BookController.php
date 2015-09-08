@@ -9,7 +9,8 @@ class BookController extends Controller
 	{
 		$bm = new BookManager();
 		$details = $bm->getDetails($id);
-		$this->show('book/details', ['book'=> $details]);
+		$this->show('book/details', ['book'
+			=> $details]);
 	}
 
 	public function catalogue()
