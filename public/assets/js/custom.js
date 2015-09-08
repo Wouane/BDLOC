@@ -24,7 +24,27 @@ $(document).ready(function(){
     });
 });
 
+//requête AJAX pour filtres catégories
+$('.chk_boxes').on("click", function(){
+             console.log('Affichage');
+  var categorie = $('.chk_boxes').val();
+  if (categorie == false) {
+    $('.listcat').html("");
 
+  }
+  else {
+      $.ajax({
+        //récupère l'url du formulaire
+        
+        "data":$('#filters').serialize()
+      }).done(function(response){
+        var content=$(response).find(".listcat");
+        $('.listcat').html(content);
+
+      }); 
+    }
+  
+});
 
 
 (function(d, s, id) {
