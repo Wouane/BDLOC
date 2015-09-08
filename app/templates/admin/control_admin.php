@@ -12,7 +12,7 @@
 		</thead>
 		<tbody>
 			<tr>
-				<td>10</td>
+				<td>4</td>
 				<td>1</td>
 			</tr>
 		</tbody>
@@ -23,14 +23,14 @@
 		<thead>
 			<tr>
 				<th><i class="fa fa-shopping-cart"></i> Commandes</th>
-				<th><i class="fa fa-cart-arrow-down"></i> Panier abandonnés</th>
+				<th><i class="fa fa-cart-arrow-down"></i> Bande dessinés disponible</th>
 				<th><i class="fa fa-user-times"></i> Produits hors stock</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr>
 				<td>0</td>
-				<td>2</td>
+				<td><?php echo $countstock; ?></td>
 				<td>0</td>
 			</tr>
 		</tbody>
@@ -41,14 +41,14 @@
 		<thead>
 			<tr>
 				<th><i class="fa fa-envelope-o"></i> Nouveaux messages</th>
-				<th><i class="fa fa-user-plus"></i> Nouveaux clients</th>
+				<th><i class="fa fa-user-plus"></i> Nombre d'Admins</th>
 				<th><i class="fa fa-users"></i> Nombre d'utilisateurs</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr>
 				<td>3</td>
-				<td>2</td>
+				<td><?php echo $count_admin; ?></td>
 				<td><?php echo $count; ?></td>
 			</tr>
 		</tbody>
