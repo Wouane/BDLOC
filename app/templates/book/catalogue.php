@@ -8,75 +8,107 @@
 	<!-- Filtres -->
 		<form name="filters" id="filters" method='GET' action="<?php echo $this->url('catalogue')?>">					
 				<h3>Catégories</h3>
-
-				<input type="checkbox" class="chk_boxe" id="check_all" value="check_all">
-				<label for="check_all" class="cheked_label">Check all</label>
-				<br>
-
-				<input type="checkbox" name="genre[]" id="adaptation" value="adaptation" class="chk_boxes">
-				<label for="adaptation">Adaptation</label>
-
-				<input type="checkbox" name="genre[]" id="animalier" value="animalier" class="chk_boxes">
-				<label for="animalier">Animalier</label>
-
-				<input type="checkbox" name="genre[]" id="aventure" value="aventure" class="chk_boxes">
-				<label for="aventure">Aventure</label>
-
-				<input type="checkbox" name="genre[]" id="biographie" value="biographie" class="chk_boxes">
-				<label for="biographie">Biographie</label>
-
-				<input type="checkbox" name="genre[]" id="comics" value="comics" class="chk_boxes">
-				<label for="comics">Comics</label>
-
-				<input type="checkbox" name="genre[]" id="divers" value="divers" class="chk_boxes">
-				<label for="divers">Divers</label>
-
-				<input type="checkbox" name="genre[]" id= "heroic_fantasy" value="heroic_fantasy" class="chk_boxes">
-				<label for="heroic_fantasy">Heroic Fantasy</label>
-
-				<input type="checkbox" name="genre[]" id="historique" value="historique" class="chk_boxes">
-				<label for="historique">Historique</label>
-
-				<input type="checkbox" name="genre[]" id="humour" value="humour" class="chk_boxes">
-				<label for="humour">Humour</label>
-
-				<input type="checkbox" name="genre[]" id="independant" value="independant" class="chk_boxes">
-				<label for="independant">Indépendant</label>
-
-				<input type="checkbox" name="genre[]" id="jeunesse" value="jeunesse" class="chk_boxes">
-				<label for="jeunesse">Jeunesse</label>
 				
+				<div class="checkbox_content">
+					<input type="checkbox" class="chk_boxe" id="check_all" value="check_all">
+					<label for="check_all" class="cheked_label">Check all</label>					
+				</div>
 
-				<input type="checkbox" name="genre[]" id="manga" value="manga" class="chk_boxes">
-				<label for="manga">Manga</label>
+				<div class="checkbox_content">
+					<input type="checkbox" name="genre[]" id="adaptation" value="adaptation" class="chk_boxes">
+					<label for="adaptation">Adaptation</label>
+				</div>
+				<div class="checkbox_content">
+					<input type="checkbox" name="genre[]" id="animalier" value="animalier" class="chk_boxes">
+					<label for="animalier">Animalier</label>
+				</div>
 
-				<input type="checkbox" name="genre[]" id="polar" value="polar" class="chk_boxes">
-				<label for="polar">Polar</label>
+				<div class="checkbox_content">
+					<input type="checkbox" name="genre[]" id="aventure" value="aventure" class="chk_boxes">
+					<label for="aventure">Aventure</label>
+				</div>
+				
+				<div class="checkbox_content">
+					<input type="checkbox" name="genre[]" id="biographie" value="biographie" class="chk_boxes">
+					<label for="biographie">Biographie</label>
+				</div>
+				
+				<div class="checkbox_content">
+					<input type="checkbox" name="genre[]" id="comics" value="comics" class="chk_boxes">
+					<label for="comics">Comics</label>
+				</div>
 
+				<div class="checkbox_content">
+					<input type="checkbox" name="genre[]" id="divers" value="divers" class="chk_boxes">
+					<label for="divers">Divers</label>
+				</div>
 
-				<input type="checkbox" name="genre[]" id="quotidien" value="quotidien" class="chk_boxes">
-				<label for="quotidien">Quotidien</label>
+				<div class="checkbox_content">
+					<input type="checkbox" name="genre[]" id= "heroic_fantasy" value="heroic_fantasy" class="chk_boxes">
+					<label for="heroic_fantasy">Heroic Fantasy</label>
+				</div>
+				
+				<div class="checkbox_content">
+					<input type="checkbox" name="genre[]" id="historique" value="historique" class="chk_boxes">
+					<label for="historique">Historique</label>
+				</div>
+				
+				<div class="checkbox_content">
+					<input type="checkbox" name="genre[]" id="humour" value="humour" class="chk_boxes">
+					<label for="humour">Humour</label>
+				</div>
+					
+				<div class="checkbox_content">
+					<input type="checkbox" name="genre[]" id="independant" value="independant" class="chk_boxes">
+					<label for="independant">Indépendant</label>
+				</div>
+				
+				<div class="checkbox_content">
+					<input type="checkbox" name="genre[]" id="jeunesse" value="jeunesse" class="chk_boxes">
+					<label for="jeunesse">Jeunesse</label>
+				</div>
+				
+				<div class="checkbox_content">
+					<input type="checkbox" name="genre[]" id="manga" value="manga" class="chk_boxes">
+					<label for="manga">Manga</label>
+				</div>
 
-				<input type="checkbox" name="genre[]" id="roman" value="roman" class="chk_boxes">
-				<label for="roman">Roman graphique</label>
+				<div class="checkbox_content">
+					<input type="checkbox" name="genre[]" id="polar" value="polar" class="chk_boxes">
+					<label for="polar">Polar</label>
+				</div>
 
-				<input type="checkbox" name="genre[]" id="fiction" value="fiction" class="chk_boxes">
-				<label for="fiction">Science Fiction</label>
+				<div class="checkbox_content">
+					<input type="checkbox" name="genre[]" id="quotidien" value="quotidien" class="chk_boxes">
+					<label for="quotidien">Quotidien</label>
+				</div>
 
-				<!-- <input type="checkbox" name="genre[]" id="tranche_de_vie" value="tranche_de_vie" class="chk_boxes">
-				<label for="tranche_de_vie">Tranche de vie</label> -->
+				<div class="checkbox_content">
+					<input type="checkbox" name="genre[]" id="roman" value="roman" class="chk_boxes">
+					<label for="roman">Roman graphique</label>
+				</div>
+				
+				<div class="checkbox_content">
+					<input type="checkbox" name="genre[]" id="fiction" value="fiction" class="chk_boxes">
+					<label for="fiction">Science Fiction</label>
+				</div>
 
-				<input type="checkbox" name="genre[]" id="thriller" value="thriller" class="chk_boxes">
-				<label for="thriller">Thriller</label>
+				<div class="checkbox_content">
+					<input type="checkbox" name="genre[]" id="thriller" value="thriller" class="chk_boxes">
+					<label for="thriller">Thriller</label>
+				</div>
 
 		</form>
 		<form >
 			<h3>Disponibilité</h3>
-
-			<input type="checkbox" name="disponibles" id="disponibles" value="disponibles">
-			<label for="disponibles">Disponibles</label>
-			<input type="checkbox" name="indisponibles" id="indisponibles" value="indisponibles">
-			<label for="indisponibles">Indisponibles</label>
+			<div class="checkbox_content">
+				<input type="checkbox" name="disponibles" id="disponibles" value="disponibles">
+				<label for="disponibles">Disponibles</label>
+			</div>
+			<div class="checkbox_content">
+				<input type="checkbox" name="indisponibles" id="indisponibles" value="indisponibles">
+				<label for="indisponibles">Indisponibles</label>
+			</div>
 		</form>
 	</div>
 <div class="maincat">
