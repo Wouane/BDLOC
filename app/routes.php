@@ -6,7 +6,7 @@
 		// --------------------------PUBLIC / USER --------------------------------------------------------
 		// ================================================================================================
 
-
+							//CONNEXION + PARAMETRES CONNEXION USER 
 
 		//accueil de l'admin --------------------------------------------------------------------------
 		['GET', '/', 'Default#home', 'home'],
@@ -19,29 +19,14 @@
 
 		//Page de Mot de passe oublié -----------------------------------------------------------------
 		['GET|POST', '/connexion/mot-de-passe-oublie/', 'User#forgotPassword', 'oublieMotdepasse'],
-		//Page de changement de mot de passe depuis Profil-----------------------------------------------------------	
+
+		//Page de changement de mot de passe depuis Profile------------------------------------------------	
 		['GET|POST', '/change-mot-de-passe/', 'User#changePassword', 'changeMotdepasse'],
 
-		//Page de CHANGEMENT DE MOT DE PASSE après avoir recu un mail-----------------------------------------------------------	
+		//Page de CHANGEMENT DE MOT DE PASSE après avoir recu un mail--------------------------------------------
 		['GET|POST', '/reinitialisation-mot-de-passe/[:token]/', 'User#resetPassword', 'resetMotdepasse'],
 
-		//Parametre du PROFIL de l'utilisateur -------------------------------------------------------
-		['GET|POST', '/catalogue/profil/parametres/', 'User#parameters', 'parametres'],
-
-		//Page CATALOGUE------------------------------------------------------------------------------
-		['GET|POST', '/catalogue/', 'Book#catalogue', 'catalogue'],
-
-		//Page DETAILS-------------------------------------------------------------------------------
-		['GET', '/catalogue/details/[i:id]/', 'Book#details', 'details'],
-
-		//Page RECHERCHER search.js-------------------------------------------------------------------------------
-		['GET|POST', '/recherche/', 'Book#search', 'search'],
-
-		//Page PANIER de l'utilisateur ----------------------------------------------------------------
-		['GET|POST', '/catalogue/panier/', 'Default#cart', 'panier'],
-
-		//Page CONTACT de l'utilisateur-----------------------------------------------------------------
-		['GET|POST', '/catalogue/contact/', 'Default#contact', 'contact'],
+							// PROFIL 
 
 		//Page PROFIL de l'utilisateur-----------------------------------------------------------------
 		['GET|POST', '/catalogue/profil/', 'User#profil', 'profile'],
@@ -51,6 +36,34 @@
 
 		//Page déconnexion de l'utilisateur -----------------------------------------------------------	
 		['GET', '/deconnexion/', 'User#logout', 'deconnexion'],
+
+							// CATALOGUE
+
+		//Page CATALOGUE------------------------------------------------------------------------------
+		['GET|POST', '/catalogue/', 'Book#catalogue', 'catalogue'],
+
+		//Page DETAILS-------------------------------------------------------------------------------
+		['GET', '/catalogue/details/[i:id]/', 'Book#details', 'details'],
+
+		//Page RECHERCHER search.js------------------------------------------------------------------------
+		['GET|POST', '/recherche/', 'Book#search', 'search'],
+
+							// PANIER
+
+		//Page PANIER de l'utilisateur ----------------------------------------------------------------
+		['GET|POST', '/catalogue/panier/', 'Cart#cart', 'panier'],
+
+		//Page AJOUT DUNE BD AU PANIER de l'utilisateur ----------------------------------------------------------------
+		['GET|POST', '/catalogue/panier/ajoutbd', 'Cart#AddbooktoCart', 'AddtoCart'],
+
+		// Page VIDER LE PANIER de l'utilisateur
+		['GET|POST', '/catalogue/panier/vider/', 'Cart#RemoveCart', 'RemoveCart'],	
+
+								// DIVERS PAGE DU SITE
+
+		//Page CONTACT de l'utilisateur-----------------------------------------------------------------
+		['GET|POST', '/catalogue/contact/', 'Default#contact', 'contact'],
+
 
 		//FAKE DATA----------------------------------------------------------------------------------
 		['GET|POST', '/inscription/fakedata/', 'User#Fakedata', 'fake_data'],
