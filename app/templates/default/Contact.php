@@ -2,11 +2,11 @@
 
 <?php $this->start('main_content'); ?>
 <h2 class="contact-title">Page Contact</h2>
-<form method="POST" class="contact">
+<form method="POST" class="contact" name="contact">
 <p class="contact-text"><i class="fa fa-exclamation-circle"></i> Ecrivez nous !</p>
 	<div class="form-group">
 		<label for="name">NOM COMPLET <sup><i class="fa fa-asterisk"></i></sup></label>
-		<input type="text" id="nom" name="name" placeholder="Nom">
+		<input type="text" id="name" name="name" placeholder="Nom">
 	</div>
 
 	<div class="form-group">
@@ -28,8 +28,11 @@
 		<p><sup><i class="fa fa-asterisk"></sup></i> Champs obligatoires</p>
 	</div>	
 
-	<input type="submit" class="validate-contact"value="Envoyer">
 	<div><?php echo $result; ?></div>
+	<div><?php echo $error; ?></div>
+	<input type="submit" class="validate-contact"value="Envoyer">
+
+
 </form>
 
 <?php $this->stop('main_content'); ?>

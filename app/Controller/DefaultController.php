@@ -14,7 +14,7 @@ class DefaultController extends Controller
 	{
 		$this->show('default/home');
 	}
-		public function login()
+	public function login()
 	{
 		$am = new AuthentificationManager();
 		$this->show('user/login');
@@ -42,58 +42,73 @@ class DefaultController extends Controller
 
 	public function contact()
 	{
-		$result = "";
-		if (!empty($_POST)) {
-		
-		$mail = new \PHPMailer;
+		$am = new AuthentificationManager();
+		$error = "";
+		$user_name_regex = "/^[\p{L}._-]{2,100}$/u";
 
-		//configuration de l'envoi
-		$mail->isSMTP();
-		$mail->setLanguage('fr');
-		$mail->CharSet = 'UTF-8';
+		if(!empty($_POST)){
+			$name = $_POST['name'];
+			$email = $_POST['email'];
+			// $subject = $_POST['subject'];
 
-		//debug
-		$mail->SMTPDebug   = 0;
-		$mail->Debugoutput = 'html';
-
-		//config du serveur smtp
-		$mail->Host = 'smtp.gmail.com';
-		$mail->Port = 587; 
-		$mail->SMTPSecure = 'tls'; 
-		$mail->SMTPAuth = true;
-
-		//Identifiant
-		global $w_config;
-		$smtp_user = $w_config['smtp_user'];
-		$smtp_pass = $w_config['smtp_pass'];
-		$mail->Username = $smtp_user;
-		$mail->Password = $smtp_pass;
-
-		//envoie
-		$mail->From = $_POST['email'];
-		$mail->FromName = $_POST['name'];
-		$mail->Subject = $_POST['subject'];
-		$mail->Body = $_POST['message'];
-
-		//To us
-		$mail->addAddress('bdlocbdloc@gmail.com', 'Admin');
-
-		//mail au format HTML
-		$mail->isHTML(true);
-
-		//envoie du mail ou error
-		if(!$mail->send())
-			{
-				$result = "Mailer Error: " .$mail->ErrorInfo;
-			}else{
-				$result = "Votre message a bien été envoyé";
+			//Nom valide
+			if(!preg_match($user_name_regex, $name)){
+				$error = "Votre nom ne doit pas contenir de caractères spéciaux !";
 			}
+			//email valide
+			if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+				$error = "Email non valide";
+			}
+
+
+			$result = "";
+			if(!$error){
+				$mail = new \PHPMailer;
+
+			//configuration de l'envoi
+				$mail->isSMTP();
+				$mail->setLanguage('fr');
+				$mail->CharSet = 'UTF-8';
+
+			//debug
+				$mail->SMTPDebug   = 0;
+				$mail->Debugoutput = 'html';
+
+			//config du serveur smtp
+				$mail->Host = 'smtp.gmail.com';
+				$mail->Port = 587; 
+				$mail->SMTPSecure = 'tls'; 
+				$mail->SMTPAuth = true;
+
+			//Identifiant
+				global $w_config;
+				$smtp_user = $w_config['smtp_user'];
+				$smtp_pass = $w_config['smtp_pass'];
+				$mail->Username = $smtp_user;
+				$mail->Password = $smtp_pass;
+
+			//envoie
+				$mail->From = $_POST['email'];
+				$mail->FromName = $_POST['name'];
+				$mail->Subject = $_POST['subject'];
+				$mail->Body = $_POST['message'];
+
+			//To us
+				$mail->addAddress('bdlocbdloc@gmail.com', 'Admin');
+
+			//mail au format HTML
+				$mail->isHTML(true);
+
+			//envoie du mail ou error
+				if(!$mail->send())
+				{
+					$result = "Mailer Error: " .$mail->ErrorInfo;
+				}else{
+					$result = "Votre message a bien été envoyé";
+				}
+			}
+		}
+			//affiche la page contact
+		$this->show('default/contact', [ 'result' => $result, 'error' => $error ]);
 	}
-		//affiche la page contact
-		$this->show('default/contact', [ 'result' => $result ]);
-	}
-
-
-
-
 }
