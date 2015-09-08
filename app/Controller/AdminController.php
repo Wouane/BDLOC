@@ -122,8 +122,10 @@ class AdminController extends Controller
 		//Instance usermanager
 		$userManager = new\Manager\userManager();
 		//appellé la fonction
-		$count = $userManager->countall(); 
-		$this->show('admin/control_admin', ['count' => $count]);
+		$count = $userManager->countall();
+		$count_admin = $userManager->countallAdmin(); 
+		$countstock = $userManager->countstock();
+		$this->show('admin/control_admin', ['count' => $count, 'count_admin' => $count_admin, 'countstock' => $countstock]);
 	}
 
 	public function logout()

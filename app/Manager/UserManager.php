@@ -48,4 +48,30 @@
 			return $count;
 		}
 
+		public function countallAdmin()
+		{
+			//Qui compte 
+			$sql = "SELECT COUNT(*)
+					FROM admins ";
+
+			$sth = $this->dbh->prepare($sql);
+			$sth->execute();
+			$count_admin = $sth->fetchColumn();
+
+			//Return la réponse
+			return $count_admin;
+		}
+
+		public function countstock()
+		{
+			$sql = "SELECT SUM(stock)
+					FROM books";
+
+			$sth = $this->dbh->prepare($sql);
+			$sth->execute();
+			$countstock = $sth->fetchColumn();
+
+			return $countstock;
+		}
+
 	}
