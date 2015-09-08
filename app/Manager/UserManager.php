@@ -10,8 +10,9 @@
 
 		public function getToken($token)
 		{
-			$sql = "SELECT * FROM users
-			WHERE token = :token";
+			$sql = "SELECT *
+					FROM users
+					WHERE token = :token";
 
 			$sth = $this->dbh->prepare($sql);
 			$sth->bindValue(":token", $token);
@@ -22,15 +23,15 @@
 			return $foundUser;
 		}
 
+		// GESTION DE DELETE PROFILE 
 		public function deleteProfile($id)
 		{
-			$sql = "DELETE * FROM users
-			WHERE id = :id";
+					$sql = "DELETE FROM users
+							WHERE id = :id";
 
-			$sth = $this->$dbh->prepare($sql);
+			$sth = $this->dbh->prepare($sql);
 			$sth->bindValue(":id", $id);
 			$sth->execute();
-
 		}
 
 		public function countall()
