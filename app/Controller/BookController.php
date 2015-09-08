@@ -23,7 +23,7 @@ class BookController extends Controller
 			$bdlocCat = [];
 			$genre = [];
 			$keyword = "";
-
+			
 // CONDTION DE LA MORT
 			//Pagination
 			if(!empty($_GET['start'])){

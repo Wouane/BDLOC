@@ -8,6 +8,7 @@
 
 			// déclaration des variables ($types de recherches)
 			$byNumberSelected = 'selected';
+			
 			$keyword = "";
 			$genre = "";
 			//Sort by number

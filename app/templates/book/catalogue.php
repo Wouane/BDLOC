@@ -119,11 +119,11 @@
 			<input type="search" placeholder="Recherche" name="search" id="search">
 		</form>
 
-		<form method="GET">
-				<select name="byOrder" onChange="recupere()" id="byOrder">
+		<form method="GET" action="<?php echo $this->url('catalogue')?>">
+				<select name="byOrder" onChange="showUser(this.value)" id="byOrder">
 					<option value="alpha" id="byAlpha">Ordre alphabétique</option>
 					<option value="date" id="byDateCreated">Date d'ajout au catalogue</option>					
-					<option value="publication" id="byDatePublish">Date de publication</option>
+					<option selected value="publication" id="byDatePublish">Date de publication</option>
 				</select>
 		</form>
 		<form method="GET">

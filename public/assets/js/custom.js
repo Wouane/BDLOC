@@ -46,7 +46,7 @@ $('.chk_boxes').on("click", function(){
 function recupere()
 {
 document.getElementById('denis').submit();
-document.formulaire.choix.value = liste.options[liste.selectedIndex].value;
+//document.formulaire.choix.value = liste.options[liste.selectedIndex].value;
 
 }
 
