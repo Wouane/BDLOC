@@ -758,7 +758,7 @@ transition: all .35s;
 	border:2px solid #FE641E;
 	border-bottom: none;
 }
-.results>input[type="search"] {
+.results>form>input[type="search"] {
 	width: 15%;
 	padding: 5px;
 	border-top-right-radius: 3px;
@@ -767,11 +767,11 @@ transition: all .35s;
 	float: left;
 	margin-right: 15px;
 }
-.results>input[type="search"]:focus {
+.results>form>input[type="search"]:focus {
 	outline: none;
 	border: 1px solid #1C8AF9;
 }
-.results>label {
+.results>form>label {
 	float: left;
 	background-color: #FE641E;
 	padding: 8px;
