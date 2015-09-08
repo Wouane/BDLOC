@@ -609,13 +609,14 @@ class UserController extends Controller
 
 /*==================PAGE DELETE PROFILE===================*/
 
-	public function deleteProfile()
-	{
-		$am = new AuthentificationManager();
-		$am->deleteProfile();
-	
-		$this->redirectToRoute('home');
+	public function deleteProfile($id)
+	{   
+		// $this->allowTo('user');
+		$UserManager = new\Manager\UserManager();
 
+		// $deleteTerms = $termManager->delete($id);
+		$UserManager->deleteProfile($id);
+		$this->redirectToRoute('home');
 	}
 
 
