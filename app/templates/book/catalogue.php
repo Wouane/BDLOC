@@ -115,8 +115,10 @@
 	<div class="results">
 		<!-- Tris et pagination -->
 		<form id="searchform" action="<?php echo $this->url('catalogue')?>" method="POST">
-			<label for="search"><i class="fa fa-search"></i></label>
-			<input type="search" placeholder="Recherche" name="search" id="search">
+			<div class="search-input">
+				<input class="search" type="search" placeholder="Recherche" name="search" id="search">
+				<label class="search-label" for="search"><i class="fa fa-search"></i></label>
+			</div>
 		</form>
 
 		<form method="GET" action="<?php echo $this->url('catalogue')?>">
