@@ -71,13 +71,6 @@ Affichage page Admin Mise en page +css
 reflechir aux elements à afficher ET donc à une base HTML
 pour appeller les éléments que l'admin veut récupérer
 
-
-------------------------------------------------------
-PAGE CONTACT :
-
-verif erreurs sous chaque champs
-tcheck validation
-
 ------------------------------------------------------
 
 PAGE MON PANIER:

@@ -1,0 +1,24 @@
+bdloc.dev/connexion/ : N'affiche plus la session de connexion. 
+		       Affiche un message d'erreur compresser par le footer et non voyants "Mauvais identifiants" & le bouton connexion ne marche pas  
+		       
+
+bdloc.dev/inscription/ : Le champs du nom peut être absent
+
+bdloc.dev: accès directe au site par "mentions légales" & "contacter-nous" qui se trouvent dans le footer
+
+bdloc.dev/catalogue/ : Ordre alphabétique / date d'ajout / date de publication / Résultats par page
+		       Disponibles / Indisponibles
+		       Quand on selectionne une catégorie et qu'on appuye sur suivant cela perd la recherche
+
+bdloc.dev/catalogue/profil/ : supprimer mon compte ne marche pas.
+
+bdloc.dev/change-mot-de-passe/ : pas de redirection.
+
+bdloc.dev/catalogue/mentions-legales/ : quand on appuye sur bdlocbdlocbdloc@gmail.com on arrive sur google
+
+bdloc.dev/admin/admin-control/inscription/ : email et le pseudo ne reste pas lorsqu'on se trompent sur un champs
+ 
+bdloc.dev/admin/admin-control/inscription/ 
+bdloc.dev/admin/connexion/ : aucune restriction d'admin
+
+bdloc.dev/connexion/mot-de-passe-oublie/ : lien dans le mail amène à une erreur  
