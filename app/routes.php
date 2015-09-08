@@ -6,6 +6,8 @@
 		// --------------------------PUBLIC / USER --------------------------------------------------------
 		// ================================================================================================
 
+
+
 		//accueil de l'admin --------------------------------------------------------------------------
 		['GET', '/', 'Default#home', 'home'],
 
@@ -24,7 +26,7 @@
 		['GET|POST', '/reinitialisation-mot-de-passe/[:token]/', 'User#resetPassword', 'resetMotdepasse'],
 
 		//Parametre du PROFIL de l'utilisateur -------------------------------------------------------
-		['GET|POST', '/catalogue/profil/parametres', 'User#parameters', 'parametres'],
+		['GET|POST', '/catalogue/profil/parametres/', 'User#parameters', 'parametres'],
 
 		//Page CATALOGUE------------------------------------------------------------------------------
 		['GET|POST', '/catalogue/', 'Book#catalogue', 'catalogue'],
@@ -36,7 +38,7 @@
 		['GET|POST', '/recherche/', 'Book#search', 'search'],
 
 		//Page PANIER de l'utilisateur ----------------------------------------------------------------
-		['GET|POST', '/catalogue/panier/', 'Cart#cart', 'panier'],
+		['GET|POST', '/catalogue/panier/', 'Default#cart', 'panier'],
 
 		//Page CONTACT de l'utilisateur-----------------------------------------------------------------
 		['GET|POST', '/catalogue/contact/', 'Default#contact', 'contact'],
@@ -44,11 +46,14 @@
 		//Page PROFIL de l'utilisateur-----------------------------------------------------------------
 		['GET|POST', '/catalogue/profil/', 'User#profil', 'profile'],
 
+		//Page DELETEPROFILE de l'utilisateur-----------------------------------------------------------------
+		['GET|POST', '/catalogue/profil/deleteprofile/[i:id]/', 'User#deleteProfile', 'deleteProfile'],
+
 		//Page déconnexion de l'utilisateur -----------------------------------------------------------	
 		['GET', '/deconnexion/', 'User#logout', 'deconnexion'],
 
 		//FAKE DATA----------------------------------------------------------------------------------
-		['GET|POST', '/inscription/fakedata', 'User#Fakedata', 'fake_data'],
+		['GET|POST', '/inscription/fakedata/', 'User#Fakedata', 'fake_data'],
 
 		//Page MENTIONS LEGALES ----------------------------------------------------------------
 		['GET', '/catalogue/mentions-legales/', 'Default#credits', 'mentionsLegales'],
@@ -69,7 +74,6 @@
 		//Déconnexion----------------------------------------------------------------------------------
 		['GET', '/admin/deconnexion/', 'Admin#logout', 'deconnexion_admin'],
 		
-
 		//---------------------------------------------------------------------------------------------	
 
 	);
