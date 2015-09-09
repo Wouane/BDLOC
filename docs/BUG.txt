@@ -12,9 +12,7 @@ bdloc.dev/catalogue/ : Ordre alphabétique / date d'ajout / date de publication /
 
 bdloc.dev/catalogue/profil/ : supprimer mon compte ne marche pas.
 
-bdloc.dev/change-mot-de-passe/ : pas de redirection.
-
-bdloc.dev/catalogue/mentions-legales/ : quand on appuye sur bdlocbdlocbdloc@gmail.com on arrive sur google
+bdloc.dev/change-mot-de-passe/ : pas de redirection. bouton retour
 
 bdloc.dev/admin/admin-control/inscription/ : email et le pseudo ne reste pas lorsqu'on se trompent sur un champs
  
