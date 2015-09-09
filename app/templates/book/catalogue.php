@@ -10,7 +10,7 @@
 				<h3>Catégories</h3>
 				
 				<div class="checkbox_content checker_all">
-					<input type="checkbox" class="chk_boxe" id="check_all" value="check_all">
+					<input type="checkbox" class="css-label lite-orange-check chk_boxe" id="check_all" value="check_all">
 					<label for="check_all" class="cheked_label">Check all</label>					
 				</div>
 
