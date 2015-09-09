@@ -4,6 +4,9 @@
 
 <h2 class="change-password-title">Modifiez votre mot de passe</h2>
 <form method="POST" class="change-password">
+			<div class="boutton_retour">
+				<input type="button" value="Retour" class="bouton_retour"onclick="history.go(-1)">
+			</div>
 			<div class="change-pswd">
 				<label for="old_password">Ancien mot de passe</label>
 				<input type="password" name="old_password" id="old_password" />

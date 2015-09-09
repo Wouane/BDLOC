@@ -605,6 +605,19 @@ form.change-password>input.validate-change-pswd:hover, form.forgot-password>inpu
 	background-color: #1C8AF9;
 }
 
+input.bouton_retour{
+	width: 7em;
+	padding:0.7em;
+	border-radius: 7px;
+	border: none;
+	background-color: #FE641E;
+	padding:5px 3px;
+	color: #2C3E50;
+}
+
+input.bouton_retour:hover{
+	background-color: #1C8AF9;
+}
 
 
 /*================================================================================================================*/
