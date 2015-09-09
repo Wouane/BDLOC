@@ -22,6 +22,7 @@ class BookController extends Controller
 			$bdlocCat = [];
 			$genre = [];
 			$keyword = "";
+			$dispo = "";
 			
 // CONDTION DE LA MORT
 			//Pagination
@@ -35,10 +36,10 @@ class BookController extends Controller
 		// UNE FOIS LA CONDITION FINIE (les différents options recherches sélectionnées)
 		//alors affiche les livres et le catalogue
 
-		$books = $bookManager->getBooks($byNumber, $start, $bdlocCat, $sort, $keyword);
+		$books = $bookManager->getBooks($byNumber, $start, $bdlocCat, $sort, $keyword, $dispo);
 		//debug($books);
 
-		$this->show('book/catalogue',["books"=>$books,"start"=>$start,"bdlocCat"=>$bdlocCat,"sort"=>$sort,"keyword"=>$keyword]);
+		$this->show('book/catalogue',["books"=>$books,"start"=>$start,"bdlocCat"=>$bdlocCat,"sort"=>$sort,"keyword"=>$keyword,"dispo"=>$dispo]);
 
 	}
 	public function search()

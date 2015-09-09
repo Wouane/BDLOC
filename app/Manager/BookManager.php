@@ -11,6 +11,8 @@
 			
 			$keyword = "";
 			$genre = "";
+			$dispo = "";
+			debug($_GET['dispo']);
 			//Sort by number
 			if(!empty($_GET['byNumber'])){
 				$byNumber = $_GET['byNumber'];
@@ -48,13 +50,23 @@
 			}
 
 			if(!empty($bdlocCat)){
-			$genre = "AND t.style LIKE '%".$bdlocCat[0]."%'";
-			
-				for ($i=1; $i<count($bdlocCat); $i++){
-				$genre.=" OR t.style LIKE '%".$bdlocCat[$i]."%'";
+			$genre = 	"AND t.style LIKE '%".$bdlocCat[0]."%'";			
+						for ($i=1; $i<count($bdlocCat); $i++){
+						$genre.=" OR t.style LIKE '%".$bdlocCat[$i]."%'";
 				//debug($genre);
 				}
 			}
+			// if(!empty($_GET['dispo'])){
+			// 	if ($_GET['dispo'] == 'disponibles'){					
+			// 				$dispo = " WHERE books.stock != 0";
+			// 				//debug($dispo);
+			// 			}
+			// 			else{
+			// 				$dispo = " WHERE books.stock == 0";
+			// 			}
+			// }
+
+			
 			// LA REQUETE NINJA POWA DYNAMIQUE DE LA MORT
 			$sql = "SELECT  t.style AS catstyle, t.title AS ttitle, books.dateCreated, books.cover, books.title, books.id, books.stock, i.lastName AS ilastname, i.firstName AS ifirstname, s.lastName AS slastname, s.firstName AS sfirstname, c.lastName AS clastname, c.firstName AS cfirstname
 					FROM $this->table					
@@ -64,18 +76,19 @@
 					LEFT JOIN series AS t ON books.serieId = t.id					
 					WHERE (books.title LIKE :keyword OR c.lastName LIKE :keyword OR i.lastName LIKE :keyword OR s.lastName LIKE :keyword
 					OR c.firstName LIKE :keyword OR i.firstName LIKE :keyword OR s.firstName LIKE :keyword
-					OR t.title LIKE :keyword)
+					OR t.title LIKE :keyword OR books.stock = 0)
 					$genre
+					-- $dispo					
 					ORDER BY $sort ASC
 					LIMIT $start, $byNumber";
-					//debug($sort);
+					
 					// LA REQUETE DYNAMIQUE S'EXECUTE UNE SEULE FOIS
 			$sth = $this->dbh->prepare($sql);
 			$sth->bindValue(":keyword", '%'.$keyword.'%');
 			$sth->bindValue(":byNumber", $byNumber);
-			$sth->bindValue(":genre", $genre);
-			$sth->execute();	
-			//debug($_GET);		
+			$sth->bindValue(":genre", $genre);			
+			$sth->execute();
+			debug($sql);
 			return $sth->fetchAll();
 
 		}
