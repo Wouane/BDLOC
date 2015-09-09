@@ -261,6 +261,7 @@ class UserController extends Controller
 /*==================PAGE PROFIL===================*/
 	public function profil()
 	{
+		$user = $this->getUser();
 		$userManager = new UserManager();
 		$error = "";
 		$succes = "";
@@ -278,7 +279,6 @@ class UserController extends Controller
 
 		if(!empty($_POST))
 		{
-			$user = $this->getUser();
 			$id = $user["id"];
 			$email = trim(strip_tags($_POST['email']));
 			$username = trim(strip_tags($_POST['username']));
@@ -444,6 +444,7 @@ class UserController extends Controller
 /*==================PAGE REGISTER===================*/
 	public function register()
 	{
+		$am = new AuthentificationManager();
 		$userManager = new UserManager();
 		$error = "";
 		$username = "";
@@ -542,10 +543,9 @@ class UserController extends Controller
 				"pic_name"      => $pic_name,
 				];
 				$userManager = new \Manager\UserManager();
-				$am = new AuthentificationManager();
-				$am ->LogUserIn($newSubscriber);
 				$userManager->insert($newSubscriber);
-			
+				$am ->LogUserIn($newSubscriber);
+				$user = $this->getUser();
 				$this->redirectToRoute('catalogue');
 			}				
 
@@ -617,6 +617,7 @@ class UserController extends Controller
 	public function deleteProfile($id)
 	{   
 		// $this->allowTo('user');
+		$user = $this->getUser();
 		$UserManager = new\Manager\UserManager();
 
 		// $deleteTerms = $termManager->delete($id);
