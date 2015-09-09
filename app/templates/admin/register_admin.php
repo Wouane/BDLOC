@@ -1,4 +1,4 @@
-<?php $this->layout('layout_admin', ['title' => 'Inscription']) ?>
+<?php $this->layout('layout_admin', ['title' => 'Inscription | Administrateur']) ?>
 
 <?php $this->start('main_content') ?>
 
@@ -8,24 +8,24 @@
 	<fieldset>	
 		<div class="form_admin">
 			<label for="email">Email : </label>
-			<input  type="email" id="email" name="email" placeholder="Email">
+			<input  type="email" class="input" id="email" name="email" placeholder="Email">
 		</div>
 		<div class="form_admin">
 			<label for="username">Choisissez un Pseudo : </label>
-			<input  type="text"  id="username" name='username' placeholder="Pseudo">
+			<input  type="text"  class="input" id="username" name='username' placeholder="Pseudo">
 		</div>
 		<div class="form_admin">
 			<label for="password">Votre mot de passe : </label>
-			<input type="password" id="password" name='password' placeholder="Mot de passe">
+			<input type="password" class="input" id="password" name='password' placeholder="Mot de passe">
 		</div>
 		<div class="form_admin">
 			<label for="password_confirm">Confirmer votre mot de passe : </label>
-			<input type="password"  id="password_confirm" name="password_confirm" placeholder="Confirmation">
+			<input type="password"  class="input" id="password_confirm" name="password_confirm" placeholder="Confirmation">
 		</div>
 		<div class="error_admin">
 			<?php echo $error; ?>
 		</div>
-		<button type="submit" class="btn_admin_register">Valider</button>
+		<button type="submit" class="btn_admin">Valider</button>
 
 	</fieldset>
 
