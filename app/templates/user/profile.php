@@ -83,11 +83,11 @@
 				<input type="submit" class="valid-picture" value="Valider" onclick="return(confirm('Etes-vous sûr de vouloir remplacer votre image ?'));">
 			</li>
 			<li data-content="gallery">
-				<a class="change-password" href="<?= $this->url('changeMotdepasse'); ?>" title="password" onclick="return(confirm('Etes-vous sûr de vouloir modifier votre mot de passe ?'));">
+				<a class="btn-default change-password" href="<?= $this->url('changeMotdepasse'); ?>" title="password" onclick="return(confirm('Etes-vous sûr de vouloir modifier votre mot de passe ?'));">
 					<i class="fa fa-unlock"></i> Modifier mon mot de passe
 				</a>
 				
-				<a class="delete-profile" href="<?php echo $this->url('deleteProfile', ['id' => $w_user['id']]); ?>" title="suppression du compte" onclick="return(confirm('Etes-vous sûr de vouloir supprimer votre compte ?'));">	
+				<a class="btn-default delete-profile" href="<?php echo $this->url('deleteProfile', ['id' => $w_user['id']]); ?>" title="suppression du compte" onclick="return(confirm('Etes-vous sûr de vouloir supprimer votre compte ?'));">	
 					<i class="fa fa-trash-o"></i> Supprimer mon compte Bdloc
 				</a>
 			</li>
