@@ -206,7 +206,7 @@ class UserController extends Controller
 	
 				$userManager = new \Manager\UserManager();
 				$userManager->update($newPassword, $id);	
-				//$this->redirectToRoute('profile');
+				$this->redirectToRoute('profile');
 	
 				$succes = "Votre Mots de passe a bien été changer !";
 				
