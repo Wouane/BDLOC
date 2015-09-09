@@ -106,13 +106,12 @@
 		<form name="dispo" method="GET" action="<?php echo $this->url('catalogue')?>">
 			<h3>Disponibilité</h3>
 			<div class="checkbox_content">
-				<input type="checkbox" name="dispo" id="disponibles" value="disponibles">
+				<input type="checkbox" name="dispo" id="disponibles" class="chk_boxes" value="disponibles">
 				<label for="disponibles">Disponibles</label>
 			</div>
 			<div class="checkbox_content">
-				<input type="checkbox" name="dispo" id="indisponibles" value="indisponibles">
-				<label for="indisponibles">Indisponibles</label>
-				<button type="submit">GOJOGO</button>
+				<input type="checkbox" name="dispo" id="indisponibles" class="chk_boxes" value="indisponibles">
+				<label for="indisponibles">Indisponibles</label>				
 			</div>
 		</form>
 	</div>

@@ -45,7 +45,7 @@ class BookController extends Controller
 	public function search()
 	{
 		$bookManager = new BookManager();
-		$books = $bookManager->getBooks($byNumber, $start, $bdlocCat, $sort, $keyword);
+		$books = $bookManager->getBooks($byNumber, $start, $bdlocCat, $sort, $keyword, $dispo);
 	}
 
 }

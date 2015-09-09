@@ -26,31 +26,38 @@ $(document).ready(function(){
 
 //requête AJAX pour filtres catégories
 $('.chk_boxes').on("click", function(){
-             console.log('Affichage');
-  var categorie = $('.chk_boxes').val();
+             //console.log('Affichage');
+  var categorie = $('.chk_boxes').val();  
   if (categorie == false) {
     $('.listcat').html("");
   }
   else {
       $.ajax({
         //récupère l'url du formulaire        
-        "data":$('#filters').serialize()
+        data:$('#filters').serialize()+'&'+$('#dispo').serialize()
       }).done(function(response){
         var content=$(response).find(".listcat");
         $('.listcat').html(content);
       }); 
     }
-  
 });
-// Change for form
-function recupere()
-{
-
-
-//document.getElementById('denis').submit();
-//document.formulaire.choix.value = liste.options[liste.selectedIndex].value;
-
-}
+//available
+// $('.available').on("click", function(){
+//              //console.log('Affichage');
+//   var available = $('.available').val()
+//   if (available == false) {
+//     $('.listcat').html("");
+//   }
+//   else {
+//       $.ajax({
+//         //récupère l'url du formulaire        
+//         "data":$('#dispo').serialize()
+//       }).done(function(response){
+//         var content=$(response).find(".listcat");
+//         $('.listcat').html(content);
+//       }); 
+//     }
+// });
 
 
 (function(d, s, id) {
