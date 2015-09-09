@@ -205,8 +205,6 @@ nav{
 	color: #FE641E;
 }
 
-
-
 /*||||||||||||||FOOTER||||||||||||||*/
 footer{
 	background-color: #EBEBEB;
@@ -214,7 +212,7 @@ footer{
 	width: 100%;
 }
 footer, .main:after {
-	height: 215px;
+	height: 240px;
 }
 .nav-footer{
 	height:30%;
@@ -236,6 +234,9 @@ footer, .main:after {
 	font-weight: bolder
 }
 
+.copyright{
+	text-align: center;
+}
 #fb-root {
 	width: 500px;
 	float: left;
@@ -672,8 +673,42 @@ form.reset-password>div.form-reset>input[type="password"]:focus,  form.reset-pas
 	border:1px solid #1C8AF9;
 }
 
+form.change-password>div.change-pswd>input:focus, input:active{
+	border:1px solid #1C8AF9;
+}
 
+form.change-password>input.validate-change-pswd{
+	margin-left:17.5em;
+	border: none;
+	color: #FFF;
+	width: 10em;
+	padding:0.7em;
+	border-radius: 3px;
+	background-color: #FE641E;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	-webkit-transition: all .35s;
+	-moz-transition: all .35s;
+	transition: all .35s;
+}
+form.change-password>input.validate-change-pswd:hover, form.forgot-password>input.validate-change-pswd:focus,  form.forgot-password>input.validate-change-pswd:active{
+	color: #FFF;
+	background-color: #1C8AF9;
+}
 
+input.bouton_retour{
+	width: 7em;
+	padding:0.7em;
+	border-radius: 7px;
+	border: none;
+	background-color: #FE641E;
+	padding:5px 3px;
+	color: #2C3E50;
+}
+
+input.bouton_retour:hover{
+	background-color: #1C8AF9;
+}
 
 
 /*================================================================================================================*/
@@ -803,6 +838,22 @@ input.valid-picture:hover{
 }
 
 /*|||||||||||||||ONGLET MON COMPTE|||||||||||||||||*/
+
+.delete-profile, .change-password{
+	padding:0.8em;
+	background-color:#FE641E;
+	border-radius:3px;
+	color:#fff;
+	width:6em;
+	margin:1em;
+	-webkit-transition: all .35s;
+	-moz-transition: all .35s;
+	transition: all .35s;
+}
+a.delete-profile:hover, a.change-password:hover {
+	color:#FFF;
+	background-color: #1C8AF9;
+}
 
 
 /*================================================================================================================*/
@@ -1091,9 +1142,6 @@ a.tooltip:hover span{
 	}
 
 
-
-
-
 	/*================================================================================================================*/
 	/*====================================RENT.PHP================================================================*/
 	/*================================================================================================================*/
@@ -1219,15 +1267,7 @@ a.tooltip:hover span{
 
 	img.error{
 		margin: 150px auto;
-
 	}
-
-
-
-
-
-
-
 
 	/*================================================================================================================*/
 	/*====================================CHECKBOXSTYLE===============================================================*/

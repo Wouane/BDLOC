@@ -457,6 +457,9 @@ class UserController extends Controller
 
 			$user_name_regex = "/^[\p{L}0-9._-]{2,100}$/u";
 
+			$user_name_regex = "/^[\p{L}0-9._-]{2,100}$/u";
+			$adresse_regex = "^([\d\/-]*[\h]?(bis|ter)?)[\h]*([\D]{3}.*)$";
+
 
 			if(!empty($_POST))
 			{
@@ -483,6 +486,7 @@ class UserController extends Controller
 					$error = "Ce Pseudo est deja utillisé !";
 				}
 		// Email valide ?
+
 				if(!filter_var($email, FILTER_VALIDATE_EMAIL))
 				{
 					$error = "Email non valide";
@@ -490,6 +494,19 @@ class UserController extends Controller
 				if ($userManager->emailExists($email)) {
 					$error = "Cet Email est deja utillisé !";
 				}
+
+			if(!filter_var($email, FILTER_VALIDATE_EMAIL))
+			{
+				$error = "Email non valide";
+			}
+			if ($userManager->emailExists($email)) {
+				$error = "Cet Email est deja utillisé !";
+			}
+		// Adresse valide FAIL
+			//if (!preg_match($adresse_regex, $streetname)) {
+			//	$error = "Votre adresse n'es pas valide !";
+			//}
+			
 		// ZIPCODE valide
 				if($zipcode <= "75000" || $zipcode >= "75021"){
 					$error = "Vous devez habiter Paris pour vous inscrire à notre service !";

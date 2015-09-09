@@ -1,8 +1,12 @@
 <?php $this->layout('layout_bdloc', ['title' => 'BdLoc']) ?>
 
+
+
+
 	<?php $this->start("main_content") ?>
 
 
+ 
 <div class="main">
 	<div class="filter">
 	<!-- Filtres -->
@@ -122,18 +126,17 @@
 		</form>
 
 		<form method="GET" action="<?php echo $this->url('catalogue')?>">
-				<select name="byOrder" onChange="showUser(this.value)" id="byOrder">
-					<option value="alpha" id="byAlpha">Ordre alphabétique</option>
-					<option value="date" id="byDateCreated">Date d'ajout au catalogue</option>					
-					<option selected value="publication" id="byDatePublish">Date de publication</option>
+				<select name="byOrder" onChange="this.form.submit()" id="byOrder">
+					<option value="alpha" <?php if($_GET['byOrder'] =='alpha'){echo 'selected';} ?> id="byAlpha">Ordre alphabétique</option>
+					<option value="date" <?php if($_GET['byOrder'] =='date'){echo 'selected';} ?> id="byDateCreated">Date d'ajout au catalogue</option>					
+					<option value="publication" <?php if($_GET['byOrder'] =='publication'){echo 'selected';} ?> id="byDatePublish">Date de publication</option>
 				</select>
 		</form>
-		<form method="GET">
-				<select name="byNumber" onChange="showUser(this.value)" id="byNumber">
-					<option>Résultats par page</option>
-					<option value="20">Afficher 20 résultats</option>
-					<option value="40">Afficher 40 résultats</option>
-					<option value="60">Afficher 60 résultats</option>
+		<form method="GET" action="<?php echo $this->url('catalogue')?>">
+				<select name="byNumber" onChange="this.form.submit()" id="byNumber">					
+					<option value="20"<?php if($_GET['byNumber'] =='20'){echo 'selected';} ?>>Afficher 20 résultats</option>
+					<option value="40"<?php if($_GET['byNumber'] =='40'){echo 'selected';} ?>>Afficher 40 résultats</option>
+					<option value="60"<?php if($_GET['byNumber'] =='60'){echo 'selected';} ?>>Afficher 60 résultats</option>
 				</select>
 
 					<a href="?start=<?= $start-20 ?>"  <?php if ($start == 0): ?> onclick="return false" style="background:#CCC"<?php endif ?>><i class="fa fa-chevron-left"></i> Préc</a>
