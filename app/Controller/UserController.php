@@ -196,6 +196,7 @@ class UserController extends Controller
 				if (empty($error)) {
 					
 			//insérer en base
+
 					$hash = password_hash($password, PASSWORD_DEFAULT);
 					
 					$id = $user['id'];
@@ -212,6 +213,21 @@ class UserController extends Controller
 					
 				}
 				
+
+				$hash = password_hash($password, PASSWORD_DEFAULT);
+				
+				$id = $user['id'];
+
+				$newPassword = [
+				"password" => $hash,
+				];
+				
+				$userManager = new \Manager\UserManager();
+				$userManager->update($newPassword, $id);	
+				$this->redirectToRoute('profile');
+				
+				$succes = "Votre Mots de passe a bien été changer !";
+
 				
 			}
 			$data = [];
@@ -258,6 +274,7 @@ class UserController extends Controller
 		}
 
 	//Page profile
+
 		/*==================PAGE PROFIL===================*/
 		public function profil()
 		{
@@ -288,353 +305,428 @@ class UserController extends Controller
 				$zipcode = trim(strip_tags($_POST['zipcode']));
 				$phonenumber = trim(strip_tags($_POST['phonenumber']));
 
+				/*==================PAGE PROFIL===================*/
+				public function profil()
+				{
+					$user = $this->getUser();
+					$userManager = new UserManager();
+					$error = "";
+					$succes = "";
+					$id = "";
+					$username = "";
+					$email = "";
+					$firstname = "";
+					$lastname = "";
+					$streetname = "";
+					$phonenumber = "";
+					$zipcode = "";
+					$pic_name =$this->getUser()['pic_name'];
+
+					$user_name_regex = "/^[\p{L}0-9._-]{2,100}$/u";
+
+					if(!empty($_POST))
+					{
+						$id = $user["id"];
+						$email = trim(strip_tags($_POST['email']));
+						$username = trim(strip_tags($_POST['username']));
+						$firstname = trim(strip_tags($_POST['firstname']));
+						$lastname = trim(strip_tags($_POST['lastname']));
+						$streetname = trim(strip_tags($_POST['streetname']));
+						$zipcode = trim(strip_tags($_POST['zipcode']));
+						$phonenumber = trim(strip_tags($_POST['phonenumber']));
+
+
 		//|||||||||||||||||||| username valide ?
 
-				if(strlen($username) < 4)
-				{
-					$error = "Votre Pseudo doit comporter 4 lettres minimum !";
-				}
-				if(!preg_match($user_name_regex, $username)) {
-					$error = "Votre Pseudo ne doit pas contenir de caractère spéciaux !";
-				}
-
-				else {
-					if ($username !== $_SESSION['user']['username']) {
-						$foundPseudo = $userManager->usernameExists($username);
-
-						if (!empty($foundPseudo)) {
-							$error = "Ce pseudo est déjà enregistré ici !";
+						if(strlen($username) < 4)
+						{
+							$error = "Votre Pseudo doit comporter 4 lettres minimum !";
 						}
-					}
-				}
+						if(!preg_match($user_name_regex, $username)) {
+							$error = "Votre Pseudo ne doit pas contenir de caractère spéciaux !";
+						}
+
+						else {
+							if ($username !== $_SESSION['user']['username']) {
+								$foundPseudo = $userManager->usernameExists($username);
+
+								if (!empty($foundPseudo)) {
+									$error = "Ce pseudo est déjà enregistré ici !";
+								}
+							}
+						}
 
 		//|||||||||||||||| Email valide ?
 
-				if(!filter_var($email, FILTER_VALIDATE_EMAIL))
-				{
-					$error = "Email non valide";
-				}
-				else {
-					if ($email !== $_SESSION['user']['email']) {
-						$foundEmail = $userManager->emailExists($email);
-
-						if (!empty($foundEmail)) {
-							$error = "Ce pseudo est déjà enregistré ici !";
+						if(!filter_var($email, FILTER_VALIDATE_EMAIL))
+						{
+							$error = "Email non valide";
 						}
-					}
-				}
+						else {
+							if ($email !== $_SESSION['user']['email']) {
+								$foundEmail = $userManager->emailExists($email);
+
+								if (!empty($foundEmail)) {
+									$error = "Ce pseudo est déjà enregistré ici !";
+								}
+							}
+						}
 
 		// |||||||||||||||| IMAGE valide ?
-				if (($_FILES['pic_name']['error']) != 4) {
+						if (($_FILES['pic_name']['error']) != 4) {
 
-					$tmpName = $_FILES['pic_name']['tmp_name'];
+							$tmpName = $_FILES['pic_name']['tmp_name'];
 
-					if ($_FILES['pic_name']['error'] != 0) {
-						switch ($_FILES['pic_name']['error']) {
-							case 1:
-							$error = "Votre fichier est trop gros !";
-							break;
-							case 4:
-							$error = "Aucun fichier n'a été selectionné !";
-							break;
-							default:
-							$error = "Une erreur est survenue lors du chargement de votre image LOL";
-							break;		
+							if ($_FILES['pic_name']['error'] != 0) {
+								switch ($_FILES['pic_name']['error']) {
+									case 1:
+									$error = "Votre fichier est trop gros !";
+									break;
+									case 4:
+									$error = "Aucun fichier n'a été selectionné !";
+									break;
+									default:
+									$error = "Une erreur est survenue lors du chargement de votre image LOL";
+									break;		
+								}
+							}
+
+							$info = finfo_open(FILEINFO_MIME_TYPE);
+							$mime = finfo_file($info, $tmpName);
+
+							$acceptedMime = array("image/jpeg", "image/gif", "image/png");
+
+							if (!in_array($mime, $acceptedMime)) {
+								$error = "Type de fichier refuser ";
+							}
+							if ($_FILES == $_SESSION['user']['pic_name']) {
+								
+							}
+
+							if (empty($error)) {
+								$extention = pathinfo($_FILES['pic_name']['name'], PATHINFO_EXTENSION);
+								$pic_name = md5($tmpName . time() . uniqid()) . "." . $extention;
+								$destinationDirectory = __DIR__ . "/../../public/assets/img/uploads/";
+
+								if (file_exists($destinationDirectory . "originals/" . $pic_name)) {
+									$pic_name = md5($tmpName . time() . uniqid())  . uniqid() . "." . $extention;
+								}
+								move_uploaded_file($tmpName, $destinationDirectory . "originals/".$pic_name);
+
+								$img = new \abeautifulsite\SimpleImage($destinationDirectory . "originals/".$pic_name);
+								$img->best_fit(600,600)->save($destinationDirectory . "mediums/" . $pic_name);
+								$img->thumbnail(150,150)->save($destinationDirectory . "thumbnails/" . $pic_name);
+								
+							}
+							if (empty($error)) {
+								$succes ="Bravo !";
+							}
 						}
-					}
-
-					$info = finfo_open(FILEINFO_MIME_TYPE);
-					$mime = finfo_file($info, $tmpName);
-
-					$acceptedMime = array("image/jpeg", "image/gif", "image/png");
-
-					if (!in_array($mime, $acceptedMime)) {
-						$error = "Type de fichier refuser ";
-					}
-					if ($_FILES == $_SESSION['user']['pic_name']) {
-						
-					}
-
-					if (empty($error)) {
-						$extention = pathinfo($_FILES['pic_name']['name'], PATHINFO_EXTENSION);
-						$pic_name = md5($tmpName . time() . uniqid()) . "." . $extention;
-						$destinationDirectory = __DIR__ . "/../../public/assets/img/uploads/";
-
-						if (file_exists($destinationDirectory . "originals/" . $pic_name)) {
-							$pic_name = md5($tmpName . time() . uniqid())  . uniqid() . "." . $extention;
-						}
-						move_uploaded_file($tmpName, $destinationDirectory . "originals/".$pic_name);
-
-						$img = new \abeautifulsite\SimpleImage($destinationDirectory . "originals/".$pic_name);
-						$img->best_fit(600,600)->save($destinationDirectory . "mediums/" . $pic_name);
-						$img->thumbnail(150,150)->save($destinationDirectory . "thumbnails/" . $pic_name);
-						
-					}
-					if (empty($error)) {
-						$succes ="Bravo !";
-					}
-				}
 
 		//|||||||||||||||| ZIPCODE valide ?
 
-				if($zipcode <= "75000" || $zipcode >= "75021"){
-					$error = "Vous devez habiter Paris pour vous inscrire à notre service !";
-				}
+						if($zipcode <= "75000" || $zipcode >= "75021"){
+							$error = "Vous devez habiter Paris pour vous inscrire à notre service !";
+						}
 
 		//|||||||||||||||| Téléphone valide ?
 
-				if(preg_match("/^[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}$/", $phonenumber)) {
+						if(preg_match("/^[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}$/", $phonenumber)) {
   				// $phonenumber is valid
-					$error = "Votre numéro de téléphone n'est pas valide !";
-				}
+							$error = "Votre numéro de téléphone n'est pas valide !";
+						}
 
 		//||||||||||||||||	2er cihffre du Telephone coresponde a 01,02,03,04,05,06,07,08 ou 09 
 
-				if(substr($phonenumber, 0,2) < "01" || substr($phonenumber, 0,2) > "09") {
-					$error = "Votre numéro de téléphone n'est pas valide !";
-				}
+						if(substr($phonenumber, 0,2) < "01" || substr($phonenumber, 0,2) > "09") {
+							$error = "Votre numéro de téléphone n'est pas valide !";
+						}
 
 		//si valide...
 
-				if(empty($error))
-				{
+						if(empty($error))
+						{
 
 		//insérer en base
 
-					$modifySubscriber = [
-					"username" 		=> $username,
-					"email" 		=> $email,
-					"firstname" 	=> $firstname,
-					"lastname" 		=> $lastname,
-					"zip_code" 		=> $zipcode,
-					"street_name" 	=> $streetname,
-					"phone_number" 	=> $phonenumber,
-					"date_modified" => date("Y-m-d H:i:s"),
-					"pic_name"		=> $pic_name,
-					];
+							$modifySubscriber = [
+							"username" 		=> $username,
+							"email" 		=> $email,
+							"firstname" 	=> $firstname,
+							"lastname" 		=> $lastname,
+							"zip_code" 		=> $zipcode,
+							"street_name" 	=> $streetname,
+							"phone_number" 	=> $phonenumber,
+							"date_modified" => date("Y-m-d H:i:s"),
+							"pic_name"		=> $pic_name,
+							];
 
-					$userManager = new \Manager\UserManager();
-					$userManager->update($modifySubscriber, $id);
+							$userManager = new \Manager\UserManager();
+							$userManager->update($modifySubscriber, $id);
 
-					
+							
 				//Crée une instance et refresh le contenu
-					$am = new AuthentificationManager();
-					$am->refreshUser();
+							$am = new AuthentificationManager();
+							$am->refreshUser();
+							
+							$succes = "Votre profil a bien été enregistré !";
+						}	
+					}
 					
-					$succes = "Votre profil a bien été enregistré !";
-				}	
-			}
-			
 
-			$data = [];
-			$data['error'] = $error;
-			$data['succes'] = $succes;
-			$data['username'] = $username;
-			$data['email'] = $email;
-			$data['firstname'] = $firstname;
-			$data['lastname'] = $lastname;
-			$data['zipcode'] = $zipcode;
-			$data['streetname'] = $streetname;
-			$data['phonenumber'] = $phonenumber;
-			$data['pic_name'] = 'default.png';
-			
-			$this->show('user/profile', $data);
-		}
+					$data = [];
+					$data['error'] = $error;
+					$data['succes'] = $succes;
+					$data['username'] = $username;
+					$data['email'] = $email;
+					$data['firstname'] = $firstname;
+					$data['lastname'] = $lastname;
+					$data['zipcode'] = $zipcode;
+					$data['streetname'] = $streetname;
+					$data['phonenumber'] = $phonenumber;
+					$data['pic_name'] = 'default.png';
+					
+					$this->show('user/profile', $data);
+				}
 
-		/*==================PAGE REGISTER===================*/
-		public function register()
-		{
-			$userManager = new UserManager();
-			$error = "";
-			$username = "";
-			$email = "";
-			$firstname = "";
-			$lastname = "";
-			$streetname = "";
-			$phonenumber = "";
-			$zipcode = "";
-			$pic_name = "default.png";
+				/*==================PAGE REGISTER===================*/
+				public function register()
+				{
+					$userManager = new UserManager();
+					$error = "";
+					$username = "";
+					$email = "";
+					$firstname = "";
+					$lastname = "";
+					$streetname = "";
+					$phonenumber = "";
+					$zipcode = "";
+					$pic_name = "default.png";
 
-			$user_name_regex = "/^[\p{L}0-9._-]{2,100}$/u";
+					/*==================PAGE REGISTER===================*/
+					public function register()
+					{
+						$am = new AuthentificationManager();
+						$userManager = new UserManager();
+						$error = "";
+						$username = "";
+						$email = "";
+						$firstname = "";
+						$lastname = "";
+						$streetname = "";
+						$phonenumber = "";
+						$zipcode = "";
+						$pic_name = "default.png";
 
-			$user_name_regex = "/^[\p{L}0-9._-]{2,100}$/u";
-			$adresse_regex = "^([\d\/-]*[\h]?(bis|ter)?)[\h]*([\D]{3}.*)$";
+
+						$user_name_regex = "/^[\p{L}0-9._-]{2,100}$/u";
+
+						$user_name_regex = "/^[\p{L}0-9._-]{2,100}$/u";
+						$adresse_regex = "^([\d\/-]*[\h]?(bis|ter)?)[\h]*([\D]{3}.*)$";
 
 
-			if(!empty($_POST))
-			{
-				$email = trim(strip_tags($_POST['email']));
-				$username = trim(strip_tags($_POST['username']));
-				$password = trim(strip_tags($_POST['password']));
-				$confirm = trim(strip_tags($_POST['confirm']));
-				$firstname = trim(strip_tags($_POST['firstname']));
-				$lastname = trim(strip_tags($_POST['lastname']));
-				$streetname = trim(strip_tags($_POST['streetname']));
-				$zipcode = trim(strip_tags($_POST['zipcode']));
-				$phonenumber = trim(strip_tags($_POST['phonenumber']));
+						if(!empty($_POST))
+						{
+							$email = trim(strip_tags($_POST['email']));
+							$username = trim(strip_tags($_POST['username']));
+							$password = trim(strip_tags($_POST['password']));
+							$confirm = trim(strip_tags($_POST['confirm']));
+							$firstname = trim(strip_tags($_POST['firstname']));
+							$lastname = trim(strip_tags($_POST['lastname']));
+							$streetname = trim(strip_tags($_POST['streetname']));
+							$zipcode = trim(strip_tags($_POST['zipcode']));
+							$phonenumber = trim(strip_tags($_POST['phonenumber']));
 
 
 		// username valide ?
-				if(strlen($username) < 4)
-				{
-					$error = "Votre Pseudo doit comporter 4 lettres minimum !";
-				}
-				if(!preg_match($user_name_regex, $username)) {
-					$error = "Votre Pseudo ne doit pas contenir de caractère spéciaux !";
-				}
-				if ($userManager->usernameExists($username)) {
-					$error = "Ce Pseudo est deja utillisé !";
-				}
+							if(strlen($username) < 4)
+							{
+								$error = "Votre Pseudo doit comporter 4 lettres minimum !";
+							}
+							if(!preg_match($user_name_regex, $username)) {
+								$error = "Votre Pseudo ne doit pas contenir de caractère spéciaux !";
+							}
+							if ($userManager->usernameExists($username)) {
+								$error = "Ce Pseudo est deja utillisé !";
+							}
 		// Email valide ?
 
-				if(!filter_var($email, FILTER_VALIDATE_EMAIL))
-				{
-					$error = "Email non valide";
-				}
-				if ($userManager->emailExists($email)) {
-					$error = "Cet Email est deja utillisé !";
-				}
+							if(!filter_var($email, FILTER_VALIDATE_EMAIL))
+							{
+								$error = "Email non valide";
+							}
+							if ($userManager->emailExists($email)) {
+								$error = "Cet Email est deja utillisé !";
+							}
 
-			if(!filter_var($email, FILTER_VALIDATE_EMAIL))
-			{
-				$error = "Email non valide";
-			}
-			if ($userManager->emailExists($email)) {
-				$error = "Cet Email est deja utillisé !";
-			}
+							if(!filter_var($email, FILTER_VALIDATE_EMAIL))
+							{
+								$error = "Email non valide";
+							}
+							if ($userManager->emailExists($email)) {
+								$error = "Cet Email est deja utillisé !";
+							}
 		// Adresse valide FAIL
 			//if (!preg_match($adresse_regex, $streetname)) {
 			//	$error = "Votre adresse n'es pas valide !";
 			//}
-			
+							
 		// ZIPCODE valide
-				if($zipcode <= "75000" || $zipcode >= "75021"){
-					$error = "Vous devez habiter Paris pour vous inscrire à notre service !";
-				}
+							if($zipcode <= "75000" || $zipcode >= "75021"){
+								$error = "Vous devez habiter Paris pour vous inscrire à notre service !";
+							}
 		// Téléphone valide
-				if(preg_match("/^[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}$/", $phonenumber)) {
+							if(preg_match("/^[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}$/", $phonenumber)) {
   				// $phonenumber is valid
-					$error = "Votre numéro de téléphone n'est pas valide !";
-				}
+								$error = "Votre numéro de téléphone n'est pas valide !";
+							}
 		//	2er cihffre du Telephone coresponde a 01,02,03,04,05,06,07,08 ou 09 
-				if(substr($phonenumber, 0,2) < "01" || substr($phonenumber, 0,2) > "09") {
-					$error = "Votre numéro de téléphone n'est pas valide !";
-				}
+							if(substr($phonenumber, 0,2) < "01" || substr($phonenumber, 0,2) > "09") {
+								$error = "Votre numéro de téléphone n'est pas valide !";
+							}
 		// verif du MDP -- il doit contenir au moin 1 lettre et 1 chiffre !
-				else {
-					$containsLetter = preg_match('/[a-zA-Z]/', $password);
-					$containsDigit = preg_match('/\d/', $password);
+							else {
+								$containsLetter = preg_match('/[a-zA-Z]/', $password);
+								$containsDigit = preg_match('/\d/', $password);
 
-					if (!$containsLetter || !$containsDigit ) {
-						$error = "Merci de choisir un mot de passe comportant au moins une lettre et un chiffre !";
-					}
-				}
+								if (!$containsLetter || !$containsDigit ) {
+									$error = "Merci de choisir un mot de passe comportant au moins une lettre et un chiffre !";
+								}
+							}
 	 	// Password identiques ?
-				if($password != $confirm)
-				{
-					$error = "Vos mots de passe doivent être identiques !";
-				}
+							if($password != $confirm)
+							{
+								$error = "Vos mots de passe doivent être identiques !";
+							}
 	 	//si valide...
-				if(empty($error))
-				{
+							if(empty($error))
+							{
 		//hasher le mot de passe
-					$hash = password_hash($password, PASSWORD_DEFAULT);
+								$hash = password_hash($password, PASSWORD_DEFAULT);
 		//insérer en base
-					$newSubscriber = [
-					"username" 		=> $username,
-					"email" 		=> $email,
-					"password" 		=> $hash,
-					"firstname" 	=> $firstname,
-					"lastname" 		=> $lastname,
-					"zip_code" 		=> $zipcode,
-					"street_name" 	=> $streetname,
-					"phone_number" 	=> $phonenumber,
-					"date_modified" => date("Y-m-d H:i:s"),
-					"date_created" 	=> date("Y-m-d H:i:s"),
-					"pic_name"      => $pic_name,
-					];
-					$userManager = new \Manager\UserManager();
-					$am = new AuthentificationManager();
-					$am ->LogUserIn($newSubscriber);
-					$userManager->insert($newSubscriber);
-					
-					$this->redirectToRoute('catalogue');
-				}				
 
-			}
-			/* Afficher la page */
-			$data = [];
-			$data['error'] = $error;
-			$data['username'] = $username;
-			$data['email'] = $email;
-			$data['firstname'] = $firstname;
-			$data['lastname'] = $lastname;
-			$data['zipcode'] = $zipcode;
-			$data['streetname'] = $streetname;
-			$data['phonenumber'] = $phonenumber;
-			$data['pic_name'] = $pic_name;
+								$newSubscriber = [
+								"username" 		=> $username,
+								"email" 		=> $email,
+								"password" 		=> $hash,
+								"firstname" 	=> $firstname,
+								"lastname" 		=> $lastname,
+								"zip_code" 		=> $zipcode,
+								"street_name" 	=> $streetname,
+								"phone_number" 	=> $phonenumber,
+								"date_modified" => date("Y-m-d H:i:s"),
+								"date_created" 	=> date("Y-m-d H:i:s"),
+								"pic_name"      => $pic_name,
+								];
+								$userManager = new \Manager\UserManager();
+								$am = new AuthentificationManager();
+								$am ->LogUserIn($newSubscriber);
+								$userManager->insert($newSubscriber);
+								
+								$this->redirectToRoute('catalogue');
+							}				
 
-			$this->show('user/register', $data);
-		}
+						}
+						/* Afficher la page */
+						$data = [];
+						$data['error'] = $error;
+						$data['username'] = $username;
+						$data['email'] = $email;
+						$data['firstname'] = $firstname;
+						$data['lastname'] = $lastname;
+						$data['zipcode'] = $zipcode;
+						$data['streetname'] = $streetname;
+						$data['phonenumber'] = $phonenumber;
+						$data['pic_name'] = $pic_name;
 
-		/*==================PAGE LOGIN===================*/
-		public function login()
-		{
-			$am = new AuthentificationManager();
-			$error = "";
-			$username = "";
-			if(!empty($_POST))
-			{
-	 	//validation
-				$password = $_POST['password'];
-				$username = $_POST['username'];
-				$result = $am->isValidLoginInfo($username, $password);
-	 	//si valide : connexion
-				if($result > 0)
+						$this->show('user/register', $data);
+
+						$newSubscriber = [
+						"username" 		=> $username,
+						"email" 		=> $email,
+						"password" 		=> $hash,
+						"firstname" 	=> $firstname,
+						"lastname" 		=> $lastname,
+						"zip_code" 		=> $zipcode,
+						"street_name" 	=> $streetname,
+						"phone_number" 	=> $phonenumber,
+						"date_modified" => date("Y-m-d H:i:s"),
+						"date_created" 	=> date("Y-m-d H:i:s"),
+						"pic_name"      => $pic_name,
+						];
+						$userManager = new \Manager\UserManager();
+						$userManager->insert($newSubscriber);
+						$am ->LogUserIn($newSubscriber);
+						$user = $this->getUser();
+						$this->redirectToRoute('catalogue');
+					}				
+
+
+				}
+
+				/*==================PAGE LOGIN===================*/
+				public function login()
 				{
-					$userId = $result;
+					$am = new AuthentificationManager();
+					$error = "";
+					$username = "";
+					if(!empty($_POST))
+					{
+	 	//validation
+						$password = $_POST['password'];
+						$username = $_POST['username'];
+						$result = $am->isValidLoginInfo($username, $password);
+	 	//si valide : connexion
+						if($result > 0)
+						{
+							$userId = $result;
 	 	//récupère l'utilisateur
-					$userManager = new \Manager\UserManager();
-					$user = $userManager->find($userId);
+							$userManager = new \Manager\UserManager();
+							$user = $userManager->find($userId);
 
 	 	//connecte l'user
-					$am->LogUserIn($user);
+							$am->LogUserIn($user);
 	 	//redirection
-					$this->redirectToRoute('catalogue');
-				}
-				else 
-				{
-					$error = "Mauvais Identifiants !";
-				}
-			}
-			$data = [];
+							$this->redirectToRoute('catalogue');
+						}
+						else 
+						{
+							$error = "Mauvais Identifiants !";
+						}
+					}
+					$data = [];
 		//$data['error'] = $error;
-			$data['username'] = $username;
+					$data['username'] = $username;
 		// Afficher la page 
-			$this->show('user/login',['error'=>$error]);
-		}
+					$this->show('user/login',['error'=>$error]);
+				}
 
-		/*==================PAGE LOGOUT===================*/
+				/*==================PAGE LOGOUT===================*/
 
-		public function logout()
-		{
-			$am = new AuthentificationManager();
-			$am->logUserOut();
-			$this->redirectToRoute('home');
-		}
+				public function logout()
+				{
+					$am = new AuthentificationManager();
+					$am->logUserOut();
+					$this->redirectToRoute('home');
+				}
 
 
-		/*==================PAGE DELETE PROFILE===================*/
+				/*==================PAGE DELETE PROFILE===================*/
 
-		public function deleteProfile($id)
-		{   
+				public function deleteProfile($id)
+				{   
 		// $this->allowTo('user');
-			$UserManager = new\Manager\UserManager();
+
+					$UserManager = new\Manager\UserManager();
+
+					$user = $this->getUser();
+					$UserManager = new\Manager\UserManager();
+
 
 		// $deleteTerms = $termManager->delete($id);
-			$UserManager->deleteProfile($id);
-			$this->redirectToRoute('home');
-		}
+					$UserManager->deleteProfile($id);
+					$this->redirectToRoute('home');
+				}
 
 
-	}
+			}
