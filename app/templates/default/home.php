@@ -18,8 +18,11 @@
 				<a href="<?= $this->url('inscription') ?>" title="Abonnement">Abonnez-vous à BDLOC</a>
 			</div>
 			<div class="homewords">
-			...la Marie de Paris a décidé de créer un nouveau système de location de BD, bdloc.fr,
-			<div class="cent"> 100% en ligne,</div><div class="cent">100% gratuit,</div> <div class="cent">100% moderne</div>
+			<p class="text-homewords">La Marie de Paris a décidé de créer <span>Esprit Bd</span>, un site de location de BD réservé uniquement aux Parisiens<p>
+				<div class="icone">
+					<img class="icone-home" src ="<?= $this->assetUrl('img/icon-tour-eiffel.png') ?>" alt="icone tour eiffel">
+				</div>
+			<p class="text-homewords">Cette bédéthèque virtuelle vous permet de louerjusqu'à <span>10 Bandes-dessinées gratuitement !</span><p>
 		</div>
 	</div>
 </div>
