@@ -2,7 +2,8 @@
 
 <?php $this->start('main_content'); ?>
 
-<h2 class="change-password-title">Modifiez votre mot de passe</h2>
+<h2 class="change-password-title">Page de modification de mot de passe</h2>
+<p class="change-password-text"><i class="fa fa-exclamation-circle"> Veuillez modifier votre mot de passe</p>
 <form method="POST" class="change-password">
 			<div class="boutton_retour">
 				<input type="button" value="Retour" class="bouton_retour"onclick="history.go(-1)">
