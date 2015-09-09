@@ -887,7 +887,7 @@ color: #666;
 	width: auto;
 	padding: 1.2em;
 	min-width: 300px;
-	float: left;
+	/*float: left;*/
 }
 .book{
 	margin: 0.8em;
