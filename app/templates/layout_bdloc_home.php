@@ -44,10 +44,9 @@
 <!-- FOOTER -->
 <!-- ============= -->
 		<footer>
-			<ul class="nav-footer">				
-				<li><i class="fa fa-file-text-o footer"></i><a href="<?= $this->url('mentionsLegales'); ?>"> Mentions légales |</a></li> 
-				<li><i class="fa fa-phone footer"></i><a href="<?= $this->url('contact'); ?>" title="Contact"> Contactez-nous</a></li>
-			</ul>
+			<div class="copyright">
+			    Copyright © 2015 Bdloc. Tous droits réservés. Contact : bdlocbdloc@gmail.com 
+			</div>	
 		<!-- ENCART FACEBOOK -->
 			<div id="fb-root">
 				<div class="fb-page" data-href="https://www.facebook.com/bdloc" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
