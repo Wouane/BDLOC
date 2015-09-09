@@ -125,19 +125,30 @@
 				<label class="search-label" for="search"><i class="fa fa-search"></i></label>
 			</div>
 		</form>
-
+		<?php
+			$orderCat = "";
+			if (!empty($_GET['byOrder'])) {
+				$orderCat = $_GET['byOrder']; 
+			}
+		?>
 		<form method="GET" action="<?php echo $this->url('catalogue')?>">
 				<select name="byOrder" onChange="this.form.submit()" id="byOrder">
-					<option value="alpha" <?php if($_GET['byOrder'] =='alpha'){echo 'selected';} ?> id="byAlpha">Ordre alphabétique</option>
-					<option value="date" <?php if($_GET['byOrder'] =='date'){echo 'selected';} ?> id="byDateCreated">Date d'ajout au catalogue</option>					
-					<option value="publication" <?php if($_GET['byOrder'] =='publication'){echo 'selected';} ?> id="byDatePublish">Date de publication</option>
+					<option value="alpha" <?php if($orderCat =='alpha'){echo 'selected';} ?> id="byAlpha">Ordre alphabétique</option>
+					<option value="date" <?php if($orderCat =='date'){echo 'selected';} ?> id="byDateCreated">Date d'ajout au catalogue</option>					
+					<option value="publication" <?php if($orderCat =='publication'){echo 'selected';} ?> id="byDatePublish">Date de publication</option>
 				</select>
 		</form>
+		<?php
+			$orderNum = "";
+			if (!empty($_GET['byNumber'])) {
+				$orderNum = $_GET['byNumber']; 
+			}
+		?>
 		<form method="GET" action="<?php echo $this->url('catalogue')?>">
 				<select name="byNumber" onChange="this.form.submit()" id="byNumber">					
-					<option value="20"<?php if($_GET['byNumber'] =='20'){echo 'selected';} ?>>Afficher 20 résultats</option>
-					<option value="40"<?php if($_GET['byNumber'] =='40'){echo 'selected';} ?>>Afficher 40 résultats</option>
-					<option value="60"<?php if($_GET['byNumber'] =='60'){echo 'selected';} ?>>Afficher 60 résultats</option>
+					<option value="20"<?php if($orderNum =='20'){echo 'selected';} ?>>Afficher 20 résultats</option>
+					<option value="40"<?php if($orderNum =='40'){echo 'selected';} ?>>Afficher 40 résultats</option>
+					<option value="60"<?php if($orderNum =='60'){echo 'selected';} ?>>Afficher 60 résultats</option>
 				</select>
 
 					<a href="?start=<?= $start-20 ?>"  <?php if ($start == 0): ?> onclick="return false" style="background:#CCC"<?php endif ?>><i class="fa fa-chevron-left"></i> Préc</a>
