@@ -3,6 +3,7 @@
 <?php $this->start('main_content'); ?>
 
 <h2 class="reset-password-title">Modifiez votre mot de passe</h2>
+<p class="reset-password-text"><i class="fa fa-exclamation-circle"></i> Veuillez entrez un nouveau mot de passe</p>
 <form method="POST" class="reset-password">
 	<div class="form-reset">
 		<label class="reset-password-label" for="password">NOUVEAU MOT DE PASSE</label>
