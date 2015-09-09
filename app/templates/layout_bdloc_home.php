@@ -29,7 +29,7 @@
 			<a href="<?= $this->url('home') ?>"><img class="logo" src="<?= $this->assetUrl('img/logo-default.png') ?>" alt="logo BDLOC"/></a>
 		</div>
 		<!-- NO NAV -->
-		<h1 class="titre-home">BDLOC, louer gratuitement vos Bandes dessinées</h1>
+		<h1 class="titre-home">Esprit BD, louer gratuitement vos Bandes dessinées</h1>
 		<!-- ESPACE USER -->
 		<div class="btn-login">
 			<button>Connexion</button>
