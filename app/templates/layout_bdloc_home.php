@@ -31,9 +31,13 @@
 		<!-- NO NAV -->
 		<h1 class="titre-home">Esprit BD, louer gratuitement vos Bandes dessinées</h1>
 		<!-- ESPACE USER -->
-		<div class="btn-login">
-			<button>Connexion</button>
-		</div>
+
+		<?php if ($this->url('connexion')): ?>
+					<div class="btn-login">
+						<button>Connexion</button>
+					</div>
+		<?php endif ?>
+
 	</header>
 <!-- ============= -->
 	<!--MAIN CONTENT -->
