@@ -9,8 +9,7 @@ class BookController extends Controller
 	{
 		$bm = new BookManager();
 		$details = $bm->getDetails($id);
-		$this->show('book/details', ['book'
-			=> $details]);
+		$this->show('book/details', ['book'	=> $details]);
 	}
 
 	public function catalogue()
@@ -30,6 +29,7 @@ class BookController extends Controller
 				$start = $_GET['start'];
 				//debug($start);
 			}
+
 
 
 		// UNE FOIS LA CONDITION FINIE (les différents options recherches sélectionnées)
