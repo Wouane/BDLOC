@@ -184,8 +184,7 @@ nav{
 	padding:0.7em;
 	border-radius: 3px;
 	background-color: #FE641E;
-	margin-top: 1em;
-	margin-bottom: 1em;
+	margin:1em auto;
 	-webkit-transition: all .35s;
 	-moz-transition: all .35s;
 	transition: all .35s;
@@ -637,17 +636,22 @@ form.change-password>input.validate-change-pswd:hover, form.forgot-password>inpu
 
 h2.reset-password-title {
 	text-align: center;
-	margin:2em;
+	margin:1.5em;
 	font-size:20px;
+}
+
+p.reset-password-text{
+	text-align: center;
+	color:#FE641E;
 }
 
 form.reset-password {
 	width:35%;
-	margin:4em auto;
+	margin:2em auto;
 }
 
 form.reset-password>div.form-reset{
-	margin:1em;
+	margin:1em 0 1em 5em;
 	width:75%;
 }
 
@@ -738,7 +742,7 @@ h3.titre-section{
 
 /*|||||||||||||||ONGLET UPDATE INFOS|||||||||||||||||*/
 form.update-profile{
-	margin-left: 1em;
+	margin:0 auto;
 	width: 70%;
 }	
 form.update-profile>div.form-modify>label{
