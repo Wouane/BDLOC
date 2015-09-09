@@ -103,7 +103,7 @@
 				</div>
 
 		</form>
-		<form name="dispo" method="GET" action="<?php echo $this->url('catalogue')?>">
+		<form name="dispo" id="dispo" method="GET" action="<?php echo $this->url('catalogue')?>">
 			<h3>Disponibilité</h3>
 			<div class="checkbox_content">
 				<input type="checkbox" name="dispo" id="disponibles" class="chk_boxes" value="disponibles">
