@@ -1,5 +1,5 @@
 
-	<h2><i class="fa fa-user"></i> Connectez-vous</h2>
+	<h2 class="connection"><i class="fa fa-user"></i> Connectez-vous</h2>
 
 <div class="page-login">
 	<div class="closelog"></div>
