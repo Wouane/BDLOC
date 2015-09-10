@@ -13,7 +13,7 @@
 		<tbody>
 			<tr>
 				<td>1</td>
-				<td>1</td>
+				<td>0</td>
 			</tr>
 		</tbody>
 	</table>

@@ -132,6 +132,6 @@ class AdminController extends Controller
 	{
 		$am = new AuthentificationManager();
 		$am->logUserOut();
-		$this->redirectToRoute('connexion_admin');
+		$this->redirectToRoute('home');
 	}
 }
