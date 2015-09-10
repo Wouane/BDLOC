@@ -1,8 +1,8 @@
-<?php $this->layout('layout_backoffice', ['title' => 'backOffice']) ?>
+<?php $this->layout('layout_backoffice', ['title' => 'Back Office']) ?>
 
 <?php $this->start('main_content') ?>
 
-	<table>
+	<table class="table">
 		<caption>Tous les 30minutes</caption>
 		<thead>
 			<tr>
@@ -18,7 +18,7 @@
 		</tbody>
 	</table>
 
-	<table>
+	<table class="table">
 		<caption>Actuellement en attente</caption>
 		<thead>
 			<tr>
@@ -36,7 +36,7 @@
 		</tbody>
 	</table>
 
-	<table>
+	<table class="table">
 		<caption>Notifications</caption>
 		<thead>
 			<tr>
