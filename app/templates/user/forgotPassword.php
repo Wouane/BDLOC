@@ -2,7 +2,7 @@
 
 <?php $this->start('main_content') ?>
 
-		<h2 class="forgot-password-title">Mots de passe Oublier ?</h2>
+		<h2 class="forgot-password-title">Mots de passe oublié ?</h2>
 		<p class="forgot-password-text"><i class="fa fa-exclamation-circle"></i> Entrer votre Email pour recevoir un lien et changer votre mot de passe</p>
 	<form class="forgot-password" method="POST" action="">
 		<input class="mail-forgot-password" type="email" placeholder="Votre Email" name="email" autocomplete="off">
