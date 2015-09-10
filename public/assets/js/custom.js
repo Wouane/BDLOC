@@ -1,17 +1,24 @@
 //Login sur home page
 $(document).ready(function(){
-  console.log( "ready!" );
+  //console.log( "ready!" );
+  var url = document.location.href;
+  console.log(url);
+
+  if(window.location.href === 'http://bdloc.dev/'){$('.btn-login').css('display','block');}
+  if(window.location.href === 'http://www.bdloc.dev/inscription/'){$('.btn-login').css('display','none');}
+   if(window.location.href === 'http://www.bdloc.dev/connexion/'){$('.btn-login').css('display','none');}
+  // if(url!='http://bdloc.dev/'){$('.btn-login').css('display','block');}
     $("button").click(function(event){
     	//event.stopPropagation();
       $('.login').css('display','block');
         $(".login").animate({
-        	top: '165px',
+        	top: '105px',
         	opacity: '1',
         });
     });
     $('.closelog').click(function(e){
         $(".login").animate({
-          top: '-665px',
+          top: '-600px',
           opacity: '0.1',
         });
     }); 

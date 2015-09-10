@@ -31,7 +31,7 @@ img{
 }
 
 h2{
-	color: #AFB4B7;
+	color: #505050;
 	font-weight: 300;
 	margin-bottom: 1em;
 	font-weight: 400;
@@ -49,13 +49,19 @@ i.fa-asterisk, i.fa-file-text-o{
 	color:#FE641E;
 }
 
-i.fa-exclamation-circle, i.fa-external-link{
+i.fa-exclamation-circle, i.fa-external-link, i.fa-user{
 	color:#1C8AF9;
 }
 
 i.footer{
 	color:#AFB4B7;
 }
+
+i.fa-pencil-square-o{
+	color:#fff;
+}
+
+
 
 /*================================================================================================================*/
 /*====================================LAYOUT_BDLOC.PHP==================================================*/
@@ -157,7 +163,7 @@ nav{
 /*||||||||||||||||HEADER||||||||||||||||||||||||||*/
 
 /*CONNEXION*/
-.btn-login button{
+.btn-login>button{
 	border: none;
 	color: #FFF;
 	width: 10em;
@@ -170,8 +176,11 @@ nav{
 	border-radius: 3px;
 	margin-right: 2em;
 	margin-top: 1.5em;
+	display:block !important;
 }
-.btn-login button:hover{
+
+
+.btn-login>button:hover{
 	background-color: #FE641E;
 	color:#FFF;
 }
@@ -206,15 +215,18 @@ nav{
 
 /*||||||||||||||FOOTER||||||||||||||*/
 footer{
+	position:relative;
 	background-color: #EBEBEB;
 	bottom: 0px;
 	width: 100%;
+	margin-top:8em;
 }
+
 footer, .main:after {
 	height: 240px;
 }
 .nav-footer{
-	height:30%;
+	height:35%;
 	padding:5em;
 	color:#AFB4B7;
 	float: left;
@@ -234,13 +246,24 @@ footer, .main:after {
 }
 
 .copyright{
-	text-align: center;
+	text-align:center;
+	width:auto;
+	margin:2em 45em 0 0;
+	padding:2em;
+	color:#B2B3B5;
+	font-family: 'PT sans';
+	float:right;
+	}
+
+.copyright>p, address>p{
+	line-height: 1.5em;
+	font-size: 0.8em
 }
+
 #fb-root {
-	width: 500px;
-	float: left;
-	bottom: 0;
-	padding:1em;
+	float:left;
+	margin:1em;
+	width: 15%;
 }
 /*================================================================================================================*/
 /*====================================HOME.PHP==============================================================*/
@@ -257,6 +280,7 @@ h1.titre-home {
 	font-weight: 200;
 	float: left;
 }
+
 .main{
 	min-height: 100%;
 	height: auto !important;
@@ -304,26 +328,58 @@ h1.titre-home {
 .icone{
 	width:30%;
 	margin:0.3em auto;
-
 }
-
-
 
 .icone-home{
 	width:35%;
 	display:block;
 	margin:0 auto;
 }
+/*|||||||||||||bouton ABONNEMENT||||||||||||||*/
+
+.homewords>a{
+	width:25%;
+	font-size: 1.5em;
+	text-decoration:none;
+	text-decoration: underline;
+	font-family: 'Sansita One';
+	background-color:#FE641E;
+	border-radius:20px;
+	color:#fff;
+	margin-top:4em;
+	margin-right:10em;
+	padding:1.5em;
+	display:inline-block;
+	-webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.28);
+	-moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.28);
+	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.28);
+	-webkit-transition: all .35s;
+	-moz-transition: all .35s;
+	transition: all .35s;
+
+}
+
+.homewords>a:hover{
+	color:#fff;
+	background-color:#1C8AF9;;
+}
+
+
 
 /*||||||||||||||||||||||||||LOGIN BOX ANIMEE||||||||||||||||||||||||||*/
+
+h2.connection{
+	text-align: center;
+	margin:2em;
+}
 
 .login{
 	position: absolute;
 	padding-top: 2.5em;
-	left: 25%;
+	left: 35%;
 	top:-500px;
 	opacity: 0.5;
-	width: 50%;
+	width: 35%;
 	/*height: 30%;*/
 	height: 300px;
 	background-color: rgba(255, 255, 255, 0.9);
@@ -349,14 +405,14 @@ h1.titre-home {
 }
 
 .page-login{
-	margin: 20px auto;
+	margin:0 auto;
 	width: 50%;
 	text-align: center;
 }
 .warning{
 	width: 30%;
 	text-align: center;
-	margin: 0 auto;
+	margin: 0 auto;	
 	color: #FF0000;
 }
 
@@ -389,13 +445,14 @@ h1.titre-home {
 	height: 400px;
 	text-align: center;
 }
+
 .subscribe{
 	display:inline-block; 
 	background-image: url('../img/bulle-intro-perso.png');
 	background-repeat: no-repeat;
 	width:815px;
 	height:438px;
-	margin-left:5em;
+	margin-left:6em;
 	font-family: 'Sansita One', cursive;	
 	font-size: 3vw;
 	float:left;
@@ -406,11 +463,6 @@ h1.titre-home {
 .subscribe a:hover{
 	color: #1C8AF9;
 }
-
-.homewords{
-	
-}
-
 
 .text-homewords>span{
 	color:#1C8AF9;
@@ -437,7 +489,7 @@ h1.titre-home {
 }
 div#slider {
 	width: 100%;
-	height: 450px;
+	height: 350px;
 	z-index: -10;
 }
 div#slider figure {
@@ -1432,7 +1484,5 @@ a.tooltip:hover span{
 	}
 
 	input[type=checkbox].css-checkbox.lrg:checked + label.css-label.lrg{
-
 		background-position: 0 -20px;
 	}
-

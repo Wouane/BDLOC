@@ -31,9 +31,11 @@
 		<!-- NO NAV -->
 		<h1 class="titre-home">Esprit BD, louer gratuitement vos Bandes dessinées</h1>
 		<!-- ESPACE USER -->
-		<div class="btn-login">
-			<button>Connexion</button>
-		</div>
+					<div class="btn-login">
+						<button class="connect">Connexion</button>
+					</div>
+		
+
 	</header>
 <!-- ============= -->
 	<!--MAIN CONTENT -->
@@ -45,8 +47,15 @@
 <!-- FOOTER -->
 <!-- ============= -->
 		<footer>
+			<!-- Copyright -->
 			<div class="copyright">
-			    Copyright © 2015 Bdloc. Tous droits réservés. Contact : bdlocbdloc@gmail.com 
+			    <p>© 2015 Bdloc. Tous droits réservés. Contact : bdlocbdloc@gmail.com.<p>
+				<p>Responsable légal : Alexandre DUPARC, Florian MICHEL, Julien Morizot, Denis GODECQ</p>
+				<address>
+					<p>Copyright BDLOC INC © est situé au 136 avenue Pablo Picasso</p>
+					<p>92000 - NANTERRE.</p>
+					<p>Tél:(+33)1 45 25 35 45</p>
+				</address>
 			</div>	
 		<!-- ENCART FACEBOOK -->
 			<div id="fb-root">
