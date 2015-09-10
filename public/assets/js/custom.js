@@ -5,7 +5,8 @@ $(document).ready(function(){
   console.log(url);
 
   if(window.location.href === 'http://bdloc.dev/'){$('.btn-login').css('display','block');}
-   if(window.location.href === 'http://www.bdloc.dev/inscription/'){$('.btn-login').css('display','none');}
+  if(window.location.href === 'http://www.bdloc.dev/inscription/'){$('.btn-login').css('display','none');}
+   if(window.location.href === 'http://www.bdloc.dev/connexion/'){$('.btn-login').css('display','none');}
   // if(url!='http://bdloc.dev/'){$('.btn-login').css('display','block');}
     $("button").click(function(event){
     	//event.stopPropagation();
