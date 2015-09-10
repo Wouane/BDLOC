@@ -592,7 +592,7 @@ class UserController extends Controller
 			}
 			else 
 			{
-				$error = "Mauvais Identifiants !";
+				$error = "Mauvais Identifiants !";				
 			}
 		}
 		$data = [];

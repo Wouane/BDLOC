@@ -36,6 +36,7 @@ caption{
 	width: 500px;
 	border-radius: 5px;
 	background-color:  #1C8AF9;
+	border: 3px solid #0D47A1;
 }
 
 button.btn_admin{

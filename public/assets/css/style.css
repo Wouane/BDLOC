@@ -349,14 +349,14 @@ h1.titre-home {
 }
 
 .page-login{
-	margin: 20px auto;
+	margin:0 auto;
 	width: 50%;
 	text-align: center;
 }
 .warning{
 	width: 30%;
 	text-align: center;
-	margin: 0 auto;
+	margin: 0 auto;	
 	color: #FF0000;
 }
 

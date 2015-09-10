@@ -1,6 +1,9 @@
 //Login sur home page
 $(document).ready(function(){
-  console.log( "ready!" );
+  //console.log( "ready!" );
+  var url = document.location.href;
+  console.log(url);
+  if(url!='http://bdloc.dev/'){$('.btn-login').css('display','none');}
     $("button").click(function(event){
     	//event.stopPropagation();
       $('.login').css('display','block');

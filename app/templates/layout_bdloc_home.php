@@ -24,16 +24,20 @@
 <!-- ============= -->
 <!-- HEADER -->
 <!-- ============= -->
-	<header>
+	<header><div class="login"><?php $this->insert('user/login_insert',['username'=>'','error'=>'']) ?></div>
 		<div id="logo">
 			<a href="<?= $this->url('home') ?>"><img class="logo" src="<?= $this->assetUrl('img/logo-default.png') ?>" alt="logo BDLOC"/></a>
 		</div>
 		<!-- NO NAV -->
 		<h1 class="titre-home">Esprit BD, louer gratuitement vos Bandes dessinées</h1>
 		<!-- ESPACE USER -->
-		<div class="btn-login">
-			<button>Connexion</button>
-		</div>
+
+		
+					<div class="btn-login">
+						<button>Connexion</button>
+					</div>
+		
+
 	</header>
 <!-- ============= -->
 	<!--MAIN CONTENT -->
