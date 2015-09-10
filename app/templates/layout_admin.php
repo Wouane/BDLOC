@@ -14,7 +14,7 @@
 	<div class="container">
 	<div class="header">	
 		<header>
-			<h1>Page <?= $this->e($title) ?></h1>
+			<h1><?= $this->e($title) ?></h1>
 		</header>
 	</div>
 		<section>
