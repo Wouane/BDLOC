@@ -1,3 +1,4 @@
+<div class="page-login">
 	<h2>Connectez-vous</h2>
 	<div class="closelog"></div>
 		<form method="POST" name="login" class="form-content" id="login" novalidate action="<?= $this->url('connexion') ?>">
@@ -18,3 +19,4 @@
 		  
 		  <div class="btn-forgot"><a href="<?= $this->url('oublieMotdepasse') ?>">Mot de passe oublié ?</a></div>
 		</form>
+</div>
