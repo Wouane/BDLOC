@@ -236,6 +236,7 @@ footer, .main:after {
 	font-weight: bolder
 }
 
+
 .copyright{
 	text-align:center;
 	width:30%;
@@ -244,8 +245,8 @@ footer, .main:after {
 	color:#B2B3B5;
 	font-family: 'PT sans';
 	border:1px solid red;
+	display:inline-block;
 	clear:both;
-	display:block;
 }
 
 .copyright>p, address>p{
@@ -254,16 +255,11 @@ footer, .main:after {
 }
 
 #fb-root {
-	display:inline;
+	display:inline-block;
 	position:relative;
 	border:1px solid #1C8AF9;
 	width: 15%;
-	top:0.5em;
-	left:2em;
-
-
 }
-
 /*================================================================================================================*/
 /*====================================HOME.PHP==============================================================*/
 /*================================================================================================================*/
