@@ -24,7 +24,8 @@
 			</div>
 		</div>
 		<div class="homewords">
-			<a class="abonnement" href="<?= $this->url('inscription') ?>" title="Abonnement"> Abonnez-vous à BDLOC</a>
+			<a class="abonnement" href="<?= $this->url('inscription') ?>" title="Abonnement">
+				<i class="fa fa-pencil-square-o"></i> Abonnez-vous à BDLOC</a>
 		</div>
 	</div>
 		<?php $this->stop('main_content') ?>
