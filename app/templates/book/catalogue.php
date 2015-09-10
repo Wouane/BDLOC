@@ -160,7 +160,7 @@
 		<?php  		
 			foreach ($books as $book) {
 				$findDetails = $this->url('details', ['id'=> $book['id']]);
-				$cart = $this->url('panier');
+				$cart = $this->url('AddtoCart',['book_id'=>$book['id']]);
 				//debug ($findDetails);
 				$bookie = $this->assetUrl('img/couvertures-medium/'. $book["cover"]);
 				echo "<div class='book'>";				

@@ -54,7 +54,7 @@
 		['GET|POST', '/catalogue/panier/', 'Cart#cart', 'panier'],
 
 		//Page AJOUT DUNE BD AU PANIER de l'utilisateur ----------------------------------------------------------------
-		['GET|POST', '/catalogue/panier/ajoutbd', 'Cart#AddbooktoCart', 'AddtoCart'],
+		['GET|POST', '/catalogue/panier/ajoutbd/[:book_id]', 'Cart#AddbooktoCart', 'AddtoCart'],
 
 		// Page VIDER LE PANIER de l'utilisateur
 		['GET|POST', '/catalogue/panier/vider/', 'Cart#RemoveCart', 'RemoveCart'],	
