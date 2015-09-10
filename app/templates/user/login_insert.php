@@ -1,4 +1,4 @@
-	<h2>Connectez-vous</h2>
+	<h2><i class="fa fa-user"></i> Connectez-vous</h2>
 	<div class="closelog"></div>
 		<form method="POST" name="login" class="form-content" id="login" novalidate action="<?= $this->url('connexion') ?>">
 			<div class="form-group">
