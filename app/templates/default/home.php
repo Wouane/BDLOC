@@ -20,12 +20,12 @@
 					<div class="icone">
 						<img class="icone-home" src ="<?= $this->assetUrl('img/icon-tour-eiffel.png') ?>" alt="icone tour eiffel">
 					</div>
-				<p class="text-presentation">Cette bédéthèque virtuelle vous permet de louerjusqu'à <span>10 Bandes-dessinées gratuitement !</span><p>
+				<p class="text-presentation">Cette BDthèque virtuelle vous permet de louer jusqu'à <span>10 Bandes-dessinées gratuitement !</span><p>
 			</div>
 		</div>
 		<div class="homewords">
 			<a class="abonnement" href="<?= $this->url('inscription') ?>" title="Abonnement">
-				<i class="fa fa-pencil-square-o"></i> Abonnez-vous à BDLOC</a>
+				<i class="fa fa-pencil-square-o"></i> Abonnez-vous à Esprit Bd</a>
 		</div>
 	</div>
 		<?php $this->stop('main_content') ?>
