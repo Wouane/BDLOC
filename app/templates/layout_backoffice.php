@@ -11,12 +11,14 @@
 </head>
 <body>
 	<div class="container">
-	<div class="header">	
+		
 		<header>
-			<h1>Page <?= $this->e($title) ?></h1>
-			<a href="<?= $this->url('deconnexion_admin'); ?>" title="Deconnexion">Déconnexion</a>
+			<div class="title_office">
+				<h1><?= $this->e($title) ?></h1>
+			</div>
+			<a href="<?= $this->url('deconnexion_admin'); ?>" class="deconnexion_admin" title="Deconnexion">Déconnexion</a>
 		</header>
-	</div>
+		
 		<section>
 			<?= $this->section('main_content') ?>
 		</section>

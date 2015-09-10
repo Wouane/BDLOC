@@ -1,33 +1,18 @@
+/*LOGIN - REGISTER */
 .header{
-	font-size: 30px;
 	text-align: center;
-}
-
-tr, th, td {
-	border: 1px solid #ccc; 
-	padding: 20px;
-	text-align: center;
-	font-family: sans-serif;
-
-}
-
-table{
-	margin: 30px auto;
-}
-
-caption{
-	background-color:#1C8AF9;
-	padding: 10px;
-	font-family: sans-serif;
-	color: #fff;
+	font-family: "PT sans";
+	margin-top: 50px;
+	font-weight: bold;
+	font-size: 2em;
 }
 .form_admin{
 	padding: 5px;
 	
 }
 
-#register_admin, #connexion_admin{
-	font-family: "PT sans";
+#register_admin{
+	font-family: "PT sans""PT sans";
 	margin: 0 auto;
 	margin-top: 80px;
 	color: #fff;
@@ -38,6 +23,34 @@ caption{
 	background-color:  #1C8AF9;
 	border: 3px solid #0D47A1;
 }
+
+#connexion_admin{
+	font-family: "PT sans""PT sans";
+	margin: 0 auto;
+	margin-top: 80px;
+	color: #fff;
+	text-align: center;
+	padding: 20px;
+	width: 500px;
+	border-radius: 5px;
+	background-color:  #1C8AF9;
+	border: 3px solid #0D47A1;
+}
+
+label{
+	width: 250px;
+	display: block;
+	float: left;
+	
+}
+
+input.input{
+	border: 3px solid  #0d47a1;
+	border-radius: 3px;
+	padding: 3px;
+}
+
+
 
 button.btn_admin{
 	font-family: "PT sans";
@@ -54,20 +67,48 @@ button.btn_admin:hover{
 	background-color: #FE641E;
 }
 
-.input{
-	border: 3px solid  #0d47a1;
+/*CONTROL ADMIN*/
+.title_office{
+	font-size: 3em;
+	text-align: center;
+}
+
+a.deconnexion_admin{
+	background-color:  #1C8AF9;
+	color: #fff;
+	font-size: 1.5em;
+	float: right;
+	margin-right: 20px;
+	text-decoration: none;
+	width: 7em;
+	padding: 4px 3px;
+	text-align: center;
 	border-radius: 3px;
-	padding: 3px;
+
 }
 
-label{
-	width: 250px;
-	display: block;
-	float: left;
-	
+a.deconnexion_admin:hover{
+	background-color: #FE641E;
+	color: #fff;
+}
+tr, th, td {
+	border: 1px solid #ccc; 
+	padding: 20px;
+	text-align: center;
+	font-family: "PT sans";
+	font-size: 1.3em;
+
 }
 
-button{
-	margin : 5px;
+table{
+	margin: 50px auto;
+}
+
+caption{
+	background-color:#1C8AF9;
+	padding: 10px;
+	font-family: "PT sans";
+	color: #fff;
+	font-size: 1.5em;
 }
 
