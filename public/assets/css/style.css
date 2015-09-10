@@ -62,6 +62,7 @@ i.fa-pencil-square-o{
 }
 
 
+
 /*================================================================================================================*/
 /*====================================LAYOUT_BDLOC.PHP==================================================*/
 /*================================================================================================================*/
@@ -162,7 +163,7 @@ nav{
 /*||||||||||||||||HEADER||||||||||||||||||||||||||*/
 
 /*CONNEXION*/
-.btn-login button{
+.btn-login>button{
 	border: none;
 	color: #FFF;
 	width: 10em;
@@ -175,8 +176,11 @@ nav{
 	border-radius: 3px;
 	margin-right: 2em;
 	margin-top: 1.5em;
+	display:block !important;
 }
-.btn-login button:hover{
+
+
+.btn-login>button:hover{
 	background-color: #FE641E;
 	color:#FFF;
 }
@@ -243,15 +247,13 @@ footer, .main:after {
 
 .copyright{
 	text-align:center;
-	width:30%;
-	margin:0 auto;
+	width:auto;
+	margin:2em 45em 0 0;
 	padding:2em;
 	color:#B2B3B5;
 	font-family: 'PT sans';
-	border:1px solid red;
-	display:inline-block;
-	clear:both;
-}
+	float:right;
+	}
 
 .copyright>p, address>p{
 	line-height: 1.5em;
@@ -259,9 +261,8 @@ footer, .main:after {
 }
 
 #fb-root {
-	display:inline-block;
-	position:relative;
-	border:1px solid #1C8AF9;
+	float:left;
+	margin:1em;
 	width: 15%;
 }
 /*================================================================================================================*/
@@ -337,7 +338,7 @@ h1.titre-home {
 /*|||||||||||||bouton ABONNEMENT||||||||||||||*/
 
 .homewords>a{
-	width:20%;
+	width:25%;
 	font-size: 1.5em;
 	text-decoration:none;
 	text-decoration: underline;
@@ -366,6 +367,11 @@ h1.titre-home {
 
 
 /*||||||||||||||||||||||||||LOGIN BOX ANIMEE||||||||||||||||||||||||||*/
+
+h2.connection{
+	text-align: center;
+	margin:2em;
+}
 
 .login{
 	position: absolute;
@@ -439,13 +445,14 @@ h1.titre-home {
 	height: 400px;
 	text-align: center;
 }
+
 .subscribe{
 	display:inline-block; 
 	background-image: url('../img/bulle-intro-perso.png');
 	background-repeat: no-repeat;
 	width:815px;
 	height:438px;
-	margin-left:8em;
+	margin-left:6em;
 	font-family: 'Sansita One', cursive;	
 	font-size: 3vw;
 	float:left;
@@ -456,11 +463,6 @@ h1.titre-home {
 .subscribe a:hover{
 	color: #1C8AF9;
 }
-
-.homewords{
-	
-}
-
 
 .text-homewords>span{
 	color:#1C8AF9;
@@ -487,7 +489,7 @@ h1.titre-home {
 }
 div#slider {
 	width: 100%;
-	height: 400px;
+	height: 350px;
 	z-index: -10;
 }
 div#slider figure {
@@ -1458,7 +1460,5 @@ a.tooltip:hover span{
 	}
 
 	input[type=checkbox].css-checkbox.lrg:checked + label.css-label.lrg{
-
 		background-position: 0 -20px;
 	}
-
