@@ -5,7 +5,7 @@ $(document).ready(function(){
     	//event.stopPropagation();
       $('.login').css('display','block');
         $(".login").animate({
-        	top: '165px',
+        	top: '133px',
         	opacity: '1',
         });
     });
