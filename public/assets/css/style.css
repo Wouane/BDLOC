@@ -49,7 +49,7 @@ i.fa-asterisk, i.fa-file-text-o{
 	color:#FE641E;
 }
 
-i.fa-exclamation-circle, i.fa-external-link{
+i.fa-exclamation-circle, i.fa-external-link, i.fa-user{
 	color:#1C8AF9;
 }
 
@@ -320,10 +320,10 @@ h1.titre-home {
 .login{
 	position: absolute;
 	padding-top: 2.5em;
-	left: 25%;
+	left: 35%;
 	top:-500px;
 	opacity: 0.5;
-	width: 50%;
+	width: 35%;
 	/*height: 30%;*/
 	height: 300px;
 	background-color: rgba(255, 255, 255, 0.9);
@@ -437,7 +437,7 @@ h1.titre-home {
 }
 div#slider {
 	width: 100%;
-	height: 450px;
+	height: 400px;
 	z-index: -10;
 }
 div#slider figure {
