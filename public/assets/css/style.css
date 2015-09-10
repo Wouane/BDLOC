@@ -1092,17 +1092,52 @@ a.change-password:hover {
 .info-book img{
 	margin-right: 1em;
 }
+
+.featherlight .featherlight-content {
+	border-bottom: none;
+}
+.featherlight-content {
+	width: 50%;
+	border-bottom: none;
+	border: 8px solid #1C8AF9;
+	border-right: none;
+	border-left: none;
+	border-radius: 5px;
+	border-bottom-right-radius: 50px;
+}
+.featherlight-content>span {
+	color: #1C8AF9;
+}
 .details{		
 	overflow: hidden;
 	padding: 5px;
+	height: 700px;
 	/*background-color: #AFB4B7;*/
-	border: 3px solid #1C8AF9;
+}
+.details>div>div>strong {
+	color: #1C8AF9;
+}
+.details>div>p>strong {
+	color: #1C8AF9;
+}
+.details>div>div {
+	margin-bottom: 10px;
 }
 .text_details{
 	float: left;
 	width: 45%;
 	margin-left: 1em;
-	margin-top: 20em;
+}
+.text_details>div>h2 {
+	text-transform: capitalize;
+	font-size: 3em;
+	color: #1EACFE;
+	margin-bottom: 10px;
+}
+.text_details>div>h3 {
+	font-size: 2em;
+	color: #CCCFDA;
+	margin-bottom: 50px;
 }
 .title-bd{
 	width: 300px;
