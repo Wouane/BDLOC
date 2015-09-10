@@ -25,16 +25,14 @@ class CartController extends Controller{
 		$cbm = new \Manager\Book_cartManager();
 		$user = $this->getUser();
 		$user_id = $user['id'];
-		$cart_id = $cm-> AddbooktoCart($user_id);
+		$cart_id = $cm->AddbooktoCart($user_id);
 		$cbm->AddbooktoCart($cart_id, $book_id);
 		$cm->findCard();
-		//$this->allowTo('user');
-		// debug($user);
-		
-		// $Cart = $CartManager->findAll("modifiedDate", "DESC");
-		// $showCart = $cm->ShowCart();
-		// print_r(get_class_methods($bookManager));
+
+
+
 		$this->show('cart/Cart', ['books' => $books, 'user' => $user]);
+
 		
 	}
 }

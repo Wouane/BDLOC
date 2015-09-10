@@ -6,6 +6,7 @@
 
 		public function findCard(){
 			$sql = "SELECT user_id
+					-- LEFT JOIN book_cart ON users.id = book_cart.cart_id				
 					FROM $this->table";
 			$sth = $this->dbh->prepare($sql);
 			$sth->execute();			
