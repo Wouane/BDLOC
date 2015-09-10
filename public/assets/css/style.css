@@ -31,7 +31,7 @@ img{
 }
 
 h2{
-	color: #AFB4B7;
+	color: #505050;
 	font-weight: 300;
 	margin-bottom: 1em;
 	font-weight: 400;
@@ -206,15 +206,18 @@ nav{
 
 /*||||||||||||||FOOTER||||||||||||||*/
 footer{
+	position:relative;
 	background-color: #EBEBEB;
 	bottom: 0px;
 	width: 100%;
+	margin-top:8em;
 }
+
 footer, .main:after {
 	height: 240px;
 }
 .nav-footer{
-	height:30%;
+	height:35%;
 	padding:5em;
 	color:#AFB4B7;
 	float: left;
@@ -234,14 +237,33 @@ footer, .main:after {
 }
 
 .copyright{
-	text-align: center;
+	text-align:center;
+	width:30%;
+	margin:0 auto;
+	padding:2em;
+	color:#B2B3B5;
+	font-family: 'PT sans';
+	border:1px solid red;
+	clear:both;
+	display:block;
 }
+
+.copyright>p, address>p{
+	line-height: 1.5em;
+	font-size: 0.8em
+}
+
 #fb-root {
-	width: 500px;
-	float: left;
-	bottom: 0;
-	padding:1em;
+	display:inline;
+	position:relative;
+	border:1px solid #1C8AF9;
+	width: 15%;
+	top:0.5em;
+	left:2em;
+
+
 }
+
 /*================================================================================================================*/
 /*====================================HOME.PHP==============================================================*/
 /*================================================================================================================*/
@@ -257,6 +279,7 @@ h1.titre-home {
 	font-weight: 200;
 	float: left;
 }
+
 .main{
 	min-height: 100%;
 	height: auto !important;
@@ -304,16 +327,29 @@ h1.titre-home {
 .icone{
 	width:30%;
 	margin:0.3em auto;
-
 }
-
-
 
 .icone-home{
 	width:35%;
 	display:block;
 	margin:0 auto;
 }
+/*|||||||||||||bouton ABONNEMENT||||||||||||||*/
+
+a.abonnement{
+	width:20%;
+	height:8%;
+	font-size: 2.5em;
+	text-decoration:none;
+	text-decoration: underline;
+	font-family: 'Sansita One';
+	background-color:#FE641E;
+	border-radius:5px;
+	color:#fff;
+
+}
+
+
 
 /*||||||||||||||||||||||||||LOGIN BOX ANIMEE||||||||||||||||||||||||||*/
 
