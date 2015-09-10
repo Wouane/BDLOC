@@ -10,7 +10,13 @@ class CartController extends Controller{
 // 			$this->show('cart/Cart');
 // 		}
 // 	//methode pour récupérer l'id du book cliqué
-
+		public function Cart(){
+		$books="";
+		$cm = new \Manager\CartManager();
+		$user = $this->getUser();
+		$this->show('cart/Cart', ['books' => $books, 'user' => $user]);
+		
+	}
  
 
 	public function AddbooktoCart($book_id)

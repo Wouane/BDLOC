@@ -7,7 +7,7 @@
 		public function findCard(){
 			$sql = "SELECT user_id
 					FROM $this->table";
-			$sth = $this->dbh->prepare($sql);		
+			$sth = $this->dbh->prepare($sql);
 			$sth->execute();			
 			return $sth->fetch();
 			debug($sql);
