@@ -51,7 +51,7 @@
 			if(!empty($bdlocCat)){
 			$genre = 	"AND t.style LIKE '%".$bdlocCat[0]."%'";			
 						for ($i=1; $i<count($bdlocCat); $i++){
-						$genre.="AND t.style LIKE '%".$bdlocCat[$i]."%'";
+						$genre.="OR t.style LIKE '%".$bdlocCat[$i]."%'";
 				//debug($genre);
 				}
 			}
