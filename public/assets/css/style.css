@@ -634,6 +634,28 @@ form.change-password>input.validate-change-pswd:hover, form.forgot-password>inpu
 	background-color: #1C8AF9;
 }
 
+p.change-password-text{
+	text-align: center;
+}
+
+input.bouton_retour{
+	
+	width: 7em;
+	margin: -50px 70px;
+	float:right;
+	padding:0.7em;
+	border-radius: 7px;
+	border: none;
+	background-color: #FE641E;
+	padding:5px 3px;
+	color: #fff;
+}
+
+input.bouton_retour:hover{
+	background-color: #1C8AF9;
+	color: #FFF;
+}
+
 /*================================================================================================================*/
 /*====================================RESET_PASSWORD.PHP==================================================*/
 /*================================================================================================================*/
@@ -703,21 +725,6 @@ form.change-password>input.validate-change-pswd:hover, form.forgot-password>inpu
 	color: #FFF;
 	background-color: #1C8AF9;
 }
-
-input.bouton_retour{
-	width: 7em;
-	padding:0.7em;
-	border-radius: 7px;
-	border: none;
-	background-color: #FE641E;
-	padding:5px 3px;
-	color: #2C3E50;
-}
-
-input.bouton_retour:hover{
-	background-color: #1C8AF9;
-}
-
 
 /*================================================================================================================*/
 /*====================================PAGE PROFILE.PHP==================================================*/
@@ -847,7 +854,7 @@ input.valid-picture:hover{
 
 /*|||||||||||||||ONGLET MON COMPTE|||||||||||||||||*/
 
-.delete-profile, .change-password{
+.delete-profile {
 	padding:0.8em;
 	background-color:#FE641E;
 	border-radius:3px;
@@ -858,7 +865,24 @@ input.valid-picture:hover{
 	-moz-transition: all .35s;
 	transition: all .35s;
 }
-a.delete-profile:hover, a.change-password:hover {
+a.delete-profile:hover {
+	color:#FFF;
+	background-color: #1C8AF9;
+}
+
+.change-password {
+	padding:0.8em;
+	background-color:#FE641E;
+	border-radius:3px;
+	color:#fff;
+	width:6em;
+	margin:1em;
+	-webkit-transition: all .35s;
+	-moz-transition: all .35s;
+	transition: all .35s;
+}
+
+a.change-password:hover {
 	color:#FFF;
 	background-color: #1C8AF9;
 }
