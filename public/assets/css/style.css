@@ -57,6 +57,11 @@ i.footer{
 	color:#AFB4B7;
 }
 
+i.fa-pencil-square-o{
+	color:#fff;
+}
+
+
 /*================================================================================================================*/
 /*====================================LAYOUT_BDLOC.PHP==================================================*/
 /*================================================================================================================*/
@@ -236,7 +241,6 @@ footer, .main:after {
 	font-weight: bolder
 }
 
-
 .copyright{
 	text-align:center;
 	width:30%;
@@ -332,17 +336,31 @@ h1.titre-home {
 }
 /*|||||||||||||bouton ABONNEMENT||||||||||||||*/
 
-a.abonnement{
+.homewords>a{
 	width:20%;
-	height:8%;
-	font-size: 2.5em;
+	font-size: 1.5em;
 	text-decoration:none;
 	text-decoration: underline;
 	font-family: 'Sansita One';
 	background-color:#FE641E;
-	border-radius:5px;
+	border-radius:20px;
 	color:#fff;
+	margin-top:4em;
+	margin-right:10em;
+	padding:1.5em;
+	display:inline-block;
+	-webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.28);
+	-moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.28);
+	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.28);
+	-webkit-transition: all .35s;
+	-moz-transition: all .35s;
+	transition: all .35s;
 
+}
+
+.homewords>a:hover{
+	color:#fff;
+	background-color:#1C8AF9;;
 }
 
 
@@ -427,7 +445,7 @@ a.abonnement{
 	background-repeat: no-repeat;
 	width:815px;
 	height:438px;
-	margin-left:5em;
+	margin-left:8em;
 	font-family: 'Sansita One', cursive;	
 	font-size: 3vw;
 	float:left;
