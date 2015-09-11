@@ -2,7 +2,7 @@
 $(document).ready(function(){
   //console.log( "ready!" );
   var url = document.location.href;
-  console.log(url);
+  //console.log(url);
 
   if(window.location.href === 'http://bdloc.dev/'){$('.btn-login').css('display','block');}
   if(window.location.href === 'http://www.bdloc.dev/inscription/'){$('.btn-login').css('display','none');}
