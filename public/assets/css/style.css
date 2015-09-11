@@ -1239,7 +1239,6 @@ a.tooltip:hover span{
 	.main-cart{
 		padding: 3em;
 		margin: 2em;
-		border: solid 1px blue;
 	}
 	.cart-title {
 		color: #AFB4B7;
@@ -1254,6 +1253,13 @@ a.tooltip:hover span{
 	table.my-cart{
 		width: 60%;
 		margin: 0 auto;
+		background-color: #FFF;
+	}
+	table>tr>td>img {
+		border:1px solid blue;
+		display: block;
+		margin: 0 auto;
+		margin-left: 50px;
 	}
 	table>tbody>tr {
 		height: 100px;
