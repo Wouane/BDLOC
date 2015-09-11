@@ -68,8 +68,8 @@
 				<?php echo $error; ?>
 				<!-- VALIDATION -->
 				<input type="submit" class="btn btn-default" value="Valider">
-
-			</li>
+			<!--/form-->
+		</li>
 
 			<li data-content="new">
 				<fieldset class="form-modify">
