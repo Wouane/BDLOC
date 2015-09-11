@@ -169,7 +169,7 @@
 				echo "<ul>";				
 				echo "<li class='title-bd'>" . $book['ttitle'] . "</li>";
 				echo "<li class='title-bd'>" . $book['title'] . "</li>";
-				echo "<li class='title-bd'>" . $book['catstyle'] . "</li>";				
+				echo "<li class='style-bd'>" . $book['catstyle'] . "</li>";				
 				if(isset($book['sfirstname'])){echo "<li>" . $book['sfirstname'] . " " . $book['slastname'] . " <a href='' class='tooltip'><i class='fa fa-info-circle'></i><span>Auteur</span></a></li>";}					
 				if(isset($book['cfirstname'])){echo "<li>" . $book['cfirstname'] . " " . $book['clastname'] . " <a href='' class='tooltip'><i class='fa fa-info-circle'></i><span>Coloriste</span></a></li>";}					
 				if(isset($book['ifirstname'])){echo "<li>" . $book['ifirstname'] . " " . $book['ilastname'] . " <a href='' class='tooltip'><i class='fa fa-info-circle'></i><span>Illustrateur</span></a></li>";}

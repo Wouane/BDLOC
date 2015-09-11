@@ -1145,6 +1145,10 @@ a.change-password:hover {
 	white-space: nowrap;
 	overflow: hidden;
 }
+.style-bd {
+	color: #1C8AF9;
+	margin: 10px 0px;
+}
 .img_details img{
 	width: 100%;
 }
@@ -1154,6 +1158,12 @@ a.change-password:hover {
 	margin-right: 10px;
 	overflow: hidden;
 
+}
+.fa-info-circle {
+	color: #1C8AF9;
+}
+.fa-info-circle:hover {
+	color: #FE641E;
 }
 .left-mini{
 	float: left;
@@ -1169,7 +1179,7 @@ a.change-password:hover {
 
 .right-mini>ul{
 	margin-top: 30px;
-	margin-bottom: 35px;
+	margin-bottom: 10px;
 }
 .right-mini>ul li:first-child{	
 	color: #1C8AF9;
