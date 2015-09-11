@@ -933,6 +933,9 @@ a.delete-profile:hover {
 	transition: all .35s;
 }
 
+.selected>.change-password{
+	background-color:#FE641E;
+}
 a.change-password:hover {
 	color:#FFF;
 	background-color: #1C8AF9;
