@@ -1236,6 +1236,7 @@ a.tooltip:hover span{
 	}
 	.cart-title>span {
 		color: #1C8AF9;
+		font-weight: bolder;
 	}
 	table.my-cart{
 		width: 75%;
