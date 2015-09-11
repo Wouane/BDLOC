@@ -13,10 +13,6 @@
 			<p><?php echo $book['nnote']; ?></p>
 		</div>
 		<div>
-			<strong>Stock :</strong> 
-			<?php echo $book['stock']; ?>
-		</div>
-		<div>
 			<strong>Editeur :</strong> 
 			<?php echo $book['publisher']; ?>
 		</div>
@@ -34,6 +30,10 @@
 			<strong>Illustrator :</strong> 
 			<?php echo $book['ifirstname']; ?> 
 			<?php echo $book['ilastname']; ?>
+		</div>
+		<div>
+			<strong>Stock :</strong> 
+			<?php echo $book['stock']; ?>
 		</div>
 	</div>
 </div>
