@@ -166,12 +166,6 @@
 				echo "<div class='book'>";				
 				echo "<div class='left-mini'><img src=\"" . $bookie.  "\" alt='BDLOC'></div>";
 				echo "<div class='right-mini'>";
-				echo "<div class='ico-details'><a href='#' data-featherlight='" . $findDetails . "'><img src=\"" .$this->assetUrl('img/icone-details.png'). "\" alt='BDLOC'></a></div>";
-				echo "<div class='ico-cart'><a href=".$cart.">";
-				if ($book['stock']!=0) {
-					echo "<img src=\"" .$this->assetUrl('img/icone-cart.png'). "\" alt='BDLOC'>";
-				}
-				echo "</a></div>";					
 				echo "<ul>";				
 				echo "<li class='title-bd'>" . $book['ttitle'] . "</li>";
 				echo "<li class='title-bd'>" . $book['title'] . "</li>";
@@ -181,6 +175,12 @@
 				if(isset($book['ifirstname'])){echo "<li>" . $book['ifirstname'] . " " . $book['ilastname'] . " <a href='' class='tooltip'><i class='fa fa-info-circle'></i><span>Illustrateur</span></a></li>";}
 				echo "<li>" . $book['stock'] . " disponibilité</li>";
 				echo "</ul>";
+				echo "<div class='ico-details'><a href='#' data-featherlight='" . $findDetails . "'><img src=\"" .$this->assetUrl('img/icone-details.png'). "\" alt='BDLOC'></a></div>";
+				echo "<div class='ico-cart'><a href=".$cart.">";
+				if ($book['stock']!=0) {
+					echo "<img src=\"" .$this->assetUrl('img/icone-cart.png'). "\" alt='BDLOC'>";
+				}
+				echo "</a></div>";					
 				echo "</div>";
 				echo "</div>";				
 			
