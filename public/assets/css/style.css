@@ -1167,7 +1167,10 @@ a.change-password:hover {
 	font-weight: 600;
 }
 
-.right-mini>ul{margin-top: 30px;}
+.right-mini>ul{
+	margin-top: 30px;
+	margin-bottom: 35px;
+}
 .right-mini>ul li:first-child{	
 	color: #1C8AF9;
 	text-transform: uppercase;
