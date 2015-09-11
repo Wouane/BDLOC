@@ -119,6 +119,7 @@ $sql = "SELECT  t.style AS catstyle, t.title AS ttitle, books.dateCreated, books
 			$books = "";
 			foreach ($books_ids as $book_id) {
 				$books .= $book_id['book_id'] . ", ";
+				count($book_id);
 			}
 
 			$booksIds = substr($books, 0, -2);
