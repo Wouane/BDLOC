@@ -5,7 +5,7 @@
 
 	<?php $this->start("main_content") ?>
 	
-	<h2>Bienvenue sur votre panier <span><?= $w_user['username']; ?></span> ! </h2>
+	<h2 class="cart-title">Vous êtes sur les panier de <span><?= $w_user['username']; ?></span> ! </h2>
 <div class="main-cart">	
 		<table class="my-cart">
 			<caption><i class="fa fa-shopping-cart cart"></i> Mon panier</caption>

@@ -1228,7 +1228,15 @@ a.tooltip:hover span{
 		margin: 2em;
 		border: solid 1px blue;
 	}
-	
+	.cart-title {
+		color: #AFB4B7;
+		font-size: 18px;
+		text-align: center;
+		margin: 2em;
+	}
+	.cart-title>span {
+		color: #1C8AF9;
+	}
 	table.my-cart{
 		width: 75%;
 		margin: 0 auto;
