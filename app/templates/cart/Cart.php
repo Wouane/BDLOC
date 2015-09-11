@@ -12,26 +12,21 @@
 			<thead>
 				<th>Cover</th>
 				<th>Titre</th>
-				<th>Auteur</th>
-				<th>Supression</th>
 			</thead>
 			<tbody>
+				
 				<!-- Debut FOREACH pour affichage des livres dans le panier -->
-
+			<?php foreach($books as $book):?>
 			<tr>
 				<td>
-					
+					<img src="<?php echo $this->assetUrl('img/couvertures-medium/'.$book['cover']);?>" width='150px'>
 				</td>
 				<td>
+					<?= $this->e($book['title'])?>
+				</td>
 				
-				</td>
-				<td>
-				
-				</td>
-				<td>
-					<a class="Delete" href="#">Retirer du panier</a>
-				</td>
 			</tr>
+			<?php endforeach ?>
 
 			</tbody>
 		</table>

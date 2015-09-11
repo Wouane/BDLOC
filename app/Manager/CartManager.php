@@ -10,7 +10,7 @@
 					WHERE user_id = $user_id";
 			$sth = $this->dbh->prepare($sql);
 			$sth->execute();			
-			return $sth->fetchColumn();		
+			return $sth->fetchColumn();
 		}
 		public function AddbooktoCart($user_id){
 			$sql="INSERT INTO carts(user_id, status, date_created) VALUES ($user_id,0,NOW())";
@@ -18,5 +18,6 @@
 			$sth->execute();
 			return $this->dbh->lastInsertId();
 		}
+
 
 	}

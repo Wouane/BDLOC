@@ -114,6 +114,20 @@ $sql = "SELECT  t.style AS catstyle, t.title AS ttitle, books.dateCreated, books
 			return $sth->fetch();
 			
 		}
+		public function showBooks($books_ids)
+		{
+			$books = "";
+			foreach ($books_ids as $book_id) {
+				$books .= $book_id['book_id'] . ", ";
+			}
+
+			$booksIds = substr($books, 0, -2);
+			$sql= "SELECT * 
+					FROM $this->table WHERE id IN ($booksIds)";
+			$sth = $this->dbh->prepare($sql);
+			$sth->execute();
+			return $sth->fetchAll();
+		}
 
 
 	}

@@ -7,17 +7,27 @@ class CartController extends Controller{
 
 
  	//methode pour récupérer l'id du book cliqué
-	public function Cart()
+	public function showCart()
 		{
-			$books="";
 			$cm = new \Manager\CartManager();
+			$cbm = new \Manager\Book_cartManager();
+			$bm = new \Manager\BookManager();
+			// récupérer l'id du cart
 			$user = $this->getUser();
 			$user_id = $user['id'];
+			$cart_id = $cm->findCart($user_id);
+			// récupérer les id des livres 
+			$books_ids = $cbm->findAllBooksInCart($cart_id);
+
+			//récupérer les infos du livre
+			$books = $bm->showBooks($books_ids);
+			//debug($books);
+			
 			$this->show('cart/Cart', ['books' => $books, 'user' => $user]);
 			
 		}
  
-
+ 
 	public function AddbooktoCart($book_id)
 		{   
 			$books="";
@@ -33,7 +43,7 @@ class CartController extends Controller{
 			}
 			
 			$cbm->AddbooktoCart($cart_id, $book_id);
-			$this->show('cart/Cart', ['books' => $books, 'user' => $user]);
+			$this->redirectToRoute('catalogue');
 		}
 }
 // //DELETE UN BOOK
