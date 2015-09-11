@@ -100,7 +100,7 @@ $sql = "SELECT  t.style AS catstyle, t.title AS ttitle, books.dateCreated, books
 		public function getDetails($id)
 		{	
 			// LA REQUETE Pour la page details.php
-			$sql = "SELECT books.cover, books.title, books.id, books.stock, books.publisher, i.lastName AS ilastname, i.firstName AS ifirstname, s.lastName AS slastname, s.firstName AS sfirstname, c.lastName AS clastname, c.firstName AS cfirstname
+			$sql = "SELECT t.title AS ttitle, t.note AS nnote, books.cover, books.title, books.id, books.stock, books.publisher, i.lastName AS ilastname, i.firstName AS ifirstname, s.lastName AS slastname, s.firstName AS sfirstname, c.lastName AS clastname, c.firstName AS cfirstname
 					FROM $this->table					
 					LEFT JOIN authors AS s ON books.scenarist = s.id
 					LEFT JOIN authors AS i ON books.illustrator = i.id 
@@ -113,6 +113,20 @@ $sql = "SELECT  t.style AS catstyle, t.title AS ttitle, books.dateCreated, books
 			$sth->execute();
 			return $sth->fetch();
 			
+		}
+		public function showBooks($books_ids)
+		{
+			$books = "";
+			foreach ($books_ids as $book_id) {
+				$books .= $book_id['book_id'] . ", ";
+			}
+
+			$booksIds = substr($books, 0, -2);
+			$sql= "SELECT * 
+					FROM $this->table WHERE id IN ($booksIds)";
+			$sth = $this->dbh->prepare($sql);
+			$sth->execute();
+			return $sth->fetchAll();
 		}
 
 
