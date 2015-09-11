@@ -22,7 +22,7 @@
 					<img src="<?php echo $this->assetUrl('img/couvertures-medium/'.$book['cover']);?>" width='150px'>
 				</td>
 				<td class="article-title">
-					<?= $this->e($book['title'])?>
+					<?= $this->e($book['title'])?>					
 				</td>
 				
 			</tr>
@@ -32,12 +32,12 @@
 		</table>
 		<!-- ACTIONS DU PANIER -->
 
-	</div>
 		
 	
-		<a href="<?php echo $this->url('catalogue') ?>" title="Continuer">Continuer à bouquiner</a>
+		<a href="<?php echo $this->url('catalogue') ?>" title="Continuer" class="readmmore">Continuer à bouquiner</a>
 		
 
+	</div>
 	<?php $this->stop("main_content") ?>
 	
 	
