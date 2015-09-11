@@ -32,21 +32,21 @@ class AdminController extends Controller
 			}
 
 			if($AdminManager->usernameExists($username)){
-			 	$error = "Pseudo déjà utilisé !";
-			 }
+				$error = "Pseudo déjà utilisé !";
+			}
 
-			 elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-			$error = "Votre email n'est pas valide !";
+			elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+				$error = "Votre email n'est pas valide !";
 			}
 
 			
 			if($AdminManager->emailExists($email)){
-			 	$error = "Email déjà utilisé !";
-			 }
+				$error = "Email déjà utilisé !";
+			}
 
 			 //Password identique
 			if ($password != $password_confirm){
-			$error = "Vos mots de passe ne correspondent pas !";
+				$error = "Vos mots de passe ne correspondent pas !";
 			}
 			elseif(strlen($password) <= 5 || strlen($password_confirm) <= 5)
 			{
@@ -55,9 +55,9 @@ class AdminController extends Controller
 
 			if(empty($error)){
 				$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-			
+				
 				//insére en base de donnée
-			$newAdmin = [
+				$newAdmin = [
 				"username" 		=> $username,
 				"email"			=> $email,
 				"role"			=> "admin",
@@ -71,10 +71,10 @@ class AdminController extends Controller
 			}
 		}
 		$viewPass = [
-				"error" => $error,
-				"username" => $email,
-				"email" => $email
-				 ];
+		"error" => $error,
+		"username" => $email,
+		"email" => $email
+		];
 		$this->show('admin/register_admin', $viewPass);
 	}
 
@@ -104,7 +104,7 @@ class AdminController extends Controller
 				//connecte l'user
 				$am->logUserIn($admin);
 				//redirection
-				 $this->redirectToRoute('control_admin');
+				$this->redirectToRoute('control_admin');
 
 
 			}
