@@ -278,6 +278,7 @@ h1.titre-home {
 	color: #FE641E;
 	font-weight: 200;
 	float: left;
+
 }
 
 .main{
@@ -1106,6 +1107,10 @@ a.change-password:hover {
 }
 .featherlight-content>span {
 	color: #1C8AF9;
+}
+.featherlight-close-icon {
+	font-weight: 600;
+    color: #FE641E!important;
 }
 .details{		
 	overflow: hidden;
