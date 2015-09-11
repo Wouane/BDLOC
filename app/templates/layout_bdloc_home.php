@@ -59,10 +59,10 @@
 			</div>	
 		<!-- ENCART FACEBOOK -->
 			<div id="fb-root">
-				<div class="fb-page" data-href="https://www.facebook.com/bdloc" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+				<div class="fb-page" data-href="https://www.facebook.com/espritbd" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
 					<div class="fb-xfbml-parse-ignore">
-						<blockquote cite="https://www.facebook.com/bdloc">
-							<a href="https://www.facebook.com/bdloc">Bdloc</a>
+						<blockquote cite="https://www.facebook.com/espritbd">
+							<a href="https://www.facebook.com/espritbd">Esprit Bd</a>
 						</blockquote>
 					</div>
 				</div>

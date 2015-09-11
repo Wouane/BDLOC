@@ -68,7 +68,7 @@
 				<?php echo $error; ?>
 				<!-- VALIDATION -->
 				<input type="submit" class="btn btn-default" value="Valider">
-
+				
 			</li>
 
 			<li data-content="new">
