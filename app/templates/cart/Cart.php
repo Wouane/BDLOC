@@ -21,7 +21,7 @@
 				<td>
 					<img src="<?php echo $this->assetUrl('img/couvertures-medium/'.$book['cover']);?>" width='150px'>
 				</td>
-				<td>
+				<td class="article-title">
 					<?= $this->e($book['title'])?>
 				</td>
 				
